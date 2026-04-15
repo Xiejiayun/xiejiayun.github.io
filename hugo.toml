@@ -1,0 +1,186 @@
+baseURL = "https://xiejiayun.github.io/"
+title = "Jiayun's Blog"
+theme = "hugo-theme-stack"
+
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
+
+[pagination]
+pagerSize = 10
+
+[outputs]
+home = ["HTML", "JSON"]
+
+# Languages
+[languages]
+[languages.zh-cn]
+languageName = "中文"
+title = "Jiayun's Blog"
+weight = 1
+
+[languages.zh-cn.params]
+description = "个人博客"
+
+[[languages.zh-cn.menus.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = 1
+[languages.zh-cn.menus.main.params]
+icon = "home"
+
+[[languages.zh-cn.menus.main]]
+identifier = "archives"
+name = "归档"
+url = "/archives/"
+weight = 2
+[languages.zh-cn.menus.main.params]
+icon = "archives"
+
+[[languages.zh-cn.menus.main]]
+identifier = "search"
+name = "搜索"
+url = "/search/"
+weight = 3
+[languages.zh-cn.menus.main.params]
+icon = "search"
+
+[[languages.zh-cn.menus.main]]
+identifier = "about"
+name = "关于"
+url = "/about/"
+weight = 4
+[languages.zh-cn.menus.main.params]
+icon = "user"
+
+[languages.en]
+languageName = "English"
+title = "Jiayun's Blog"
+weight = 2
+
+[languages.en.params]
+description = "Personal Blog"
+
+[[languages.en.menus.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+[languages.en.menus.main.params]
+icon = "home"
+
+[[languages.en.menus.main]]
+identifier = "archives"
+name = "Archives"
+url = "/archives/"
+weight = 2
+[languages.en.menus.main.params]
+icon = "archives"
+
+[[languages.en.menus.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+weight = 3
+[languages.en.menus.main.params]
+icon = "search"
+
+[[languages.en.menus.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 4
+[languages.en.menus.main.params]
+icon = "user"
+
+# Theme parameters
+[params]
+mainSections = ["post"]
+rssFullContent = true
+
+[params.footer]
+since = 2025
+
+[params.sidebar]
+subtitle = "个人博客"
+
+[params.article]
+toc = true
+readingTime = true
+headingAnchor = true
+math = false
+
+[params.article.license]
+enabled = false
+
+[params.widgets]
+[[params.widgets.homepage]]
+type = "search"
+
+[[params.widgets.homepage]]
+type = "archives"
+[params.widgets.homepage.params]
+limit = 5
+
+[[params.widgets.homepage]]
+type = "categories"
+[params.widgets.homepage.params]
+limit = 10
+
+[[params.widgets.homepage]]
+type = "tag-cloud"
+[params.widgets.homepage.params]
+limit = 10
+
+[[params.widgets.page]]
+type = "toc"
+
+[params.colorScheme]
+toggle = true
+default = "auto"
+
+[params.comments]
+enabled = false
+
+# Markup settings
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+tabWidth = 4
+
+[markup.tableOfContents]
+endLevel = 4
+ordered = false
+startLevel = 2
+
+# Permalinks
+[permalinks]
+post = "/p/:slug/"
+page = "/:slug/"
+
+# Related content
+[related]
+includeNewer = true
+threshold = 60
+toLower = false
+
+[[related.indices]]
+name = "tags"
+weight = 100
+
+[[related.indices]]
+name = "categories"
+weight = 200
+
+# Google Analytics (uncomment and add your ID to enable)
+# [services]
+# [services.googleAnalytics]
+# ID = "G-XXXXXXXXXX"
