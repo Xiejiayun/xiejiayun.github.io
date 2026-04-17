@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff4444"/>
+      <stop offset="100%" style="stop-color:#ff8800"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+  <text x="600" y="90" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#888">日均AI Token消耗量</text>
+  <text x="600" y="200" text-anchor="middle" font-family="Arial,sans-serif" font-size="120" font-weight="bold" fill="url(#bar)">140T</text>
+  <text x="600" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="36" fill="#e0e0e0">万亿 Tokens / 天</text>
+  <text x="600" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#ff8800">↑ 40% vs 2025年底</text>
+  <!-- Bar chart -->
+  <rect x="300" y="380" width="120" height="80" fill="#334" rx="4"/>
+  <rect x="440" y="360" width="120" height="100" fill="#445" rx="4"/>
+  <rect x="580" y="330" width="120" height="130" fill="#556" rx="4"/>
+  <rect x="720" y="370" width="120" height="90" fill="url(#bar)" rx="4" opacity="0.8"/>
+  <text x="360" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#888">2025 Q2</text>
+  <text x="500" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#888">Q3</text>
+  <text x="640" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#888">Q4</text>
+  <text x="780" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" fill="#ff8800">2026 Q1</text>
+  <text x="600" y="570" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#555">前沿科技 · 深度分析</text>
+</svg>
