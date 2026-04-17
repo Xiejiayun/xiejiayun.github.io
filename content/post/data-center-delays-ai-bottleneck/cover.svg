@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a"/>
+      <stop offset="100%" style="stop-color:#2d1a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <!-- Server racks -->
+  <rect x="150" y="200" width="80" height="200" rx="5" fill="#333" stroke="#ff8c00" stroke-width="2"/>
+  <rect x="250" y="200" width="80" height="200" rx="5" fill="#333" stroke="#ff8c00" stroke-width="2"/>
+  <rect x="350" y="200" width="80" height="200" rx="5" fill="#333" stroke="#555" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="450" y="200" width="80" height="200" rx="5" fill="#222" stroke="#555" stroke-width="2" stroke-dasharray="5,5"/>
+  <rect x="550" y="200" width="80" height="200" rx="5" fill="#222" stroke="#555" stroke-width="2" stroke-dasharray="5,5"/>
+  <!-- Blinking lights on active servers -->
+  <circle cx="170" cy="230" r="4" fill="#00ff00"/>
+  <circle cx="170" cy="250" r="4" fill="#00ff00"/>
+  <circle cx="170" cy="270" r="4" fill="#00ff00"/>
+  <circle cx="270" cy="230" r="4" fill="#00ff00"/>
+  <circle cx="270" cy="250" r="4" fill="#ffaa00"/>
+  <circle cx="270" cy="270" r="4" fill="#00ff00"/>
+  <!-- Warning on delayed ones -->
+  <text x="390" y="310" text-anchor="middle" font-size="36" fill="#ff4444">⚠</text>
+  <text x="490" y="310" text-anchor="middle" font-size="36" fill="#ff4444">⚠</text>
+  <text x="590" y="310" text-anchor="middle" font-size="36" fill="#ff4444">⚠</text>
+  <!-- Stats -->
+  <text x="850" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="96" font-weight="bold" fill="#ff8c00">40%</text>
+  <text x="850" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#ccc">延期交付</text>
+  <text x="600" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="40" font-weight="bold" fill="#fff">AI算力瓶颈</text>
+  <text x="600" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#ff8c00">数据中心建设 · 能源危机 · 供应链压力</text>
+  <text x="600" y="570" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">前沿科技 · 深度分析</text>
+</svg>

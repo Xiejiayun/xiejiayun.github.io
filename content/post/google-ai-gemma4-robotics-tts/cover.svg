@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2a"/>
+      <stop offset="100%" style="stop-color:#1b2838"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <!-- Google colors dots -->
+  <circle cx="480" cy="300" r="60" fill="#4285f4" opacity="0.8"/>
+  <circle cx="560" cy="220" r="50" fill="#ea4335" opacity="0.8"/>
+  <circle cx="640" cy="300" r="60" fill="#fbbc04" opacity="0.8"/>
+  <circle cx="720" cy="220" r="50" fill="#34a853" opacity="0.8"/>
+  <!-- Labels -->
+  <text x="600" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#fff">Google AI 全家桶</text>
+  <text x="300" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#4285f4">Gemma 4 开源</text>
+  <text x="600" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#ea4335">具身智能</text>
+  <text x="900" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" fill="#34a853">Flash TTS</text>
+  <rect x="200" y="490" width="200" height="3" fill="#4285f4" rx="1"/>
+  <rect x="500" y="490" width="200" height="3" fill="#ea4335" rx="1"/>
+  <rect x="800" y="490" width="200" height="3" fill="#34a853" rx="1"/>
+  <text x="600" y="570" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">前沿科技 · 深度分析</text>
+</svg>

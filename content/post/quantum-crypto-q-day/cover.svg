@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff2d55;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#ff2d55;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <circle cx="600" cy="280" r="200" fill="url(#glow)"/>
+  <!-- Quantum circuit lines -->
+  <line x1="200" y1="200" x2="1000" y2="200" stroke="#333" stroke-width="1"/>
+  <line x1="200" y1="280" x2="1000" y2="280" stroke="#333" stroke-width="1"/>
+  <line x1="200" y1="360" x2="1000" y2="360" stroke="#333" stroke-width="1"/>
+  <!-- Quantum gates -->
+  <rect x="350" y="185" width="30" height="30" fill="none" stroke="#ff2d55" stroke-width="2" rx="3"/>
+  <rect x="500" y="265" width="30" height="30" fill="none" stroke="#ff2d55" stroke-width="2" rx="3"/>
+  <rect x="650" y="345" width="30" height="30" fill="none" stroke="#ff2d55" stroke-width="2" rx="3"/>
+  <rect x="800" y="185" width="30" height="30" fill="none" stroke="#ff2d55" stroke-width="2" rx="3"/>
+  <!-- Connection lines -->
+  <line x1="515" y1="265" x2="515" y2="200" stroke="#ff2d55" stroke-width="1" opacity="0.5"/>
+  <line x1="665" y1="280" x2="665" y2="345" stroke="#ff2d55" stroke-width="1" opacity="0.5"/>
+  <!-- Lock icon (broken) -->
+  <text x="600" y="300" text-anchor="middle" font-size="64" fill="#ff2d55" opacity="0.6">🔓</text>
+  <text x="600" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="48" font-weight="bold" fill="#fff">Q-Day 倒计时</text>
+  <text x="600" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#ff2d55">量子计算 vs 加密体系</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">前沿科技 · 深度分析</text>
+</svg>

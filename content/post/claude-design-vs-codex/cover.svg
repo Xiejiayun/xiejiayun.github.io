@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <!-- Left: Claude -->
+  <rect x="80" y="180" width="460" height="280" rx="20" fill="#2a1a3e" stroke="#d4a574" stroke-width="2"/>
+  <text x="310" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="#d4a574">Claude</text>
+  <text x="310" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#e0d0c0">Design</text>
+  <text x="310" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#999">视觉创作 · 快速原型</text>
+  <!-- Right: Codex -->
+  <rect x="660" y="180" width="460" height="280" rx="20" fill="#1a2e1a" stroke="#74d4a5" stroke-width="2"/>
+  <text x="890" y="260" text-anchor="middle" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="#74d4a5">Codex</text>
+  <text x="890" y="310" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#c0e0d0">全面进化</text>
+  <text x="890" y="400" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#999">桌面操控 · 插件生态</text>
+  <!-- VS -->
+  <text x="600" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-size="56" font-weight="bold" fill="#ff6b6b">VS</text>
+  <!-- Title -->
+  <text x="600" y="100" text-anchor="middle" font-family="Arial,sans-serif" font-size="32" fill="#fff">AI工具军备竞赛</text>
+  <text x="600" y="560" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" fill="#666">前沿科技 · 深度分析</text>
+</svg>
