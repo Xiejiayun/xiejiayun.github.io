@@ -30,6 +30,7 @@ home = ["HTML", "RSS"]
   featured_tags = true
   featured_condition_size = 1
   about_me = true
+  custom_css = ["css/custom-dark.css"]
 
   # Dark mode
   auto_theme = true

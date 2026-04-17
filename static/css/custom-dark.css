@@ -1,0 +1,38 @@
+/* Dark mode table styles for post content */
+[data-theme="dark"] .post-container table,
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table {
+    background: rgba(8, 17, 35, 0.78) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}}
+
+[data-theme="dark"] .post-container table th,
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table th {
+    background: rgba(12, 24, 50, 0.9) !important;
+    border-color: rgba(148, 197, 255, 0.22) !important;
+    color: #eff4ff !important;
+}}
+
+[data-theme="dark"] .post-container table td,
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table td {
+    border-color: rgba(148, 197, 255, 0.15) !important;
+    color: #c9d1d9 !important;
+}}
+
+[data-theme="dark"] .post-container table tr,
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table tr {
+    background: rgba(8, 17, 35, 0.78) !important;
+    border-color: rgba(148, 197, 255, 0.18) !important;
+}}
+
+[data-theme="dark"] .post-container table tr:hover,
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table tr:hover {
+    background: rgba(126, 190, 255, 0.1) !important;
+}}
+
+/* Mermaid diagram dark mode background */
+[data-theme="dark"] pre.mermaid,
+@media (prefers-color-scheme: dark) { :root:not([data-theme]) pre.mermaid {
+    background: rgba(8, 17, 35, 0.78) !important;
+    border-radius: 8px;
+    padding: 16px;
+}}
