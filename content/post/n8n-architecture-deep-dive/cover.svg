@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#1a1e2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6d5a"/>
+      <stop offset="100%" style="stop-color:#ff9a44"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.06" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="0" x2="1200" y2="630"/><line x1="200" y1="0" x2="1200" y2="500"/>
+    <line x1="400" y1="0" x2="1200" y2="370"/><line x1="0" y1="130" x2="800" y2="630"/>
+    <line x1="0" y1="260" x2="600" y2="630"/>
+  </g>
+  <!-- Node graph visualization -->
+  <g opacity="0.15">
+    <circle cx="150" cy="200" r="25" fill="none" stroke="#ff6d5a" stroke-width="2"/>
+    <circle cx="350" cy="150" r="25" fill="none" stroke="#ff9a44" stroke-width="2"/>
+    <circle cx="350" cy="300" r="25" fill="none" stroke="#ff6d5a" stroke-width="2"/>
+    <circle cx="550" cy="220" r="25" fill="none" stroke="#ff9a44" stroke-width="2"/>
+    <line x1="175" y1="200" x2="325" y2="150" stroke="#ff6d5a" stroke-width="1.5"/>
+    <line x1="175" y1="200" x2="325" y2="300" stroke="#ff6d5a" stroke-width="1.5"/>
+    <line x1="375" y1="150" x2="525" y2="220" stroke="#ff9a44" stroke-width="1.5"/>
+    <line x1="375" y1="300" x2="525" y2="220" stroke="#ff9a44" stroke-width="1.5"/>
+  </g>
+  <!-- Stats -->
+  <text x="750" y="160" fill="#ff6d5a" font-family="monospace" font-size="18" opacity="0.6">250万行代码</text>
+  <text x="750" y="190" fill="#ff9a44" font-family="monospace" font-size="18" opacity="0.6">46个内部包 · 6层架构</text>
+  <text x="750" y="220" fill="#888" font-family="monospace" font-size="18" opacity="0.6">400+ Integrations</text>
+  <!-- Title -->
+  <text x="100" y="420" fill="url(#accent)" font-family="Arial,sans-serif" font-size="52" font-weight="bold">n8n</text>
+  <text x="100" y="480" fill="#e6edf3" font-family="Arial,sans-serif" font-size="36" font-weight="bold">架构深度解剖</text>
+  <text x="100" y="530" fill="#8b949e" font-family="Arial,sans-serif" font-size="22">从250万行TypeScript看工作流引擎的设计哲学</text>
+  <!-- Accent line -->
+  <rect x="100" y="545" width="400" height="3" fill="url(#accent)" rx="1.5"/>
+</svg>
