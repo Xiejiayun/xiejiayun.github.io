@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <!-- Chip layout -->
+  <g transform="translate(600, 260)">
+    <!-- Main package outline -->
+    <rect x="-200" y="-150" width="400" height="300" rx="8" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.4"/>
+    <!-- Chiplets -->
+    <rect x="-170" y="-120" width="120" height="100" rx="4" fill="#06b6d4" opacity="0.3" stroke="#06b6d4" stroke-width="1.5"/>
+    <text x="-110" y="-60" text-anchor="middle" fill="#06b6d4" font-family="monospace" font-size="12">CPU 5nm</text>
+    <rect x="50" y="-120" width="120" height="100" rx="4" fill="#8b5cf6" opacity="0.3" stroke="#8b5cf6" stroke-width="1.5"/>
+    <text x="110" y="-60" text-anchor="middle" fill="#8b5cf6" font-family="monospace" font-size="12">GPU 3nm</text>
+    <rect x="-170" y="20" width="120" height="100" rx="4" fill="#34d399" opacity="0.3" stroke="#34d399" stroke-width="1.5"/>
+    <text x="-110" y="80" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="12">I/O 12nm</text>
+    <rect x="50" y="20" width="120" height="100" rx="4" fill="#f43f5e" opacity="0.3" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="110" y="80" text-anchor="middle" fill="#f43f5e" font-family="monospace" font-size="12">GaN Power</text>
+    <!-- Interconnect lines -->
+    <line x1="-50" y1="-70" x2="50" y2="-70" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="-50" y1="70" x2="50" y2="70" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="-110" y1="-20" x2="-110" y2="20" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <line x1="110" y1="-20" x2="110" y2="20" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+    <!-- UCIe label -->
+    <text x="0" y="0" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="10" opacity="0.8">UCIe</text>
+    <!-- Optical I/O indicators -->
+    <circle cx="-200" cy="-60" r="4" fill="#06b6d4" opacity="0.8"/>
+    <circle cx="-200" cy="0" r="4" fill="#06b6d4" opacity="0.6"/>
+    <circle cx="-200" cy="60" r="4" fill="#06b6d4" opacity="0.4"/>
+    <circle cx="200" cy="-60" r="4" fill="#8b5cf6" opacity="0.8"/>
+    <circle cx="200" cy="0" r="4" fill="#8b5cf6" opacity="0.6"/>
+    <circle cx="200" cy="60" r="4" fill="#8b5cf6" opacity="0.4"/>
+  </g>
+  <!-- Title -->
+  <text x="600" y="510" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="34" font-weight="bold">Chiplet即插即用时代来临</text>
+  <text x="600" y="555" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="18">先进封装如何重塑半导体产业格局</text>
+  <rect x="50" y="40" width="100" height="32" rx="16" fill="#fbbf24" opacity="0.2"/>
+  <text x="100" y="61" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="14">半导体</text>
+</svg>

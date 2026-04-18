@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid -->
+  <g opacity="0.1">
+    <line x1="0" y1="0" x2="0" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="60" y1="0" x2="60" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="120" y1="0" x2="120" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="180" y1="0" x2="180" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="240" y1="0" x2="240" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="360" y1="0" x2="360" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="420" y1="0" x2="420" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="480" y1="0" x2="480" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="540" y1="0" x2="540" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="660" y1="0" x2="660" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="720" y1="0" x2="720" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="780" y1="0" x2="780" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="840" y1="0" x2="840" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="960" y1="0" x2="960" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="1020" y1="0" x2="1020" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="1080" y1="0" x2="1080" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="1140" y1="0" x2="1140" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+    <line x1="1200" y1="0" x2="1200" y2="630" stroke="#94a3b8" stroke-width="0.5"/>
+  </g>
+  <!-- Git branch lines -->
+  <g opacity="0.3">
+    <path d="M200 100 L200 530" stroke="#06b6d4" stroke-width="3" stroke-dasharray="8,4"/>
+    <path d="M200 200 Q300 200 300 280 L300 400 Q300 480 200 480" stroke="#f43f5e" stroke-width="2" stroke-dasharray="5,5"/>
+    <circle cx="200" cy="200" r="8" fill="#06b6d4"/>
+    <circle cx="300" cy="280" r="6" fill="#f43f5e"/>
+    <circle cx="300" cy="400" r="6" fill="#f43f5e"/>
+    <circle cx="200" cy="480" r="8" fill="#06b6d4"/>
+    <!-- X mark over PR -->
+    <line x1="265" y1="305" x2="335" y2="375" stroke="#ef4444" stroke-width="4"/>
+    <line x1="335" y1="305" x2="265" y2="375" stroke="#ef4444" stroke-width="4"/>
+  </g>
+  <!-- AI symbol -->
+  <g transform="translate(800, 250)">
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.4"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.6"/>
+    <circle cx="0" cy="0" r="20" fill="#8b5cf6" opacity="0.8"/>
+    <line x1="-80" y1="0" x2="-50" y2="0" stroke="#8b5cf6" stroke-width="1.5"/>
+    <line x1="50" y1="0" x2="80" y2="0" stroke="#8b5cf6" stroke-width="1.5"/>
+    <line x1="0" y1="-80" x2="0" y2="-50" stroke="#8b5cf6" stroke-width="1.5"/>
+    <line x1="0" y1="50" x2="0" y2="80" stroke="#8b5cf6" stroke-width="1.5"/>
+  </g>
+  <!-- Arrow from git to AI -->
+  <path d="M400 340 L680 290" stroke="url(#accent)" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.6"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8b5cf6"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="600" y="520" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="36" font-weight="bold">Pull Request已死？</text>
+  <text x="600" y="565" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="20">AI编码时代的软件开发范式革命</text>
+  <!-- Tag -->
+  <rect x="50" y="40" width="120" height="32" rx="16" fill="#06b6d4" opacity="0.2"/>
+  <text x="110" y="61" text-anchor="middle" fill="#06b6d4" font-family="monospace" font-size="14">AI × DevOps</text>
+</svg>
