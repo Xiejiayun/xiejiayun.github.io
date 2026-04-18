@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Caduceus symbol hint -->
+  <g opacity="0.08" transform="translate(900,100) scale(1.5)">
+    <line x1="50" y1="0" x2="50" y2="300" stroke="#a78bfa" stroke-width="3"/>
+    <path d="M20,50 Q50,80 80,50 Q110,20 80,50 Q50,80 20,50" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <path d="M20,100 Q50,130 80,100 Q110,70 80,100 Q50,130 20,100" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="35" cy="0" r="8" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="65" cy="0" r="8" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+  </g>
+  <!-- Neural network nodes -->
+  <g opacity="0.12">
+    <circle cx="100" cy="150" r="6" fill="#a78bfa"/><circle cx="100" cy="200" r="6" fill="#a78bfa"/>
+    <circle cx="100" cy="250" r="6" fill="#a78bfa"/>
+    <circle cx="250" cy="175" r="6" fill="#818cf8"/><circle cx="250" cy="225" r="6" fill="#818cf8"/>
+    <circle cx="400" cy="200" r="6" fill="#fbbf24"/>
+    <line x1="106" y1="150" x2="244" y2="175" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="106" y1="200" x2="244" y2="175" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="106" y1="200" x2="244" y2="225" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="106" y1="250" x2="244" y2="225" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="256" y1="175" x2="394" y2="200" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="256" y1="225" x2="394" y2="200" stroke="#818cf8" stroke-width="0.8"/>
+  </g>
+  <!-- Stats -->
+  <text x="100" y="380" fill="#a78bfa" font-family="monospace" font-size="16" opacity="0.7">238K LOC Python · 20+ Platform Adapters</text>
+  <text x="100" y="405" fill="#818cf8" font-family="monospace" font-size="16" opacity="0.7">60+ Tools · Pluggable Memory · ACP/MCP</text>
+  <!-- Title -->
+  <text x="100" y="470" fill="url(#gold)" font-family="Arial,sans-serif" font-size="52" font-weight="bold">Hermes Agent ☤</text>
+  <text x="100" y="525" fill="#e5e7eb" font-family="Arial,sans-serif" font-size="32" font-weight="bold">自我进化AI代理的架构哲学</text>
+  <text x="100" y="570" fill="#9ca3af" font-family="Arial,sans-serif" font-size="20">从23万行Python看一个会学习的通用Agent如何炼成</text>
+  <rect x="100" y="585" width="450" height="3" fill="url(#accent)" rx="1.5"/>
+</svg>
