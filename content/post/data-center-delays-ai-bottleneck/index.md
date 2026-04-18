@@ -1,7 +1,7 @@
 ---
 title: "美国40%数据中心延期交付：AI算力瓶颈比你想象的更严重"
 description: "卫星和无人机图像揭示，美国大量在建数据中心面临严重延期。能源供应、建设周期和社区阻力正在成为AI发展的真正瓶颈。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "us-data-center-delays-ai-compute-bottleneck"
 image: "cover.svg"
 categories:

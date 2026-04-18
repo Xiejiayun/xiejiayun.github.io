@@ -1,7 +1,7 @@
 ---
 title: "TSMC与芯片制造的地缘博弈：当CC Wei告诉Musk'建晶圆厂没有捷径'"
 description: "从TSMC 2026年财报电话会到Intel CPU刷新，深度分析全球半导体制造格局的最新变化与AI算力供应链的真实瓶颈"
-date: 2026-04-18
+date: 2026-04-18T00:00:00+08:00
 slug: "tsmc-fab-geopolitics-2026"
 image: "cover.svg"
 categories:

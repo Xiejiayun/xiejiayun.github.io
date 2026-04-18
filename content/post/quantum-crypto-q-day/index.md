@@ -1,7 +1,7 @@
 ---
 title: "Q-Day倒计时：量子计算正在逼近加密体系的崩溃点"
 description: "Ars Technica和IEEE Spectrum的最新报道揭示，量子计算对现有加密体系的威胁正在从理论变为现实。后量子密码学竞赛已经开始，但很多企业还没有意识到紧迫性。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "quantum-computing-crypto-q-day-threat"
 image: "cover.svg"
 categories:

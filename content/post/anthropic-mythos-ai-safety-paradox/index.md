@@ -1,7 +1,7 @@
 ---
 title: "Anthropic Mythos的安全悖论：当最强AI模型'太危险而不能发布'意味着什么"
 description: "从Mythos的'受控发布'到Project Glasswing，深入分析AI安全叙事背后的商业博弈与真实技术风险"
-date: 2026-04-18
+date: 2026-04-18T00:00:00+08:00
 slug: "anthropic-mythos-ai-safety-paradox"
 image: "cover.svg"
 categories:

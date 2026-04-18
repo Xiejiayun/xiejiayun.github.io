@@ -1,7 +1,7 @@
 ---
 title: "RAG系统的三次进化：从向量搜索到Graph-RAG的架构革命"
 description: "深度解析检索增强生成的技术演进——向量检索、重排序模型、图结构知识库，以及为什么Graph-RAG将重新定义企业知识系统"
-date: 2026-04-18
+date: 2026-04-18T00:00:00+08:00
 slug: "rag-evolution-graph-rag-2026"
 image: "cover.svg"
 categories:

@@ -1,7 +1,7 @@
 ---
 title: "Hermes Agent 部署实战：从安装到 Discord/微信集成全流程踩坑指南"
 description: "基于 Hermes Agent v0.10.0 实际部署经验，覆盖 WSL2 安装、Claude 模型配置、Discord 和微信集成全流程，含踩坑记录与解决方案。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "hermes-agent-deploy-guide"
 categories:
     - AI

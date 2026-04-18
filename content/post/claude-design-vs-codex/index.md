@@ -1,7 +1,7 @@
 ---
 title: "Claude Design vs Codex全面进化：Anthropic和OpenAI的AI工具军备竞赛"
 description: "Anthropic发布Claude Design进军视觉设计，OpenAI的Codex新增计算机操控和插件系统。两大AI巨头正在将大模型能力延伸到每一个工作场景。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "claude-design-vs-codex-ai-tools-war"
 image: "cover.svg"
 categories:

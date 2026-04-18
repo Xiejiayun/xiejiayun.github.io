@@ -1,7 +1,7 @@
 ---
 title: "在 Mac 上用 Hermes Agent 打造 6 人 iOS 顶级专家团队（Discord 多 Bot 实战）"
 description: "基于 macOS 实战经验，使用 Hermes Agent Profile 系统 + Agent Maestro 模型代理，在 Discord 部署 6 个独立 AI Bot 组成 iOS App 开发专家团队，涵盖 PM、UX/UI、架构、开发、DevOps、Manager 全角色。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "hermes-ios-team-mac"
 categories:
     - AI

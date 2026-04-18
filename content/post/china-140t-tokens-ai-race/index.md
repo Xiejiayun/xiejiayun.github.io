@@ -1,7 +1,7 @@
 ---
 title: "中国日均AI Token消耗突破140万亿：一场无声的算力竞赛正在改写全球AI版图"
 description: "中国AI Token使用量三个月增长40%，OpenAI发布生命科学专用模型GPT-Rosalind，Tesla完成AI5芯片流片——从数据到芯片，中美AI竞赛已进入全产业链对抗。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "china-140t-tokens-global-ai-race"
 image: "cover.svg"
 categories:

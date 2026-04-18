@@ -1,7 +1,7 @@
 ---
 title: "当Spot学会推理、京东机器人出诊：具身智能从实验室走向街头的真实路线图"
 description: "Boston Dynamics联合DeepMind教Spot推理，京东推出机器人急救服务覆盖50+城市，NVIDIA Physical AI全面布局——具身智能的商业化拐点正在到来，但挑战远比想象的复杂。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "embodied-ai-spot-reasoning-jd-robot-ambulance"
 image: "cover.svg"
 categories:

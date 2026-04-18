@@ -1,7 +1,7 @@
 ---
 title: "Google的AI全家桶：Gemma 4开源、机器人具身智能、Gemini 3.1语音革新"
 description: "Google密集发布Gemma 4开源模型、Gemini Robotics-ER 1.6具身推理、Gemini 3.1 Flash TTS语音合成，展现了从云端到终端、从数字到物理世界的全面AI布局。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "google-ai-gemma4-robotics-gemini-tts"
 image: "cover.svg"
 categories:

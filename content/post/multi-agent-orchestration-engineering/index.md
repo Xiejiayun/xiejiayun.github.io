@@ -1,7 +1,7 @@
 ---
 title: "多智能体系统的工程化挑战：竞态条件、测试框架与设计模式的实战指南"
 description: "当多个AI Agent同时操作共享资源，软件工程中最经典的并发问题以全新的形式回归——如何设计、测试和调试多Agent系统"
-date: 2026-04-18
+date: 2026-04-18T00:00:00+08:00
 slug: "multi-agent-orchestration-engineering"
 image: "cover.svg"
 categories:

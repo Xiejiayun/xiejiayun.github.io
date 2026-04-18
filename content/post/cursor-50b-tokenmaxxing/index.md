@@ -1,7 +1,7 @@
 ---
 title: "Cursor估值飙至500亿美元背后：AI编程的狂热与'Tokenmaxxing'陷阱"
 description: "Cursor即将以500亿美元估值融资20亿美元，AI编程工具赛道火热。但'Tokenmaxxing'现象提醒我们：更多AI生成的代码未必等于更高的生产力。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "cursor-50b-valuation-tokenmaxxing-trap"
 image: "cover.svg"
 categories:

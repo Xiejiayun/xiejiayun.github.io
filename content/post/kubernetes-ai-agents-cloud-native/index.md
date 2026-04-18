@@ -1,7 +1,7 @@
 ---
 title: "从Kubernetes到Agent Sandbox：AI智能体的生产化部署正在重塑云原生架构"
 description: "Kubernetes v1.36预览Agent Sandbox，OpenAI升级Agents SDK引入原生沙箱执行，CNCF警告K8s不足以保护LLM工作负载——AI智能体正在倒逼整个云原生生态的进化。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "kubernetes-ai-agents-cloud-native-evolution"
 image: "cover.svg"
 categories:

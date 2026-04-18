@@ -1,7 +1,7 @@
 ---
 title: "编码智能体的架构解剖：从IDE插件到自主工程师的进化路线"
 description: "深入拆解Coding Agent的核心架构——上下文工程、工具调用、沙箱执行，分析为何当前AI编程助手既被追捧又被质疑"
-date: 2026-04-18
+date: 2026-04-18T00:00:00+08:00
 slug: "coding-agent-architecture-2026"
 image: "cover.svg"
 categories:

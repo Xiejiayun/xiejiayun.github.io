@@ -1,7 +1,7 @@
 ---
 title: "C++26反射与内存安全、投机执行的硅片浪费：编程语言和芯片架构正在同步进化"
 description: "C++26引入反射、内存安全和合约机制，SemiWiki揭示投机执行浪费了大量晶体管，新异步模型对标Rust——从语言到硅片，一场关于效率的革命正在两个层次同时展开。"
-date: 2026-04-17
+date: 2026-04-17T00:00:00+08:00
 slug: "cpp26-speculation-silicon-waste-efficiency"
 image: "cover.svg"
 categories:

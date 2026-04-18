@@ -38,10 +38,10 @@ home = ["HTML", "RSS"]
 
   # Giscus comments
   [params.giscus]
-    data_repo = "xiejiayun/xiejiayun.github.io"
-    data_repo_id = ""
+    data_repo = "Xiejiayun/xiejiayun.github.io"
+    data_repo_id = "R_kgDOSDh9Kg"
     data_category = "General"
-    data_category_id = ""
+    data_category_id = "DIC_kwDOSDh9Ks4C7HQR"
     data_mapping = "pathname"
     data_reactions_enabled = "1"
     data_emit_metadata = "0"
