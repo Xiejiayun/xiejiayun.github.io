@@ -1,0 +1,44 @@
+     1|<!-- post list -->
+     2|<div data-pagefind-ignore="all">
+     3|{{ range $index, $element := $.Paginator.Pages }}
+     4|<div class="post-preview">
+     5|    <a href="{{ .Permalink }}">
+     6|        <h2 class="post-title">
+     7|            {{ .Title }}
+     8|        </h2>
+     9|	{{with .Params.subtitle }}
+    10|        <h3 class="post-subtitle">
+    11|            {{ . }}
+    12|        </h3>
+    13|	{{ end }}
+    14|        <div class="post-content-preview">
+    15|	{{ with .Description }}
+    16|            {{ . }}
+    17|        {{ else }}
+    18|            {{ .Summary | plainify}}
+    19|       {{ end }}
+    20|        </div>
+    21|    </a>
+    22|    <p class="post-meta">
+    23|    {{ if .Params.metadata }}
+    24|        {{ range $index, $element := .Params.metadata }}
+    25|            {{ if .link }}
+    26|                <a href="{{ .link }}">{{ .text }}</a>
+    27|            {{ else }}
+    28|                {{ .text }}
+    29|            {{ end }}
+    30|        {{ end }}
+    31|    {{ else }}
+    32|        Posted by {{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }} on {{ .Date.Format "Monday, January 2, 2006 15:04 MST" }}
+    33|        <!-- Don't show "Last Modified on" if update happened on the same day. -->
+    34|        {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
+    35|            <br>Last Modified on {{ dateFormat "Monday, January 2, 2006 15:04 MST" .Params.LastMod }} 
+    36|        {{ end }}
+    37|    {{ end }}
+    38|    </p>
+    39|
+    40|</div>
+    41|<hr>
+    42|{{ end }}
+    43|</div>
+    44|

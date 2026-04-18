@@ -1,0 +1,166 @@
+     1|{{ define "header" }}
+     2|<!-- Post Header -->
+     3|<style type="text/css">
+     4|    header.intro-header {
+     5|        background-image: url('{{ if .Params.image }}{{ .Params.image | relURL }}{{ else }}{{ .Site.Params.header_image | relURL}}{{ end }}')
+     6|    }
+     7|</style>
+     8|{{ if eq .Params.headerstyle "text" }}
+     9|<header class="intro-header style-text" >
+    10|{{ else }}
+    11|<header class="intro-header" >
+    12|{{ end }}
+    13|    <div class="container">
+    14|        <div class="row">
+    15|            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    16|                <div class="post-heading">
+    17|                    <div class="tags">
+    18|                        {{ range .Params.tags }}
+    19|                        <a class="tag" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" title="{{ . }}">
+    20|                            {{ . }}
+    21|                        </a>
+    22|                        {{ end }}
+    23|                    </div>
+    24|                    <h1>{{ .Title }}</h1>
+    25|                    <h2 class="subheading">{{ .Params.subtitle }}</h2>
+    26|                    <span class="meta">
+    27|                        {{ if .Params.metadata }}
+    28|                            {{ range $index, $element := .Params.metadata }}
+    29|                                {{ if .link }}
+    30|                                    <a href="{{ .link }}">{{ .text }}</a>
+    31|                                {{ else }}
+    32|                                    {{ .text }}
+    33|                                {{ end }}
+    34|                            {{ end }}
+    35|                        {{ else }}
+    36|                            Posted by 
+    37|                            {{ if .Params.author }}
+    38|                                {{ .Params.author }}
+    39|                            {{ else }}
+    40|                                    {{ .Site.Title }}
+    41|                            {{ end }} 
+    42|                            on 
+    43|                            {{ .Date.Format "Monday, January 2, 2006 15:04 MST" }}
+    44|                            {{ if .Site.Params.page_view_counter }}
+    45|                                {{ partial "page_view_counter.html" . }}
+    46|                            {{ end }}
+    47|                            <!-- Don't show "Last Modified on" if update happened on the same day. -->
+    48|                            {{ if (and (not .Lastmod.IsZero) (not (eq (dateFormat "2006-01-02" .Lastmod) (dateFormat "2006-01-02" .Date)))) }}
+    49|                            <br>Last Modified on {{ dateFormat "Monday, January 2, 2006 15:04 MST" .Params.LastMod }}
+    50|                            {{ end }}
+    51|                        {{ end }}    
+    52|                    </span>
+    53|                </div>
+    54|            </div>
+    55|        </div>
+    56|    </div>
+    57|</header>
+    58|{{ end }}
+    59|
+    60|{{ define "main" }}
+    61|<!-- Post Content -->
+    62|<article>
+    63|    <div class="container">
+    64|        <div class="row">
+    65|
+    66|            <!-- Post Container -->
+    67|            <div class="
+    68|                col-lg-8 col-lg-offset-2
+    69|                col-md-10 col-md-offset-1
+    70|                post-container">
+    71|
+    72|                <!--
+    73|                {{ if not (eq (.Param "showtoc") false) }}
+    74|                <header>
+    75|                    <h2>TOC</h2>
+    76|                </header>
+    77|                {{.TableOfContents}}
+    78|                {{ end }}
+    79|                -->
+    80|                {{ .Content }}
+    81|
+    82|                {{ if .Site.Params.reward }}
+    83|                {{ partial "reward.html" . }}
+    84|                {{ end }}
+    85|
+    86|                {{ if or (.PrevInSection) (.NextInSection) }}
+    87|                <hr>
+    88|                <ul class="pager">
+    89|                    {{ if .PrevInSection }}
+    90|                    <li class="previous">
+    91|                        <a href="{{ .PrevInSection.RelPermalink }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title}}">&larr;
+    92|                            Previous Post</a>
+    93|                    </li>
+    94|                    {{ end }}
+    95|                    {{ if .NextInSection }}
+    96|                    <li class="next">
+    97|                        <a href="{{ .NextInSection.RelPermalink }}" data-toggle="tooltip" data-placement="top" title="{{ .NextInSection.Title}}">Next
+    98|                            Post &rarr;</a>
+    99|                    </li>
+   100|                    {{ end }}
+   101|                </ul>
+   102|                {{ end }}
+   103|
+   104|                {{ partial "comments.html" . }}
+   105|            </div>
+   106|
+   107|            <!-- Side Catalog Container -->
+   108|            {{ if not (eq (.Param "showtoc") false) }}
+   109|            <div class="
+   110|                col-lg-2 col-lg-offset-0
+   111|                visible-lg-block
+   112|                sidebar-container
+   113|                catalog-container">
+   114|                <div class="side-catalog">
+   115|                    <hr class="hidden-sm hidden-xs">
+   116|                    <h5>
+   117|                        <a class="catalog-toggle" href="#">CATALOG</a>
+   118|                    </h5>
+   119|                    <ul class="catalog-body"></ul>
+   120|                </div>
+   121|            </div>
+   122|            {{ end }}
+   123|
+   124|            <!-- Sidebar Container -->
+   125|            <div class="
+   126|                col-lg-8 col-lg-offset-2
+   127|                col-md-10 col-md-offset-1
+   128|                sidebar-container">
+   129|
+   130|                <!-- Featured Tags -->
+   131|                {{ if .Site.Params.featured_tags }}
+   132|                <section>
+   133|                    <hr class="hidden-sm hidden-xs">
+   134|                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+   135|                    <div class="tags">
+   136|                        {{ $featured_condition_size := .Site.Params.featured_condition_size }}
+   137|                        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+   138|                        {{ if gt (len $taxonomy.Pages) $featured_condition_size }}
+   139|                        <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" title="{{ $name }}">
+   140|                            {{ $name }}
+   141|                        </a>
+   142|                        {{ end }}
+   143|                        {{ end }}
+   144|                    </div>
+   145|                </section>
+   146|                {{ end }}
+   147|
+   148|                <!-- Friends Blog -->
+   149|                {{ if .Site.Params.friends }}
+   150|                <section>
+   151|                    <hr>
+   152|                    <h5>FRIENDS</h5>
+   153|                    <ul class="list-inline">
+   154|                        {{ range .Site.Params.friend_link }}
+   155|                        <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+   156|                        {{ end }}
+   157|                    </ul>
+   158|                </section>
+   159|                {{ end }}
+   160|            </div>
+   161|        </div>
+   162|    </div>
+   163|</article>
+   164|
+   165|{{ end }}
+   166|
