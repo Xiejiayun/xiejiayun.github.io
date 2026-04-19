@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <!-- VS battle layout -->
+  <!-- Anthropic side -->
+  <rect x="100" y="150" width="400" height="280" rx="15" fill="none" stroke="#d4a574" stroke-width="2" opacity="0.6"/>
+  <text x="300" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#d4a574">Anthropic</text>
+  <text x="300" y="240" text-anchor="middle" font-size="14" fill="#888" font-family="Arial">Safety-First Enterprise AI</text>
+  <text x="300" y="280" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">Claude Opus 4.7 | Mythos</text>
+  <text x="300" y="305" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">AWS + Google Cloud</text>
+  <text x="300" y="330" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">Constitutional AI</text>
+  <text x="300" y="355" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">Agent Code Review</text>
+  <!-- OpenAI side -->
+  <rect x="700" y="150" width="400" height="280" rx="15" fill="none" stroke="#74b9ff" stroke-width="2" opacity="0.6"/>
+  <text x="900" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#74b9ff">OpenAI</text>
+  <text x="900" y="240" text-anchor="middle" font-size="14" fill="#888" font-family="Arial">Platform Empire Builder</text>
+  <text x="900" y="280" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">GPT-5 | gpt-oss | Frontier</text>
+  <text x="900" y="305" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">Azure + Independent</text>
+  <text x="900" y="330" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">TBPN Media Acquisition</text>
+  <text x="900" y="355" text-anchor="middle" font-size="12" fill="#666" font-family="Arial">Consumer + Enterprise</text>
+  <!-- VS in center -->
+  <circle cx="600" cy="290" r="40" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+  <text x="600" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ff6b6b">VS</text>
+  <!-- Lightning bolts -->
+  <line x1="500" y1="250" x2="560" y2="290" stroke="#ff6b6b" stroke-width="2" opacity="0.4"/>
+  <line x1="640" y1="290" x2="700" y2="250" stroke="#ff6b6b" stroke-width="2" opacity="0.4"/>
+  <line x1="500" y1="330" x2="560" y2="290" stroke="#ff6b6b" stroke-width="2" opacity="0.4"/>
+  <line x1="640" y1="290" x2="700" y2="330" stroke="#ff6b6b" stroke-width="2" opacity="0.4"/>
+  <!-- Title -->
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">企业AI市场的路线之争</text>
+  <text x="600" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ff6b6b">两种AI商业哲学的终极碰撞</text>
+</svg>

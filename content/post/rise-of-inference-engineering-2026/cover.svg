@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="100%" style="stop-color:#1e1e3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <!-- Inference pipeline visualization -->
+  <!-- Input -->
+  <rect x="80" y="220" width="140" height="60" rx="8" fill="none" stroke="#ffd93d" stroke-width="2"/>
+  <text x="150" y="255" text-anchor="middle" font-size="14" fill="#ffd93d" font-family="Arial">Input Tokens</text>
+  <!-- Arrow -->
+  <line x1="220" y1="250" x2="290" y2="250" stroke="#555" stroke-width="2" marker-end="url(#arrow4)"/>
+  <!-- KV Cache -->
+  <rect x="290" y="200" width="160" height="100" rx="8" fill="none" stroke="#00d4ff" stroke-width="2"/>
+  <text x="370" y="240" text-anchor="middle" font-size="13" fill="#00d4ff" font-family="Arial">KV Cache</text>
+  <text x="370" y="265" text-anchor="middle" font-size="11" fill="#00d4ff" font-family="Arial" opacity="0.6">Attention Memory</text>
+  <!-- Arrow -->
+  <line x1="450" y1="250" x2="520" y2="250" stroke="#555" stroke-width="2"/>
+  <!-- Reasoning -->
+  <rect x="520" y="190" width="180" height="120" rx="8" fill="none" stroke="#7b2ff7" stroke-width="2"/>
+  <text x="610" y="235" text-anchor="middle" font-size="13" fill="#7b2ff7" font-family="Arial">Inference Engine</text>
+  <text x="610" y="258" text-anchor="middle" font-size="11" fill="#7b2ff7" font-family="Arial" opacity="0.6">CoT + Tool Use</text>
+  <text x="610" y="278" text-anchor="middle" font-size="11" fill="#7b2ff7" font-family="Arial" opacity="0.6">+ Self-Refine</text>
+  <!-- Arrow -->
+  <line x1="700" y1="250" x2="770" y2="250" stroke="#555" stroke-width="2"/>
+  <!-- Output -->
+  <rect x="770" y="220" width="160" height="60" rx="8" fill="none" stroke="#6bcb77" stroke-width="2"/>
+  <text x="850" y="255" text-anchor="middle" font-size="14" fill="#6bcb77" font-family="Arial">Structured Output</text>
+  <!-- Caching layer below -->
+  <rect x="290" y="370" width="440" height="50" rx="8" fill="none" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="510" y="400" text-anchor="middle" font-size="12" fill="#ff6b6b" font-family="Arial">Semantic Cache + Prefix Cache + Prompt Cache</text>
+  <line x1="370" y1="300" x2="400" y2="370" stroke="#ff6b6b" stroke-width="1" opacity="0.4"/>
+  <line x1="610" y1="310" x2="580" y2="370" stroke="#ff6b6b" stroke-width="1" opacity="0.4"/>
+  <!-- Title -->
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">推理工程学的崛起</text>
+  <text x="600" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7b2ff7">AI行业最被低估的新学科</text>
+</svg>

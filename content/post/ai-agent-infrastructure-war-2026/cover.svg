@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="100%" style="stop-color:#1a1a3e"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#7b2ff7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.1" stroke="#00d4ff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/><line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+  <!-- Agent nodes -->
+  <circle cx="300" cy="250" r="40" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.8"/>
+  <circle cx="600" cy="180" r="50" fill="none" stroke="#7b2ff7" stroke-width="2" opacity="0.8"/>
+  <circle cx="900" cy="260" r="35" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.8"/>
+  <circle cx="450" cy="380" r="45" fill="none" stroke="#ffd93d" stroke-width="2" opacity="0.8"/>
+  <circle cx="750" cy="400" r="38" fill="none" stroke="#6bcb77" stroke-width="2" opacity="0.8"/>
+  <!-- Connections -->
+  <line x1="340" y1="250" x2="550" y2="190" stroke="url(#glow1)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="650" y1="190" x2="865" y2="255" stroke="url(#glow1)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="310" y1="290" x2="410" y2="360" stroke="url(#glow1)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="495" y1="380" x2="712" y2="400" stroke="url(#glow1)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="620" y1="230" x2="470" y2="340" stroke="url(#glow1)" stroke-width="1.5" opacity="0.5"/>
+  <line x1="880" y1="290" x2="770" y2="370" stroke="url(#glow1)" stroke-width="1.5" opacity="0.5"/>
+  <!-- Pulse dots -->
+  <circle cx="300" cy="250" r="5" fill="#00d4ff" opacity="0.9"/>
+  <circle cx="600" cy="180" r="6" fill="#7b2ff7" opacity="0.9"/>
+  <circle cx="900" cy="260" r="5" fill="#ff6b6b" opacity="0.9"/>
+  <circle cx="450" cy="380" r="5" fill="#ffd93d" opacity="0.9"/>
+  <circle cx="750" cy="400" r="5" fill="#6bcb77" opacity="0.9"/>
+  <!-- Title -->
+  <text x="600" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">AI Agent基础设施大战</text>
+  <text x="600" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00d4ff">从模型服务到智能体托管的范式转移</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <!-- Evolution timeline -->
+  <line x1="100" y1="300" x2="1100" y2="300" stroke="#333" stroke-width="2"/>
+  <!-- Nodes on timeline -->
+  <circle cx="180" cy="300" r="12" fill="#4a9eff"/><text x="180" y="340" text-anchor="middle" font-size="11" fill="#888" font-family="Arial">GPT-2</text>
+  <circle cx="330" cy="300" r="14" fill="#6b5ce7"/><text x="330" y="340" text-anchor="middle" font-size="11" fill="#888" font-family="Arial">LLaMA</text>
+  <circle cx="480" cy="300" r="16" fill="#e74c3c"/><text x="480" y="340" text-anchor="middle" font-size="11" fill="#888" font-family="Arial">Mistral</text>
+  <circle cx="630" cy="300" r="18" fill="#f39c12"/><text x="630" y="340" text-anchor="middle" font-size="11" fill="#888" font-family="Arial">DeepSeek</text>
+  <circle cx="780" cy="300" r="20" fill="#2ecc71"/><text x="780" y="340" text-anchor="middle" font-size="11" fill="#888" font-family="Arial">Qwen3</text>
+  <circle cx="950" cy="300" r="24" fill="#00d4ff"/><text x="950" y="340" text-anchor="middle" font-size="11" fill="#888" font-family="Arial">Gemma 4</text>
+  <!-- Rising curve -->
+  <path d="M180,280 Q330,270 480,250 Q630,220 780,180 Q950,130 1050,100" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0.6"/>
+  <!-- Branches -->
+  <line x1="630" y1="300" x2="630" y2="220" stroke="#f39c12" stroke-width="1" opacity="0.5"/>
+  <text x="630" y="210" text-anchor="middle" font-size="10" fill="#f39c12" font-family="Arial">MoE+MLA</text>
+  <line x1="780" y1="300" x2="780" y2="190" stroke="#2ecc71" stroke-width="1" opacity="0.5"/>
+  <text x="780" y="175" text-anchor="middle" font-size="10" fill="#2ecc71" font-family="Arial">Hybrid Thinking</text>
+  <line x1="950" y1="300" x2="950" y2="160" stroke="#00d4ff" stroke-width="1" opacity="0.5"/>
+  <text x="950" y="145" text-anchor="middle" font-size="10" fill="#00d4ff" font-family="Arial">Multimodal Native</text>
+  <!-- Title -->
+  <text x="600" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white">开放权重LLM架构演进全景</text>
+  <text x="600" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00d4ff">从GPT-2到Gemma 4的七年革命</text>
+</svg>
