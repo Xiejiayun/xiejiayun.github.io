@@ -1,38 +1,196 @@
-/* Dark mode table styles for post content */
-[data-theme="dark"] .post-container table,
-@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table {
+/* ============================================================
+   Post Content Table Styles — GitHub-flavored + purple accent
+   Works in both light and dark mode
+   ============================================================ */
+
+/* Wrapper for horizontal scroll on narrow screens */
+.post-container {
+    /* allow long tables to scroll instead of breaking layout */
+}
+
+.post-container table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1.5em 0;
+    font-size: 0.92em;
+    line-height: 1.55;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    /* reset any ugly defaults from parent rules */
+    background: #ffffff;
+}
+
+/* Hack: display:block on <table> breaks some things — use a
+   nested display:table so cells still align as a real table */
+.post-container table > thead,
+.post-container table > tbody,
+.post-container table > tfoot {
+    display: table;
+    width: 100%;
+    table-layout: auto;
+}
+
+.post-container table th,
+.post-container table td {
+    padding: 10px 14px;
+    border-top: 1px solid #d0d7de;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    vertical-align: top;
+    word-break: break-word;
+}
+
+.post-container table thead th {
+    background: linear-gradient(180deg, #f6f8fa 0%, #eef1f5 100%);
+    font-weight: 600;
+    color: #1f2328;
+    border-top: none;
+    border-bottom: 2px solid #8b5cf6; /* purple accent bar */
+    white-space: nowrap;
+}
+
+/* Zebra stripes */
+.post-container table tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+.post-container table tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+/* Hover highlight */
+.post-container table tbody tr {
+    transition: background-color 0.12s ease-in-out;
+}
+.post-container table tbody tr:hover {
+    background: #f3eefe !important; /* light purple */
+}
+
+/* Inline code in tables — make it pop a little */
+.post-container table code {
+    background: #eef1f5;
+    color: #8b5cf6;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+/* Centered columns — use <th align="center"> in source to trigger */
+.post-container table th[align="center"],
+.post-container table td[align="center"] {
+    text-align: center;
+}
+.post-container table th[align="right"],
+.post-container table td[align="right"] {
+    text-align: right;
+}
+
+/* ============================================================
+   Dark mode overrides
+   Supports:
+     - [data-theme="dark"]  (manual toggle)
+     - prefers-color-scheme: dark when user has not toggled
+   ============================================================ */
+
+[data-theme="dark"] .post-container table {
     background: rgba(8, 17, 35, 0.78) !important;
-    border-color: rgba(148, 197, 255, 0.18) !important;
-}}
+    border-color: rgba(148, 197, 255, 0.22) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
 
 [data-theme="dark"] .post-container table th,
-@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table th {
-    background: rgba(12, 24, 50, 0.9) !important;
-    border-color: rgba(148, 197, 255, 0.22) !important;
-    color: #eff4ff !important;
-}}
-
-[data-theme="dark"] .post-container table td,
-@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table td {
-    border-color: rgba(148, 197, 255, 0.15) !important;
+[data-theme="dark"] .post-container table td {
+    border-top-color: rgba(148, 197, 255, 0.15) !important;
     color: #c9d1d9 !important;
-}}
+}
 
-[data-theme="dark"] .post-container table tr,
-@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table tr {
+[data-theme="dark"] .post-container table thead th {
+    background: linear-gradient(180deg, rgba(20, 34, 66, 0.95) 0%, rgba(12, 24, 50, 0.95) 100%) !important;
+    color: #eff4ff !important;
+    border-bottom: 2px solid #a78bfa !important;
+}
+
+[data-theme="dark"] .post-container table tbody tr:nth-child(odd) {
     background: rgba(8, 17, 35, 0.78) !important;
-    border-color: rgba(148, 197, 255, 0.18) !important;
-}}
+}
+[data-theme="dark"] .post-container table tbody tr:nth-child(even) {
+    background: rgba(14, 26, 52, 0.85) !important;
+}
+[data-theme="dark"] .post-container table tbody tr:hover {
+    background: rgba(167, 139, 250, 0.12) !important;
+}
 
-[data-theme="dark"] .post-container table tr:hover,
-@media (prefers-color-scheme: dark) { :root:not([data-theme]) .post-container table tr:hover {
-    background: rgba(126, 190, 255, 0.1) !important;
-}}
+[data-theme="dark"] .post-container table code {
+    background: rgba(167, 139, 250, 0.12) !important;
+    color: #c4b5fd !important;
+    border-color: rgba(167, 139, 250, 0.25) !important;
+}
 
-/* Mermaid diagram dark mode background */
-[data-theme="dark"] pre.mermaid,
-@media (prefers-color-scheme: dark) { :root:not([data-theme]) pre.mermaid {
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) .post-container table {
+        background: rgba(8, 17, 35, 0.78) !important;
+        border-color: rgba(148, 197, 255, 0.22) !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+    :root:not([data-theme]) .post-container table th,
+    :root:not([data-theme]) .post-container table td {
+        border-top-color: rgba(148, 197, 255, 0.15) !important;
+        color: #c9d1d9 !important;
+    }
+    :root:not([data-theme]) .post-container table thead th {
+        background: linear-gradient(180deg, rgba(20, 34, 66, 0.95) 0%, rgba(12, 24, 50, 0.95) 100%) !important;
+        color: #eff4ff !important;
+        border-bottom: 2px solid #a78bfa !important;
+    }
+    :root:not([data-theme]) .post-container table tbody tr:nth-child(odd) {
+        background: rgba(8, 17, 35, 0.78) !important;
+    }
+    :root:not([data-theme]) .post-container table tbody tr:nth-child(even) {
+        background: rgba(14, 26, 52, 0.85) !important;
+    }
+    :root:not([data-theme]) .post-container table tbody tr:hover {
+        background: rgba(167, 139, 250, 0.12) !important;
+    }
+    :root:not([data-theme]) .post-container table code {
+        background: rgba(167, 139, 250, 0.12) !important;
+        color: #c4b5fd !important;
+        border-color: rgba(167, 139, 250, 0.25) !important;
+    }
+}
+
+/* ============================================================
+   Mermaid diagram dark-mode background (preserve existing rule)
+   ============================================================ */
+
+[data-theme="dark"] pre.mermaid {
     background: rgba(8, 17, 35, 0.78) !important;
     border-radius: 8px;
     padding: 16px;
-}}
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) pre.mermaid {
+        background: rgba(8, 17, 35, 0.78) !important;
+        border-radius: 8px;
+        padding: 16px;
+    }
+}
+
+/* ============================================================
+   Mobile: tighter padding, smaller font
+   ============================================================ */
+@media (max-width: 640px) {
+    .post-container table {
+        font-size: 0.86em;
+    }
+    .post-container table th,
+    .post-container table td {
+        padding: 8px 10px;
+    }
+}
