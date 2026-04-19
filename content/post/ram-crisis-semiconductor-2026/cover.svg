@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+  </pattern>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <!-- RAM chip visual -->
+  <rect x="280" y="130" width="240" height="120" rx="8" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="2"/>
+  <!-- Chip pins -->
+  <line x1="300" y1="130" x2="300" y2="115" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="330" y1="130" x2="330" y2="115" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="360" y1="130" x2="360" y2="115" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="390" y1="130" x2="390" y2="115" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="420" y1="130" x2="420" y2="115" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="450" y1="130" x2="450" y2="115" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="480" y1="130" x2="480" y2="115" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="300" y1="250" x2="300" y2="265" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="330" y1="250" x2="330" y2="265" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="360" y1="250" x2="360" y2="265" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="390" y1="250" x2="390" y2="265" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="420" y1="250" x2="420" y2="265" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="450" y1="250" x2="450" y2="265" stroke="#a78bfa" stroke-width="2"/>
+  <line x1="480" y1="250" x2="480" y2="265" stroke="#a78bfa" stroke-width="2"/>
+  <!-- Chip text -->
+  <text x="400" y="180" fill="#a78bfa" font-family="monospace" font-size="16" text-anchor="middle">DRAM</text>
+  <text x="400" y="200" fill="#fb7185" font-family="monospace" font-size="12" text-anchor="middle">供应缺口 40%</text>
+  <text x="400" y="220" fill="#94a3b8" font-family="monospace" font-size="10" text-anchor="middle">→ 2027</text>
+  <!-- Warning triangle -->
+  <polygon points="400,85 385,110 415,110" fill="none" stroke="#fb7185" stroke-width="2"/>
+  <text x="400" y="107" fill="#fb7185" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">!</text>
+  <!-- Supply-demand bars -->
+  <rect x="100" y="300" width="200" height="20" rx="4" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1"/>
+  <text x="200" y="314" fill="#34d399" font-family="monospace" font-size="10" text-anchor="middle">需求 ████████████████</text>
+  <rect x="100" y="330" width="120" height="20" rx="4" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1"/>
+  <text x="160" y="344" fill="#fbbf24" font-family="monospace" font-size="10" text-anchor="middle">供应 ████████</text>
+  <text x="100" y="370" fill="#94a3b8" font-family="sans-serif" font-size="10">仅满足 60% 需求 (Nikkei)</text>
+  <!-- GPU price arrow up -->
+  <text x="620" y="290" fill="#fb7185" font-family="monospace" font-size="12">GPU 价格 ↑</text>
+  <text x="620" y="310" fill="#fbbf24" font-family="monospace" font-size="12">数据中心延期 ↑</text>
+  <text x="620" y="330" fill="#a78bfa" font-family="monospace" font-size="12">RTX 3060 回归 ?</text>
+  <!-- Title -->
+  <text x="400" y="42" fill="#e2e8f0" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">全球内存危机与半导体变局</text>
+  <text x="400" y="68" fill="#94a3b8" font-family="sans-serif" font-size="14" text-anchor="middle">一场可能持续到2027年的供应链风暴</text>
+</svg>
