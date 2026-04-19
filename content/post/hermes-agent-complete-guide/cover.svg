@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22d3ee"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Caduceus hint, right side -->
+  <g opacity="0.08" transform="translate(930,90) scale(1.4)">
+    <line x1="50" y1="0" x2="50" y2="320" stroke="#a78bfa" stroke-width="3"/>
+    <path d="M20,50 Q50,80 80,50 Q110,20 80,50 Q50,80 20,50" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <path d="M20,110 Q50,140 80,110 Q110,80 80,110 Q50,140 20,110" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <path d="M20,170 Q50,200 80,170 Q110,140 80,170 Q50,200 20,170" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="35" cy="0" r="8" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+    <circle cx="65" cy="0" r="8" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+  </g>
+
+  <!-- Platform constellation -->
+  <g opacity="0.15">
+    <!-- Center agent node -->
+    <circle cx="280" cy="230" r="14" fill="#fbbf24"/>
+    <circle cx="280" cy="230" r="24" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.5"/>
+    <!-- platform orbits -->
+    <circle cx="140" cy="150" r="7" fill="#a78bfa"/>
+    <circle cx="160" cy="300" r="7" fill="#a78bfa"/>
+    <circle cx="120" cy="230" r="7" fill="#a78bfa"/>
+    <circle cx="420" cy="140" r="7" fill="#818cf8"/>
+    <circle cx="440" cy="240" r="7" fill="#818cf8"/>
+    <circle cx="400" cy="320" r="7" fill="#818cf8"/>
+    <circle cx="260" cy="100" r="7" fill="#22d3ee"/>
+    <circle cx="310" cy="360" r="7" fill="#22d3ee"/>
+    <!-- connections -->
+    <line x1="280" y1="230" x2="140" y2="150" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="280" y1="230" x2="160" y2="300" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="280" y1="230" x2="120" y2="230" stroke="#a78bfa" stroke-width="0.8"/>
+    <line x1="280" y1="230" x2="420" y2="140" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="280" y1="230" x2="440" y2="240" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="280" y1="230" x2="400" y2="320" stroke="#818cf8" stroke-width="0.8"/>
+    <line x1="280" y1="230" x2="260" y2="100" stroke="#22d3ee" stroke-width="0.8"/>
+    <line x1="280" y1="230" x2="310" y2="360" stroke="#22d3ee" stroke-width="0.8"/>
+  </g>
+
+  <!-- Meta tags -->
+  <text x="100" y="380" fill="#a78bfa" font-family="monospace" font-size="16" opacity="0.75">117 Docs · 47+ Tools · 15+ Messaging Platforms</text>
+  <text x="100" y="405" fill="#22d3ee" font-family="monospace" font-size="16" opacity="0.75">Self-Improving · Lives Anywhere · Cross-Platform</text>
+
+  <!-- Title -->
+  <text x="100" y="470" fill="url(#gold)" font-family="Arial,sans-serif" font-size="52" font-weight="bold">Hermes Agent ☤ 中文完全指南</text>
+  <text x="100" y="525" fill="#e5e7eb" font-family="Arial,sans-serif" font-size="30" font-weight="bold">117 篇官方文档浓缩成的一本使用手册</text>
+  <text x="100" y="570" fill="#9ca3af" font-family="Arial,sans-serif" font-size="20">安装 · 配置 · 工具 · 记忆 · 技能 · MCP · 跨平台 · 委派 · 沙箱</text>
+  <rect x="100" y="585" width="500" height="3" fill="url(#accent)" rx="1.5"/>
+</svg>
