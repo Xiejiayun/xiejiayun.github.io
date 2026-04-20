@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Robot body -->
+  <rect x="520" y="100" width="160" height="120" rx="10" fill="rgba(6,78,59,0.3)" stroke="#34d399" stroke-width="2"/>
+  <!-- Robot head -->
+  <rect x="550" y="50" width="100" height="60" rx="8" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="2"/>
+  <!-- Eyes -->
+  <circle cx="580" cy="80" r="10" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="620" cy="80" r="10" fill="#22d3ee" opacity="0.7"/>
+  <circle cx="580" cy="80" r="4" fill="#0f172a"/>
+  <circle cx="620" cy="80" r="4" fill="#0f172a"/>
+  <!-- Arms -->
+  <line x1="520" y1="140" x2="440" y2="200" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+  <line x1="680" y1="140" x2="760" y2="200" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+  <!-- Hands -->
+  <circle cx="440" cy="200" r="12" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <circle cx="760" cy="200" r="12" fill="none" stroke="#fbbf24" stroke-width="2"/>
+  <!-- Legs -->
+  <line x1="560" y1="220" x2="540" y2="320" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+  <line x1="640" y1="220" x2="660" y2="320" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+  <!-- Brain/AI connection -->
+  <path d="M600 50 L600 20 Q600 10 610 10 L700 10" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <rect x="700" y="0" width="120" height="30" rx="4" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1"/>
+  <text x="760" y="20" font-family="monospace" font-size="10" fill="#a78bfa" text-anchor="middle">WORLD MODEL</text>
+  <!-- Sim environment -->
+  <rect x="150" y="280" width="200" height="120" rx="6" fill="rgba(120,53,15,0.2)" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="250" y="310" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle">SIMULATION</text>
+  <text x="250" y="330" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">NVIDIA Omniverse</text>
+  <!-- Real world -->
+  <rect x="850" y="280" width="200" height="120" rx="6" fill="rgba(6,78,59,0.2)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="950" y="310" font-family="monospace" font-size="11" fill="#34d399" text-anchor="middle">REAL WORLD</text>
+  <text x="950" y="330" font-family="monospace" font-size="9" fill="#94a3b8" text-anchor="middle">Warehouse / Factory</text>
+  <!-- Arrow sim to real -->
+  <line x1="350" y1="340" x2="840" y2="340" stroke="#fb923c" stroke-width="2" stroke-dasharray="8,4"/>
+  <polygon points="840,333 855,340 840,347" fill="#fb923c"/>
+  <text x="595" y="365" font-family="monospace" font-size="10" fill="#fb923c" text-anchor="middle">Sim-to-Real Transfer</text>
+  <!-- Text -->
+  <text x="600" y="470" font-family="monospace" font-size="28" fill="#e2e8f0" text-anchor="middle" font-weight="bold">具身智能的ChatGPT时刻</text>
+  <text x="600" y="510" font-family="monospace" font-size="16" fill="#34d399" text-anchor="middle">基础模型 × 仿真迁移 × 世界模型</text>
+  <text x="600" y="545" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle">Embodied AI: From Simulation to Reality</text>
+</svg>

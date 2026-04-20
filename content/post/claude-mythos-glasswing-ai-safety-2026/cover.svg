@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Shield icon -->
+  <path d="M600 120 L720 180 L720 320 Q720 420 600 480 Q480 420 480 320 L480 180 Z" fill="none" stroke="#fb7185" stroke-width="3" opacity="0.8"/>
+  <path d="M600 160 L690 205 L690 310 Q690 390 600 440 Q510 390 510 310 L510 205 Z" fill="rgba(136,19,55,0.3)" stroke="none"/>
+  <!-- AI brain inside shield -->
+  <circle cx="600" cy="290" r="50" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.7"/>
+  <circle cx="580" cy="275" r="8" fill="#a78bfa" opacity="0.5"/>
+  <circle cx="620" cy="275" r="8" fill="#a78bfa" opacity="0.5"/>
+  <circle cx="600" cy="305" r="8" fill="#a78bfa" opacity="0.5"/>
+  <line x1="580" y1="275" x2="620" y2="275" stroke="#a78bfa" stroke-width="1" opacity="0.4"/>
+  <line x1="580" y1="275" x2="600" y2="305" stroke="#a78bfa" stroke-width="1" opacity="0.4"/>
+  <line x1="620" y1="275" x2="600" y2="305" stroke="#a78bfa" stroke-width="1" opacity="0.4"/>
+  <!-- Warning triangles -->
+  <polygon points="200,400 230,350 260,400" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.6"/>
+  <polygon points="940,400 970,350 1000,400" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.6"/>
+  <!-- Text -->
+  <text x="600" y="560" font-family="monospace" font-size="28" fill="#e2e8f0" text-anchor="middle" font-weight="bold">CLAUDE MYTHOS × PROJECT GLASSWING</text>
+  <text x="600" y="595" font-family="monospace" font-size="16" fill="#94a3b8" text-anchor="middle">AI安全的核武器时刻</text>
+</svg>
