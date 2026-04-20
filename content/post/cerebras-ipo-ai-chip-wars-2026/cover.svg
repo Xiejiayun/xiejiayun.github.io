@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="chipGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Wafer circle -->
+  <circle cx="600" cy="280" r="180" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="600" cy="280" r="160" fill="none" stroke="#22d3ee" stroke-width="0.5" opacity="0.3"/>
+  <!-- Chip grid on wafer -->
+  <g opacity="0.6">
+    <rect x="480" y="200" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#22d3ee" stroke-width="1"/>
+    <rect x="540" y="200" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#fbbf24" stroke-width="1"/>
+    <rect x="600" y="200" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#22d3ee" stroke-width="1"/>
+    <rect x="660" y="200" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#fbbf24" stroke-width="1"/>
+    <rect x="480" y="260" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#fbbf24" stroke-width="1"/>
+    <rect x="540" y="260" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#22d3ee" stroke-width="1"/>
+    <rect x="600" y="260" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#fbbf24" stroke-width="1"/>
+    <rect x="660" y="260" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#22d3ee" stroke-width="1"/>
+    <rect x="480" y="320" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#22d3ee" stroke-width="1"/>
+    <rect x="540" y="320" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#fbbf24" stroke-width="1"/>
+    <rect x="600" y="320" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#22d3ee" stroke-width="1"/>
+    <rect x="660" y="320" width="50" height="50" rx="2" fill="url(#chipGlow)" stroke="#fbbf24" stroke-width="1"/>
+  </g>
+  <!-- Connection lines -->
+  <line x1="200" y1="280" x2="420" y2="280" stroke="#22d3ee" stroke-width="1" opacity="0.3"/>
+  <line x1="780" y1="280" x2="1000" y2="280" stroke="#fbbf24" stroke-width="1" opacity="0.3"/>
+  <!-- Title -->
+  <text x="600" y="520" font-family="'Segoe UI',Arial,sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">AI CHIP WARS</text>
+  <text x="600" y="560" font-family="'Segoe UI',Arial,sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Cerebras IPO · Wafer-Scale · $35B Valuation</text>
+</svg>
