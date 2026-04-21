@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#2e1a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <text x="700" y="200" font-family="monospace" font-size="72" font-weight="bold" fill="#ff6600" opacity="0.15">140</text>
+  <text x="700" y="280" font-family="monospace" font-size="72" font-weight="bold" fill="#ff6600" opacity="0.25">万亿</text>
+  <text x="700" y="360" font-family="monospace" font-size="72" font-weight="bold" fill="#ff6600" opacity="0.35">Token</text>
+  <polyline points="100,500 200,480 300,470 400,440 500,400 600,350 700,280 800,200 900,120 1000,80 1100,50" fill="none" stroke="#ff6600" stroke-width="3" opacity="0.7"/>
+  <circle cx="1100" cy="50" r="6" fill="#ff6600"/>
+  <text x="60" y="270" font-family="sans-serif" font-size="44" font-weight="bold" fill="white">中国AI算力大爆发</text>
+  <text x="60" y="330" font-family="sans-serif" font-size="28" fill="#ff6600">日均140万亿Token的产业重构</text>
+  <rect x="60" y="350" width="300" height="3" fill="#ff6600" opacity="0.8"/>
+  <text x="60" y="400" font-family="sans-serif" font-size="16" fill="#888">同比增长40%+ · 字节利润暴跌70%</text>
+</svg>

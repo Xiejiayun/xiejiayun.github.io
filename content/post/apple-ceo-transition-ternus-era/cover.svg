@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <path d="M850 200 Q900 150 950 200 Q1000 250 950 300 Q920 330 900 350 Q880 330 850 300 Q800 250 850 200Z" fill="none" stroke="#aaa" stroke-width="2" opacity="0.4"/>
+  <line x1="600" y1="100" x2="600" y2="530" stroke="#333" stroke-width="1"/>
+  <circle cx="600" cy="200" r="5" fill="#4a9eff"/>
+  <circle cx="600" cy="300" r="5" fill="#4a9eff"/>
+  <circle cx="600" cy="400" r="5" fill="#4a9eff"/>
+  <text x="620" y="205" font-family="sans-serif" font-size="14" fill="#666">2011 Cook接手</text>
+  <text x="620" y="305" font-family="sans-serif" font-size="14" fill="#666">2026 权力交接</text>
+  <text x="620" y="405" font-family="sans-serif" font-size="14" fill="#4a9eff">Ternus时代</text>
+  <text x="60" y="280" font-family="sans-serif" font-size="46" font-weight="bold" fill="white">苹果CEO交接</text>
+  <text x="60" y="340" font-family="sans-serif" font-size="32" fill="#4a9eff">硬件复兴与AI豪赌</text>
+  <rect x="60" y="360" width="250" height="3" fill="#4a9eff" opacity="0.8"/>
+  <text x="60" y="410" font-family="sans-serif" font-size="18" fill="#888">Cook → Ternus · Srouji升任</text>
+</svg>
