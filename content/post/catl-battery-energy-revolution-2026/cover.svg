@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff88"/>
+      <stop offset="100%" style="stop-color:#00aa55"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#00ff88;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#00ff88;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <g stroke="#00ff8820" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/><line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/><line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+  <!-- Battery shape -->
+  <rect x="480" y="120" width="240" height="390" rx="20" fill="none" stroke="#00ff88" stroke-width="3"/>
+  <rect x="540" y="100" width="120" height="30" rx="10" fill="#00ff88" opacity="0.6"/>
+  <!-- Charge bars -->
+  <rect x="500" y="420" width="200" height="30" rx="5" fill="#00ff88" opacity="0.9"/>
+  <rect x="500" y="380" width="200" height="30" rx="5" fill="#00ff88" opacity="0.75"/>
+  <rect x="500" y="340" width="200" height="30" rx="5" fill="#00ff88" opacity="0.6"/>
+  <rect x="500" y="300" width="200" height="30" rx="5" fill="#00ff88" opacity="0.45"/>
+  <rect x="500" y="260" width="200" height="30" rx="5" fill="#00ff88" opacity="0.3"/>
+  <rect x="500" y="220" width="200" height="30" rx="5" fill="#00ff88" opacity="0.15"/>
+  <!-- Lightning bolt -->
+  <polygon points="590,150 560,310 590,310 570,380 640,270 610,270 630,150" fill="url(#bolt)" opacity="0.4"/>
+  <!-- Timer text -->
+  <text x="600" y="560" font-family="monospace" font-size="48" fill="#00ff88" text-anchor="middle" font-weight="bold">7 MIN</text>
+  <!-- Decorative circles -->
+  <circle cx="150" cy="150" r="60" fill="none" stroke="#00ff8830" stroke-width="2"/>
+  <circle cx="150" cy="150" r="40" fill="none" stroke="#00ff8850" stroke-width="1"/>
+  <circle cx="1050" cy="480" r="80" fill="none" stroke="#00ff8830" stroke-width="2"/>
+  <circle cx="1050" cy="480" r="50" fill="none" stroke="#00ff8850" stroke-width="1"/>
+  <!-- Energy wave -->
+  <path d="M0,530 Q150,490 300,530 Q450,570 600,530 Q750,490 900,530 Q1050,570 1200,530" fill="none" stroke="url(#glow)" stroke-width="2"/>
+</svg>

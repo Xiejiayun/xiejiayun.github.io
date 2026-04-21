@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#0a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Lock icon -->
+  <rect x="520" y="200" width="160" height="140" rx="10" fill="none" stroke="#00ccff" stroke-width="3"/>
+  <path d="M540,200 L540,160 A60,60 0 0 1 660,160 L660,200" fill="none" stroke="#00ccff" stroke-width="3"/>
+  <circle cx="600" cy="265" r="15" fill="#00ccff"/>
+  <rect x="596" y="270" width="8" height="30" rx="3" fill="#00ccff"/>
+  <!-- Shield check -->
+  <text x="600" y="130" font-family="monospace" font-size="18" fill="#00ccff80" text-anchor="middle">AES-128 ✓</text>
+  <!-- Quantum bits floating -->
+  <g opacity="0.4">
+    <text x="100" y="100" font-family="monospace" font-size="14" fill="#ff4444">|0⟩</text>
+    <text x="200" y="180" font-family="monospace" font-size="14" fill="#ff4444">|1⟩</text>
+    <text x="150" y="400" font-family="monospace" font-size="14" fill="#ff4444">|ψ⟩</text>
+    <text x="1000" y="120" font-family="monospace" font-size="14" fill="#ff4444">|0⟩+|1⟩</text>
+    <text x="1050" y="350" font-family="monospace" font-size="14" fill="#ff4444">|φ⟩</text>
+    <text x="900" y="500" font-family="monospace" font-size="14" fill="#ff4444">|ψ⟩</text>
+  </g>
+  <!-- Binary streams -->
+  <text x="50" y="550" font-family="monospace" font-size="11" fill="#00ccff20">01001010110101001010110101001011010100101011010100101101</text>
+  <text x="50" y="570" font-family="monospace" font-size="11" fill="#00ccff20">10110101001011010100101101010010110101001010110101001010</text>
+  <!-- Crossed out RSA -->
+  <g transform="translate(850,250)">
+    <text x="0" y="0" font-family="monospace" font-size="24" fill="#ff444480">RSA-2048</text>
+    <line x1="-10" y1="-10" x2="140" y2="5" stroke="#ff4444" stroke-width="3"/>
+  </g>
+  <g transform="translate(850,300)">
+    <text x="0" y="0" font-family="monospace" font-size="24" fill="#ff444480">ECC-256</text>
+    <line x1="-10" y1="-10" x2="120" y2="5" stroke="#ff4444" stroke-width="3"/>
+  </g>
+  <!-- Title area -->
+  <text x="600" y="480" font-family="monospace" font-size="36" fill="#00ccff" text-anchor="middle" font-weight="bold">2^128 ≫ 2^64</text>
+  <text x="600" y="530" font-family="sans-serif" font-size="20" fill="#00ccff60" text-anchor="middle">POST-QUANTUM SAFE</text>
+</svg>

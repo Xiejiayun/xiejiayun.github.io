@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a0a20"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8800"/>
+      <stop offset="100%" style="stop-color:#ff4400"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Revenue chart -->
+  <g transform="translate(100,80)">
+    <!-- Axis -->
+    <line x1="50" y1="400" x2="1000" y2="400" stroke="#ffffff30" stroke-width="1"/>
+    <line x1="50" y1="0" x2="50" y2="400" stroke="#ffffff30" stroke-width="1"/>
+    <!-- Grid -->
+    <line x1="50" y1="100" x2="1000" y2="100" stroke="#ffffff10" stroke-width="1"/>
+    <line x1="50" y1="200" x2="1000" y2="200" stroke="#ffffff10" stroke-width="1"/>
+    <line x1="50" y1="300" x2="1000" y2="300" stroke="#ffffff10" stroke-width="1"/>
+    <!-- Y labels -->
+    <text x="40" y="105" font-family="monospace" font-size="12" fill="#ffffff60" text-anchor="end">$30B</text>
+    <text x="40" y="205" font-family="monospace" font-size="12" fill="#ffffff60" text-anchor="end">$20B</text>
+    <text x="40" y="305" font-family="monospace" font-size="12" fill="#ffffff60" text-anchor="end">$10B</text>
+    <text x="40" y="405" font-family="monospace" font-size="12" fill="#ffffff60" text-anchor="end">$0</text>
+    <!-- Bars: Anthropic ARR growth -->
+    <rect x="150" y="360" width="60" height="40" rx="3" fill="#ff880060"/>
+    <text x="180" y="390" font-family="monospace" font-size="10" fill="#ff8800" text-anchor="middle">$1B</text>
+    <text x="180" y="420" font-family="monospace" font-size="10" fill="#ffffff40" text-anchor="middle">2024</text>
+    <rect x="300" y="280" width="60" height="120" rx="3" fill="#ff880080"/>
+    <text x="330" y="310" font-family="monospace" font-size="10" fill="#ff8800" text-anchor="middle">$5B</text>
+    <text x="330" y="420" font-family="monospace" font-size="10" fill="#ffffff40" text-anchor="middle">Q3'25</text>
+    <rect x="450" y="210" width="60" height="190" rx="3" fill="#ff8800a0"/>
+    <text x="480" y="240" font-family="monospace" font-size="10" fill="#ff8800" text-anchor="middle">$19B</text>
+    <text x="480" y="420" font-family="monospace" font-size="10" fill="#ffffff40" text-anchor="middle">Mar'26</text>
+    <rect x="600" y="100" width="60" height="300" rx="3" fill="url(#bar)"/>
+    <text x="630" y="90" font-family="monospace" font-size="14" fill="#ff8800" text-anchor="middle" font-weight="bold">$30B</text>
+    <text x="630" y="420" font-family="monospace" font-size="10" fill="#ffffff40" text-anchor="middle">Apr'26</text>
+    <!-- Arrow up -->
+    <text x="750" y="150" font-family="monospace" font-size="36" fill="#ff880060">↑58%</text>
+    <text x="750" y="190" font-family="monospace" font-size="14" fill="#ffffff40">in 30 days</text>
+  </g>
+  <!-- Amazon investment -->
+  <text x="900" y="520" font-family="monospace" font-size="48" fill="#ff440040" text-anchor="middle">$5B</text>
+  <text x="900" y="560" font-family="sans-serif" font-size="16" fill="#ffffff30" text-anchor="middle">Amazon Investment</text>
+</svg>
