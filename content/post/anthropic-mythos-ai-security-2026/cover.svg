@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <filter id="glow1"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+  <circle cx="600" cy="280" r="120" fill="none" stroke="#ff4444" stroke-width="2" opacity="0.6" filter="url(#glow1)"/>
+  <circle cx="600" cy="280" r="80" fill="none" stroke="#ff6666" stroke-width="1.5" opacity="0.4"/>
+  <line x1="480" y1="280" x2="720" y2="280" stroke="#ff4444" stroke-width="1" opacity="0.3"/>
+  <line x1="600" y1="160" x2="600" y2="400" stroke="#ff4444" stroke-width="1" opacity="0.3"/>
+  <text x="600" y="280" text-anchor="middle" fill="#ff4444" font-size="48" font-family="monospace" filter="url(#glow1)">⚠</text>
+  <text x="600" y="480" text-anchor="middle" fill="#ffffff" font-size="36" font-family="sans-serif" font-weight="bold">Mythos: AI安全的新范式</text>
+  <text x="600" y="520" text-anchor="middle" fill="#888888" font-size="18" font-family="sans-serif">当AI强大到不敢公开发布</text>
+</svg>

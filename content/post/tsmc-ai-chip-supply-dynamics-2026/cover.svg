@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/>
+      <stop offset="100%" style="stop-color:#2e1a0a"/>
+    </linearGradient>
+    <filter id="glow4"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <rect x="350" y="180" width="500" height="200" rx="3" fill="none" stroke="#ff8800" stroke-width="2" filter="url(#glow4)"/>
+  <line x1="350" y1="230" x2="850" y2="230" stroke="#ff8800" stroke-width="0.5" opacity="0.3"/>
+  <line x1="350" y1="280" x2="850" y2="280" stroke="#ff8800" stroke-width="0.5" opacity="0.3"/>
+  <line x1="350" y1="330" x2="850" y2="330" stroke="#ff8800" stroke-width="0.5" opacity="0.3"/>
+  <rect x="380" y="250" width="60" height="120" fill="#ff8800" opacity="0.2"/>
+  <rect x="460" y="220" width="60" height="150" fill="#ff8800" opacity="0.3"/>
+  <rect x="540" y="190" width="60" height="180" fill="#ff8800" opacity="0.4"/>
+  <rect x="620" y="210" width="60" height="160" fill="#ff8800" opacity="0.35"/>
+  <rect x="700" y="195" width="60" height="175" fill="#ff8800" opacity="0.45"/>
+  <text x="600" y="480" text-anchor="middle" fill="#ffffff" font-size="36" font-family="sans-serif" font-weight="bold">TSMC与AI芯片博弈</text>
+  <text x="600" y="520" text-anchor="middle" fill="#888888" font-size="18" font-family="sans-serif">供需失衡下的产业重构</text>
+</svg>
