@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0221"/>
+      <stop offset="50%" style="stop-color:#1a0533"/>
+      <stop offset="100%" style="stop-color:#2d1b69"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7b2ff7;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ff2d55;stop-opacity:0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <circle cx="400" cy="200" r="120" fill="none" stroke="url(#glow)" stroke-width="2" opacity="0.5"/>
+  <circle cx="400" cy="200" r="80" fill="none" stroke="url(#glow)" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="400" cy="200" r="40" fill="url(#glow)" opacity="0.3"/>
+  <line x1="400" y1="80" x2="400" y2="320" stroke="#7b2ff7" stroke-width="0.5" opacity="0.3"/>
+  <line x1="280" y1="200" x2="520" y2="200" stroke="#7b2ff7" stroke-width="0.5" opacity="0.3"/>
+  <text x="400" y="180" text-anchor="middle" fill="#fff" font-family="monospace" font-size="28" font-weight="bold">MYTHOS</text>
+  <text x="400" y="215" text-anchor="middle" fill="#c084fc" font-family="monospace" font-size="16">PROJECT GLASSWING</text>
+  <text x="400" y="250" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="12">271 ZERO-DAYS · TOO DANGEROUS TO RELEASE</text>
+  <rect x="50" y="350" width="120" height="4" rx="2" fill="#7b2ff7" opacity="0.6"/>
+  <rect x="630" y="350" width="120" height="4" rx="2" fill="#ff2d55" opacity="0.6"/>
+</svg>
