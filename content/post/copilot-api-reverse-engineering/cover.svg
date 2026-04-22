@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#1a1e2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="120" text-anchor="middle" fill="#58a6ff" font-family="monospace" font-size="18" opacity="0.6">REVERSE ENGINEERING</text>
+  <text x="400" y="180" text-anchor="middle" fill="#f0f6fc" font-family="sans-serif" font-weight="bold" font-size="42">Copilot API</text>
+  <text x="400" y="230" text-anchor="middle" fill="#8b949e" font-family="sans-serif" font-size="20">GitHub Copilot → OpenAI / Anthropic 兼容代理</text>
+  <text x="400" y="290" text-anchor="middle" fill="#3fb950" font-family="monospace" font-size="16">OAuth → Device Code → Copilot Token → API Proxy</text>
+  <text x="400" y="340" text-anchor="middle" fill="#484f58" font-family="monospace" font-size="14">Hono · Bun · SSE · Protocol Translation</text>
+</svg>
