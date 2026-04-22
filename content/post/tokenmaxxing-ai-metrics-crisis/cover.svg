@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/><stop offset="100%" style="stop-color:#0a0a1a"/>
+    </linearGradient>
+    <filter id="glow4"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <!-- Fake chart going up -->
+  <g transform="translate(150,100)">
+    <line x1="0" y1="350" x2="900" y2="350" stroke="#333" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="350" stroke="#333" stroke-width="2"/>
+    <!-- "Real value" line - flat -->
+    <polyline points="0,300 150,280 300,260 450,250 600,240 750,230 900,220" fill="none" stroke="#4488ff" stroke-width="2.5" stroke-dasharray="8,4"/>
+    <!-- "Token usage" line - exponential -->
+    <polyline points="0,300 150,250 300,180 450,120 600,60 750,20 900,-10" fill="none" stroke="#ff4444" stroke-width="3"/>
+    <!-- Gap area -->
+    <polygon points="300,260 450,250 600,240 750,230 900,220 900,-10 750,20 600,60 450,120 300,180" fill="#ff4444" fill-opacity="0.1"/>
+    <!-- Labels -->
+    <text x="910" y="-5" fill="#ff4444" font-family="monospace" font-size="14">Token消耗 ↑</text>
+    <text x="910" y="225" fill="#4488ff" font-family="monospace" font-size="14">实际价值 →</text>
+    <text x="500" y="150" fill="#ff8844" font-family="Arial" font-size="20" text-anchor="middle" opacity="0.7">GAP</text>
+    <!-- Y axis label -->
+    <text x="-10" y="370" fill="#666" font-family="monospace" font-size="12">0</text>
+    <text x="900" y="370" fill="#666" font-family="monospace" font-size="12">2026</text>
+  </g>
+  <!-- Title -->
+  <text x="600" y="540" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="bold">Tokenmaxxing</text>
+  <text x="600" y="575" text-anchor="middle" fill="#ff4444" font-family="Arial, sans-serif" font-size="18">WHEN METRICS BECOME TARGETS · AI ROI CRISIS</text>
+</svg>

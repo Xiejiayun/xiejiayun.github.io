@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1520"/><stop offset="100%" style="stop-color:#151a0a"/>
+    </linearGradient>
+    <filter id="glow5"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <!-- Wafer (circle) on left -->
+  <g transform="translate(350,280)">
+    <circle cx="0" cy="0" r="120" fill="none" stroke="#4488ff" stroke-width="2" filter="url(#glow5)"/>
+    <!-- Dies on wafer -->
+    <g fill="#223366" stroke="#4488ff" stroke-width="0.5">
+      <rect x="-90" y="-90" width="40" height="40" rx="2"/>
+      <rect x="-45" y="-90" width="40" height="40" rx="2"/>
+      <rect x="0" y="-90" width="40" height="40" rx="2"/>
+      <rect x="-90" y="-45" width="40" height="40" rx="2"/>
+      <rect x="-45" y="-45" width="40" height="40" rx="2"/>
+      <rect x="0" y="-45" width="40" height="40" rx="2"/>
+      <rect x="45" y="-45" width="40" height="40" rx="2"/>
+      <rect x="-90" y="0" width="40" height="40" rx="2"/>
+      <rect x="-45" y="0" width="40" height="40" rx="2"/>
+      <rect x="0" y="0" width="40" height="40" rx="2"/>
+      <rect x="45" y="0" width="40" height="40" rx="2"/>
+      <rect x="-90" y="45" width="40" height="40" rx="2"/>
+      <rect x="-45" y="45" width="40" height="40" rx="2"/>
+      <rect x="0" y="45" width="40" height="40" rx="2"/>
+    </g>
+    <text x="0" y="155" text-anchor="middle" fill="#4488ff" font-family="monospace" font-size="14">WLP ~78%</text>
+  </g>
+  <!-- Arrow -->
+  <g stroke="#ffaa00" stroke-width="2" filter="url(#glow5)">
+    <line x1="520" y1="280" x2="630" y2="280"/>
+    <polygon points="630,274 645,280 630,286" fill="#ffaa00"/>
+  </g>
+  <!-- Panel (rectangle) on right -->
+  <g transform="translate(850,280)">
+    <rect x="-140" y="-120" width="280" height="240" fill="none" stroke="#00cc66" stroke-width="2" rx="5" filter="url(#glow5)"/>
+    <!-- More dies fit -->
+    <g fill="#1a3322" stroke="#00cc66" stroke-width="0.5">
+      <rect x="-125" y="-105" width="38" height="38" rx="2"/><rect x="-82" y="-105" width="38" height="38" rx="2"/>
+      <rect x="-39" y="-105" width="38" height="38" rx="2"/><rect x="4" y="-105" width="38" height="38" rx="2"/>
+      <rect x="47" y="-105" width="38" height="38" rx="2"/><rect x="90" y="-105" width="38" height="38" rx="2"/>
+      <rect x="-125" y="-62" width="38" height="38" rx="2"/><rect x="-82" y="-62" width="38" height="38" rx="2"/>
+      <rect x="-39" y="-62" width="38" height="38" rx="2"/><rect x="4" y="-62" width="38" height="38" rx="2"/>
+      <rect x="47" y="-62" width="38" height="38" rx="2"/><rect x="90" y="-62" width="38" height="38" rx="2"/>
+      <rect x="-125" y="-19" width="38" height="38" rx="2"/><rect x="-82" y="-19" width="38" height="38" rx="2"/>
+      <rect x="-39" y="-19" width="38" height="38" rx="2"/><rect x="4" y="-19" width="38" height="38" rx="2"/>
+      <rect x="47" y="-19" width="38" height="38" rx="2"/><rect x="90" y="-19" width="38" height="38" rx="2"/>
+      <rect x="-125" y="24" width="38" height="38" rx="2"/><rect x="-82" y="24" width="38" height="38" rx="2"/>
+      <rect x="-39" y="24" width="38" height="38" rx="2"/><rect x="4" y="24" width="38" height="38" rx="2"/>
+      <rect x="47" y="24" width="38" height="38" rx="2"/><rect x="90" y="24" width="38" height="38" rx="2"/>
+      <rect x="-125" y="67" width="38" height="38" rx="2"/><rect x="-82" y="67" width="38" height="38" rx="2"/>
+      <rect x="-39" y="67" width="38" height="38" rx="2"/><rect x="4" y="67" width="38" height="38" rx="2"/>
+      <rect x="47" y="67" width="38" height="38" rx="2"/><rect x="90" y="67" width="38" height="38" rx="2"/>
+    </g>
+    <text x="0" y="150" text-anchor="middle" fill="#00cc66" font-family="monospace" font-size="14">PLP ~95%+</text>
+  </g>
+  <!-- Title -->
+  <text x="600" y="540" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="38" font-weight="bold">芯片封装革命</text>
+  <text x="600" y="575" text-anchor="middle" fill="#ffaa00" font-family="Arial, sans-serif" font-size="18">WAFER → PANEL · GLASS SUBSTRATE · CHIPLET ERA</text>
+</svg>
