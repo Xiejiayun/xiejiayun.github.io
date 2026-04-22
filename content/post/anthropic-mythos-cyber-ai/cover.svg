@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1c1917"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb7185"/>
+      <stop offset="100%" stop-color="#e11d48"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Shield shape -->
+  <path d="M900,150 L1000,200 L1000,350 L900,420 L800,350 L800,200 Z" fill="none" stroke="#fb7185" stroke-width="2" opacity="0.3"/>
+  <path d="M900,180 L970,215 L970,330 L900,380 L830,330 L830,215 Z" fill="rgba(136,19,55,0.2)" stroke="#fb7185" stroke-width="1" opacity="0.5"/>
+  <!-- Lock icon in shield -->
+  <rect x="882" y="270" width="36" height="28" rx="4" fill="none" stroke="#fb7185" stroke-width="1.5" opacity="0.6"/>
+  <path d="M890,270 L890,258 Q890,245 900,245 Q910,245 910,258 L910,270" fill="none" stroke="#fb7185" stroke-width="1.5" opacity="0.6"/>
+  <!-- Binary rain effect -->
+  <g font-family="monospace" font-size="10" fill="#fb7185" opacity="0.1">
+    <text x="150" y="100">01001101</text>
+    <text x="300" y="150">10110100</text>
+    <text x="200" y="200">01101001</text>
+    <text x="350" y="250">11010010</text>
+    <text x="250" y="400">01001110</text>
+    <text x="400" y="350">10010110</text>
+  </g>
+  <!-- Title -->
+  <text x="100" y="300" font-family="sans-serif" font-size="40" fill="#f8fafc" font-weight="bold">Anthropic Mythos</text>
+  <text x="100" y="355" font-family="sans-serif" font-size="26" fill="#94a3b8">当AI学会攻防，网络安全规则被改写</text>
+  <rect x="100" y="385" width="160" height="3" fill="#fb7185" rx="1"/>
+  <rect x="100" y="420" width="90" height="28" rx="14" fill="rgba(136,19,55,0.2)" stroke="#fb7185" stroke-width="1"/>
+  <text x="145" y="438" font-family="sans-serif" font-size="12" fill="#fb7185" text-anchor="middle">AI安全</text>
+  <rect x="210" y="420" width="100" height="28" rx="14" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="260" y="438" font-family="sans-serif" font-size="12" fill="#06b6d4" text-anchor="middle">网络安全</text>
+</svg>

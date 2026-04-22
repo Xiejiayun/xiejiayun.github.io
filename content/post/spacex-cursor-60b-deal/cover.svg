@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid -->
+  <g opacity="0.08">
+    <line x1="0" y1="0" x2="0" y2="630" stroke="#94a3b8" stroke-width="0.5" transform="translate(60,0)" />
+    <line x1="0" y1="0" x2="0" y2="630" stroke="#94a3b8" stroke-width="0.5" transform="translate(120,0)" />
+    <line x1="0" y1="0" x2="0" y2="630" stroke="#94a3b8" stroke-width="0.5" transform="translate(180,0)" />
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="#94a3b8" stroke-width="0.5" transform="translate(0,60)" />
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="#94a3b8" stroke-width="0.5" transform="translate(0,120)" />
+  </g>
+  <!-- Rocket trail -->
+  <path d="M200,500 Q400,300 500,200 Q550,150 600,120" stroke="url(#accent)" stroke-width="3" fill="none" opacity="0.6"/>
+  <circle cx="600" cy="120" r="8" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="600" cy="120" r="20" fill="#06b6d4" opacity="0.15"/>
+  <!-- Code brackets -->
+  <text x="800" y="200" font-family="monospace" font-size="120" fill="#8b5cf6" opacity="0.15">{}</text>
+  <!-- Dollar sign -->
+  <text x="900" y="400" font-family="monospace" font-size="80" fill="#fbbf24" opacity="0.1">$60B</text>
+  <!-- Title -->
+  <text x="100" y="320" font-family="sans-serif" font-size="42" fill="#f8fafc" font-weight="bold">SpaceX 600亿美元收购Cursor</text>
+  <text x="100" y="380" font-family="sans-serif" font-size="28" fill="#94a3b8">AI编程工具为何成为战略级资产？</text>
+  <!-- Bottom accent line -->
+  <rect x="100" y="420" width="200" height="3" fill="url(#accent)" rx="1"/>
+  <!-- Tags -->
+  <rect x="100" y="460" width="90" height="30" rx="15" fill="rgba(6,182,212,0.15)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="145" y="480" font-family="sans-serif" font-size="13" fill="#06b6d4" text-anchor="middle">AI编程</text>
+  <rect x="210" y="460" width="90" height="30" rx="15" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="255" y="480" font-family="sans-serif" font-size="13" fill="#8b5cf6" text-anchor="middle">SpaceX</text>
+</svg>
