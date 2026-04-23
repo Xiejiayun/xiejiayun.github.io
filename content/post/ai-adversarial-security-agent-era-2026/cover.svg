@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0000"/>
+      <stop offset="50%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#000a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <!-- Shield icon -->
+  <path d="M600 140 L720 200 L720 340 L600 420 L480 340 L480 200 Z" fill="none" stroke="#ff4444" stroke-width="3" opacity="0.8"/>
+  <path d="M600 180 L690 225 L690 325 L600 390 L510 325 L510 225 Z" fill="none" stroke="#ff6666" stroke-width="1" opacity="0.4"/>
+  <!-- Exclamation mark -->
+  <text x="600" y="310" text-anchor="middle" fill="#ff4444" font-family="sans-serif" font-size="80" font-weight="bold">!</text>
+  <!-- Attack vectors -->
+  <line x1="100" y1="100" x2="480" y2="240" stroke="#ff4444" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+  <line x1="1100" y1="100" x2="720" y2="240" stroke="#ff4444" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+  <line x1="100" y1="500" x2="480" y2="340" stroke="#ff4444" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+  <line x1="1100" y1="500" x2="720" y2="340" stroke="#ff4444" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+  <!-- Attack labels -->
+  <text x="100" y="90" fill="#ff6666" font-family="monospace" font-size="13">Prompt Injection</text>
+  <text x="950" y="90" fill="#ff6666" font-family="monospace" font-size="13">Tool Poisoning</text>
+  <text x="80" y="520" fill="#ff6666" font-family="monospace" font-size="13">Context Manipulation</text>
+  <text x="940" y="520" fill="#ff6666" font-family="monospace" font-size="13">Memory Corruption</text>
+  <!-- Title -->
+  <text x="600" y="60" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="32" font-weight="bold">AI Agent的对抗安全危机</text>
+  <text x="600" y="530" text-anchor="middle" fill="#888888" font-family="sans-serif" font-size="16">当Agent遇到恶意环境</text>
+</svg>

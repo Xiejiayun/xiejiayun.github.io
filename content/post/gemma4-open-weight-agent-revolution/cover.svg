@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1a0a"/>
+      <stop offset="100%" style="stop-color:#1a2a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <!-- Gemma logo area -->
+  <circle cx="600" cy="280" r="150" fill="none" stroke="#4285f4" stroke-width="2" opacity="0.4"/>
+  <circle cx="600" cy="280" r="100" fill="none" stroke="#ea4335" stroke-width="2" opacity="0.4"/>
+  <circle cx="600" cy="280" r="50" fill="none" stroke="#fbbc05" stroke-width="2" opacity="0.6"/>
+  <text x="600" y="290" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="32" font-weight="bold">Gemma 4</text>
+  <!-- Tool icons around -->
+  <text x="380" y="200" text-anchor="middle" fill="#34a853" font-family="monospace" font-size="16">🔧 Tool Use</text>
+  <text x="820" y="200" text-anchor="middle" fill="#4285f4" font-family="monospace" font-size="16">🖥️ Local Deploy</text>
+  <text x="380" y="400" text-anchor="middle" fill="#ea4335" font-family="monospace" font-size="16">🤖 Agent Mode</text>
+  <text x="820" y="400" text-anchor="middle" fill="#fbbc05" font-family="monospace" font-size="16">⚡ RTX Accel</text>
+  <!-- Connecting lines -->
+  <line x1="440" y1="200" x2="550" y2="260" stroke="#34a853" stroke-width="1" opacity="0.3"/>
+  <line x1="760" y1="200" x2="650" y2="260" stroke="#4285f4" stroke-width="1" opacity="0.3"/>
+  <line x1="440" y1="390" x2="550" y2="310" stroke="#ea4335" stroke-width="1" opacity="0.3"/>
+  <line x1="760" y1="390" x2="650" y2="310" stroke="#fbbc05" stroke-width="1" opacity="0.3"/>
+  <!-- Title -->
+  <text x="600" y="70" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="32" font-weight="bold">开放权重模型的Agent化转型</text>
+  <text x="600" y="540" text-anchor="middle" fill="#666666" font-family="sans-serif" font-size="16">从"能跑就行"到"能干活的Agent"</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a2e"/>
+      <stop offset="50%" style="stop-color:#1a1a4e"/>
+      <stop offset="100%" style="stop-color:#0d0d35"/>
+    </linearGradient>
+    <linearGradient id="chip1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4aa"/>
+      <stop offset="100%" style="stop-color:#0088ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+  <!-- Circuit lines -->
+  <g stroke="#00d4aa" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="100" x2="400" y2="100"/><line x1="400" y1="100" x2="400" y2="300"/>
+    <line x1="800" y1="50" x2="800" y2="250"/><line x1="800" y1="250" x2="1200" y2="250"/>
+    <line x1="200" y1="400" x2="600" y2="400"/><line x1="600" y1="400" x2="600" y2="580"/>
+    <line x1="100" y1="500" x2="1100" y2="500"/>
+  </g>
+  <!-- Chip 1 - Google -->
+  <rect x="200" y="180" width="180" height="180" rx="10" fill="none" stroke="url(#chip1)" stroke-width="3"/>
+  <text x="290" y="280" text-anchor="middle" fill="#00d4aa" font-family="monospace" font-size="28" font-weight="bold">TPU</text>
+  <text x="290" y="310" text-anchor="middle" fill="#00d4aa" font-family="monospace" font-size="14">v6+</text>
+  <!-- Chip 2 - NVIDIA -->
+  <rect x="510" y="180" width="180" height="180" rx="10" fill="none" stroke="#76b900" stroke-width="3"/>
+  <text x="600" y="275" text-anchor="middle" fill="#76b900" font-family="monospace" font-size="22" font-weight="bold">NVIDIA</text>
+  <text x="600" y="310" text-anchor="middle" fill="#76b900" font-family="monospace" font-size="14">B200/GB300</text>
+  <!-- Chip 3 - Tesla -->
+  <rect x="820" y="180" width="180" height="180" rx="10" fill="none" stroke="#e82127" stroke-width="3"/>
+  <text x="910" y="275" text-anchor="middle" fill="#e82127" font-family="monospace" font-size="22" font-weight="bold">Tesla</text>
+  <text x="910" y="310" text-anchor="middle" fill="#e82127" font-family="monospace" font-size="14">AI5</text>
+  <!-- VS symbols -->
+  <text x="445" y="280" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold">⚡</text>
+  <text x="755" y="280" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold">⚡</text>
+  <!-- Title -->
+  <text x="600" y="80" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="36" font-weight="bold">Agentic时代的AI芯片战争</text>
+  <!-- Subtitle -->
+  <text x="600" y="460" text-anchor="middle" fill="#888888" font-family="sans-serif" font-size="18">Google TPU · NVIDIA GPU · Tesla Custom Silicon</text>
+  <!-- Decorative dots -->
+  <circle cx="290" cy="160" r="4" fill="#00d4aa"/><circle cx="310" cy="160" r="4" fill="#00d4aa"/>
+  <circle cx="270" cy="160" r="4" fill="#00d4aa"/>
+  <circle cx="600" cy="160" r="4" fill="#76b900"/><circle cx="620" cy="160" r="4" fill="#76b900"/>
+  <circle cx="580" cy="160" r="4" fill="#76b900"/>
+  <circle cx="910" cy="160" r="4" fill="#e82127"/><circle cx="930" cy="160" r="4" fill="#e82127"/>
+  <circle cx="890" cy="160" r="4" fill="#e82127"/>
+</svg>
