@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <!-- Neural network nodes -->
+  <g fill="none" stroke="#4285f4" stroke-width="1.5" opacity="0.3">
+    <circle cx="200" cy="200" r="40"/>
+    <circle cx="200" cy="350" r="40"/>
+    <circle cx="200" cy="500" r="40"/>
+    <circle cx="500" cy="250" r="40"/>
+    <circle cx="500" cy="400" r="40"/>
+    <circle cx="800" cy="315" r="50"/>
+  </g>
+  <g stroke="#4285f4" stroke-width="1" opacity="0.2">
+    <line x1="240" y1="200" x2="460" y2="250"/>
+    <line x1="240" y1="200" x2="460" y2="400"/>
+    <line x1="240" y1="350" x2="460" y2="250"/>
+    <line x1="240" y1="350" x2="460" y2="400"/>
+    <line x1="240" y1="500" x2="460" y2="250"/>
+    <line x1="240" y1="500" x2="460" y2="400"/>
+    <line x1="540" y1="250" x2="750" y2="315"/>
+    <line x1="540" y1="400" x2="750" y2="315"/>
+  </g>
+  <!-- TPU chip representation -->
+  <rect x="760" y="275" width="80" height="80" rx="8" fill="#4285f4" opacity="0.8"/>
+  <text x="800" y="322" text-anchor="middle" fill="#ffffff" font-family="monospace" font-size="20" font-weight="bold">TPU</text>
+  <!-- Orbiting agents -->
+  <g opacity="0.6">
+    <circle cx="800" cy="150" r="25" fill="none" stroke="#34a853" stroke-width="2"/>
+    <text x="800" y="155" text-anchor="middle" fill="#34a853" font-family="monospace" font-size="11">Agent</text>
+    <circle cx="950" cy="250" r="25" fill="none" stroke="#fbbc04" stroke-width="2"/>
+    <text x="950" y="255" text-anchor="middle" fill="#fbbc04" font-family="monospace" font-size="11">Agent</text>
+    <circle cx="950" cy="400" r="25" fill="none" stroke="#ea4335" stroke-width="2"/>
+    <text x="950" y="405" text-anchor="middle" fill="#ea4335" font-family="monospace" font-size="11">Agent</text>
+    <circle cx="800" cy="490" r="25" fill="none" stroke="#4285f4" stroke-width="2"/>
+    <text x="800" y="495" text-anchor="middle" fill="#4285f4" font-family="monospace" font-size="11">Agent</text>
+  </g>
+  <!-- Orbit path -->
+  <ellipse cx="800" cy="315" rx="180" ry="180" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.15" stroke-dasharray="5,5"/>
+  <!-- Title -->
+  <text x="600" y="570" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="bold" opacity="0.9">Google TPU v7 × Agentic Era</text>
+  <text x="600" y="605" text-anchor="middle" fill="#4285f4" font-family="monospace" font-size="14" opacity="0.7">CUSTOM SILICON FOR THE AGENT PARADIGM</text>
+</svg>

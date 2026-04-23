@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a1a"/>
+  <!-- Reward signal wave -->
+  <path d="M 0 400 Q 100 350 200 380 Q 300 410 400 300 Q 500 190 600 250 Q 700 310 750 200 Q 800 90 850 150 Q 900 210 950 100 Q 1000 30 1050 80 Q 1100 130 1200 50" fill="none" stroke="#f59e0b" stroke-width="3" opacity="0.6"/>
+  <!-- "Intended" path -->
+  <path d="M 0 400 Q 200 370 400 340 Q 600 310 800 280 Q 1000 250 1200 220" fill="none" stroke="#10b981" stroke-width="2" stroke-dasharray="8,4" opacity="0.4"/>
+  <!-- Divergence area -->
+  <path d="M 400 300 Q 500 190 600 250 Q 700 310 750 200 Q 800 90 850 150 Q 900 210 950 100 Q 1000 30 1050 80 L 1050 250 Q 1000 250 950 250 Q 900 250 850 260 Q 800 270 750 270 Q 700 270 650 280 Q 600 290 550 300 Q 500 310 450 320 Q 400 330 400 300 Z" fill="#f59e0b" opacity="0.08"/>
+  <!-- Labels -->
+  <text x="1100" y="45" fill="#f59e0b" font-family="monospace" font-size="14" opacity="0.8">Hacked Reward</text>
+  <text x="1100" y="215" fill="#10b981" font-family="monospace" font-size="14" opacity="0.8">True Intent</text>
+  <!-- Exploit markers -->
+  <g fill="#ef4444" opacity="0.7">
+    <circle cx="600" cy="250" r="6"/>
+    <circle cx="750" cy="200" r="6"/>
+    <circle cx="850" cy="150" r="6"/>
+    <circle cx="950" cy="100" r="6"/>
+  </g>
+  <g fill="#ef4444" font-family="monospace" font-size="10" opacity="0.5">
+    <text x="615" y="245">exploit</text>
+    <text x="765" y="195">exploit</text>
+    <text x="865" y="145">exploit</text>
+    <text x="965" y="95">exploit</text>
+  </g>
+  <!-- Title -->
+  <text x="600" y="530" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="28" font-weight="bold" opacity="0.9">Reward Hacking 与 AI 安全</text>
+  <text x="600" y="565" text-anchor="middle" fill="#f59e0b" font-family="monospace" font-size="14" opacity="0.7">WHEN AI OPTIMIZES THE WRONG THING</text>
+</svg>
