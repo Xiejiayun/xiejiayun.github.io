@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <!-- Quantum orbits -->
+  <ellipse cx="600" cy="300" rx="200" ry="80" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.3" transform="rotate(-20,600,300)"/>
+  <ellipse cx="600" cy="300" rx="200" ry="80" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.3" transform="rotate(20,600,300)"/>
+  <ellipse cx="600" cy="300" rx="200" ry="80" fill="none" stroke="#34d399" stroke-width="1" opacity="0.3" transform="rotate(60,600,300)"/>
+  <!-- Center nucleus -->
+  <circle cx="600" cy="300" r="30" fill="#22d3ee" opacity="0.2"/>
+  <circle cx="600" cy="300" r="15" fill="#22d3ee" opacity="0.4"/>
+  <!-- Electrons -->
+  <circle cx="420" cy="260" r="6" fill="#a78bfa" opacity="0.8"/>
+  <circle cx="780" cy="340" r="6" fill="#22d3ee" opacity="0.8"/>
+  <circle cx="650" cy="210" r="6" fill="#34d399" opacity="0.8"/>
+  <!-- Lock broken -->
+  <rect x="560" y="400" width="80" height="60" rx="5" fill="none" stroke="#ef4444" stroke-width="2" opacity="0.5"/>
+  <path d="M578 400 L578 385 Q578 370 600 370 Q622 370 622 385 L622 400" fill="none" stroke="#ef4444" stroke-width="2" opacity="0.5"/>
+  <!-- Crack in lock -->
+  <line x1="600" y1="400" x2="600" y2="460" stroke="#ef4444" stroke-width="2" opacity="0.3" stroke-dasharray="3,3"/>
+  <!-- Binary rain -->
+  <text x="150" y="150" font-family="monospace" font-size="10" fill="#22d3ee" opacity="0.15">01001101 01001100</text>
+  <text x="800" y="500" font-family="monospace" font-size="10" fill="#a78bfa" opacity="0.15">10110010 01101011</text>
+  <!-- Title -->
+  <text x="600" y="540" text-anchor="middle" font-family="system-ui" font-size="28" fill="white" font-weight="bold" opacity="0.9">量子安全军备竞赛</text>
+  <text x="600" y="575" text-anchor="middle" font-family="system-ui" font-size="16" fill="#22d3ee" opacity="0.7">勒索软件已开始使用后量子加密</text>
+</svg>

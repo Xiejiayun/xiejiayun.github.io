@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <!-- Left brain (DeepSeek) -->
+  <circle cx="350" cy="280" r="120" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.6"/>
+  <circle cx="350" cy="280" r="80" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.3"/>
+  <circle cx="350" cy="280" r="40" fill="#3b82f6" opacity="0.1"/>
+  <text x="350" y="285" text-anchor="middle" font-family="monospace" font-size="20" fill="#3b82f6" font-weight="bold">V4</text>
+  <text x="350" y="430" text-anchor="middle" font-family="system-ui" font-size="22" fill="#3b82f6" opacity="0.8">DeepSeek</text>
+  <!-- Right brain (GPT-5.5) -->
+  <circle cx="850" cy="280" r="120" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+  <circle cx="850" cy="280" r="80" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <circle cx="850" cy="280" r="40" fill="#f59e0b" opacity="0.1"/>
+  <text x="850" y="285" text-anchor="middle" font-family="monospace" font-size="18" fill="#f59e0b" font-weight="bold">5.5</text>
+  <text x="850" y="430" text-anchor="middle" font-family="system-ui" font-size="22" fill="#f59e0b" opacity="0.8">GPT</text>
+  <!-- VS -->
+  <text x="600" y="295" text-anchor="middle" font-family="system-ui" font-size="48" fill="white" font-weight="bold" opacity="0.4">VS</text>
+  <!-- Connection lines -->
+  <line x1="470" y1="280" x2="730" y2="280" stroke="white" stroke-width="1" opacity="0.1" stroke-dasharray="5,5"/>
+  <!-- Neural dots -->
+  <circle cx="320" cy="240" r="4" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="380" cy="250" r="4" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="330" cy="310" r="4" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="370" cy="320" r="4" fill="#3b82f6" opacity="0.5"/>
+  <circle cx="820" cy="240" r="4" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="880" cy="250" r="4" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="830" cy="310" r="4" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="870" cy="320" r="4" fill="#f59e0b" opacity="0.5"/>
+  <!-- Title -->
+  <text x="600" y="560" text-anchor="middle" font-family="system-ui" font-size="28" fill="white" font-weight="bold" opacity="0.9">前沿模型争霸：架构分化与路线之争</text>
+  <text x="600" y="595" text-anchor="middle" font-family="system-ui" font-size="16" fill="#94a3b8" opacity="0.7">百万级上下文 × 稀疏注意力 × MoE</text>
+</svg>
