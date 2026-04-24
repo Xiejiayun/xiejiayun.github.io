@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="hg1" cx="50%" cy="50%"><stop offset="0%" stop-color="#fb7185" stop-opacity="0.25"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+    <linearGradient id="hg2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#fb923c" stop-opacity="0.15"/><stop offset="100%" stop-color="transparent"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect width="1200" height="630" fill="url(#hg1)"/>
+  <rect width="1200" height="630" fill="url(#hg2)"/>
+  <!-- Rising cost bars -->
+  <rect x="300" y="400" width="40" height="80" fill="#34d399" opacity="0.4" rx="2"/>
+  <rect x="380" y="350" width="40" height="130" fill="#34d399" opacity="0.5" rx="2"/>
+  <rect x="460" y="300" width="40" height="180" fill="#fbbf24" opacity="0.5" rx="2"/>
+  <rect x="540" y="240" width="40" height="240" fill="#fbbf24" opacity="0.6" rx="2"/>
+  <rect x="620" y="180" width="40" height="300" fill="#fb923c" opacity="0.6" rx="2"/>
+  <rect x="700" y="150" width="40" height="330" fill="#fb923c" opacity="0.7" rx="2"/>
+  <rect x="780" y="100" width="40" height="380" fill="#fb7185" opacity="0.7" rx="2"/>
+  <rect x="860" y="70" width="40" height="410" fill="#fb7185" opacity="0.8" rx="2"/>
+  <line x1="280" y1="480" x2="920" y2="480" stroke="#94a3b8" stroke-width="1" opacity="0.3"/>
+  <text x="600" y="120" text-anchor="middle" fill="#e2e8f0" font-family="monospace" font-size="36" font-weight="bold">AI的隐性代价</text>
+  <text x="600" y="160" text-anchor="middle" fill="#fb7185" font-family="monospace" font-size="14">Token支出失控 · 数据中心碳排放 · 环境成本</text>
+  <text x="600" y="550" text-anchor="middle" fill="#475569" font-family="monospace" font-size="11">THE HIDDEN COSTS OF AI · 2026</text>
+</svg>
