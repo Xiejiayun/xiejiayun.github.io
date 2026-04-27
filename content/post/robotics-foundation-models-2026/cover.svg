@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1929"/>
+      <stop offset="100%" style="stop-color:#1a0a20"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <!-- Robot arm stylized -->
+  <g transform="translate(850,300)" opacity="0.5">
+    <!-- Base -->
+    <rect x="-30" y="120" width="60" height="20" fill="#34d399" rx="3"/>
+    <!-- Arm segments -->
+    <line x1="0" y1="120" x2="0" y2="60" stroke="#34d399" stroke-width="8" stroke-linecap="round"/>
+    <line x1="0" y1="60" x2="60" y2="-20" stroke="#34d399" stroke-width="6" stroke-linecap="round"/>
+    <line x1="60" y1="-20" x2="120" y2="20" stroke="#34d399" stroke-width="4" stroke-linecap="round"/>
+    <!-- Joints -->
+    <circle cx="0" cy="60" r="8" fill="#0a1929" stroke="#34d399" stroke-width="2"/>
+    <circle cx="60" cy="-20" r="6" fill="#0a1929" stroke="#34d399" stroke-width="2"/>
+    <!-- Gripper -->
+    <line x1="120" y1="20" x2="135" y2="5" stroke="#34d399" stroke-width="3"/>
+    <line x1="120" y1="20" x2="135" y2="35" stroke="#34d399" stroke-width="3"/>
+    <!-- Brain glow -->
+    <circle cx="0" cy="-40" r="35" fill="#7c3aed" opacity="0.15"/>
+    <circle cx="0" cy="-40" r="20" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.4"/>
+    <text x="0" y="-35" font-family="Arial" font-size="16" fill="#a78bfa" text-anchor="middle" opacity="0.6">AI</text>
+  </g>
+  <!-- Neural connections from brain to arm -->
+  <g stroke="#a78bfa" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3">
+    <line x1="850" y1="260" x2="850" y2="300"/>
+    <line x1="850" y1="260" x2="910" y2="280"/>
+    <line x1="850" y1="260" x2="790" y2="280"/>
+  </g>
+  <!-- Floating data points -->
+  <g fill="#34d399" opacity="0.3">
+    <circle cx="700" cy="150" r="3"/><circle cx="720" cy="200" r="2"/>
+    <circle cx="680" cy="250" r="2.5"/><circle cx="750" cy="180" r="2"/>
+    <circle cx="1000" cy="150" r="2"/><circle cx="1050" cy="200" r="3"/>
+    <circle cx="980" cy="400" r="2"/><circle cx="1020" cy="450" r="2.5"/>
+  </g>
+  <!-- Title -->
+  <text x="80" y="240" font-family="Arial, sans-serif" font-size="44" font-weight="bold" fill="white">机器人基础模型2026</text>
+  <text x="80" y="300" font-family="Arial, sans-serif" font-size="28" fill="#34d399">具身智能的拐点来了</text>
+  <text x="80" y="370" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8">Gemini Robotics · 小脑芯片 · 世界模型 · 三层架构</text>
+  <rect x="80" y="190" width="100" height="4" fill="#34d399" rx="2"/>
+</svg>
