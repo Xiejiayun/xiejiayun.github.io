@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <!-- Three pillars -->
+  <rect x="120" y="200" width="280" height="220" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="260" y="240" text-anchor="middle" fill="#22d3ee" font-family="monospace" font-size="14" font-weight="bold">KV Routing</text>
+  <text x="260" y="270" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">自适应缓存共享</text>
+  <text x="260" y="370" text-anchor="middle" fill="#22d3ee" font-family="monospace" font-size="24">-60%</text>
+  <text x="260" y="395" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">显存占用</text>
+
+  <rect x="460" y="200" width="280" height="220" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="600" y="240" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="14" font-weight="bold">AutoCompress</text>
+  <text x="600" y="270" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">关键层隔离压缩</text>
+  <text x="600" y="370" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="24">+5%</text>
+  <text x="600" y="395" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">准确率提升</text>
+
+  <rect x="800" y="200" width="280" height="220" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="940" y="240" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="14" font-weight="bold">Spectral</text>
+  <text x="940" y="270" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">训练光谱生命周期</text>
+  <text x="940" y="370" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="24">SVD</text>
+  <text x="940" y="395" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">权重矩阵分析</text>
+
+  <!-- Connection line -->
+  <line x1="400" y1="310" x2="460" y2="310" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="740" y1="310" x2="800" y2="310" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Title -->
+  <text x="600" y="510" text-anchor="middle" fill="white" font-family="monospace" font-size="30" font-weight="bold">推理优化的三大突破</text>
+  <text x="600" y="545" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="14">Transformer不均匀性的统一利用 · 2026</text>
+</svg>
