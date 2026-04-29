@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#grad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+  <circle cx="150" cy="400" r="40" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.4"/><circle cx="750" cy="400" r="40" fill="none" stroke="#34d399" stroke-width="2" opacity="0.4"/><line x1="190" y1="400" x2="710" y2="400" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="8,4" opacity="0.3"/><circle cx="450" cy="400" r="25" fill="none" stroke="#fb7185" stroke-width="2" opacity="0.5"/>
+  <text x="450" y="220" text-anchor="middle" fill="white" font-family="sans-serif" font-size="28" font-weight="bold">
+    <tspan x="450" dy="0">OpenAI打破微软独占：AWS联盟与S</tspan>
+    <tspan x="450" dy="40">ymphony开源协议背后的AI平台权力重构</tspan>
+    <tspan x="450" dy="40"></tspan>
+  </text>
+  <rect x="350" y="320" width="200" height="4" rx="2" fill="#fbbf24" opacity="0.8"/>
+  <text x="450" y="360" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">前沿科技深度分析 · 2026</text>
+</svg>

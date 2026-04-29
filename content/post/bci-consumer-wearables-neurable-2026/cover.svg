@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#grad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+  <path d="M 100 420 Q 200 380 300 420 Q 400 460 500 420 Q 600 380 700 420 Q 800 460 850 420" fill="none" stroke="#34d399" stroke-width="2" opacity="0.4"/><path d="M 100 440 Q 200 400 300 440 Q 400 480 500 440 Q 600 400 700 440 Q 800 480 850 440" fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.3"/><circle cx="450" cy="420" r="30" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.4"/>
+  <text x="450" y="220" text-anchor="middle" fill="white" font-family="sans-serif" font-size="28" font-weight="bold">
+    <tspan x="450" dy="0">脑机接口走向消费市场：从实验室到日常可穿</tspan>
+    <tspan x="450" dy="40">戴的关键跨越</tspan>
+    <tspan x="450" dy="40"></tspan>
+  </text>
+  <rect x="350" y="320" width="200" height="4" rx="2" fill="#34d399" opacity="0.8"/>
+  <text x="450" y="360" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="14">前沿科技深度分析 · 2026</text>
+</svg>
