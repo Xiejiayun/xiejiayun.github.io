@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#172554"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <g stroke="#1e293b" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="100" x2="1200" y2="100"/><line x1="0" y1="200" x2="1200" y2="200"/><line x1="0" y1="300" x2="1200" y2="300"/><line x1="0" y1="400" x2="1200" y2="400"/>
+  </g>
+  <!-- Central brain/model -->
+  <circle cx="600" cy="280" r="55" fill="rgba(76,29,149,0.3)" stroke="#a78bfa" stroke-width="2"/>
+  <text x="600" y="275" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="14" font-weight="bold">LLM</text>
+  <text x="600" y="295" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="10">Context Window</text>
+  <!-- Context layers - concentric arcs -->
+  <!-- Core context -->
+  <path d="M 480 280 A 120 120 0 0 1 720 280" fill="none" stroke="#22d3ee" stroke-width="2"/>
+  <text x="600" y="145" text-anchor="middle" fill="#22d3ee" font-family="monospace" font-size="11">Core Context</text>
+  <!-- Retrieved context -->
+  <path d="M 430 280 A 170 170 0 0 1 770 280" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="440" y="130" fill="#34d399" font-family="monospace" font-size="10">Retrieved</text>
+  <!-- Memory context -->
+  <path d="M 380 280 A 220 220 0 0 1 820 280" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="820" y="100" text-anchor="end" fill="#fbbf24" font-family="monospace" font-size="10">Memory</text>
+  <!-- Input sources -->
+  <!-- Documents -->
+  <rect x="120" y="180" width="100" height="60" rx="5" fill="rgba(8,51,68,0.5)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="170" y="210" text-anchor="middle" fill="#22d3ee" font-family="monospace" font-size="11">Docs</text>
+  <text x="170" y="225" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8">RAG retrieval</text>
+  <line x1="220" y1="210" x2="545" y2="270" stroke="#22d3ee" stroke-width="1" opacity="0.5"/>
+  <!-- Tools -->
+  <rect x="120" y="300" width="100" height="60" rx="5" fill="rgba(6,78,59,0.5)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="170" y="330" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="11">Tools</text>
+  <text x="170" y="345" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8">Definitions</text>
+  <line x1="220" y1="330" x2="545" y2="290" stroke="#34d399" stroke-width="1" opacity="0.5"/>
+  <!-- Memory DB -->
+  <rect x="980" y="180" width="100" height="60" rx="5" fill="rgba(120,53,15,0.4)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="1030" y="210" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="11">Memory</text>
+  <text x="1030" y="225" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8">Long-term</text>
+  <line x1="980" y1="210" x2="655" y2="270" stroke="#fbbf24" stroke-width="1" opacity="0.5"/>
+  <!-- Cache -->
+  <rect x="980" y="300" width="100" height="60" rx="5" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="1030" y="330" text-anchor="middle" fill="#fb7185" font-family="monospace" font-size="11">Cache</text>
+  <text x="1030" y="345" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8">KV Store</text>
+  <line x1="980" y1="330" x2="655" y2="290" stroke="#fb7185" stroke-width="1" opacity="0.5"/>
+  <!-- Funnel/filter effect -->
+  <text x="350" y="270" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="20">⟩</text>
+  <text x="850" y="270" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="20">⟨</text>
+  <!-- Title -->
+  <text x="600" y="480" text-anchor="middle" fill="#f8fafc" font-family="monospace" font-size="34" font-weight="bold">Context Engineering</text>
+  <text x="600" y="520" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="16">From Prompt Engineering to Context Engineering</text>
+  <!-- Evolution arrow -->
+  <text x="350" y="560" text-anchor="middle" fill="#475569" font-family="monospace" font-size="12">Prompt Eng. (2023)</text>
+  <line x1="440" y1="556" x2="740" y2="556" stroke="#475569" stroke-width="1"/>
+  <polygon points="740,552 755,556 740,560" fill="#a78bfa"/>
+  <text x="850" y="560" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="12">Context Eng. (2026)</text>
+</svg>
