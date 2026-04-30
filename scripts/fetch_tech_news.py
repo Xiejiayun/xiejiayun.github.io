@@ -145,6 +145,44 @@ FEEDS = {
     "Tom's Hardware": ("https://www.tomshardware.com/feeds/all", "tier2_quality", "hardware"),
     "IEEE Robotics": ("https://spectrum.ieee.org/feeds/topic/robotics.rss", "tier2_quality", "hardware"),
 
+    # --- 机器人 / 具身智能 (P0 扩充) ---
+    "The Robot Report": ("https://www.therobotreport.com/feed/", "tier2_quality", "robotics"),
+    "Robohub": ("https://robohub.org/feed/", "tier2_quality", "robotics"),
+    "Hugging Face Blog (LeRobot etc)": ("https://huggingface.co/blog/feed.xml", "tier2_quality", "robotics"),
+    "ROS Discourse": ("https://discourse.ros.org/latest.rss", "tier2_quality", "robotics"),
+    "MIT News - Robotics": ("https://news.mit.edu/topic/mitrobotics-rss.xml", "tier2_quality", "robotics"),
+
+    # --- 数据库 / 系统底层 (P0 扩充) ---
+    "Marc Brooker": ("https://brooker.co.za/blog/rss.xml", "tier1_deep", "systems"),
+    "Phil Eaton": ("https://notes.eatonphil.com/rss.xml", "tier1_deep", "systems"),
+    "Jepsen": ("https://jepsen.io/analyses.atom", "tier1_deep", "systems"),
+    "Murat Demirbas": ("https://muratbuffalo.blogspot.com/feeds/posts/default", "tier1_deep", "systems"),
+    "ACM Queue": ("https://queue.acm.org/rss/feeds/queuecontent.xml", "tier1_deep", "systems"),
+    "TigerBeetle Blog": ("https://tigerbeetle.com/blog/index.xml", "tier1_deep", "systems"),
+
+    # --- 软件工程优质博客 (P0+ 扩充) ---
+    "Hillel Wayne": ("https://buttondown.com/hillelwayne/rss", "tier1_deep", "engineering"),
+    "Fabien Sanglard": ("https://fabiensanglard.net/rss.xml", "tier1_deep", "engineering"),
+    "Russ Cox (research!rsc)": ("https://research.swtch.com/feed.atom", "tier1_deep", "engineering"),
+    "Bartosz Ciechanowski": ("https://ciechanow.ski/atom.xml", "tier1_deep", "engineering"),
+    "Eli Bendersky": ("https://eli.thegreenplace.net/feeds/all.atom.xml", "tier1_deep", "engineering"),
+    "Drew DeVault": ("https://drewdevault.com/blog/index.xml", "tier1_deep", "engineering"),
+    "Antirez (Salvatore Sanfilippo)": ("http://antirez.com/rss", "tier1_deep", "engineering"),
+    "Lobste.rs Engineering Tag": ("https://lobste.rs/t/programming.rss", "tier2_quality", "engineering"),
+    "Stripe Engineering": ("https://stripe.com/blog/engineering/feed.rss", "tier2_quality", "devops"),
+    "Discord Engineering": ("https://discord.com/blog/rss.xml", "tier2_quality", "devops"),
+    "Figma Engineering": ("https://www.figma.com/blog/engineering/rss/", "tier2_quality", "devops"),
+    "Shopify Engineering": ("https://shopify.engineering/blog.atom", "tier2_quality", "devops"),
+    "Sentry Engineering": ("https://blog.sentry.io/rss/", "tier2_quality", "devops"),
+    "Tailscale Blog": ("https://tailscale.com/blog/index.xml", "tier2_quality", "devops"),
+
+    # --- arXiv 扩展 (P0 - 补安全/系统/编程语言学术) ---
+    "arXiv CS.CR (Security)": ("https://export.arxiv.org/rss/cs.CR", "tier1_deep", "academic"),
+    "arXiv CS.DC (Distributed)": ("https://export.arxiv.org/rss/cs.DC", "tier1_deep", "academic"),
+    "arXiv CS.PL (ProgLang)": ("https://export.arxiv.org/rss/cs.PL", "tier1_deep", "academic"),
+    "arXiv CS.OS (OS)": ("https://export.arxiv.org/rss/cs.OS", "tier1_deep", "academic"),
+    "arXiv CS.DB (Database)": ("https://export.arxiv.org/rss/cs.DB", "tier1_deep", "academic"),
+
     # ========================================
     # TIER 3: 广覆盖新闻 & 社区 (权重 x1)
     # ========================================
