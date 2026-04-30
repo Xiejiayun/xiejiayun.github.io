@@ -176,6 +176,47 @@ FEEDS = {
     "Sentry Engineering": ("https://blog.sentry.io/rss/", "tier2_quality", "devops"),
     "Tailscale Blog": ("https://tailscale.com/blog/index.xml", "tier2_quality", "devops"),
 
+    # --- 大厂研究院/AI实验室博客 (P0+ 扩充) ---
+    "NVIDIA Developer Blog": ("https://developer.nvidia.com/blog/feed", "tier1_deep", "ai_official"),
+    "NVIDIA Research": ("https://research.nvidia.com/rss.xml", "tier1_deep", "ai_official"),
+    "IBM Research Blog": ("https://research.ibm.com/blog/rss", "tier1_deep", "ai_official"),
+    "Google Research Blog": ("https://research.google/blog/rss/", "tier1_deep", "ai_official"),
+    "AWS ML Blog": ("https://aws.amazon.com/blogs/machine-learning/feed/", "tier1_deep", "ai_official"),
+    "Cohere Blog": ("https://cohere.com/blog/rss.xml", "tier1_deep", "ai_official"),
+    "Mistral News": ("https://mistral.ai/news/feed.xml", "tier1_deep", "ai_official"),
+    "Allen AI (AI2)": ("https://allenai.org/blog/feed.xml", "tier1_deep", "ai_official"),
+    "EleutherAI Blog": ("https://blog.eleuther.ai/index.xml", "tier1_deep", "ai_official"),
+    "LMSYS Blog": ("https://lmsys.org/blog/index.xml", "tier1_deep", "ai_official"),
+
+    # --- 大厂工程博客 (P0+ 扩充) ---
+    "Microsoft Engineering": ("https://devblogs.microsoft.com/feed/", "tier2_quality", "devops"),
+    "Google Developers Blog": ("https://developers.googleblog.com/feeds/posts/default", "tier2_quality", "devops"),
+    "Meta Engineering": ("https://engineering.fb.com/feed/", "tier2_quality", "devops"),
+    "Apple Security Research": ("https://security.apple.com/blog/rss.xml", "tier2_quality", "security"),
+    "LinkedIn Engineering": ("https://engineering.linkedin.com/blog.rss.html", "tier2_quality", "devops"),
+    "Airbnb Engineering": ("https://medium.com/feed/airbnb-engineering", "tier2_quality", "devops"),
+    "Spotify Engineering": ("https://engineering.atspotify.com/feed/", "tier2_quality", "devops"),
+    "Pinterest Engineering": ("https://medium.com/feed/pinterest-engineering", "tier2_quality", "devops"),
+    "Dropbox Tech": ("https://dropbox.tech/feed", "tier2_quality", "devops"),
+    "Slack Engineering": ("https://slack.engineering/feed/", "tier2_quality", "devops"),
+    "Canva Engineering": ("https://www.canva.dev/blog/engineering/feed.xml", "tier2_quality", "devops"),
+    "Booking.com Tech": ("https://blog.booking.com/feed.xml", "tier2_quality", "devops"),
+    "Datadog Engineering": ("https://www.datadoghq.com/blog/engineering/index.xml", "tier2_quality", "devops"),
+    "Grafana Blog": ("https://grafana.com/blog/index.xml", "tier2_quality", "devops"),
+    "Vercel Blog": ("https://vercel.com/atom", "tier2_quality", "devops"),
+
+    # --- 金融/经济 深度博客 (P0 扩充) ---
+    "Marc Rubinstein - Net Interest": ("https://www.netinterest.co/feed", "tier1_deep", "finance"),
+    "Byrne Hobart - The Diff": ("https://www.thediff.co/feed", "tier1_deep", "finance"),
+    "Doomberg": ("https://doomberg.substack.com/feed", "tier1_deep", "finance"),
+    "Lyn Alden": ("https://www.lynalden.com/feed/", "tier1_deep", "finance"),
+    "Apricitas Economics": ("https://www.apricitas.io/feed", "tier1_deep", "finance"),
+    "Concoda": ("https://concoda.substack.com/feed", "tier1_deep", "finance"),
+    "The Macro Compass": ("https://themacrocompass.substack.com/feed", "tier1_deep", "finance"),
+    "Marginal Revolution": ("https://marginalrevolution.com/feed", "tier1_deep", "economics"),
+    "Calculated Risk": ("https://www.calculatedriskblog.com/feeds/posts/default", "tier2_quality", "finance"),
+    "Reuters Breakingviews": ("https://www.reuters.com/breakingviews/rss", "tier2_quality", "finance"),
+
     # --- arXiv 扩展 (P0 - 补安全/系统/编程语言学术) ---
     "arXiv CS.CR (Security)": ("https://export.arxiv.org/rss/cs.CR", "tier1_deep", "academic"),
     "arXiv CS.DC (Distributed)": ("https://export.arxiv.org/rss/cs.DC", "tier1_deep", "academic"),
