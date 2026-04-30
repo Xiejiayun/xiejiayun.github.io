@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#0f172a"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <!-- Central hub -->
+  <circle cx="400" cy="180" r="50" fill="rgba(120,53,15,0.4)" stroke="#fbbf24" stroke-width="2"/>
+  <text x="400" y="175" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#fbbf24">GPT-5.5</text>
+  <text x="400" y="195" text-anchor="middle" font-family="monospace" font-size="10" fill="#fbbf24" opacity="0.7">PLATFORM</text>
+  <!-- Spokes -->
+  <line x1="350" y1="180" x2="200" y2="120" stroke="#22d3ee" stroke-width="1.5" opacity="0.6"/>
+  <line x1="350" y1="180" x2="200" y2="240" stroke="#34d399" stroke-width="1.5" opacity="0.6"/>
+  <line x1="450" y1="180" x2="600" y2="120" stroke="#a78bfa" stroke-width="1.5" opacity="0.6"/>
+  <line x1="450" y1="180" x2="600" y2="240" stroke="#fb7185" stroke-width="1.5" opacity="0.6"/>
+  <!-- Nodes -->
+  <rect x="140" y="100" width="80" height="40" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="180" y="125" text-anchor="middle" font-family="monospace" font-size="10" fill="#22d3ee">AWS</text>
+  <rect x="140" y="220" width="80" height="40" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="180" y="245" text-anchor="middle" font-family="monospace" font-size="10" fill="#34d399">Symphony</text>
+  <rect x="560" y="100" width="80" height="40" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="600" y="125" text-anchor="middle" font-family="monospace" font-size="10" fill="#a78bfa">FedRAMP</text>
+  <rect x="560" y="220" width="80" height="40" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="600" y="245" text-anchor="middle" font-family="monospace" font-size="10" fill="#fb7185">Codex</text>
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">OpenAI平台化战略</text>
+  <text x="400" y="350" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#94a3b8">从模型公司到AI基础设施</text>
+</svg>

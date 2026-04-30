@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="400" fill="#0f172a"/>
+  <rect width="800" height="400" fill="url(#grid)"/>
+  <!-- Shield -->
+  <path d="M400 80 L340 110 L340 180 Q340 240 400 270 Q460 240 460 180 L460 110 Z" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="2"/>
+  <!-- AI Eye -->
+  <ellipse cx="400" cy="165" rx="30" ry="20" fill="none" stroke="#22d3ee" stroke-width="2"/>
+  <circle cx="400" cy="165" r="8" fill="#22d3ee" opacity="0.8"/>
+  <!-- Bug icons -->
+  <circle cx="200" cy="150" r="6" fill="#fb7185" opacity="0.6"/>
+  <circle cx="220" cy="200" r="4" fill="#fb7185" opacity="0.4"/>
+  <circle cx="180" cy="220" r="5" fill="#fb7185" opacity="0.5"/>
+  <circle cx="600" cy="140" r="5" fill="#fb7185" opacity="0.5"/>
+  <circle cx="620" cy="190" r="6" fill="#fb7185" opacity="0.6"/>
+  <circle cx="580" cy="210" r="4" fill="#fb7185" opacity="0.4"/>
+  <!-- Scan lines -->
+  <line x1="250" y1="150" x2="355" y2="165" stroke="#22d3ee" stroke-width="1" opacity="0.4" stroke-dasharray="4,4"/>
+  <line x1="240" y1="200" x2="355" y2="170" stroke="#22d3ee" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <line x1="550" y1="140" x2="445" y2="160" stroke="#22d3ee" stroke-width="1" opacity="0.4" stroke-dasharray="4,4"/>
+  <line x1="560" y1="200" x2="445" y2="170" stroke="#22d3ee" stroke-width="1" opacity="0.3" stroke-dasharray="4,4"/>
+  <!-- 271 number -->
+  <text x="400" y="320" text-anchor="middle" font-family="monospace" font-size="48" font-weight="bold" fill="#fb7185">271</text>
+  <text x="400" y="350" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#94a3b8">ZERO-DAY VULNERABILITIES DISCOVERED BY AI</text>
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e2e8f0">AI网络安全革命</text>
+</svg>
