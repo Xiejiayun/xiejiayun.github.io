@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c0a05"/>
+      <stop offset="1" stop-color="#3f1d10"/>
+    </linearGradient>
+    <linearGradient id="t" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#fde047"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g opacity="0.2" font-family="Courier New, monospace" font-size="16" fill="#fb923c">
+    <text x="60" y="120">async fn read(&amp;mut self) -&gt; Result&lt;Bytes&gt; {</text>
+    <text x="60" y="145">    self.io.read_exact().await</text>
+    <text x="60" y="170">}</text>
+  </g>
+  <text x="80" y="260" fill="#94a3b8" font-family="Helvetica, Arial" font-size="22">OPEN SOURCE · TOOLCHAIN</text>
+  <text x="80" y="350" fill="url(#t)" font-family="Helvetica, Arial" font-size="52" font-weight="bold">Rust 异步生态的分裂与重聚</text>
+  <text x="80" y="420" fill="url(#t)" font-family="Helvetica, Arial" font-size="36">io_uring 与一个迟到的标准</text>
+  <text x="80" y="560" fill="#64748b" font-family="Helvetica, Arial" font-size="20">Tokio · monoio · glommio · async Drop</text>
+</svg>
