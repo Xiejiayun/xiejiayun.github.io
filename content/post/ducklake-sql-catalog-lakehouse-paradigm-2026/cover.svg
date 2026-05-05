@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c1424"/>
+      <stop offset="1" stop-color="#11261d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.1" stroke="#22c55e" stroke-width="1">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200"/>
+  </g>
+  <g transform="translate(80,140)">
+    <text fill="#fbbf24" font-family="ui-sans-serif" font-size="58" font-weight="800">DuckLake 1.0</text>
+    <text y="62" fill="#22c55e" font-family="ui-sans-serif" font-size="36" font-weight="700">元数据，回家</text>
+    <text y="130" fill="#cbd5e1" font-family="ui-sans-serif" font-size="22">把 Lakehouse 的元数据从对象存储拉回 SQL 数据库</text>
+  </g>
+  <g transform="translate(80,330)" font-family="monospace">
+    <rect x="0" y="0" width="280" height="160" rx="10" fill="none" stroke="#ef4444" stroke-width="2"/>
+    <text x="140" y="34" text-anchor="middle" fill="#ef4444" font-size="20" font-weight="700">Iceberg / Delta</text>
+    <text x="140" y="74" text-anchor="middle" fill="#94a3b8" font-size="16">manifest + snapshot</text>
+    <text x="140" y="98" text-anchor="middle" fill="#94a3b8" font-size="16">JSON / Avro 散落 S3</text>
+    <text x="140" y="132" text-anchor="middle" fill="#fbbf24" font-size="18">commit ~ 500ms</text>
+
+    <text x="340" y="90" fill="#fbbf24" font-size="36">→</text>
+
+    <rect x="400" y="0" width="280" height="160" rx="10" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <text x="540" y="34" text-anchor="middle" fill="#22c55e" font-size="20" font-weight="700">DuckLake</text>
+    <text x="540" y="74" text-anchor="middle" fill="#94a3b8" font-size="16">元数据 → Postgres</text>
+    <text x="540" y="98" text-anchor="middle" fill="#94a3b8" font-size="16">数据 → S3 Parquet</text>
+    <text x="540" y="132" text-anchor="middle" fill="#fbbf24" font-size="18">commit ~ 20ms</text>
+  </g>
+  <text x="80" y="590" fill="#64748b" font-family="monospace" font-size="14">2026 · 数据基础设施范式深度</text>
+</svg>
