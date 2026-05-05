@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="rust" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a2417"/>
+      <stop offset="1" stop-color="#7a3a1a"/>
+    </linearGradient>
+    <linearGradient id="future" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e3b5c"/>
+      <stop offset="1" stop-color="#3ad1ff"/>
+    </linearGradient>
+    <filter id="rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/>
+      <feColorMatrix values="0 0 0 0 0.4  0 0 0 0 0.2  0 0 0 0 0.05  0 0 0 0.6 0"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="420" fill="#0d1117"/>
+
+  <!-- Left: 1990s C kernel rusted block -->
+  <g transform="translate(60,110)">
+    <rect width="280" height="200" rx="6" fill="url(#rust)" stroke="#5a2a10" stroke-width="2"/>
+    <rect width="280" height="200" rx="6" fill="url(#rust)" filter="url(#rough)" opacity="0.7"/>
+    <text x="140" y="40" text-anchor="middle" fill="#f0c090" font-family="monospace" font-size="14" font-weight="bold">1990s C kernel</text>
+    <text x="140" y="78" text-anchor="middle" fill="#c89070" font-family="monospace" font-size="11">copy_from_user(dst,</text>
+    <text x="140" y="96" text-anchor="middle" fill="#c89070" font-family="monospace" font-size="11">  ubuf, hdr.len);</text>
+    <text x="140" y="124" text-anchor="middle" fill="#a06040" font-family="monospace" font-size="10">// len unchecked</text>
+    <text x="140" y="160" text-anchor="middle" fill="#e07050" font-family="monospace" font-size="13">CVE-2026-Copy Fail</text>
+    <text x="140" y="184" text-anchor="middle" fill="#806050" font-family="monospace" font-size="10">root takeover</text>
+  </g>
+
+  <!-- Right: 2030 PQC futuristic block -->
+  <g transform="translate(460,110)">
+    <rect width="280" height="200" rx="6" fill="url(#future)" stroke="#3ad1ff" stroke-width="2" filter="url(#glow)"/>
+    <text x="140" y="40" text-anchor="middle" fill="#e0f8ff" font-family="monospace" font-size="14" font-weight="bold">2030 PQC IPsec</text>
+    <text x="140" y="78" text-anchor="middle" fill="#a0e0ff" font-family="monospace" font-size="11">ML-KEM-768 +</text>
+    <text x="140" y="96" text-anchor="middle" fill="#a0e0ff" font-family="monospace" font-size="11">X25519 hybrid</text>
+    <text x="140" y="124" text-anchor="middle" fill="#80c0e8" font-family="monospace" font-size="10">// Shor-resistant</text>
+    <text x="140" y="160" text-anchor="middle" fill="#3ad1ff" font-family="monospace" font-size="13">Cloudflare GA</text>
+    <text x="140" y="184" text-anchor="middle" fill="#7090b0" font-family="monospace" font-size="10">harvest-now-proof</text>
+  </g>
+
+  <!-- Fracture line -->
+  <path d="M 400 60 L 388 130 L 412 180 L 392 240 L 408 300 L 396 370"
+        stroke="#ff5040" stroke-width="3" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M 400 60 L 388 130 L 412 180 L 392 240 L 408 300 L 396 370"
+        stroke="#ffe040" stroke-width="1" fill="none" stroke-linecap="round"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" fill="#f0f6fc" font-family="Georgia, serif" font-size="24" font-weight="bold">Trust Root Time Travel</text>
+  <text x="400" y="395" text-anchor="middle" fill="#7a8590" font-family="monospace" font-size="11">Copy Fail ←—— kernel boundary fracture ——→ Post-Quantum IPsec</text>
+</svg>

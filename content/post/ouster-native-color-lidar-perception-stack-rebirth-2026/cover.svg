@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="55%" r="70%">
+      <stop offset="0%" stop-color="#0e1726"/>
+      <stop offset="100%" stop-color="#03060c"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <g transform="translate(400 250)" opacity="0.95">
+    <!-- concentric rings of colored points -->
+    <g id="ring"></g>
+  </g>
+  <g font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" fill="#e8eef7">
+    <text x="40" y="60" font-size="30" font-weight="700">Native-Color LiDAR</text>
+    <text x="40" y="92" font-size="18" fill="#9fb2cc">Per-point  XYZ + Reflectivity + RGB</text>
+    <text x="40" y="395" font-size="13" fill="#6f88a8">Ouster REV8 OS · Perception stack, rebuilt for physical AI</text>
+  </g>
+  <!-- programmatic dots via static placement -->
+  <g transform="translate(400 250)">
+    <!-- ring radii and color palette mixed -->
+    <!-- generated points -->
+    <g id="pts">
+      <!-- r=40 -->
+      <circle cx="40" cy="0" r="3" fill="#ff6b6b"/><circle cx="28" cy="28" r="3" fill="#ffd166"/><circle cx="0" cy="40" r="3" fill="#06d6a0"/><circle cx="-28" cy="28" r="3" fill="#4cc9f0"/><circle cx="-40" cy="0" r="3" fill="#b388ff"/><circle cx="-28" cy="-28" r="3" fill="#ff8fab"/><circle cx="0" cy="-40" r="3" fill="#9bf6ff"/><circle cx="28" cy="-28" r="3" fill="#caffbf"/>
+      <!-- r=70 -->
+      <circle cx="70" cy="0" r="2.6" fill="#fca311"/><circle cx="49" cy="49" r="2.6" fill="#84dcc6"/><circle cx="0" cy="70" r="2.6" fill="#ef476f"/><circle cx="-49" cy="49" r="2.6" fill="#118ab2"/><circle cx="-70" cy="0" r="2.6" fill="#ffd6a5"/><circle cx="-49" cy="-49" r="2.6" fill="#a0c4ff"/><circle cx="0" cy="-70" r="2.6" fill="#bdb2ff"/><circle cx="49" cy="-49" r="2.6" fill="#fdffb6"/>
+      <!-- r=110 -->
+      <circle cx="110" cy="0" r="2.4" fill="#06d6a0"/><circle cx="78" cy="78" r="2.4" fill="#ffadad"/><circle cx="0" cy="110" r="2.4" fill="#4cc9f0"/><circle cx="-78" cy="78" r="2.4" fill="#ffd166"/><circle cx="-110" cy="0" r="2.4" fill="#b388ff"/><circle cx="-78" cy="-78" r="2.4" fill="#84dcc6"/><circle cx="0" cy="-110" r="2.4" fill="#ff6b6b"/><circle cx="78" cy="-78" r="2.4" fill="#9bf6ff"/>
+      <!-- r=150 -->
+      <circle cx="150" cy="0" r="2.2" fill="#caffbf"/><circle cx="106" cy="106" r="2.2" fill="#ef476f"/><circle cx="0" cy="150" r="2.2" fill="#fdffb6"/><circle cx="-106" cy="106" r="2.2" fill="#a0c4ff"/><circle cx="-150" cy="0" r="2.2" fill="#fca311"/><circle cx="-106" cy="-106" r="2.2" fill="#06d6a0"/><circle cx="0" cy="-150" r="2.2" fill="#bdb2ff"/><circle cx="106" cy="-106" r="2.2" fill="#ff8fab"/>
+      <!-- scatter outer -->
+      <circle cx="190" cy="40" r="2" fill="#ffd166"/><circle cx="170" cy="-80" r="2" fill="#4cc9f0"/><circle cx="-180" cy="60" r="2" fill="#ff6b6b"/><circle cx="-200" cy="-30" r="2" fill="#06d6a0"/><circle cx="60" cy="180" r="2" fill="#b388ff"/><circle cx="-90" cy="170" r="2" fill="#fca311"/><circle cx="-40" cy="-160" r="2" fill="#84dcc6"/><circle cx="120" cy="-150" r="2" fill="#ef476f"/>
+      <circle cx="230" cy="0" r="1.8" fill="#9bf6ff"/><circle cx="0" cy="220" r="1.8" fill="#ffd6a5"/><circle cx="-230" cy="0" r="1.8" fill="#a0c4ff"/><circle cx="0" cy="-220" r="1.8" fill="#caffbf"/>
+    </g>
+    <!-- center sensor -->
+    <circle r="14" fill="#1b2942" stroke="#4cc9f0" stroke-width="1.5"/>
+    <circle r="4" fill="#4cc9f0"/>
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#000814"/>
+    </radialGradient>
+    <radialGradient id="dot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4d4d" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#ff1a1a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ff0000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#16324a" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="105" x2="800" y2="105"/>
+    <line x1="0" y1="210" x2="800" y2="210"/>
+    <line x1="0" y1="315" x2="800" y2="315"/>
+    <line x1="200" y1="0" x2="200" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="420"/>
+  </g>
+
+  <!-- Asia outline (stylized polygon) -->
+  <path d="M 220 90
+           L 320 70
+           L 430 80
+           L 520 110
+           L 600 150
+           L 640 210
+           L 615 270
+           L 560 310
+           L 500 330
+           L 460 360
+           L 420 380
+           L 380 360
+           L 350 330
+           L 310 320
+           L 280 290
+           L 250 250
+           L 235 200
+           L 220 150 Z"
+        fill="#1b3a5b" fill-opacity="0.55" stroke="#3aa0ff" stroke-width="1.2"/>
+
+  <!-- Japan -->
+  <path d="M 600 150 L 640 140 L 660 170 L 640 200 L 615 195 Z"
+        fill="#1b3a5b" fill-opacity="0.55" stroke="#3aa0ff" stroke-width="1.2"/>
+  <!-- Taiwan -->
+  <path d="M 545 230 L 555 225 L 560 255 L 548 260 Z"
+        fill="#1b3a5b" fill-opacity="0.7" stroke="#3aa0ff" stroke-width="1"/>
+  <!-- Malay peninsula / SEA -->
+  <path d="M 470 320 L 495 330 L 500 360 L 478 372 L 462 355 Z"
+        fill="#1b3a5b" fill-opacity="0.55" stroke="#3aa0ff" stroke-width="1"/>
+
+  <!-- Red dots: 5 supply-chain hubs -->
+  <!-- Hsinchu / Taipei -->
+  <circle cx="552" cy="232" r="18" fill="url(#dot)"/>
+  <circle cx="552" cy="232" r="3.5" fill="#ffffff"/>
+  <text x="568" y="228" fill="#ffd6d6" font-family="Helvetica,Arial,sans-serif" font-size="11">台北/新竹</text>
+
+  <!-- Seoul -->
+  <circle cx="555" cy="155" r="18" fill="url(#dot)"/>
+  <circle cx="555" cy="155" r="3.5" fill="#ffffff"/>
+  <text x="571" y="151" fill="#ffd6d6" font-family="Helvetica,Arial,sans-serif" font-size="11">首尔</text>
+
+  <!-- Kumamoto -->
+  <circle cx="635" cy="183" r="18" fill="url(#dot)"/>
+  <circle cx="635" cy="183" r="3.5" fill="#ffffff"/>
+  <text x="650" y="180" fill="#ffd6d6" font-family="Helvetica,Arial,sans-serif" font-size="11">熊本</text>
+
+  <!-- Penang -->
+  <circle cx="478" cy="338" r="18" fill="url(#dot)"/>
+  <circle cx="478" cy="338" r="3.5" fill="#ffffff"/>
+  <text x="412" y="334" fill="#ffd6d6" font-family="Helvetica,Arial,sans-serif" font-size="11">槟城</text>
+
+  <!-- Ho Chi Minh -->
+  <circle cx="500" cy="362" r="18" fill="url(#dot)"/>
+  <circle cx="500" cy="362" r="3.5" fill="#ffffff"/>
+  <text x="516" y="378" fill="#ffd6d6" font-family="Helvetica,Arial,sans-serif" font-size="11">胡志明</text>
+
+  <!-- Big 90% -->
+  <text x="120" y="240" fill="#ffffff" font-family="Helvetica,Arial,sans-serif"
+        font-size="148" font-weight="800" letter-spacing="-4">90%</text>
+  <text x="122" y="278" fill="#7fb8ff" font-family="Helvetica,Arial,sans-serif"
+        font-size="16" letter-spacing="2">PRODUCTION COST</text>
+  <text x="122" y="300" fill="#7fb8ff" font-family="Helvetica,Arial,sans-serif"
+        font-size="16" letter-spacing="2">EXPOSED TO ASIA</text>
+
+  <!-- Title strip -->
+  <text x="40" y="50" fill="#ffffff" font-family="Helvetica,Arial,sans-serif"
+        font-size="20" font-weight="700">AI 算力霸权的地理单点故障</text>
+  <text x="40" y="72" fill="#9fb6cc" font-family="Helvetica,Arial,sans-serif"
+        font-size="13">Nvidia · Asian Supply Chain · 2026</text>
+
+  <!-- bottom caption -->
+  <text x="40" y="400" fill="#5a7a99" font-family="Helvetica,Arial,sans-serif" font-size="11">
+    Wafer · CoWoS · HBM · ABF Substrate · Assembly — 一条不可分散的窄走廊
+  </text>
+</svg>
