@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1a0a"/>
+      <stop offset="100%" stop-color="#1b3a1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="110" text-anchor="middle" fill="#76ff03" font-family="Arial,sans-serif" font-size="38" font-weight="bold">🧊 PNM-HBM Architecture</text>
+  <text x="400" y="170" text-anchor="middle" fill="#e0e0e0" font-family="Arial,sans-serif" font-size="24">用存算一体 HBM 替代 GPU 计算 Die</text>
+  <text x="400" y="220" text-anchor="middle" fill="#aed581" font-family="Arial,sans-serif" font-size="18">百万上下文 Attention：内存墙的另一面</text>
+  <rect x="150" y="260" width="120" height="60" rx="5" fill="none" stroke="#76ff03" stroke-width="1.5" opacity="0.5"/>
+  <text x="210" y="295" text-anchor="middle" fill="#76ff03" font-family="monospace" font-size="14" opacity="0.7">GPU Die</text>
+  <rect x="340" y="260" width="120" height="60" rx="5" fill="none" stroke="#76ff03" stroke-width="1.5" opacity="0.5"/>
+  <text x="400" y="295" text-anchor="middle" fill="#76ff03" font-family="monospace" font-size="14" opacity="0.7">HBM+PNM</text>
+  <rect x="530" y="260" width="120" height="60" rx="5" fill="none" stroke="#76ff03" stroke-width="1.5" opacity="0.5"/>
+  <text x="590" y="295" text-anchor="middle" fill="#76ff03" font-family="monospace" font-size="14" opacity="0.7">HBM+PNM</text>
+  <line x1="270" y1="290" x2="340" y2="290" stroke="#76ff03" stroke-width="1" opacity="0.3"/>
+  <line x1="460" y1="290" x2="530" y2="290" stroke="#76ff03" stroke-width="1" opacity="0.3"/>
+  <text x="400" y="360" text-anchor="middle" fill="#78909c" font-family="Arial,sans-serif" font-size="16">AMMA: Multi-Chiplet Memory-Centric Architecture</text>
+</svg>

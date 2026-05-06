@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#2d1b69"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="110" text-anchor="middle" fill="#bb86fc" font-family="Arial,sans-serif" font-size="44" font-weight="bold">👓 AR Redefined</text>
+  <text x="400" y="170" text-anchor="middle" fill="#e0e0e0" font-family="Arial,sans-serif" font-size="26">从头显到眼镜：消费级 AR 的范式逆转</text>
+  <text x="400" y="230" text-anchor="middle" fill="#ce93d8" font-family="Arial,sans-serif" font-size="20">Meta Ray-Ban Display</text>
+  <text x="400" y="280" text-anchor="middle" fill="#78909c" font-family="Arial,sans-serif" font-size="18">不是 VR 的缩小版，而是眼镜的智能化</text>
+  <rect x="300" y="310" width="200" height="40" rx="20" fill="none" stroke="#bb86fc" stroke-width="2" opacity="0.5"/>
+  <text x="400" y="335" text-anchor="middle" fill="#bb86fc" font-family="Arial,sans-serif" font-size="16">Fashion × AI</text>
+</svg>

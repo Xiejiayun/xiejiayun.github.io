@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0d3b66"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="120" text-anchor="middle" fill="#4fc3f7" font-family="Arial,sans-serif" font-size="48" font-weight="bold">🌊 AI × Ocean</text>
+  <text x="400" y="180" text-anchor="middle" fill="#e0e0e0" font-family="Arial,sans-serif" font-size="28">波浪供电 · 海上算力</text>
+  <text x="400" y="240" text-anchor="middle" fill="#80cbc4" font-family="Arial,sans-serif" font-size="22">Panthalassa: $140M</text>
+  <text x="400" y="290" text-anchor="middle" fill="#78909c" font-family="Arial,sans-serif" font-size="18">当陆地电网不够用，AI 把数据中心搬进大海</text>
+  <line x1="100" y1="330" x2="700" y2="330" stroke="#1565c0" stroke-width="2" opacity="0.5"/>
+  <path d="M50,340 Q150,310 250,340 Q350,370 450,340 Q550,310 650,340 Q700,355 750,340" fill="none" stroke="#4fc3f7" stroke-width="2" opacity="0.4"/>
+</svg>

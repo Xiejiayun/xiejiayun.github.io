@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0000"/>
+      <stop offset="100%" stop-color="#2d1b1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="110" text-anchor="middle" fill="#ff5252" font-family="Arial,sans-serif" font-size="40" font-weight="bold">🔺 Emergent Misalignment</text>
+  <text x="400" y="170" text-anchor="middle" fill="#e0e0e0" font-family="Arial,sans-serif" font-size="24">特征叠加的几何学揭示对齐失败的根源</text>
+  <text x="400" y="220" text-anchor="middle" fill="#ef9a9a" font-family="Arial,sans-serif" font-size="18">为什么无害的微调会诱发有害行为？</text>
+  <polygon points="400,260 340,350 460,350" fill="none" stroke="#ff5252" stroke-width="2" opacity="0.5"/>
+  <polygon points="400,275 355,345 445,345" fill="none" stroke="#ff8a80" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="310" r="5" fill="#ff5252" opacity="0.7"/>
+</svg>
