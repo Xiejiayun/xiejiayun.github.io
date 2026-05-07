@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1f1f3a"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6a00" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="orangeGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="hexGrid" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="translate(0,0)">
+      <polygon points="30,2 55,15 55,37 30,50 5,37 5,15" fill="none" stroke="#2a2a4a" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#hexGrid)"/>
+  <ellipse cx="600" cy="315" rx="350" ry="250" fill="url(#glow)"/>
+  <!-- Glowing orange hexagons -->
+  <g filter="url(#orangeGlow)">
+    <polygon points="330,262 355,275 355,297 330,310 305,297 305,275" fill="none" stroke="#ff6a00" stroke-width="2" opacity="0.9"/>
+    <polygon points="390,236 415,249 415,271 390,284 365,271 365,249" fill="#ff6a0022" stroke="#ff6a00" stroke-width="2" opacity="0.8"/>
+    <polygon points="450,262 475,275 475,297 450,310 425,297 425,275" fill="#ff6a0033" stroke="#ff8c00" stroke-width="2" opacity="1"/>
+    <polygon points="510,236 535,249 535,271 510,284 485,271 485,249" fill="none" stroke="#ff6a00" stroke-width="1.5" opacity="0.7"/>
+    <polygon points="570,262 595,275 595,297 570,310 545,297 545,275" fill="#ff6a0044" stroke="#ff8c00" stroke-width="2.5" opacity="1"/>
+    <polygon points="630,236 655,249 655,271 630,284 605,271 605,249" fill="#ff6a0022" stroke="#ff6a00" stroke-width="2" opacity="0.85"/>
+    <polygon points="690,262 715,275 715,297 690,310 665,297 665,275" fill="none" stroke="#ff6a00" stroke-width="1.5" opacity="0.6"/>
+    <polygon points="750,236 775,249 775,271 750,284 725,271 725,249" fill="#ff6a0033" stroke="#ff8c00" stroke-width="2" opacity="0.9"/>
+    <polygon points="810,262 835,275 835,297 810,310 785,297 785,275" fill="none" stroke="#ff6a00" stroke-width="2" opacity="0.75"/>
+    <polygon points="450,314 475,327 475,349 450,362 425,349 425,327" fill="none" stroke="#ff6a00" stroke-width="1.5" opacity="0.65"/>
+    <polygon points="570,314 595,327 595,349 570,362 545,349 545,327" fill="#ff6a0055" stroke="#ffaa00" stroke-width="2.5" opacity="1"/>
+    <polygon points="690,314 715,327 715,349 690,362 665,349 665,327" fill="#ff6a0033" stroke="#ff6a00" stroke-width="2" opacity="0.8"/>
+    <polygon points="510,288 535,301 535,323 510,336 485,323 485,301" fill="#ff6a0022" stroke="#ff6a00" stroke-width="1.5" opacity="0.7"/>
+    <polygon points="630,288 655,301 655,323 630,336 605,323 605,301" fill="#ff6a0044" stroke="#ff8c00" stroke-width="2" opacity="0.95"/>
+  </g>
+  <!-- Title -->
+  <text x="600" y="480" text-anchor="middle" font-family="sans-serif" font-size="36" font-weight="bold" fill="#ffffff" letter-spacing="2">Cloudflare "Code Orange" 实践全解析</text>
+  <text x="600" y="525" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#ff8c00" letter-spacing="1">韧性工程 · 故障注入 · 爆炸半径预算</text>
+  <!-- Decorative lines -->
+  <line x1="250" y1="555" x2="950" y2="555" stroke="#ff6a00" stroke-width="1" opacity="0.4"/>
+</svg>

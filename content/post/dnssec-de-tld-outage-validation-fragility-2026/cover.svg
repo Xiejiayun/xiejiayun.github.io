@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#ff4444" flood-opacity="0.6" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+  </g>
+  <!-- Chain links -->
+  <!-- Link 1 - shield/lock -->
+  <g transform="translate(200,300)" opacity="0.7">
+    <rect x="-30" y="-25" width="60" height="50" rx="8" fill="none" stroke="#4ecca3" stroke-width="3"/>
+    <path d="M-15,-25 L-15,-40 Q-15,-55 0,-55 Q15,-55 15,-40 L15,-25" fill="none" stroke="#4ecca3" stroke-width="3"/>
+    <circle cx="0" cy="0" r="5" fill="#4ecca3"/>
+  </g>
+  <!-- Chain connector 1-2 -->
+  <line x1="240" y1="300" x2="370" y2="300" stroke="#4ecca3" stroke-width="3" opacity="0.5" stroke-dasharray="8,4"/>
+  <!-- Link 2 - shield -->
+  <g transform="translate(400,300)" opacity="0.7">
+    <path d="M0,-35 L25,-20 L25,10 Q25,35 0,45 Q-25,35 -25,10 L-25,-20 Z" fill="none" stroke="#4ecca3" stroke-width="3"/>
+    <path d="M-8,0 L-2,8 L10,-8" fill="none" stroke="#4ecca3" stroke-width="3"/>
+  </g>
+  <!-- Chain connector 2-broken -->
+  <line x1="435" y1="300" x2="530" y2="300" stroke="#4ecca3" stroke-width="3" opacity="0.5" stroke-dasharray="8,4"/>
+  <!-- BROKEN LINK - glowing red -->
+  <g transform="translate(600,300)" filter="url(#redGlow)">
+    <rect x="-35" y="-30" width="70" height="60" rx="10" fill="none" stroke="#ff4444" stroke-width="4"/>
+    <path d="M-20,-30 L-20,-48 Q-20,-65 0,-65 Q20,-65 20,-48 L20,-30" fill="none" stroke="#ff4444" stroke-width="4"/>
+    <!-- X mark -->
+    <line x1="-12" y1="-10" x2="12" y2="14" stroke="#ff4444" stroke-width="4"/>
+    <line x1="12" y1="-10" x2="-12" y2="14" stroke="#ff4444" stroke-width="4"/>
+    <!-- Crack lines -->
+    <line x1="40" y1="-20" x2="55" y2="-35" stroke="#ff6666" stroke-width="2" opacity="0.7"/>
+    <line x1="38" y1="15" x2="50" y2="28" stroke="#ff6666" stroke-width="2" opacity="0.7"/>
+    <line x1="-40" y1="-15" x2="-52" y2="-30" stroke="#ff6666" stroke-width="2" opacity="0.7"/>
+  </g>
+  <!-- Broken connector right -->
+  <line x1="645" y1="300" x2="690" y2="295" stroke="#ff4444" stroke-width="3" opacity="0.3" stroke-dasharray="6,8"/>
+  <line x1="710" y1="305" x2="760" y2="300" stroke="#666" stroke-width="3" opacity="0.3" stroke-dasharray="6,8"/>
+  <!-- Link 4 - dimmed -->
+  <g transform="translate(800,300)" opacity="0.25">
+    <path d="M0,-35 L25,-20 L25,10 Q25,35 0,45 Q-25,35 -25,10 L-25,-20 Z" fill="none" stroke="#888" stroke-width="3"/>
+    <path d="M-8,0 L-2,8 L10,-8" fill="none" stroke="#888" stroke-width="3"/>
+  </g>
+  <!-- Link 5 - dimmed -->
+  <g transform="translate(1000,300)" opacity="0.2">
+    <rect x="-30" y="-25" width="60" height="50" rx="8" fill="none" stroke="#888" stroke-width="3"/>
+    <path d="M-15,-25 L-15,-40 Q-15,-55 0,-55 Q15,-55 15,-40 L15,-25" fill="none" stroke="#888" stroke-width="3"/>
+  </g>
+  <!-- Labels -->
+  <text x="200" y="370" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="14" opacity="0.7">Root</text>
+  <text x="400" y="370" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="14" opacity="0.7">TLD</text>
+  <text x="600" y="385" text-anchor="middle" fill="#ff4444" font-family="monospace" font-size="16" font-weight="bold">.de ✗</text>
+  <text x="800" y="370" text-anchor="middle" fill="#888" font-family="monospace" font-size="14" opacity="0.4">SLD</text>
+  <text x="1000" y="370" text-anchor="middle" fill="#888" font-family="monospace" font-size="14" opacity="0.3">Host</text>
+  <!-- Title -->
+  <text x="600" y="100" text-anchor="middle" fill="#e8e8e8" font-size="36" font-weight="bold" font-family="sans-serif">DNSSEC 信任链断裂</text>
+  <text x="600" y="145" text-anchor="middle" fill="#ff6b6b" font-size="22" font-family="sans-serif">.de 顶级域签名事故 · 1700 万域名瘫痪</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="610" width="1200" height="20" fill="#ff4444" opacity="0.15"/>
+  <text x="600" y="560" text-anchor="middle" fill="#666" font-family="monospace" font-size="13">2026-05-05 19:30 UTC — RRSIG validation failure — chain of trust broken</text>
+</svg>
