@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1DB954;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#6c5ce7;stop-opacity:0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <g opacity="0.06" stroke="#1DB954">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-width="1"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke-width="1"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke-width="1"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke-width="1"/>
+  </g>
+  <!-- Terminal window -->
+  <rect x="60" y="340" width="480" height="240" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <circle cx="82" cy="358" r="5" fill="#ff5f56"/>
+  <circle cx="100" cy="358" r="5" fill="#ffbd2e"/>
+  <circle cx="118" cy="358" r="5" fill="#27c93f"/>
+  <text x="80" y="395" fill="#8b949e" font-family="monospace" font-size="13">$ claude-code spotify-ads</text>
+  <text x="80" y="418" fill="#1DB954" font-family="monospace" font-size="13">▸ Loading skills/*.md</text>
+  <text x="80" y="441" fill="#1DB954" font-family="monospace" font-size="13">▸ Loading agents/*.md</text>
+  <text x="80" y="464" fill="#d4a574" font-family="monospace" font-size="13">▸ curl -X POST /v1/campaigns</text>
+  <text x="80" y="487" fill="#8b949e" font-family="monospace" font-size="13">✓ Campaign created: 200 OK</text>
+  <text x="80" y="510" fill="#6c5ce7" font-family="monospace" font-size="13">▸ No MCP. Just Markdown + Bash.</text>
+  <!-- Markdown icon -->
+  <rect x="660" y="340" width="480" height="240" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="680" y="375" fill="#30363d" font-family="monospace" font-size="11"># campaign-manager.md</text>
+  <text x="680" y="400" fill="#d4a574" font-family="monospace" font-size="13">## Skills</text>
+  <text x="680" y="423" fill="#8b949e" font-family="monospace" font-size="12">  /create-campaign</text>
+  <text x="680" y="446" fill="#8b949e" font-family="monospace" font-size="12">  /list-adsets</text>
+  <text x="680" y="469" fill="#d4a574" font-family="monospace" font-size="13">## Agents</text>
+  <text x="680" y="492" fill="#8b949e" font-family="monospace" font-size="12">  NL → curl → API</text>
+  <text x="680" y="515" fill="#6c5ce7" font-family="monospace" font-size="12">  8600 lines OpenAPI → ∞ dynamic</text>
+  <!-- Flow arrow -->
+  <g transform="translate(555, 460)">
+    <line x1="0" y1="0" x2="90" y2="0" stroke="#1DB954" stroke-width="2" stroke-dasharray="6,4"/>
+    <polygon points="90,-5 100,0 90,5" fill="#1DB954"/>
+  </g>
+  <!-- Title -->
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-family="sans-serif" font-size="36" font-weight="bold">Spotify 拒绝了 MCP</text>
+  <text x="600" y="150" text-anchor="middle" fill="#8b949e" font-family="sans-serif" font-size="22">用 Markdown + Bash 构建 AI 广告接口</text>
+  <!-- Badges -->
+  <rect x="370" y="190" width="130" height="32" rx="16" fill="none" stroke="#1DB954" stroke-width="1.5"/>
+  <text x="435" y="211" text-anchor="middle" fill="#1DB954" font-family="sans-serif" font-size="14">Markdown</text>
+  <rect x="520" y="190" width="90" height="32" rx="16" fill="none" stroke="#d4a574" stroke-width="1.5"/>
+  <text x="565" y="211" text-anchor="middle" fill="#d4a574" font-family="sans-serif" font-size="14">Bash</text>
+  <rect x="630" y="190" width="90" height="32" rx="16" fill="none" stroke="#6c5ce7" stroke-width="1.5"/>
+  <text x="675" y="211" text-anchor="middle" fill="#6c5ce7" font-family="sans-serif" font-size="14">curl</text>
+  <rect x="740" y="190" width="130" height="32" rx="16" fill="none" stroke="#ff5f56" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="805" y="211" text-anchor="middle" fill="#ff5f56" font-family="sans-serif" font-size="14" text-decoration="line-through">MCP</text>
+  <!-- Spotify logo hint -->
+  <text x="600" y="280" text-anchor="middle" fill="#1DB954" font-family="sans-serif" font-size="16" opacity="0.6">8600 行 OpenAPI Spec · ~30 资源类型 · 0 个 MCP 工具</text>
+</svg>
