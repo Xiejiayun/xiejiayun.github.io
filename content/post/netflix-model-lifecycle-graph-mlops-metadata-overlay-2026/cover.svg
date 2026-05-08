@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#0a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <!-- Graph nodes -->
+  <g>
+    <!-- Model node -->
+    <circle cx="600" cy="200" r="45" fill="#1a2a4a" stroke="#e50914" stroke-width="3"/>
+    <text x="600" y="205" text-anchor="middle" font-family="monospace" font-size="14" fill="#e50914">Model</text>
+    <!-- Pipeline node -->
+    <circle cx="350" cy="350" r="40" fill="#1a2a4a" stroke="#4a9eff" stroke-width="2"/>
+    <text x="350" y="355" text-anchor="middle" font-family="monospace" font-size="13" fill="#4a9eff">Pipeline</text>
+    <!-- Feature node -->
+    <circle cx="850" cy="350" r="40" fill="#1a2a4a" stroke="#00cc66" stroke-width="2"/>
+    <text x="850" y="355" text-anchor="middle" font-family="monospace" font-size="13" fill="#00cc66">Feature</text>
+    <!-- Dataset node -->
+    <circle cx="250" cy="150" r="35" fill="#1a2a4a" stroke="#ffaa00" stroke-width="2"/>
+    <text x="250" y="155" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffaa00">Dataset</text>
+    <!-- A/B Test node -->
+    <circle cx="950" cy="150" r="35" fill="#1a2a4a" stroke="#ff66aa" stroke-width="2"/>
+    <text x="950" y="155" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff66aa">A/B Test</text>
+    <!-- Owner node -->
+    <circle cx="600" cy="450" r="35" fill="#1a2a4a" stroke="#aa88ff" stroke-width="2"/>
+    <text x="600" y="455" text-anchor="middle" font-family="monospace" font-size="12" fill="#aa88ff">Owner</text>
+  </g>
+  <!-- Edges -->
+  <g stroke-width="1.5" fill="none" opacity="0.6">
+    <line x1="560" y1="220" x2="385" y2="325" stroke="#4a9eff"/>
+    <line x1="640" y1="220" x2="815" y2="325" stroke="#00cc66"/>
+    <line x1="290" y1="165" x2="560" y2="190" stroke="#ffaa00"/>
+    <line x1="910" y1="165" x2="640" y2="190" stroke="#ff66aa"/>
+    <line x1="600" y1="245" x2="600" y2="415" stroke="#aa88ff"/>
+    <line x1="385" y1="330" x2="815" y2="330" stroke="#ffffff" opacity="0.2" stroke-dasharray="5,5"/>
+  </g>
+  <!-- MDS label -->
+  <rect x="450" y="520" width="300" height="40" rx="20" fill="#1a1a2e" stroke="#e50914" stroke-width="1.5"/>
+  <text x="600" y="545" text-anchor="middle" font-family="monospace" font-size="14" fill="#e50914">Metadata Service (MDS)</text>
+  <!-- URI example -->
+  <text x="600" y="600" text-anchor="middle" font-family="monospace" font-size="11" fill="#666" opacity="0.6">aip://model/recommender/v3.2</text>
+</svg>

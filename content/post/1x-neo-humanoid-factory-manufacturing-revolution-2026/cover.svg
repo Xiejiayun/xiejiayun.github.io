@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1a0a"/>
+      <stop offset="100%" style="stop-color:#0a0a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <!-- Factory outline -->
+  <g stroke="#00cc66" stroke-width="2" fill="none" opacity="0.4">
+    <rect x="100" y="150" width="1000" height="350" rx="5"/>
+    <line x1="100" y1="150" x2="300" y2="50"/>
+    <line x1="300" y1="50" x2="500" y2="150"/>
+    <line x1="500" y1="150" x2="700" y2="50"/>
+    <line x1="700" y1="50" x2="900" y2="150"/>
+  </g>
+  <!-- Humanoid figure (simplified) -->
+  <g transform="translate(550, 180)" stroke="#00ff88" stroke-width="2.5" fill="none">
+    <circle cx="50" cy="20" r="20"/>
+    <line x1="50" y1="40" x2="50" y2="120"/>
+    <line x1="50" y1="60" x2="15" y2="100"/>
+    <line x1="50" y1="60" x2="85" y2="100"/>
+    <line x1="50" y1="120" x2="25" y2="180"/>
+    <line x1="50" y1="120" x2="75" y2="180"/>
+  </g>
+  <!-- Assembly line dots -->
+  <g fill="#00cc66" opacity="0.6">
+    <circle cx="200" cy="400" r="6"/><circle cx="300" cy="400" r="6"/>
+    <circle cx="400" cy="400" r="6"/><circle cx="500" cy="400" r="6"/>
+    <circle cx="600" cy="400" r="6"/><circle cx="700" cy="400" r="6"/>
+    <circle cx="800" cy="400" r="6"/><circle cx="900" cy="400" r="6"/>
+    <circle cx="1000" cy="400" r="6"/>
+  </g>
+  <!-- Arrow showing production flow -->
+  <line x1="180" y1="400" x2="1020" y2="400" stroke="#00cc66" stroke-width="1" opacity="0.3"/>
+  <polygon points="1020,395 1040,400 1020,405" fill="#00cc66" opacity="0.5"/>
+  <!-- Stats -->
+  <g font-family="monospace" fill="#00ff88" opacity="0.8">
+    <text x="150" y="560" font-size="18">10,000 units/yr</text>
+    <text x="500" y="560" font-size="18">$20,000/unit</text>
+    <text x="850" y="560" font-size="18">30 kg | 167 cm</text>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#ff6b00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.1" stroke="#4a9eff">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="630" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="630" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="630" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="630" stroke-width="0.5"/>
+  </g>
+  <!-- Lightning bolt -->
+  <polygon points="580,80 520,320 580,320 500,550 700,280 620,280 680,80" fill="url(#bolt)" opacity="0.9"/>
+  <!-- Power lines -->
+  <g stroke="#4a9eff" stroke-width="2" opacity="0.4">
+    <line x1="50" y1="450" x2="200" y2="380"/>
+    <line x1="200" y1="380" x2="350" y2="420"/>
+    <line x1="350" y1="420" x2="500" y2="350"/>
+    <line x1="700" y1="350" x2="850" y2="420"/>
+    <line x1="850" y1="420" x2="1000" y2="380"/>
+    <line x1="1000" y1="380" x2="1150" y2="450"/>
+  </g>
+  <!-- Server racks -->
+  <g opacity="0.6">
+    <rect x="100" y="480" width="60" height="100" rx="3" fill="#1e3a5f" stroke="#4a9eff" stroke-width="1"/>
+    <rect x="180" y="480" width="60" height="100" rx="3" fill="#1e3a5f" stroke="#4a9eff" stroke-width="1"/>
+    <rect x="960" y="480" width="60" height="100" rx="3" fill="#1e3a5f" stroke="#4a9eff" stroke-width="1"/>
+    <rect x="1040" y="480" width="60" height="100" rx="3" fill="#1e3a5f" stroke="#4a9eff" stroke-width="1"/>
+    <circle cx="130" cy="510" r="4" fill="#ff4444"/>
+    <circle cx="210" cy="510" r="4" fill="#ff4444"/>
+    <circle cx="990" cy="510" r="4" fill="#00ff88"/>
+    <circle cx="1070" cy="510" r="4" fill="#00ff88"/>
+  </g>
+  <!-- Gap indicator -->
+  <text x="600" y="600" text-anchor="middle" font-family="monospace" font-size="16" fill="#ff6b6b" opacity="0.8">⚡ POWER GAP ⚡</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="100%" style="stop-color:#1a1a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <!-- Mathematical symbols -->
+  <g font-family="serif" fill="#ffaa00" opacity="0.15" font-size="48">
+    <text x="50" y="80">∀</text><text x="150" y="150">∃</text>
+    <text x="300" y="90">⊢</text><text x="800" y="100">¬</text>
+    <text x="950" y="170">∧</text><text x="1050" y="80">∨</text>
+    <text x="100" y="550">⊨</text><text x="1000" y="550">□</text>
+    <text x="500" y="580">◇</text>
+  </g>
+  <!-- Chip outline -->
+  <g transform="translate(400, 120)">
+    <rect x="0" y="0" width="400" height="350" rx="10" fill="#1a1a2e" stroke="#ffaa00" stroke-width="2"/>
+    <!-- Pins -->
+    <g stroke="#ffaa00" stroke-width="2">
+      <line x1="-30" y1="50" x2="0" y2="50"/><line x1="-30" y1="100" x2="0" y2="100"/>
+      <line x1="-30" y1="150" x2="0" y2="150"/><line x1="-30" y1="200" x2="0" y2="200"/>
+      <line x1="-30" y1="250" x2="0" y2="250"/><line x1="-30" y1="300" x2="0" y2="300"/>
+      <line x1="400" y1="50" x2="430" y2="50"/><line x1="400" y1="100" x2="430" y2="100"/>
+      <line x1="400" y1="150" x2="430" y2="150"/><line x1="400" y1="200" x2="430" y2="200"/>
+      <line x1="400" y1="250" x2="430" y2="250"/><line x1="400" y1="300" x2="430" y2="300"/>
+    </g>
+    <!-- Checkmark inside chip -->
+    <polyline points="150,180 185,220 260,140" stroke="#00ff88" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- QED -->
+    <text x="200" y="300" text-anchor="middle" font-family="serif" font-size="28" fill="#ffaa00" font-style="italic">Q.E.D.</text>
+  </g>
+  <!-- Stats bar -->
+  <g font-family="monospace" fill="#ffaa00" opacity="0.7">
+    <text x="150" y="560" font-size="16">First Silicon Success: 14%</text>
+    <text x="550" y="560" font-size="16">Verification: 60-70% effort</text>
+    <text x="950" y="560" font-size="16">∞ coverage</text>
+  </g>
+</svg>
