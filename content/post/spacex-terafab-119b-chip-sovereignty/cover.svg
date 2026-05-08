@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="400" y="80" width="400" height="300" fill="none" stroke="#58a6ff" stroke-width="2" rx="8"/>
+  <text x="600" y="160" text-anchor="middle" font-family="monospace" font-size="60" font-weight="bold" fill="#58a6ff">TERAFAB</text>
+  <text x="600" y="220" text-anchor="middle" font-family="monospace" font-size="80" font-weight="bold" fill="#f0883e">$119B</text>
+  <text x="600" y="280" text-anchor="middle" font-family="monospace" font-size="24" fill="#8b949e">200 GW/year → 1 TW in space</text>
+  <line x1="450" y1="310" x2="750" y2="310" stroke="#30363d" stroke-width="1"/>
+  <text x="500" y="350" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#58a6ff">SpaceX</text>
+  <text x="600" y="350" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#f0883e">Tesla</text>
+  <text x="700" y="350" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#3fb950">Intel</text>
+  <text x="600" y="450" text-anchor="middle" font-family="sans-serif" font-size="30" fill="#c9d1d9">算力主权的新形态</text>
+  <text x="600" y="500" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#8b949e">还是 Musk 式豪赌？</text>
+  <rect x="50" y="580" width="1100" height="3" fill="#30363d"/>
+  <rect x="50" y="580" width="400" height="3" fill="#58a6ff"/>
+</svg>
