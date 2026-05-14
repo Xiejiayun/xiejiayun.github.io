@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071622"/>
+      <stop offset="1" stop-color="#0c1f33"/>
+    </linearGradient>
+    <linearGradient id="leftCol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c3a5e"/>
+      <stop offset="1" stop-color="#0a1929"/>
+    </linearGradient>
+    <linearGradient id="rightCol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a1a4d"/>
+      <stop offset="1" stop-color="#170824"/>
+    </linearGradient>
+    <linearGradient id="armGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5cc4ff"/>
+      <stop offset="1" stop-color="#2c6e9c"/>
+    </linearGradient>
+    <linearGradient id="brainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c97aff"/>
+      <stop offset="1" stop-color="#5c1b8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+
+  <!-- left half: Hello Robot Stretch (路线A) -->
+  <rect x="0" y="0" width="600" height="630" fill="url(#leftCol)" opacity="0.5"/>
+  <g transform="translate(300 310)">
+    <!-- stretch base -->
+    <ellipse cx="0" cy="180" rx="80" ry="22" fill="#0d2236" stroke="#3a6e96" stroke-width="3"/>
+    <!-- column -->
+    <rect x="-18" y="-40" width="36" height="220" fill="url(#armGrad)" rx="6"/>
+    <!-- arm extension -->
+    <rect x="0" y="-30" width="160" height="14" fill="url(#armGrad)" rx="4"/>
+    <!-- gripper -->
+    <rect x="155" y="-40" width="20" height="34" fill="#5cc4ff" rx="3"/>
+    <rect x="155" y="-10" width="20" height="14" fill="#5cc4ff" rx="3"/>
+    <!-- sensor head -->
+    <circle cx="0" cy="-50" r="22" fill="#0d2236" stroke="#5cc4ff" stroke-width="3"/>
+    <circle cx="-8" cy="-55" r="5" fill="#5cc4ff"/>
+    <circle cx="8" cy="-55" r="5" fill="#5cc4ff"/>
+  </g>
+  <g transform="translate(300 540)" text-anchor="middle">
+    <text fill="#5cc4ff" font-family="Inter, sans-serif" font-size="26" font-weight="800">Hello Robot · Stretch 4</text>
+    <text y="32" fill="#a0d4f5" font-family="Inter, sans-serif" font-size="18">$29,950 · 开源 · 形态通用</text>
+    <text y="58" fill="#7a9fc0" font-family="JetBrains Mono, monospace" font-size="14">硬件平台 · 一次性销售 · 8 小时续航</text>
+  </g>
+
+  <!-- right half: Mind Robotics (路线B) -->
+  <rect x="600" y="0" width="600" height="630" fill="url(#rightCol)" opacity="0.5"/>
+  <g transform="translate(900 310)">
+    <!-- abstract brain/foundation model -->
+    <circle cx="0" cy="40" r="110" fill="none" stroke="url(#brainGrad)" stroke-width="4"/>
+    <circle cx="0" cy="40" r="78" fill="none" stroke="url(#brainGrad)" stroke-width="3" stroke-dasharray="4 4"/>
+    <circle cx="0" cy="40" r="46" fill="url(#brainGrad)" opacity="0.7"/>
+    <text x="0" y="35" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="18" font-weight="700">Foundation</text>
+    <text x="0" y="56" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="16">Model</text>
+    <!-- data flywheel arrows around -->
+    <g stroke="#ffd166" stroke-width="3" fill="none">
+      <path d="M-90 -40 Q-130 40 -90 120" marker-end="url(#arr)"/>
+      <path d="M90 120 Q130 40 90 -40" marker-end="url(#arr)"/>
+    </g>
+    <defs>
+      <marker id="arr" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+        <polygon points="0,0 6,3 0,6" fill="#ffd166"/>
+      </marker>
+    </defs>
+    <text x="-115" y="50" fill="#ffd166" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Rivian</text>
+    <text x="-115" y="64" fill="#ffd166" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">数据</text>
+    <text x="80" y="50" fill="#ffd166" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">RaaS</text>
+    <text x="80" y="64" fill="#ffd166" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">部署</text>
+  </g>
+  <g transform="translate(900 540)" text-anchor="middle">
+    <text fill="#c97aff" font-family="Inter, sans-serif" font-size="26" font-weight="800">Mind Robotics · $1B 押注</text>
+    <text y="32" fill="#d8b5ff" font-family="Inter, sans-serif" font-size="18">RaaS · 垂直整合 · 任务通用</text>
+    <text y="58" fill="#a888bc" font-family="JetBrains Mono, monospace" font-size="14">Foundation Model · 数据飞轮 · Rivian 锁定</text>
+  </g>
+
+  <!-- center VS bar -->
+  <g transform="translate(600 300)">
+    <line x1="0" y1="-200" x2="0" y2="200" stroke="#ffd166" stroke-width="2" stroke-dasharray="4 6" opacity="0.7"/>
+    <circle cx="0" cy="0" r="42" fill="#0a1929" stroke="#ffd166" stroke-width="3"/>
+    <text x="0" y="9" text-anchor="middle" fill="#ffd166" font-family="Inter, sans-serif" font-size="26" font-weight="900">VS</text>
+  </g>
+
+  <!-- title -->
+  <text x="600" y="60" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="32" font-weight="800">通用机器人商业化的两条赌注路线</text>
+  <text x="600" y="95" text-anchor="middle" fill="#a0d4f5" font-family="Inter, sans-serif" font-size="18">2026-05-14 · 具身智能 / 制造业自动化 / 路线分叉年</text>
+</svg>

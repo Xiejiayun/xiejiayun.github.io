@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06121f"/>
+      <stop offset="1" stop-color="#0e1f33"/>
+    </linearGradient>
+    <linearGradient id="nodeA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5cc4ff"/>
+      <stop offset="1" stop-color="#1f6a9c"/>
+    </linearGradient>
+    <linearGradient id="nodeB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7eff8a"/>
+      <stop offset="1" stop-color="#1f8a30"/>
+    </linearGradient>
+    <linearGradient id="nodeC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#8a6a1f"/>
+    </linearGradient>
+    <linearGradient id="masterG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c97aff"/>
+      <stop offset="1" stop-color="#5c1b8a"/>
+    </linearGradient>
+    <filter id="glow5" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+
+  <!-- grid -->
+  <g stroke="#152537" stroke-width="0.5" opacity="0.4">
+    <path d="M0 100 L1200 100 M0 200 L1200 200 M0 300 L1200 300 M0 400 L1200 400 M0 500 L1200 500"/>
+    <path d="M200 0 L200 630 M400 0 L400 630 M600 0 L600 630 M800 0 L800 630 M1000 0 L1000 630"/>
+  </g>
+
+  <!-- 3 worker datacenters on left -->
+  <g transform="translate(150 200)">
+    <!-- worker A -->
+    <g transform="translate(0 0)">
+      <rect x="0" y="0" width="160" height="80" rx="10" fill="url(#nodeA)" filter="url(#glow5)"/>
+      <text x="80" y="32" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="18" font-weight="700">Worker A</text>
+      <text x="80" y="55" text-anchor="middle" fill="#cfeaff" font-family="JetBrains Mono, monospace" font-size="12">DC East · 20K GPU</text>
+      <text x="80" y="72" text-anchor="middle" fill="#cfeaff" font-family="JetBrains Mono, monospace" font-size="11">round 142</text>
+    </g>
+    <!-- worker B -->
+    <g transform="translate(0 110)">
+      <rect x="0" y="0" width="160" height="80" rx="10" fill="url(#nodeB)" filter="url(#glow5)"/>
+      <text x="80" y="32" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="18" font-weight="700">Worker B</text>
+      <text x="80" y="55" text-anchor="middle" fill="#d6ffd6" font-family="JetBrains Mono, monospace" font-size="12">DC West · 18K GPU</text>
+      <text x="80" y="72" text-anchor="middle" fill="#d6ffd6" font-family="JetBrains Mono, monospace" font-size="11">round 139</text>
+    </g>
+    <!-- worker C -->
+    <g transform="translate(0 220)">
+      <rect x="0" y="0" width="160" height="80" rx="10" fill="url(#nodeC)" filter="url(#glow5)"/>
+      <text x="80" y="32" text-anchor="middle" fill="#1a1a1a" font-family="Inter, sans-serif" font-size="18" font-weight="700">Worker C</text>
+      <text x="80" y="55" text-anchor="middle" fill="#3a3a1a" font-family="JetBrains Mono, monospace" font-size="12">DC EU · 15K GPU</text>
+      <text x="80" y="72" text-anchor="middle" fill="#3a3a1a" font-family="JetBrains Mono, monospace" font-size="11">round 137</text>
+    </g>
+  </g>
+
+  <!-- delta arrows pointing to master -->
+  <g stroke-width="3" fill="none" filter="url(#glow5)">
+    <path d="M310 230 Q500 250 660 270" stroke="#5cc4ff" stroke-dasharray="8 6"/>
+    <path d="M310 340 Q500 340 660 320" stroke="#7eff8a" stroke-dasharray="8 6"/>
+    <path d="M310 450 Q500 420 660 360" stroke="#ffd166" stroke-dasharray="8 6"/>
+    <text x="490" y="220" fill="#5cc4ff" font-family="JetBrains Mono, monospace" font-size="13">Δ_A (k=0)</text>
+    <text x="490" y="330" fill="#7eff8a" font-family="JetBrains Mono, monospace" font-size="13">Δ_B (k=3)</text>
+    <text x="490" y="440" fill="#ffd166" font-family="JetBrains Mono, monospace" font-size="13">Δ_C (k=5)</text>
+  </g>
+
+  <!-- async master in center-right -->
+  <g transform="translate(720 240)">
+    <rect x="0" y="0" width="240" height="170" rx="14" fill="url(#masterG)" stroke="#fff" stroke-width="2" filter="url(#glow5)"/>
+    <text x="120" y="38" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="20" font-weight="800">Async Master</text>
+    <text x="120" y="65" text-anchor="middle" fill="#f0d8ff" font-family="JetBrains Mono, monospace" font-size="13">Nesterov outer opt</text>
+    <text x="120" y="85" text-anchor="middle" fill="#f0d8ff" font-family="JetBrains Mono, monospace" font-size="13">+ staleness decay</text>
+    <text x="120" y="115" text-anchor="middle" fill="#ffd166" font-family="JetBrains Mono, monospace" font-size="14">decay(k) = e^(-λk)</text>
+    <text x="120" y="140" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="14" font-weight="700">global round 145</text>
+  </g>
+
+  <!-- benefits panel right -->
+  <g transform="translate(990 220)" font-family="Inter, sans-serif">
+    <text fill="#ffd166" font-size="16" font-weight="800">✓ 容错 100×</text>
+    <text y="28" fill="#ffd166" font-size="16" font-weight="800">✓ 通信 ÷500</text>
+    <text y="56" fill="#ffd166" font-size="16" font-weight="800">✓ 跨 DC 训练</text>
+    <text y="84" fill="#ffd166" font-size="16" font-weight="800">✓ 质量 ≈ 同步</text>
+  </g>
+
+  <!-- title -->
+  <text x="600" y="60" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-size="34" font-weight="800">Decoupled DiLoCo</text>
+  <text x="600" y="95" text-anchor="middle" fill="#a0d4f5" font-family="Inter, sans-serif" font-size="18">DeepMind · 把"同步"从分布式 LLM 训练里剥离出来</text>
+  <text x="600" y="580" text-anchor="middle" fill="#7d8590" font-family="JetBrains Mono, monospace" font-size="14">2026-05-14 · AI 基础设施 / 容错训练 / 跨数据中心新范式</text>
+</svg>
