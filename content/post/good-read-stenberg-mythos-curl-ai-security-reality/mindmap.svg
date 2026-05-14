@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="brAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg2)"/>
+
+  <!-- center node -->
+  <g transform="translate(700,450)">
+    <ellipse cx="0" cy="0" rx="180" ry="60" fill="#1e293b" stroke="url(#brAccent)" stroke-width="2"/>
+    <text x="0" y="-6" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="22" font-weight="700">Mythos finds a curl vuln</text>
+    <text x="0" y="22" text-anchor="middle" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="13">Daniel Stenberg · 2026-05-11</text>
+  </g>
+
+  <!-- branch lines -->
+  <g stroke="url(#brAccent)" stroke-width="1.5" fill="none" opacity="0.6">
+    <path d="M 520,450 C 380,200 250,180 180,160"/>
+    <path d="M 520,450 C 380,350 250,330 180,310"/>
+    <path d="M 520,450 C 380,500 250,520 180,540"/>
+    <path d="M 520,450 C 380,650 250,720 180,740"/>
+    <path d="M 880,450 C 1020,200 1150,180 1220,160"/>
+    <path d="M 880,450 C 1020,350 1150,330 1220,310"/>
+    <path d="M 880,450 C 1020,500 1150,520 1220,540"/>
+    <path d="M 880,450 C 1020,650 1150,720 1220,740"/>
+  </g>
+
+  <!-- LEFT branches -->
+  <g font-family="system-ui, sans-serif">
+    <g transform="translate(180,160)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">访问漏斗</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">Glasswing → Alpha Omega → 代跑扫描</text>
+    </g>
+    <g transform="translate(180,310)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">语义错位</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">AI Confirmed ≠ Security-Team Confirmed</text>
+    </g>
+    <g transform="translate(180,540)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">curl 体量</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">178K LOC · 188 CVE · 20B installs</text>
+    </g>
+    <g transform="translate(180,740)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">营销 vs 工程</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">否定比较级，肯定绝对水平</text>
+    </g>
+  </g>
+
+  <!-- RIGHT branches -->
+  <g font-family="system-ui, sans-serif">
+    <g transform="translate(1220,160)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">老品种漏洞</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">新实例，不是新类别</text>
+    </g>
+    <g transform="translate(1220,310)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">防御工程化</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">capped dynbuf / strict numeric / format guard</text>
+    </g>
+    <g transform="translate(1220,540)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">AI 工具组合</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">AISLE + Zeropath + Codex Sec + Copilot</text>
+    </g>
+    <g transform="translate(1220,740)">
+      <rect x="-160" y="-32" width="320" height="64" rx="8" fill="#0f172a" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="0" y="-8" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="600">行动建议</text>
+      <text x="0" y="14" text-anchor="middle" fill="#94a3b8" font-size="12">首次扫描的"安全债清算"</text>
+    </g>
+  </g>
+
+  <!-- title -->
+  <text x="700" y="60" text-anchor="middle" fill="#f1f5f9" font-family="system-ui, sans-serif" font-size="26" font-weight="700">好文共赏 · 思维导图</text>
+  <text x="700" y="86" text-anchor="middle" fill="#64748b" font-family="ui-monospace, monospace" font-size="13">Mythos / curl / Project Glasswing</text>
+
+  <!-- legend -->
+  <g transform="translate(700,860)" text-anchor="middle">
+    <text fill="#475569" font-family="ui-monospace, monospace" font-size="11">xiejiayun.github.io · 好文共赏第 4 期</text>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#1a0b2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="redaccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1e293b" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+  </g>
+
+  <!-- top tag -->
+  <g transform="translate(60,60)">
+    <rect width="160" height="34" rx="17" fill="none" stroke="url(#accent)" stroke-width="1.5"/>
+    <text x="80" y="22" text-anchor="middle" fill="#22d3ee" font-family="ui-monospace, SF Mono, monospace" font-size="13" letter-spacing="2">GOOD READ · 04</text>
+  </g>
+
+  <!-- main title -->
+  <text x="60" y="200" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="700">curl 之父亲测 Mythos</text>
+  <text x="60" y="260" fill="#f1f5f9" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="600">5 个"确认漏洞"最后只剩 1 个</text>
+
+  <!-- subtitle -->
+  <text x="60" y="320" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="22">AI 安全工具的祛魅时刻</text>
+
+  <!-- numbers grid -->
+  <g transform="translate(60,380)" font-family="ui-monospace, SF Mono, monospace">
+    <g transform="translate(0,0)">
+      <text fill="url(#redaccent)" font-size="56" font-weight="700">5 → 1</text>
+      <text y="30" fill="#64748b" font-size="13">CONFIRMED FOLDS</text>
+    </g>
+    <g transform="translate(280,0)">
+      <text fill="url(#accent)" font-size="56" font-weight="700">178K</text>
+      <text y="30" fill="#64748b" font-size="13">LINES OF C SCANNED</text>
+    </g>
+    <g transform="translate(540,0)">
+      <text fill="url(#accent)" font-size="56" font-weight="700">188</text>
+      <text y="30" fill="#64748b" font-size="13">CVEs PUBLISHED</text>
+    </g>
+    <g transform="translate(760,0)">
+      <text fill="url(#accent)" font-size="56" font-weight="700">20B</text>
+      <text y="30" fill="#64748b" font-size="13">INSTALL FOOTPRINT</text>
+    </g>
+  </g>
+
+  <!-- bottom bar -->
+  <g transform="translate(60,560)" font-family="ui-monospace, SF Mono, monospace">
+    <text fill="#64748b" font-size="14">daniel.haxx.se · 2026-05-11 · curl + Anthropic Mythos + Project Glasswing</text>
+  </g>
+  <g transform="translate(1140,560)" text-anchor="end" font-family="ui-monospace, SF Mono, monospace">
+    <text fill="#94a3b8" font-size="14">xiejiayun.github.io · 好文共赏</text>
+  </g>
+
+  <!-- decorative duck/lock motif -->
+  <g transform="translate(960,140)" opacity="0.85">
+    <circle cx="0" cy="0" r="90" fill="none" stroke="url(#redaccent)" stroke-width="1" opacity="0.4"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="url(#accent)" stroke-width="1" opacity="0.5"/>
+    <text x="0" y="8" text-anchor="middle" fill="#f1f5f9" font-family="ui-monospace, SF Mono, monospace" font-size="20" font-weight="700">CVE-low</text>
+  </g>
+</svg>
