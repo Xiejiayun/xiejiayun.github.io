@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <!-- Chain links breaking -->
+  <g transform="translate(650, 100)" opacity="0.7">
+    <ellipse cx="0" cy="30" rx="40" ry="25" fill="none" stroke="#ff4444" stroke-width="3"/>
+    <ellipse cx="60" cy="30" rx="40" ry="25" fill="none" stroke="#ff4444" stroke-width="3"/>
+    <ellipse cx="120" cy="30" rx="40" ry="25" fill="none" stroke="#ff6644" stroke-width="3"/>
+    <line x1="155" y1="10" x2="175" y2="50" stroke="#ff4444" stroke-width="4"/>
+    <ellipse cx="200" cy="30" rx="40" ry="25" fill="none" stroke="#444" stroke-width="3" stroke-dasharray="5,5"/>
+    <text x="100" y="80" fill="#ff4444" font-family="monospace" font-size="14" text-anchor="middle">SUPPLY CHAIN BROKEN</text>
+  </g>
+  <!-- Worm trail -->
+  <path d="M700 200 Q750 180 800 200 Q850 220 900 200 Q950 180 1000 200 Q1050 220 1100 200" fill="none" stroke="#ff4444" stroke-width="2" opacity="0.3"/>
+  <!-- Title -->
+  <text x="60" y="200" fill="#ffffff" font-family="sans-serif" font-size="38" font-weight="bold">TanStack 被投毒</text>
+  <text x="60" y="250" fill="#ffffff" font-family="sans-serif" font-size="38" font-weight="bold">OpenAI 紧急响应</text>
+  <rect x="60" y="270" width="350" height="3" fill="#ff4444"/>
+  <text x="60" y="310" fill="#ff6644" font-family="sans-serif" font-size="22">npm 供应链攻击进入</text>
+  <text x="60" y="345" fill="#ff6644" font-family="sans-serif" font-size="22">"信任凭证劫持"新阶段</text>
+  <text x="60" y="400" fill="#666" font-family="monospace" font-size="16">Mini Shai-Hulud · 代码签名证书 · 蠕虫式扩散</text>
+  <!-- Tag -->
+  <rect x="60" y="530" width="90" height="30" rx="15" fill="none" stroke="#ff4444" stroke-width="1"/>
+  <text x="105" y="550" fill="#ff4444" font-family="monospace" font-size="13" text-anchor="middle">安全/隐私</text>
+</svg>

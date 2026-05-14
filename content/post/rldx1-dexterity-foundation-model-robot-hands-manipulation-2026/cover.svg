@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1a0a"/>
+      <stop offset="100%" style="stop-color:#0a2a1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <!-- Robotic hand outline -->
+  <g transform="translate(750, 80)" stroke="#00ff88" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Palm -->
+    <rect x="20" y="100" width="120" height="100" rx="15"/>
+    <!-- Fingers -->
+    <rect x="20" y="30" width="22" height="75" rx="8"/>
+    <rect x="48" y="10" width="22" height="95" rx="8"/>
+    <rect x="76" y="5" width="22" height="100" rx="8"/>
+    <rect x="104" y="15" width="22" height="90" rx="8"/>
+    <!-- Thumb -->
+    <rect x="-10" y="110" width="22" height="60" rx="8" transform="rotate(-30, 0, 110)"/>
+    <!-- Grasping object -->
+    <circle cx="80" cy="60" r="15" stroke="#ffaa00" stroke-dasharray="4,3"/>
+    <!-- Force arrows -->
+    <line x1="45" y1="60" x2="62" y2="60" stroke="#ffaa00" stroke-width="1"/>
+    <line x1="115" y1="60" x2="98" y2="60" stroke="#ffaa00" stroke-width="1"/>
+  </g>
+  <!-- Title -->
+  <text x="60" y="200" fill="#ffffff" font-family="sans-serif" font-size="40" font-weight="bold">RLDX-1</text>
+  <text x="60" y="255" fill="#00ff88" font-family="sans-serif" font-size="24">灵巧操作也有了基础模型</text>
+  <rect x="60" y="275" width="300" height="3" fill="#00ff88"/>
+  <text x="60" y="315" fill="#aaaaaa" font-family="sans-serif" font-size="18">机器人的手终于要追上它的腿了</text>
+  <text x="60" y="355" fill="#666" font-family="sans-serif" font-size="16">触觉-视觉联合表征 · 分层时间尺度控制 · Sim-to-Real</text>
+  <!-- Tag -->
+  <rect x="60" y="530" width="100" height="30" rx="15" fill="none" stroke="#00ff88" stroke-width="1"/>
+  <text x="110" y="550" fill="#00ff88" font-family="monospace" font-size="13" text-anchor="middle">机器人/具身</text>
+</svg>

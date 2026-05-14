@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1a"/>
+      <stop offset="100%" style="stop-color:#0a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <!-- Robot silhouette with ban sign -->
+  <g transform="translate(800, 120)">
+    <!-- Simple robot dog shape -->
+    <rect x="20" y="40" width="120" height="60" rx="10" fill="none" stroke="#4488ff" stroke-width="2"/>
+    <rect x="130" y="30" width="40" height="30" rx="5" fill="none" stroke="#4488ff" stroke-width="2"/>
+    <line x1="30" y1="100" x2="30" y2="140" stroke="#4488ff" stroke-width="3"/>
+    <line x1="60" y1="100" x2="60" y2="140" stroke="#4488ff" stroke-width="3"/>
+    <line x1="110" y1="100" x2="110" y2="140" stroke="#4488ff" stroke-width="3"/>
+    <line x1="130" y1="100" x2="130" y2="140" stroke="#4488ff" stroke-width="3"/>
+    <!-- Ban circle -->
+    <circle cx="90" cy="70" r="90" fill="none" stroke="#ff4444" stroke-width="4" opacity="0.8"/>
+    <line x1="27" y1="133" x2="153" y2="7" stroke="#ff4444" stroke-width="4" opacity="0.8"/>
+  </g>
+  <!-- Title -->
+  <text x="60" y="200" fill="#ffffff" font-family="sans-serif" font-size="38" font-weight="bold">美国拟禁中国机器人</text>
+  <text x="60" y="255" fill="#4488ff" font-family="sans-serif" font-size="24">《美国安全机器人法案》的真实意图</text>
+  <rect x="60" y="275" width="350" height="3" fill="#4488ff"/>
+  <text x="60" y="315" fill="#aaaaaa" font-family="sans-serif" font-size="18">物理世界的数据主权之争</text>
+  <text x="60" y="345" fill="#666" font-family="sans-serif" font-size="16">从华为禁令到机器人禁令：科技脱钩延伸到物理空间</text>
+  <!-- Tag -->
+  <rect x="60" y="530" width="90" height="30" rx="15" fill="none" stroke="#4488ff" stroke-width="1"/>
+  <text x="105" y="550" fill="#4488ff" font-family="monospace" font-size="13" text-anchor="middle">商业/产业</text>
+</svg>
