@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#0e1b30"/>
+      <stop offset="100%" stop-color="#1a0e2e"/>
+    </linearGradient>
+    <linearGradient id="duck" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fdbb2d"/>
+      <stop offset="100%" stop-color="#ff8c42"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- decorative protocol lines -->
+  <g opacity="0.08" stroke="#22d3ee" stroke-width="1" fill="none">
+    <path d="M 0 120 Q 300 80 600 120 T 1200 120"/>
+    <path d="M 0 200 Q 300 160 600 200 T 1200 200"/>
+    <path d="M 0 280 Q 300 240 600 280 T 1200 280"/>
+    <path d="M 0 360 Q 300 320 600 360 T 1200 360"/>
+    <path d="M 0 440 Q 300 400 600 440 T 1200 440"/>
+    <path d="M 0 520 Q 300 480 600 520 T 1200 520"/>
+  </g>
+
+  <!-- top tag -->
+  <g transform="translate(60,70)">
+    <rect width="180" height="36" rx="18" fill="#0ea5e9" opacity="0.18"/>
+    <text x="90" y="24" fill="#7dd3fc" font-size="16" font-weight="600" text-anchor="middle">好文共赏 · Editor's Pick</text>
+  </g>
+
+  <!-- duck emoji -->
+  <g transform="translate(1000,80)">
+    <circle cx="50" cy="50" r="50" fill="url(#duck)" opacity="0.92"/>
+    <ellipse cx="50" cy="62" rx="46" ry="36" fill="url(#duck)"/>
+    <circle cx="68" cy="38" r="6" fill="#0b1220"/>
+    <path d="M 78 50 L 100 45 L 100 60 L 78 58 Z" fill="#ff6b35"/>
+    <text x="50" y="135" fill="#fdbb2d" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="2">QUACK</text>
+  </g>
+
+  <!-- title -->
+  <text x="60" y="200" fill="#e2e8f0" font-size="48" font-weight="800">
+    Quack: DuckDB 在 2026 年
+  </text>
+  <text x="60" y="262" fill="url(#accent)" font-size="48" font-weight="800" filter="url(#glow)">
+    从零设计一个 wire 协议
+  </text>
+  <text x="60" y="262" fill="#a78bfa" font-size="48" font-weight="800">
+    从零设计一个 wire 协议
+  </text>
+
+  <!-- subtitle -->
+  <text x="60" y="316" fill="#94a3b8" font-size="22">
+    HTTP 为底座 · 单 RTT · application/duckdb · SQL macro 鉴权
+  </text>
+  <text x="60" y="348" fill="#94a3b8" font-size="22">
+    把 PostgreSQL 和 Arrow Flight 都拉出来当背景板
+  </text>
+
+  <!-- benchmark facts -->
+  <g transform="translate(60,410)">
+    <rect width="280" height="92" rx="14" fill="#1e3a5f" opacity="0.6"/>
+    <text x="20" y="32" fill="#22d3ee" font-size="14" font-weight="600">BULK TRANSFER</text>
+    <text x="20" y="62" fill="#e2e8f0" font-size="26" font-weight="800">60M 行 / &lt; 5 秒</text>
+    <text x="20" y="82" fill="#94a3b8" font-size="13">76GB CSV，远超 PG &amp; Arrow Flight</text>
+  </g>
+  <g transform="translate(360,410)">
+    <rect width="280" height="92" rx="14" fill="#3a1e5f" opacity="0.6"/>
+    <text x="20" y="32" fill="#a78bfa" font-size="14" font-weight="600">SMALL WRITES</text>
+    <text x="20" y="62" fill="#e2e8f0" font-size="26" font-weight="800">5500 TPS</text>
+    <text x="20" y="82" fill="#94a3b8" font-size="13">8 线程内超过 PostgreSQL</text>
+  </g>
+  <g transform="translate(660,410)">
+    <rect width="280" height="92" rx="14" fill="#5f3a1e" opacity="0.6"/>
+    <text x="20" y="32" fill="#fdbb2d" font-size="14" font-weight="600">PORT</text>
+    <text x="20" y="62" fill="#e2e8f0" font-size="26" font-weight="800">9494</text>
+    <text x="20" y="82" fill="#94a3b8" font-size="13">致敬 Netscape Navigator 1994</text>
+  </g>
+
+  <!-- bottom band -->
+  <g transform="translate(60,550)">
+    <text fill="#64748b" font-size="14">原文：The DuckDB team · 2026-05-12 · 20 min · duckdb.org</text>
+    <text y="26" fill="#64748b" font-size="14">多模评分：Opus 9.2 / Sonnet 8.8 / Gemini 8.9 — 综合 9.0/10</text>
+  </g>
+</svg>

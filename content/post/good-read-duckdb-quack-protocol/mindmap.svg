@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="-apple-system, 'Segoe UI', 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#1a0e2e"/>
+    </linearGradient>
+    <linearGradient id="cAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#fdbb2d"/>
+      <stop offset="100%" stop-color="#ff8c42"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g opacity="0.05" stroke="#22d3ee" stroke-width="1">
+    <line x1="0" y1="100" x2="1600" y2="100"/>
+    <line x1="0" y1="300" x2="1600" y2="300"/>
+    <line x1="0" y1="500" x2="1600" y2="500"/>
+    <line x1="0" y1="700" x2="1600" y2="700"/>
+    <line x1="0" y1="900" x2="1600" y2="900"/>
+  </g>
+
+  <!-- title -->
+  <text x="800" y="50" fill="#e2e8f0" font-size="26" font-weight="800" text-anchor="middle">Quack 协议设计思维导图</text>
+  <text x="800" y="80" fill="#94a3b8" font-size="14" text-anchor="middle">五大核心决定 + 工作负载边界 + benchmark + 与 PG/Arrow Flight 对比</text>
+
+  <!-- center node -->
+  <g transform="translate(800,560)">
+    <circle r="100" fill="url(#core)" opacity="0.9"/>
+    <text fill="#0b1220" font-size="32" font-weight="900" text-anchor="middle" y="-8">Quack</text>
+    <text fill="#0b1220" font-size="14" font-weight="700" text-anchor="middle" y="18">DuckDB Wire Protocol</text>
+    <text fill="#0b1220" font-size="12" text-anchor="middle" y="38">2026-05-12</text>
+  </g>
+
+  <!-- 5 branches: HTTP / single-RTT / app/duckdb / SQL-macro auth / no Arrow Flight -->
+
+  <!-- Branch 1: HTTP substrate -->
+  <g stroke="#22d3ee" stroke-width="2" fill="none">
+    <path d="M 740 480 Q 500 380 250 220"/>
+  </g>
+  <g transform="translate(60,150)">
+    <rect width="380" height="130" rx="14" fill="#0e3a55" opacity="0.85"/>
+    <text x="20" y="32" fill="#7dd3fc" font-size="16" font-weight="700">① HTTP as Substrate</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• 不在 2026 年新协议里用裸 TCP</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• L7 LB / WAF / TLS / 可观测性全部白嫖</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• DuckDB-Wasm 浏览器直连 EC2</text>
+    <text x="20" y="118" fill="#94a3b8" font-size="11">"misguided not to build on HTTP in 2026"</text>
+  </g>
+
+  <!-- Branch 2: Single round-trip -->
+  <g stroke="#a78bfa" stroke-width="2" fill="none">
+    <path d="M 860 480 Q 1100 380 1350 220"/>
+  </g>
+  <g transform="translate(1160,150)">
+    <rect width="380" height="130" rx="14" fill="#3a1e5f" opacity="0.85"/>
+    <text x="20" y="32" fill="#c4b5fd" font-size="16" font-weight="700">② Single Round-Trip</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• 简单查询 1 RTT 完成</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• 大结果用 follow-up fetch（可并行）</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• Arrow Flight 强制 2 RTT 是致命缺陷</text>
+    <text x="20" y="118" fill="#94a3b8" font-size="11">small writes 直接受益</text>
+  </g>
+
+  <!-- Branch 3: application/duckdb -->
+  <g stroke="#fdbb2d" stroke-width="2" fill="none">
+    <path d="M 760 660 Q 500 760 220 870"/>
+  </g>
+  <g transform="translate(60,810)">
+    <rect width="380" height="130" rx="14" fill="#5f3a1e" opacity="0.85"/>
+    <text x="20" y="32" fill="#fcd34d" font-size="16" font-weight="700">③ application/duckdb</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• 复用 WAL 已 battle-tested 的序列化</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• 不被 Protobuf/Arrow schema 绑死</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• 新数据类型今天加明天发版</text>
+    <text x="20" y="118" fill="#94a3b8" font-size="11">代价：客户端只能是 DuckDB 自己</text>
+  </g>
+
+  <!-- Branch 4: SQL-macro auth -->
+  <g stroke="#10b981" stroke-width="2" fill="none">
+    <path d="M 840 660 Q 1100 760 1380 870"/>
+  </g>
+  <g transform="translate(1160,810)">
+    <rect width="380" height="130" rx="14" fill="#0e3a2e" opacity="0.85"/>
+    <text x="20" y="32" fill="#6ee7b7" font-size="16" font-weight="700">④ SQL Macro Auth</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• authn / authz 都是可换 callback</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• callback 本身可以是一段 SQL macro</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• 默认 token + localhost-only，secure default</text>
+    <text x="20" y="118" fill="#94a3b8" font-size="11">treat SQL as first-class meta layer</text>
+  </g>
+
+  <!-- Branch 5: reject Arrow Flight -->
+  <g stroke="#f43f5e" stroke-width="2" fill="none">
+    <path d="M 800 460 Q 800 380 800 270"/>
+  </g>
+  <g transform="translate(610,150)">
+    <rect width="380" height="100" rx="14" fill="#5f1e2e" opacity="0.85"/>
+    <text x="20" y="32" fill="#fecaca" font-size="16" font-weight="700">⑤ Reject Arrow Flight SQL</text>
+    <text x="20" y="56" fill="#e2e8f0" font-size="13">• Interchange format ≠ wire protocol</text>
+    <text x="20" y="76" fill="#e2e8f0" font-size="13">• 2 RTT 设计是 fateful flaw</text>
+    <text x="20" y="96" fill="#94a3b8" font-size="11">"control your own evolution"</text>
+  </g>
+
+  <!-- Benchmark zone bottom-center -->
+  <g transform="translate(560,940)">
+    <rect width="480" height="120" rx="14" fill="#1e293b" opacity="0.85" stroke="url(#cAccent)" stroke-width="2"/>
+    <text x="240" y="32" fill="#22d3ee" font-size="16" font-weight="700" text-anchor="middle">Benchmarks（同 AZ m8g.2xlarge）</text>
+    <text x="20" y="62" fill="#e2e8f0" font-size="13">• Bulk: 60M 行 lineitem &lt; 5 秒（碾压 PG &amp; Arrow Flight）</text>
+    <text x="20" y="82" fill="#e2e8f0" font-size="13">• Small writes: 5500 TPS（8 线程内 &gt; PostgreSQL）</text>
+    <text x="20" y="102" fill="#fda4af" font-size="13">• 诚实承认：&gt; 8 线程被 DuckDB 内核 INSERT 锁住</text>
+  </g>
+
+  <!-- Left: workload sweet-spot -->
+  <g transform="translate(60,440)">
+    <rect width="380" height="120" rx="14" fill="#1e293b" opacity="0.7" stroke="#22d3ee" stroke-width="1"/>
+    <text x="20" y="32" fill="#7dd3fc" font-size="15" font-weight="700">🎯 工作负载甜区</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• 数据中心内多 writer</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• 中等 TPS + 大查询混合</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• observability 入库 + 分析</text>
+  </g>
+
+  <!-- Left: what Quack does NOT do -->
+  <g transform="translate(60,600)">
+    <rect width="380" height="160" rx="14" fill="#1e293b" opacity="0.7" stroke="#f43f5e" stroke-width="1"/>
+    <text x="20" y="32" fill="#fda4af" font-size="15" font-weight="700">⛔ Quack 故意不做</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• 跨实例 replication（待后续）</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• 高可用 / 故障转移</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• 跨节点分布式事务</text>
+    <text x="20" y="118" fill="#e2e8f0" font-size="13">• 内置 SSL（让 nginx 终结）</text>
+    <text x="20" y="138" fill="#e2e8f0" font-size="13">• cross-system 客户端（守住 DuckDB 自己）</text>
+  </g>
+
+  <!-- Right: compared to -->
+  <g transform="translate(1160,440)">
+    <rect width="380" height="120" rx="14" fill="#1e293b" opacity="0.7" stroke="#a78bfa" stroke-width="1"/>
+    <text x="20" y="32" fill="#c4b5fd" font-size="15" font-weight="700">⚖️ 与既有协议对位</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• PostgreSQL：行式、1996 设计、TCP 裸跑</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• Arrow Flight SQL：列式、cross-system、2 RTT</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• Quack：列式、HTTP-based、1 RTT、自序列化</text>
+  </g>
+
+  <!-- Right: strategic positioning -->
+  <g transform="translate(1160,600)">
+    <rect width="380" height="160" rx="14" fill="#1e293b" opacity="0.7" stroke="#10b981" stroke-width="1"/>
+    <text x="20" y="32" fill="#6ee7b7" font-size="15" font-weight="700">🚀 战略意义</text>
+    <text x="20" y="58" fill="#e2e8f0" font-size="13">• OLAP 引擎反向吃 OLTP 边界第 N 例</text>
+    <text x="20" y="78" fill="#e2e8f0" font-size="13">• DuckLake + Quack = 分布式 footprint</text>
+    <text x="20" y="98" fill="#e2e8f0" font-size="13">• observability 双系统(PG+CH) 可能合一</text>
+    <text x="20" y="118" fill="#e2e8f0" font-size="13">• HTAP 边界又一次模糊化</text>
+    <text x="20" y="138" fill="#94a3b8" font-size="11">但克制：不试图变成下一个 CockroachDB</text>
+  </g>
+
+  <!-- bottom signature -->
+  <text x="800" y="1080" fill="#475569" font-size="12" text-anchor="middle">好文共赏 · 思维导图 · 2026-05-14</text>
+</svg>
