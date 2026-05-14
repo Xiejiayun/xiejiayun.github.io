@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1422"/>
+      <stop offset="100%" stop-color="#0c1a2a"/>
+    </linearGradient>
+    <linearGradient id="util" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="press" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg4)"/>
+  <!-- Title -->
+  <g>
+    <text x="60" y="95" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="36" font-weight="800" fill="#f1f5f9">Kubernetes 1.36 · PSI 进入 GA</text>
+    <text x="60" y="132" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="17" fill="#94a3b8">利用率告诉你"用了多少"，PSI 告诉你"任务卡了多久"</text>
+  </g>
+
+  <!-- Chart 1: utilization vs psi -->
+  <g transform="translate(80 180)">
+    <text x="0" y="0" font-family="'Source Han Sans CN',sans-serif" font-size="15" fill="#67e8f9" font-weight="700">Node CPU utilization</text>
+    <text x="0" y="22" font-family="monospace" font-size="11" fill="#64748b">"绿色 = 健康"</text>
+    <!-- Bars -->
+    <g transform="translate(0 40)">
+      <rect x="0" y="0" width="500" height="40" rx="6" fill="#1e293b"/>
+      <rect x="0" y="0" width="300" height="40" rx="6" fill="url(#util)"/>
+      <text x="250" y="26" font-family="monospace" font-size="14" font-weight="700" fill="#0a1422" text-anchor="middle">CPU 60%</text>
+      <text x="510" y="26" font-family="monospace" font-size="12" fill="#94a3b8">looks fine</text>
+    </g>
+    <!-- PSI bars -->
+    <text x="0" y="120" font-family="'Source Han Sans CN',sans-serif" font-size="15" fill="#fbbf24" font-weight="700">PSI memory.full / cpu.some</text>
+    <text x="0" y="142" font-family="monospace" font-size="11" fill="#64748b">"任务停顿时间占比"</text>
+    <g transform="translate(0 160)">
+      <rect x="0" y="0" width="500" height="40" rx="6" fill="#1e293b"/>
+      <rect x="0" y="0" width="170" height="40" rx="6" fill="url(#press)"/>
+      <text x="85" y="26" font-family="monospace" font-size="14" font-weight="700" fill="#1a0c0c" text-anchor="middle">stall 34%</text>
+      <text x="510" y="26" font-family="monospace" font-size="12" fill="#ef4444">真实 = 病</text>
+    </g>
+    <!-- Bottom note -->
+    <text x="0" y="240" font-family="monospace" font-size="12" fill="#cbd5e1" opacity="0.85">同一节点 · 同一时刻 · 两种'真相'</text>
+    <text x="0" y="262" font-family="monospace" font-size="11" fill="#64748b">2018 Linux 4.20 引入 · 2026 K8s 1.36 终于 GA</text>
+  </g>
+
+  <!-- Right: features stack -->
+  <g transform="translate(750 180)">
+    <rect x="0" y="0" width="390" height="380" rx="14" fill="#0e1928" stroke="#1f2a3d" stroke-width="1"/>
+    <text x="195" y="36" font-family="'Source Han Sans CN',sans-serif" font-size="17" font-weight="700" fill="#e2e8f0" text-anchor="middle">1.36 三大新感官</text>
+
+    <g transform="translate(24 64)">
+      <rect x="0" y="0" width="20" height="20" rx="4" fill="#22c55e"/>
+      <text x="32" y="16" font-family="monospace" font-size="14" font-weight="700" fill="#86efac">PSI metrics GA</text>
+      <text x="32" y="36" font-family="monospace" font-size="11" fill="#94a3b8">cpu/memory/io pressure</text>
+    </g>
+
+    <g transform="translate(24 130)">
+      <rect x="0" y="0" width="20" height="20" rx="4" fill="#a78bfa"/>
+      <text x="32" y="16" font-family="monospace" font-size="14" font-weight="700" fill="#c4b5fd">PodGroup API</text>
+      <text x="32" y="36" font-family="monospace" font-size="11" fill="#94a3b8">gang scheduling · 原子调度</text>
+    </g>
+
+    <g transform="translate(24 196)">
+      <rect x="0" y="0" width="20" height="20" rx="4" fill="#fb923c"/>
+      <text x="32" y="16" font-family="monospace" font-size="14" font-weight="700" fill="#fdba74">DRA 大跃进</text>
+      <text x="32" y="36" font-family="monospace" font-size="11" fill="#94a3b8">Prioritized list (stable)</text>
+      <text x="32" y="52" font-family="monospace" font-size="11" fill="#94a3b8">Partitionable / health (beta)</text>
+      <text x="32" y="68" font-family="monospace" font-size="11" fill="#94a3b8">CPU/mem 进 DRA (alpha)</text>
+    </g>
+
+    <g transform="translate(24 290)">
+      <line x1="0" y1="0" x2="340" y2="0" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="20" font-family="monospace" font-size="12" fill="#fbbf24">AI workload 反过来重塑 K8s</text>
+      <text x="0" y="42" font-family="monospace" font-size="11" fill="#94a3b8">7 年蛰伏 · 终于成为默认调度感官</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="605" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" opacity="0.9">利用率 60% ≠ 健康 · 真正的容量上限是 PSI 陡升前的那一点</text>
+</svg>

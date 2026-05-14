@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0b1a"/>
+      <stop offset="100%" stop-color="#1a0e0a"/>
+    </linearGradient>
+    <linearGradient id="grad-seat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="grad-meter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <!-- title -->
+  <g>
+    <text x="60" y="100" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="38" font-weight="800" fill="#f8fafc">AI 编程订阅的'计费转向'</text>
+    <text x="60" y="142" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="17" fill="#94a3b8">按席位卖软件的时代正式落幕</text>
+  </g>
+  <!-- chart: comparing seat vs token -->
+  <g transform="translate(60 200)">
+    <!-- axis -->
+    <line x1="0" y1="0" x2="0" y2="280" stroke="#475569" stroke-width="1.5"/>
+    <line x1="0" y1="280" x2="700" y2="280" stroke="#475569" stroke-width="1.5"/>
+    <text x="-12" y="-6" font-family="monospace" font-size="11" fill="#64748b" text-anchor="end">cost/user $</text>
+    <text x="710" y="298" font-family="monospace" font-size="11" fill="#64748b" text-anchor="end">usage →</text>
+    <!-- seat flat line -->
+    <line x1="0" y1="230" x2="700" y2="230" stroke="url(#grad-seat)" stroke-width="3" stroke-dasharray="4 4"/>
+    <text x="540" y="222" font-family="monospace" font-size="13" fill="#06b6d4">SaaS 1.0 · seat-based</text>
+    <!-- token curve -->
+    <path d="M 0 270 C 80 268 160 250 240 220 S 400 110 560 60 L 700 30" fill="none" stroke="url(#grad-meter)" stroke-width="3"/>
+    <text x="430" y="80" font-family="monospace" font-size="13" fill="#fb923c">2026 · token-metered</text>
+    <!-- breakpoint markers -->
+    <circle cx="240" cy="220" r="5" fill="#fbbf24"/>
+    <text x="246" y="216" font-family="monospace" font-size="11" fill="#fbbf24">flex tier</text>
+    <circle cx="560" cy="60" r="5" fill="#ef4444"/>
+    <text x="566" y="56" font-family="monospace" font-size="11" fill="#ef4444">heavy agent user</text>
+  </g>
+  <!-- three pillars -->
+  <g transform="translate(820 200)">
+    <rect x="0" y="0" width="320" height="380" rx="14" fill="#11182b" stroke="#1f2a3d" stroke-width="1"/>
+    <text x="160" y="36" font-family="'Source Han Sans CN',sans-serif" font-size="17" font-weight="700" fill="#e2e8f0" text-anchor="middle">三家本周动作</text>
+    <!-- GitHub -->
+    <g transform="translate(20 60)">
+      <circle cx="14" cy="14" r="10" fill="#22c55e"/>
+      <text x="36" y="18" font-family="monospace" font-size="14" font-weight="700" fill="#86efac">GitHub</text>
+      <text x="36" y="38" font-family="monospace" font-size="11" fill="#cbd5e1">flex allotments + Max plan</text>
+      <text x="36" y="55" font-family="monospace" font-size="10" fill="#94a3b8">6/1: Business → API token</text>
+    </g>
+    <!-- Anthropic -->
+    <g transform="translate(20 140)">
+      <circle cx="14" cy="14" r="10" fill="#fb923c"/>
+      <text x="36" y="18" font-family="monospace" font-size="14" font-weight="700" fill="#fdba74">Anthropic</text>
+      <text x="36" y="38" font-family="monospace" font-size="11" fill="#cbd5e1">双账户拆分</text>
+      <text x="36" y="55" font-family="monospace" font-size="10" fill="#94a3b8">subscription + API credit</text>
+    </g>
+    <!-- OpenAI -->
+    <g transform="translate(20 220)">
+      <circle cx="14" cy="14" r="10" fill="#06b6d4"/>
+      <text x="36" y="18" font-family="monospace" font-size="14" font-weight="700" fill="#67e8f9">OpenAI</text>
+      <text x="36" y="38" font-family="monospace" font-size="11" fill="#cbd5e1">Codex 限额更宽松</text>
+      <text x="36" y="55" font-family="monospace" font-size="10" fill="#94a3b8">企业切换促销</text>
+    </g>
+    <!-- common -->
+    <g transform="translate(20 310)">
+      <line x1="0" y1="0" x2="280" y2="0" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="22" font-family="monospace" font-size="11" fill="#fbbf24">同一压力 · 三种应对</text>
+      <text x="0" y="42" font-family="monospace" font-size="11" fill="#94a3b8">token = 真实成本 → 必须传递</text>
+    </g>
+  </g>
+  <!-- footer -->
+  <text x="600" y="600" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" opacity="0.9">单用户成本可以无上限的产品 · SaaS 定价不可能三角已破</text>
+</svg>

@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08111c"/>
+      <stop offset="100%" stop-color="#190b18"/>
+    </linearGradient>
+    <linearGradient id="vec" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="riscv" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <!-- subtle silicon grid -->
+  <g stroke="#1f2a3d" stroke-width="0.5" opacity="0.35">
+    <g>
+      <line x1="0" y1="0" x2="1200" y2="0"/>
+      <line x1="0" y1="105" x2="1200" y2="105"/>
+      <line x1="0" y1="210" x2="1200" y2="210"/>
+      <line x1="0" y1="420" x2="1200" y2="420"/>
+      <line x1="0" y1="525" x2="1200" y2="525"/>
+      <line x1="0" y1="630" x2="1200" y2="630"/>
+    </g>
+  </g>
+  <!-- Title -->
+  <g>
+    <text x="60" y="100" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="38" font-weight="800" fill="#f1f5f9">SiFive P570 Gen 3</text>
+    <text x="60" y="140" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="18" fill="#94a3b8">RISC-V 第一次拿出'标量+矢量全乱序执行'</text>
+  </g>
+  <!-- Center: pipeline diagram simplified -->
+  <g transform="translate(70 200)">
+    <rect x="0" y="0" width="660" height="320" rx="14" fill="#0b1626" stroke="#1f2a3d" stroke-width="1"/>
+    <text x="330" y="34" font-family="'Source Han Sans CN',sans-serif" font-size="15" font-weight="700" fill="#cbd5e1" text-anchor="middle">微架构推断（标量+矢量统一 OoO）</text>
+
+    <!-- Front-end -->
+    <g transform="translate(30 60)">
+      <rect x="0" y="0" width="120" height="50" rx="6" fill="#1e2a44"/>
+      <text x="60" y="22" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Fetch / Decode</text>
+      <text x="60" y="38" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">8-wide · TAGE BP</text>
+    </g>
+    <line x1="150" y1="85" x2="190" y2="85" stroke="#475569" stroke-width="2"/>
+    <polygon points="190,80 200,85 190,90" fill="#475569"/>
+
+    <!-- Rename/dispatch -->
+    <g transform="translate(200 60)">
+      <rect x="0" y="0" width="160" height="50" rx="6" fill="#27374d"/>
+      <text x="80" y="22" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Rename · Dispatch</text>
+      <text x="80" y="38" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">256-entry ROB</text>
+    </g>
+    <line x1="360" y1="85" x2="400" y2="85" stroke="#475569" stroke-width="2"/>
+    <polygon points="400,80 410,85 400,90" fill="#475569"/>
+
+    <!-- IssueQ trio -->
+    <g transform="translate(410 60)">
+      <rect x="0" y="0" width="220" height="50" rx="6" fill="#1e293b"/>
+      <text x="110" y="22" font-family="monospace" font-size="11" fill="#cbd5e1" text-anchor="middle">Issue Queue (scalar/LS/vec)</text>
+    </g>
+
+    <!-- exec units -->
+    <g transform="translate(30 150)">
+      <rect x="0" y="0" width="120" height="60" rx="6" fill="#1e293b" stroke="#22c55e" stroke-width="1.5"/>
+      <text x="60" y="24" font-family="monospace" font-size="12" fill="#86efac" text-anchor="middle">Scalar OoO</text>
+      <text x="60" y="44" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">4× ALU</text>
+    </g>
+
+    <g transform="translate(180 150)">
+      <rect x="0" y="0" width="120" height="60" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="60" y="24" font-family="monospace" font-size="12" fill="#93c5fd" text-anchor="middle">Load-Store OoO</text>
+      <text x="60" y="44" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">2× AGU</text>
+    </g>
+
+    <g transform="translate(330 150)">
+      <rect x="0" y="0" width="290" height="60" rx="6" fill="url(#vec)" opacity="0.85"/>
+      <text x="145" y="22" font-family="monospace" font-size="13" font-weight="700" fill="#0a0d1a" text-anchor="middle">Vector ALU + FPU · 256-bit OoO</text>
+      <text x="145" y="44" font-family="monospace" font-size="11" fill="#0a0d1a" text-anchor="middle">⭐ 业内罕见：完全乱序矢量</text>
+    </g>
+
+    <!-- Retire -->
+    <g transform="translate(200 250)">
+      <rect x="0" y="0" width="260" height="50" rx="6" fill="#27374d"/>
+      <text x="130" y="22" font-family="monospace" font-size="12" fill="#cbd5e1" text-anchor="middle">In-order Retire</text>
+      <text x="130" y="38" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">精确异常 · 矢量独立 lane 不阻塞</text>
+    </g>
+  </g>
+
+  <!-- Right: market comparison -->
+  <g transform="translate(770 200)">
+    <rect x="0" y="0" width="370" height="320" rx="14" fill="#10172a" stroke="#1f2a3d" stroke-width="1"/>
+    <text x="185" y="36" font-family="'Source Han Sans CN',sans-serif" font-size="16" font-weight="700" fill="#cbd5e1" text-anchor="middle">瞄准 ARM Cortex-A720 区段</text>
+
+    <g font-family="monospace" font-size="12" fill="#e2e8f0">
+      <text x="20" y="80">▸ 矢量 OoO</text>
+      <text x="220" y="80" fill="#22c55e">P570 ✓</text>
+      <text x="280" y="80" fill="#ef4444">A720 部分</text>
+
+      <text x="20" y="110">▸ 256-bit RVV</text>
+      <text x="220" y="110" fill="#22c55e">✓</text>
+      <text x="280" y="110" fill="#ef4444">128-bit</text>
+
+      <text x="20" y="140">▸ 可定制指令</text>
+      <text x="220" y="140" fill="#22c55e">✓</text>
+      <text x="280" y="140" fill="#ef4444">✗</text>
+
+      <text x="20" y="170">▸ Linux/Android</text>
+      <text x="220" y="170" fill="#22c55e">tier-1</text>
+      <text x="280" y="170" fill="#22c55e">tier-1</text>
+
+      <text x="20" y="200">▸ 授权模式</text>
+      <text x="220" y="200" fill="#06b6d4">开放+定制</text>
+      <text x="280" y="200" fill="#fb923c">封闭</text>
+    </g>
+
+    <g transform="translate(20 230)">
+      <line x1="0" y1="0" x2="330" y2="0" stroke="#334155" stroke-width="1"/>
+      <text x="0" y="22" font-family="monospace" font-size="11" fill="#fbbf24">2026: 主流应用处理器市场天花板被捅穿</text>
+      <text x="0" y="42" font-family="monospace" font-size="11" fill="#94a3b8">FPGA 原型生态把流片周期压到 12 个月</text>
+      <text x="0" y="62" font-family="monospace" font-size="11" fill="#94a3b8">~20 亿 SoC/年市场 · 5%-10% 设计份额</text>
+    </g>
+  </g>
+
+  <!-- Bottom tagline -->
+  <text x="600" y="595" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="14" fill="#cbd5e1" text-anchor="middle" opacity="0.9">这次不是"开源便宜"叙事 · 是架构差异化第一次成立</text>
+</svg>

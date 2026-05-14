@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1c"/>
+      <stop offset="100%" stop-color="#0e1a18"/>
+    </linearGradient>
+    <linearGradient id="acc2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+  <!-- grid -->
+  <g stroke="#1a2e2c" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+  </g>
+  <!-- left: Go gopher block (abstract) -->
+  <g transform="translate(120 200)">
+    <rect x="0" y="0" width="220" height="220" rx="22" fill="#0f1e22" stroke="#22c55e" stroke-width="2" opacity="0.95"/>
+    <text x="110" y="80" font-family="Arial,sans-serif" font-size="48" font-weight="800" fill="#22c55e" text-anchor="middle">Go</text>
+    <text x="110" y="120" font-family="monospace" font-size="14" fill="#86efac" text-anchor="middle">testing.F</text>
+    <text x="110" y="158" font-family="monospace" font-size="11" fill="#475569" text-anchor="middle">(2022 → 2026)</text>
+    <text x="110" y="184" font-family="monospace" font-size="11" fill="#64748b" text-anchor="middle">half the toolkit</text>
+  </g>
+  <!-- arrow with fork sign -->
+  <g transform="translate(370 310)">
+    <line x1="0" y1="0" x2="160" y2="0" stroke="url(#acc2)" stroke-width="3"/>
+    <polygon points="160,-7 175,0 160,7" fill="#06b6d4"/>
+    <text x="80" y="-18" font-family="monospace" font-size="13" fill="#06b6d4" text-anchor="middle">fork toolchain</text>
+    <text x="80" y="25" font-family="monospace" font-size="11" fill="#64748b" text-anchor="middle">Trail of Bits · 2026-05-12</text>
+  </g>
+  <!-- right: gosentry -->
+  <g transform="translate(560 130)">
+    <rect x="0" y="0" width="540" height="360" rx="22" fill="#0c1c1f" stroke="#06b6d4" stroke-width="2"/>
+    <text x="270" y="60" font-family="Arial,sans-serif" font-size="56" font-weight="800" fill="#67e8f9" text-anchor="middle">gosentry</text>
+    <text x="270" y="92" font-family="monospace" font-size="13" fill="#94a3b8" text-anchor="middle">Go toolchain · LibAFL engine</text>
+    <!-- features -->
+    <g font-family="monospace" font-size="14" fill="#cbd5e1">
+      <text x="40" y="140">▸ path constraint solving</text>
+      <text x="40" y="170">▸ grammar fuzzing (Nautilus)</text>
+      <text x="40" y="200">▸ struct-aware inputs</text>
+      <text x="40" y="230">▸ --catch-races</text>
+      <text x="40" y="260">▸ --catch-leaks  (goleak)</text>
+      <text x="40" y="290">▸ --panic-on=log.Fatal</text>
+      <text x="40" y="320">▸ integer overflow detection</text>
+    </g>
+    <!-- rust badge -->
+    <g transform="translate(380 200)">
+      <rect x="0" y="0" width="120" height="60" rx="12" fill="url(#rust)" opacity="0.85"/>
+      <text x="60" y="38" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="#0a0f1c" text-anchor="middle">LibAFL</text>
+    </g>
+    <text x="440" y="278" font-family="monospace" font-size="10" fill="#fb923c" text-anchor="middle">Rust-based engine</text>
+  </g>
+  <!-- title row -->
+  <g>
+    <text x="60" y="100" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="36" font-weight="800" fill="#f1f5f9">gosentry：Go 的 fuzz 工具链被分叉了</text>
+    <text x="60" y="138" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="17" fill="#94a3b8">这次问题不是语言，是生态——主线没动力的地方，社区自己接手</text>
+  </g>
+  <!-- bottom tagline -->
+  <text x="600" y="585" font-family="'Source Han Sans CN','PingFang SC',sans-serif" font-size="15" fill="#cbd5e1" text-anchor="middle" opacity="0.9">Trail of Bits · 让 LibAFL 第一次成为主流语言工具链的引擎</text>
+</svg>
