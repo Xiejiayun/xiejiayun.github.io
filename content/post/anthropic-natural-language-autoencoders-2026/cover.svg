@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Neural activation wave -->
+  <path d="M0,200 Q50,150 100,200 Q150,250 200,200 Q250,150 300,200 Q350,250 400,200" stroke="#e94560" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M400,200 L420,200" stroke="#e94560" stroke-width="2" stroke-dasharray="4,4" opacity="0.6"/>
+  <!-- Arrow -->
+  <polygon points="440,195 450,200 440,205" fill="#e94560" opacity="0.8"/>
+  <!-- Text block representing NLA output -->
+  <rect x="470" y="170" width="280" height="60" rx="8" fill="none" stroke="#53d8fb" stroke-width="1.5" opacity="0.7"/>
+  <text x="490" y="195" fill="#53d8fb" font-family="monospace" font-size="13" opacity="0.9">thinking about rhymes...</text>
+  <text x="490" y="215" fill="#53d8fb" font-family="monospace" font-size="13" opacity="0.7">planning to use "rabbit"</text>
+  <!-- Title -->
+  <text x="400" y="80" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Natural Language Autoencoders</text>
+  <text x="400" y="110" fill="#aaaacc" font-family="sans-serif" font-size="15" text-anchor="middle">Turning Claude's thoughts into text</text>
+  <!-- Anthropic label -->
+  <text x="400" y="350" fill="#666688" font-family="sans-serif" font-size="13" text-anchor="middle">Anthropic Research · Interpretability</text>
+  <!-- Dots representing activations -->
+  <circle cx="80" cy="200" r="3" fill="#e94560" opacity="0.8"/>
+  <circle cx="200" cy="200" r="3" fill="#e94560" opacity="0.8"/>
+  <circle cx="300" cy="200" r="3" fill="#e94560" opacity="0.8"/>
+</svg>
