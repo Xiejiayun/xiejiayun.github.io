@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fb923c"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Decorative: ABC/123/汉字 scattered -->
+  <g opacity="0.08" font-family="serif" fill="#a78bfa">
+    <text x="850" y="120" font-size="80">字</text>
+    <text x="950" y="200" font-size="60">A</text>
+    <text x="880" y="280" font-size="70">3</text>
+    <text x="1000" y="160" font-size="50">诗</text>
+    <text x="1050" y="300" font-size="65">B</text>
+    <text x="920" y="380" font-size="55">成</text>
+    <text x="1000" y="420" font-size="45">2</text>
+    <text x="850" y="460" font-size="60">C</text>
+    <text x="1080" y="500" font-size="50">词</text>
+  </g>
+  <!-- Building blocks motif -->
+  <g opacity="0.10">
+    <rect x="100" y="400" width="50" height="50" rx="8" fill="#fb923c" transform="rotate(-10 125 425)"/>
+    <rect x="160" y="380" width="50" height="50" rx="8" fill="#a78bfa" transform="rotate(5 185 405)"/>
+    <rect x="130" y="340" width="50" height="50" rx="8" fill="#fbbf24" transform="rotate(-3 155 365)"/>
+  </g>
+  <!-- Title -->
+  <text x="80" y="220" font-family="sans-serif" font-weight="bold" font-size="48" fill="url(#gold)">宝宝启蒙教育 App 痛点深度分析</text>
+  <text x="80" y="280" font-family="sans-serif" font-size="28" fill="#e5e7eb">数字 · 字母 · 汉字 · 成语 · 古诗词 —— 家长真正需要什么？</text>
+  <!-- Divider -->
+  <rect x="80" y="310" width="400" height="3" rx="2" fill="url(#accent)" opacity="0.6"/>
+  <!-- Meta -->
+  <text x="80" y="360" font-family="sans-serif" font-size="20" fill="#9ca3af">2026 · 育儿专栏 · 市场调研 &amp; 产品机会</text>
+  <text x="80" y="560" font-family="sans-serif" font-size="18" fill="#6b7280">xiejiayun.github.io</text>
+</svg>
