@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#1a2340"/>
+    </linearGradient>
+    <linearGradient id="speed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff7a59" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffb347" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="scale" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5ad1ff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#7c8cff" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 105 H1200 M0 210 H1200 M0 315 H1200 M0 420 H1200 M0 525 H1200"/>
+    <path d="M150 0 V630 M300 0 V630 M450 0 V630 M600 0 V630 M750 0 V630 M900 0 V630 M1050 0 V630"/>
+  </g>
+
+  <!-- top label -->
+  <text x="60" y="80" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="22" fill="#9aa3c7" letter-spacing="6">EDITOR'S PICK · 好文共赏</text>
+
+  <!-- two loops -->
+  <g transform="translate(220,360)" filter="url(#glow)">
+    <ellipse cx="0" cy="0" rx="140" ry="90" fill="none" stroke="url(#speed)" stroke-width="6"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#ffb347">Speed</text>
+    <text x="0" y="36" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" fill="#ffd9b3" opacity="0.85">vs. uncertainty</text>
+  </g>
+
+  <g transform="translate(560,360)" filter="url(#glow)">
+    <ellipse cx="0" cy="0" rx="170" ry="100" fill="none" stroke="url(#scale)" stroke-width="6"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="32" font-weight="700" fill="#7c8cff">Scale</text>
+    <text x="0" y="38" text-anchor="middle" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="14" fill="#b9c0ff" opacity="0.85">vs. complexity</text>
+  </g>
+
+  <!-- connecting flow -->
+  <g stroke="#ffffff" stroke-opacity="0.35" stroke-dasharray="6 8" fill="none" stroke-width="2">
+    <path d="M360 360 C 420 300, 460 300, 510 340"/>
+    <path d="M360 380 C 420 440, 460 440, 510 400"/>
+  </g>
+
+  <!-- right side text -->
+  <g font-family="'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif" fill="#eef2ff">
+    <text x="760" y="245" font-size="44" font-weight="700">资深开发者</text>
+    <text x="760" y="305" font-size="44" font-weight="700">为何说不清</text>
+    <text x="760" y="365" font-size="44" font-weight="700">自己的价值</text>
+    <text x="760" y="430" font-size="20" fill="#9aa3c7">两个循环 · 两只怪兽 · 一个译者</text>
+  </g>
+
+  <!-- bottom strip -->
+  <rect x="0" y="580" width="1200" height="50" fill="#000" fill-opacity="0.35"/>
+  <text x="60" y="612" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="16" fill="#9aa3c7">导读 · 引自 nair.sh · Tuhin Nair · 2026.05.12</text>
+  <text x="1140" y="612" text-anchor="end" font-family="'Segoe UI', system-ui, -apple-system, sans-serif" font-size="16" fill="#9aa3c7">xiejiayun.github.io</text>
+</svg>
