@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#13182e"/>
+    </linearGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="700" y="50" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26"
+        font-weight="700" fill="#f0f4ff" text-anchor="middle">QUIC 死亡螺旋 · 思维导图</text>
+  <text x="700" y="78" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14"
+        fill="#7a8aaa" text-anchor="middle">when "idle" isn't idle — Cloudflare quiche CUBIC bug</text>
+
+  <!-- Center node -->
+  <g transform="translate(700, 450)">
+    <circle r="80" fill="#1f2945" stroke="#ff8e53" stroke-width="2.5"/>
+    <text y="-8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700"
+          fill="#ffb88e" text-anchor="middle">14ms</text>
+    <text y="14" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13"
+          fill="#f0f4ff" text-anchor="middle">死亡螺旋</text>
+    <text y="32" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12"
+          fill="#a0b0d0" text-anchor="middle">死锁的根因</text>
+  </g>
+
+  <!-- Branch 1: CUBIC algorithm (top-left) -->
+  <g>
+    <line x1="700" y1="370" x2="280" y2="180" stroke="#4fd1c5" stroke-width="2" opacity="0.6"/>
+    <g transform="translate(160, 130)">
+      <rect width="240" height="120" rx="12" fill="#1a2440" stroke="#4fd1c5" stroke-width="2"/>
+      <text x="120" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#4fd1c5" text-anchor="middle">CUBIC 算法</text>
+      <text x="20" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• RFC 9438</text>
+      <text x="20" y="74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 三次方曲线 W(Δt)</text>
+      <text x="20" y="93" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• epoch 锚定 → Δt = now - tₑ</text>
+      <text x="20" y="112" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• Linux 默认拥塞控制</text>
+    </g>
+  </g>
+
+  <!-- Branch 2: 2017 kernel patches (top-center) -->
+  <g>
+    <line x1="700" y1="370" x2="700" y2="220" stroke="#ffd166" stroke-width="2" opacity="0.6"/>
+    <g transform="translate(560, 110)">
+      <rect width="280" height="130" rx="12" fill="#1a2440" stroke="#ffd166" stroke-width="2"/>
+      <text x="140" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#ffd166" text-anchor="middle">2017 内核两次补丁</text>
+      <text x="20" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• Jana: 重置 epoch — 被否</text>
+      <text x="20" y="74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• Neal: 沿时间平移曲线 ✓</text>
+      <text x="20" y="93" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 一周后 follow-up：</text>
+      <text x="32" y="112" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#ff9999">  「epoch 不能设到未来」</text>
+    </g>
+  </g>
+
+  <!-- Branch 3: quiche 2020 port (top-right) -->
+  <g>
+    <line x1="700" y1="370" x2="1120" y2="180" stroke="#ff6b9d" stroke-width="2" opacity="0.6"/>
+    <g transform="translate(1000, 130)">
+      <rect width="240" height="120" rx="12" fill="#1a2440" stroke="#ff6b9d" stroke-width="2"/>
+      <text x="120" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#ff6b9d" text-anchor="middle">2020 quiche port</text>
+      <text x="20" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• Rust + user-space</text>
+      <text x="20" y="74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 无 CA_EVENT_TX_START</text>
+      <text x="20" y="93" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 近似：bytes_in_flight==0</text>
+      <text x="20" y="112" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#ff9999">• 只 port 了第一个 commit ✗</text>
+    </g>
+  </g>
+
+  <!-- Branch 4: ACK clock (left) -->
+  <g>
+    <line x1="620" y1="450" x2="220" y2="450" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+    <g transform="translate(80, 390)">
+      <rect width="240" height="130" rx="12" fill="#1a2440" stroke="#a78bfa" stroke-width="2"/>
+      <text x="120" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#a78bfa" text-anchor="middle">最小 cwnd 状态机</text>
+      <text x="20" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• cwnd = 2 个 MTU</text>
+      <text x="20" y="74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• stop-and-wait 模式</text>
+      <text x="20" y="93" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 每 RTT 翻转一次状态</text>
+      <text x="20" y="112" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• ACK clock 把 bug 锁定</text>
+    </g>
+  </g>
+
+  <!-- Branch 5: Test design (right) -->
+  <g>
+    <line x1="780" y1="450" x2="1180" y2="450" stroke="#63b3ed" stroke-width="2" opacity="0.6"/>
+    <g transform="translate(1080, 390)">
+      <rect width="260" height="130" rx="12" fill="#1a2440" stroke="#63b3ed" stroke-width="2"/>
+      <text x="130" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#63b3ed" text-anchor="middle">残忍的测试</text>
+      <text x="20" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 30% 丢包前 2 秒</text>
+      <text x="20" y="74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 然后网络变干净</text>
+      <text x="20" y="93" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 测从崩溃中爬出来</text>
+      <text x="20" y="112" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 60% 失败率暴露 bug</text>
+    </g>
+  </g>
+
+  <!-- Branch 6: qlog observability (bottom-left) -->
+  <g>
+    <line x1="680" y1="530" x2="320" y2="720" stroke="#fb7185" stroke-width="2" opacity="0.6"/>
+    <g transform="translate(160, 690)">
+      <rect width="260" height="120" rx="12" fill="#1a2440" stroke="#fb7185" stroke-width="2"/>
+      <text x="130" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#fb7185" text-anchor="middle">qlog 可观察性</text>
+      <text x="20" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 状态转移逐帧记录</text>
+      <text x="20" y="74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 可视化 cwnd / loss / RTT</text>
+      <text x="20" y="93" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 看见 14ms 周期 = RTT</text>
+      <text x="20" y="112" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• "周期匹配 → 锁在时钟上"</text>
+    </g>
+  </g>
+
+  <!-- Branch 7: Fix (bottom-center) -->
+  <g>
+    <line x1="700" y1="530" x2="700" y2="690" stroke="#34d399" stroke-width="2.5" opacity="0.7"/>
+    <g transform="translate(540, 690)">
+      <rect width="320" height="140" rx="12" fill="#1a2440" stroke="#34d399" stroke-width="2.5"/>
+      <text x="160" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#34d399" text-anchor="middle">3 行代码的修复</text>
+      <text x="20" y="55" font-family="ui-monospace, monospace" font-size="11" fill="#c0d0e0">+ last_ack_time: Instant</text>
+      <text x="20" y="74" font-family="ui-monospace, monospace" font-size="11" fill="#c0d0e0">+ 更新于 ACK 到达时</text>
+      <text x="20" y="93" font-family="ui-monospace, monospace" font-size="11" fill="#c0d0e0">~ idle_start = max(ack,sent)</text>
+      <text x="20" y="118" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#a0b0d0">→ delta 退化为 0</text>
+      <text x="20" y="135" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#a0b0d0">→ recovery 不再被推到未来</text>
+    </g>
+  </g>
+
+  <!-- Branch 8: Wider lessons (bottom-right) -->
+  <g>
+    <line x1="720" y1="530" x2="1080" y2="720" stroke="#fbbf24" stroke-width="2" opacity="0.6"/>
+    <g transform="translate(960, 690)">
+      <rect width="320" height="140" rx="12" fill="#1a2440" stroke="#fbbf24" stroke-width="2"/>
+      <text x="160" y="28" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15"
+            font-weight="700" fill="#fbbf24" text-anchor="middle">更深的教训</text>
+      <text x="20" y="55" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• user-space 协议失去内核同步</text>
+      <text x="20" y="74" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 同一 bug 在 3 个实现独立踩中</text>
+      <text x="20" y="93" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 需要"行为级"conformance test</text>
+      <text x="20" y="112" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• Rust 不阻止语义层错误假设</text>
+      <text x="20" y="131" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11" fill="#c0d0e0">• 知识扩散需要 evals/test suite</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="700" y="870" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12"
+        fill="#5a6080" text-anchor="middle">xiejiayun.com · 好文共赏 · 2026-05-14</text>
+</svg>
