@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="TanStack 三段式攻击链思维导图">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg2)"/>
+
+  <!-- title -->
+  <text x="700" y="55" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="28" fill="#f3f4f6" text-anchor="middle" font-weight="700">TanStack npm 供应链事件 · 三段式攻击链</text>
+  <text x="700" y="85" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#9ca3af" text-anchor="middle">每一刀单独都不致命；三刀串联即可在 6 分钟内夺取整个命名空间</text>
+
+  <!-- Center -->
+  <g transform="translate(700, 460)">
+    <circle r="90" fill="#1f2937" stroke="#facc15" stroke-width="3"/>
+    <text x="0" y="-12" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="22" fill="#facc15" text-anchor="middle" font-weight="700">@tanstack/*</text>
+    <text x="0" y="18" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#fde68a" text-anchor="middle">42 包 / 84 版本</text>
+    <text x="0" y="42" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">2026-05-11</text>
+  </g>
+
+  <!-- Three blades -->
+  <!-- Blade 1: pull_request_target -->
+  <g transform="translate(140, 190)">
+    <rect x="0" y="0" width="320" height="180" rx="10" fill="#1a0e0e" stroke="#ef4444" stroke-width="2"/>
+    <text x="20" y="34" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="20" fill="#fca5a5" font-weight="700">① Pwn Request</text>
+    <text x="20" y="58" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#fef3c7">pull_request_target</text>
+    <text x="20" y="84" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">触发器跑在 base 上下文里</text>
+    <text x="20" y="104" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">secret 可读 / GITHUB_TOKEN write</text>
+    <text x="20" y="124" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">无需 first-time-contributor 批准</text>
+    <text x="20" y="150" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#fca5a5">+ checkout fork ref + 执行 fork 代码</text>
+    <text x="20" y="168" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#9ca3af">= bundle-size.yml 跑 vite_setup.mjs</text>
+  </g>
+
+  <!-- Blade 2: cache poisoning -->
+  <g transform="translate(1100, 190)">
+    <rect x="0" y="0" width="280" height="180" rx="10" fill="#1a1306" stroke="#f97316" stroke-width="2"/>
+    <text x="20" y="34" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="20" fill="#fdba74" font-weight="700">② Cache Poison</text>
+    <text x="20" y="58" font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#fef3c7">actions/cache@v5</text>
+    <text x="20" y="84" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">fork PR cache 与 main 共享 scope</text>
+    <text x="20" y="104" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">cache 写不受 permissions 控制</text>
+    <text x="20" y="124" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">key 可被攻击者预测</text>
+    <text x="20" y="150" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#fdba74">绕过 2025-01 GitHub 修补：</text>
+    <text x="20" y="168" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#9ca3af">build 期间投毒，非 post-job</text>
+  </g>
+
+  <!-- Blade 3: OIDC -->
+  <g transform="translate(540, 750)">
+    <rect x="0" y="0" width="320" height="120" rx="10" fill="#1a1604" stroke="#facc15" stroke-width="2"/>
+    <text x="20" y="34" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="20" fill="#fde68a" font-weight="700">③ OIDC Memory Extraction</text>
+    <text x="20" y="60" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">id-token: write 是 workflow 级权限</text>
+    <text x="20" y="80" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#cbd5e1">读 /proc/&lt;pid&gt;/mem 提取 JWT</text>
+    <text x="20" y="100" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#fde68a">直接 POST registry.npmjs.org（绕过 publish step）</text>
+  </g>
+
+  <!-- Arrows from blades to center -->
+  <path d="M 460 280 Q 580 380 615 420" stroke="#ef4444" stroke-width="2.5" fill="none" marker-end="url(#arrow)" opacity="0.85"/>
+  <path d="M 1100 280 Q 950 380 785 425" stroke="#f97316" stroke-width="2.5" fill="none" marker-end="url(#arrow)" opacity="0.85"/>
+  <path d="M 700 750 Q 700 600 700 555" stroke="#facc15" stroke-width="2.5" fill="none" marker-end="url(#arrow)" opacity="0.85"/>
+
+  <!-- side notes -->
+  <g transform="translate(60, 420)">
+    <text font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" fill="#9ca3af" font-weight="600">前置铺垫</text>
+    <text y="22" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">2026-05-10 17:16</text>
+    <text y="40" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">fork 改名为 zblgg/configuration</text>
+    <text y="58" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">伪造 claude@users.noreply 身份</text>
+    <text y="76" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">[skip ci] 抑制 push 触发器</text>
+  </g>
+
+  <g transform="translate(1100, 420)">
+    <text font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" fill="#9ca3af" font-weight="600">事后传播</text>
+    <text y="22" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">2026-05-11 19:20–19:26</text>
+    <text y="40" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">Session/Oxen 端到端加密外传</text>
+    <text y="58" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">蠕虫式扫描 maintainer 其他包</text>
+    <text y="76" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" fill="#6b7280">~20 min 被外部研究者发现</text>
+  </g>
+
+  <!-- bottom slogan -->
+  <text x="700" y="60" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" fill="#6b7280" text-anchor="middle"></text>
+  <line x1="60" y1="855" x2="1340" y2="855" stroke="#1f2937"/>
+  <text x="700" y="888" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">
+    引用：tanstack.com · adnanthekhan.com (2024) · stepsecurity.io · GitHub Security Lab
+  </text>
+</svg>
