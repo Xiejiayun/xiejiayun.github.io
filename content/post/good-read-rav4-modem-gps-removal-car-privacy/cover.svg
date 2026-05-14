@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1a"/>
+      <stop offset="50%" stop-color="#101935"/>
+      <stop offset="100%" stop-color="#0b0f1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#feca57"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ff6b6b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="200" r="380" fill="url(#glow)"/>
+
+  <!-- Faint grid -->
+  <g opacity="0.08" stroke="#5b8def" stroke-width="1">
+    <path d="M0 90 H1200 M0 180 H1200 M0 270 H1200 M0 360 H1200 M0 450 H1200 M0 540 H1200"/>
+    <path d="M120 0 V630 M240 0 V630 M360 0 V630 M480 0 V630 M600 0 V630 M720 0 V630 M840 0 V630 M960 0 V630 M1080 0 V630"/>
+  </g>
+
+  <!-- Top tag -->
+  <g>
+    <rect x="60" y="60" width="280" height="42" rx="21" fill="none" stroke="url(#accent)" stroke-width="2"/>
+    <text x="200" y="89" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang SC', sans-serif"
+          font-size="20" font-weight="600" fill="#feca57" text-anchor="middle">📌 好文共赏 · Editor's Pick</text>
+  </g>
+
+  <!-- Cut wire icon: stylized DCM with strikethrough -->
+  <g transform="translate(880,300)">
+    <!-- DCM box -->
+    <rect x="-110" y="-70" width="220" height="140" rx="14" fill="#1a2240" stroke="#5b8def" stroke-width="3"/>
+    <text x="0" y="-30" font-family="ui-monospace, 'JetBrains Mono', monospace"
+          font-size="22" font-weight="700" fill="#9fc1ff" text-anchor="middle">DCM</text>
+    <text x="0" y="0" font-family="ui-monospace, 'JetBrains Mono', monospace"
+          font-size="12" fill="#7fa3e6" text-anchor="middle">86741-06130</text>
+    <!-- Antenna -->
+    <line x1="0" y1="-70" x2="0" y2="-110" stroke="#5b8def" stroke-width="3"/>
+    <circle cx="0" cy="-115" r="8" fill="#feca57"/>
+    <!-- Wires going out -->
+    <line x1="-110" y1="20" x2="-180" y2="20" stroke="#7fa3e6" stroke-width="3"/>
+    <line x1="-110" y1="50" x2="-180" y2="50" stroke="#7fa3e6" stroke-width="3"/>
+    <line x1="110" y1="20" x2="180" y2="20" stroke="#7fa3e6" stroke-width="3"/>
+    <line x1="110" y1="50" x2="180" y2="50" stroke="#7fa3e6" stroke-width="3"/>
+    <!-- Big red X -->
+    <g stroke="#ff6b6b" stroke-width="14" stroke-linecap="round" filter="url(#shadow)">
+      <line x1="-130" y1="-90" x2="130" y2="90"/>
+      <line x1="130" y1="-90" x2="-130" y2="90"/>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <g>
+    <text x="60" y="200" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang SC', 'Noto Sans CJK SC', sans-serif"
+          font-size="50" font-weight="800" fill="#ffffff">把车里的</text>
+    <text x="60" y="260" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang SC', 'Noto Sans CJK SC', sans-serif"
+          font-size="50" font-weight="800" fill="#ffffff">
+      <tspan fill="url(#accent)">「告密者」</tspan>
+      <tspan>物理拔除</tspan>
+    </text>
+    <text x="60" y="335" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang SC', 'Noto Sans CJK SC', sans-serif"
+          font-size="26" font-weight="500" fill="#9fc1ff">一位安全工程师把 2024 RAV4 Hybrid</text>
+    <text x="60" y="370" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang SC', 'Noto Sans CJK SC', sans-serif"
+          font-size="26" font-weight="500" fill="#9fc1ff">的车载调制解调器和 GPS 直接拧了下来</text>
+  </g>
+
+  <!-- Keywords -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="16" fill="#7fa3e6">
+    <rect x="60" y="430" width="160" height="36" rx="18" fill="#1a2240" stroke="#5b8def" stroke-width="1"/>
+    <text x="140" y="454" text-anchor="middle">#连接车隐私</text>
+
+    <rect x="240" y="430" width="160" height="36" rx="18" fill="#1a2240" stroke="#5b8def" stroke-width="1"/>
+    <text x="320" y="454" text-anchor="middle">#硬件逆向</text>
+
+    <rect x="420" y="430" width="180" height="36" rx="18" fill="#1a2240" stroke="#5b8def" stroke-width="1"/>
+    <text x="510" y="454" text-anchor="middle">#数据掮客</text>
+
+    <rect x="620" y="430" width="160" height="36" rx="18" fill="#1a2240" stroke="#5b8def" stroke-width="1"/>
+    <text x="700" y="454" text-anchor="middle">#车载遥测</text>
+  </g>
+
+  <!-- Bottom byline -->
+  <g>
+    <line x1="60" y1="540" x2="1140" y2="540" stroke="#5b8def" stroke-width="1" opacity="0.4"/>
+    <text x="60" y="580" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" fill="#9fc1ff">
+      原作：Arkadiy Tetelman · 2026-05-13 · arkadiyt.com
+    </text>
+    <text x="60" y="605" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" fill="#5b8def" opacity="0.8">
+      14 minute read · Hacker News 470+ points · 272 comments
+    </text>
+  </g>
+
+  <!-- Pick badge -->
+  <g transform="translate(1080,80)">
+    <circle r="36" fill="#ff6b6b" opacity="0.95"/>
+    <text x="0" y="-2" font-family="ui-sans-serif, system-ui, sans-serif"
+          font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">综合</text>
+    <text x="0" y="22" font-family="ui-monospace, 'JetBrains Mono', monospace"
+          font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">8.8</text>
+  </g>
+</svg>

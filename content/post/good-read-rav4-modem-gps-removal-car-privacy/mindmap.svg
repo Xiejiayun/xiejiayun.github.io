@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#feca57" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#feca57" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="800" y="56" font-family="ui-sans-serif, system-ui, 'PingFang SC', sans-serif"
+        font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">
+    把车里的「告密者」物理拔除 · 思维导图
+  </text>
+  <text x="800" y="86" font-family="ui-sans-serif, system-ui, 'PingFang SC', sans-serif"
+        font-size="15" fill="#9fc1ff" text-anchor="middle" opacity="0.85">
+    Arkadiy Tetelman · Removing the Modem and GPS from My 2024 RAV4 Hybrid
+  </text>
+
+  <!-- Center node -->
+  <g transform="translate(800,560)">
+    <circle r="160" fill="url(#centerGlow)"/>
+    <circle r="120" fill="#1a2240" stroke="#feca57" stroke-width="3" filter="url(#glow)"/>
+    <text x="0" y="-12" font-family="ui-sans-serif, sans-serif" font-size="22" font-weight="700" fill="#feca57" text-anchor="middle">RAV4</text>
+    <text x="0" y="18" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">物理拔除</text>
+    <text x="0" y="44" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="14" fill="#9fc1ff" text-anchor="middle">遥测·定位·麦克风</text>
+  </g>
+
+  <!-- Branches -->
+  <!-- BRANCH 1: 动机 (Top-Left) -->
+  <g>
+    <path d="M 720 480 Q 500 380 280 280" stroke="#5b8def" stroke-width="3" fill="none"/>
+    <g transform="translate(180,240)">
+      <rect width="320" height="170" rx="16" fill="#1a2240" stroke="#5b8def" stroke-width="2"/>
+      <text x="20" y="34" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#5b8def">① 为什么动手</text>
+      <text x="20" y="62" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· Mozilla：25 家车厂 0/25 通过隐私评测</text>
+      <text x="20" y="84" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· LexisNexis / Verisk 数据掮客</text>
+      <text x="20" y="106" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 2024 NYT：保险公司用驾驶数据涨价</text>
+      <text x="20" y="128" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 2025 Subaru：远程解锁 + GPS 历史</text>
+      <text x="20" y="150" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 默认开启 + 无意义 opt-out</text>
+    </g>
+  </g>
+
+  <!-- BRANCH 2: 三个核心组件 (Top-Right) -->
+  <g>
+    <path d="M 880 480 Q 1100 380 1320 280" stroke="#feca57" stroke-width="3" fill="none"/>
+    <g transform="translate(1220,240)">
+      <rect width="320" height="170" rx="16" fill="#1a2240" stroke="#feca57" stroke-width="2"/>
+      <text x="20" y="34" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#feca57">② 三个关键部件</text>
+      <text x="20" y="62" font-family="ui-sans-serif, monospace" font-size="13" fill="#cfd8e6">· DCM (86741-06130) ← 拔</text>
+      <text x="20" y="84" font-family="ui-sans-serif, monospace" font-size="13" fill="#cfd8e6">· GPS antenna ← 断线</text>
+      <text x="20" y="106" font-family="ui-sans-serif, monospace" font-size="13" fill="#cfd8e6">· Head Unit (86140-0R710) ← 留</text>
+      <text x="20" y="128" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 麦克风走 DCM → 需要 Bypass Kit</text>
+      <text x="20" y="150" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 蓝牙→USB 适配器避免回传</text>
+    </g>
+  </g>
+
+  <!-- BRANCH 3: 工具清单 (Mid-Left) -->
+  <g>
+    <path d="M 680 560 Q 480 560 280 560" stroke="#9fff9f" stroke-width="3" fill="none"/>
+    <g transform="translate(60,500)">
+      <rect width="220" height="160" rx="16" fill="#1a2240" stroke="#9fff9f" stroke-width="2"/>
+      <text x="20" y="34" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#9fff9f">③ 工具</text>
+      <text x="20" y="62" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 撬棒套件</text>
+      <text x="20" y="84" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 棘轮 + 8mm/10mm 套筒</text>
+      <text x="20" y="106" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 精密一字螺丝刀</text>
+      <text x="20" y="128" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· DCM Bypass Kit $90</text>
+      <text x="20" y="148" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="12" fill="#7fa3e6">中等难度 · 几小时</text>
+    </g>
+  </g>
+
+  <!-- BRANCH 4: 副作用 (Mid-Right) -->
+  <g>
+    <path d="M 920 560 Q 1120 560 1320 560" stroke="#ff9f7f" stroke-width="3" fill="none"/>
+    <g transform="translate(1320,500)">
+      <rect width="220" height="160" rx="16" fill="#1a2240" stroke="#ff9f7f" stroke-width="2"/>
+      <text x="20" y="34" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ff9f7f">④ 副作用</text>
+      <text x="20" y="62" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">- OTA 升级关闭</text>
+      <text x="20" y="84" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">- 自动碰撞通知关闭</text>
+      <text x="20" y="106" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">- SOS 灯熄灭</text>
+      <text x="20" y="128" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">- 部分车机保修受影响</text>
+      <text x="20" y="150" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">+ Magnuson–Moss 法案护体</text>
+    </g>
+  </g>
+
+  <!-- BRANCH 5: 关键陷阱 (Bottom-Left) -->
+  <g>
+    <path d="M 720 640 Q 540 740 360 820" stroke="#ff6b6b" stroke-width="3" fill="none"/>
+    <g transform="translate(140,780)">
+      <rect width="340" height="180" rx="16" fill="#1a2240" stroke="#ff6b6b" stroke-width="2"/>
+      <text x="20" y="34" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ff6b6b">⑤ 关键陷阱</text>
+      <text x="20" y="62" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">蓝牙手机 = 给车一个备用调制解调器</text>
+      <text x="20" y="84" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">→ 车继续把所有遥测从你手机回传</text>
+      <text x="20" y="110" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">解法：CarPlay 用 USB-A → USB-C 线</text>
+      <text x="20" y="132" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">或：蓝牙 → USB 适配器</text>
+      <text x="20" y="158" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">数据仍可能本地存储 → 物理回收风险</text>
+    </g>
+  </g>
+
+  <!-- BRANCH 6: 验证 (Bottom-Center) -->
+  <g>
+    <path d="M 800 680 Q 800 800 800 880" stroke="#c89fff" stroke-width="3" fill="none"/>
+    <g transform="translate(640,890)">
+      <rect width="320" height="160" rx="16" fill="#1a2240" stroke="#c89fff" stroke-width="2"/>
+      <text x="20" y="34" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#c89fff">⑥ 如何验证</text>
+      <text x="20" y="62" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 屏幕右上角「无连接」图标</text>
+      <text x="20" y="84" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· 顶棚 SOS 灯熄灭</text>
+      <text x="20" y="106" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· CarPlay 打电话对方能听见 = 麦克风 OK</text>
+      <text x="20" y="128" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">· CarPlay 不再跳到 Nevada 中部</text>
+    </g>
+  </g>
+
+  <!-- BRANCH 7: 时代意义 (Bottom-Right) -->
+  <g>
+    <path d="M 880 640 Q 1060 740 1240 820" stroke="#7fffd4" stroke-width="3" fill="none"/>
+    <g transform="translate(1140,780)">
+      <rect width="400" height="180" rx="16" fill="#1a2240" stroke="#7fffd4" stroke-width="2"/>
+      <text x="20" y="34" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#7fffd4">⑦ 这件事的时代位置</text>
+      <text x="20" y="62" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">右修法律 vs 反右修立法</text>
+      <text x="20" y="84" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">SDV / 软件定义汽车正在硬绑遥测</text>
+      <text x="20" y="106" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">类比：Bambu Lab、HP 墨盒、苹果零部件配对</text>
+      <text x="20" y="128" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="13" fill="#cfd8e6">作者：联邦隐私法 = 让这种博文消失</text>
+      <text x="20" y="152" font-family="ui-sans-serif, 'PingFang SC', sans-serif" font-size="12" fill="#9fc1ff">"Strong Federal privacy laws would make posts like this unnecessary"</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="800" y="1080" font-family="ui-sans-serif, sans-serif" font-size="13" fill="#5b8def" text-anchor="middle" opacity="0.7">
+    xiejiayun.github.io · 好文共赏 · 2026-05-14
+  </text>
+</svg>
