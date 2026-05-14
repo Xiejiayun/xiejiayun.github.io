@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#15203b"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f8fff"/>
+      <stop offset="100%" stop-color="#7c5cff"/>
+    </linearGradient>
+    <linearGradient id="cider" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb454"/>
+      <stop offset="100%" stop-color="#ff7e54"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 网格背景纹理 -->
+  <g opacity="0.08" stroke="#4f8fff" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- 时间线 -->
+  <g transform="translate(80, 480)">
+    <line x1="0" y1="0" x2="1040" y2="0" stroke="url(#accent)" stroke-width="3" opacity="0.5"/>
+    <circle cx="0" cy="0" r="8" fill="#4f8fff" filter="url(#glow)"/>
+    <text x="0" y="35" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="14" text-anchor="middle">2011</text>
+    <text x="0" y="-15" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="11" text-anchor="middle">碎片化</text>
+
+    <circle cx="260" cy="0" r="8" fill="#4f8fff" filter="url(#glow)"/>
+    <text x="260" y="35" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="14" text-anchor="middle">2013</text>
+    <text x="260" y="-15" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="11" text-anchor="middle">Cider 萌芽</text>
+
+    <circle cx="520" cy="0" r="8" fill="#7c5cff" filter="url(#glow)"/>
+    <text x="520" y="35" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="14" text-anchor="middle">2020</text>
+    <text x="520" y="-15" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="11" text-anchor="middle">VSCode 前端</text>
+
+    <circle cx="780" cy="0" r="10" fill="#ffb454" filter="url(#glow)"/>
+    <text x="780" y="35" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="14" text-anchor="middle">2023</text>
+    <text x="780" y="-15" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="11" text-anchor="middle">AI 集成</text>
+
+    <circle cx="1040" cy="0" r="8" fill="#ff7e54" filter="url(#glow)"/>
+    <text x="1040" y="35" fill="#ff7e54" font-family="ui-sans-serif, sans-serif" font-size="14" text-anchor="middle">2026</text>
+    <text x="1040" y="-15" fill="#ff7e54" font-family="ui-sans-serif, sans-serif" font-size="11" text-anchor="middle">80% 统一</text>
+  </g>
+
+  <!-- 顶部标签 -->
+  <g transform="translate(80, 70)">
+    <rect x="0" y="0" width="160" height="36" rx="18" fill="url(#cider)" opacity="0.18"/>
+    <rect x="0" y="0" width="160" height="36" rx="18" fill="none" stroke="url(#cider)" stroke-width="1.5"/>
+    <text x="80" y="24" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="15" font-weight="600" text-anchor="middle">好文共赏 · Editor's Pick</text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="80" y="200" fill="#ffffff" font-family="ui-sans-serif, sans-serif" font-size="58" font-weight="800" letter-spacing="-1">
+    Google IDE 编年史
+  </text>
+
+  <!-- 副标题 -->
+  <text x="80" y="260" fill="#a8b8d8" font-family="ui-sans-serif, sans-serif" font-size="26" font-weight="500">
+    从 Jeff Dean 的「不重要」到 Cider V 一统天下的十二年
+  </text>
+
+  <!-- 关键词 -->
+  <g transform="translate(80, 320)">
+    <rect x="0" y="0" width="120" height="34" rx="6" fill="#4f8fff" opacity="0.15"/>
+    <text x="60" y="22" fill="#7fb0ff" font-family="ui-sans-serif, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Cloud IDE</text>
+
+    <rect x="135" y="0" width="120" height="34" rx="6" fill="#7c5cff" opacity="0.15"/>
+    <text x="195" y="22" fill="#a48cff" font-family="ui-sans-serif, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Cider</text>
+
+    <rect x="270" y="0" width="120" height="34" rx="6" fill="#22d3ee" opacity="0.15"/>
+    <text x="330" y="22" fill="#67e8f9" font-family="ui-sans-serif, sans-serif" font-size="14" font-weight="600" text-anchor="middle">VSCode Fork</text>
+
+    <rect x="405" y="0" width="170" height="34" rx="6" fill="#ffb454" opacity="0.18"/>
+    <text x="490" y="22" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Platform Engineering</text>
+
+    <rect x="590" y="0" width="160" height="34" rx="6" fill="#ff7e54" opacity="0.18"/>
+    <text x="670" y="22" fill="#ff7e54" font-family="ui-sans-serif, sans-serif" font-size="14" font-weight="600" text-anchor="middle">AI Coding Agent</text>
+  </g>
+
+  <!-- 引言 -->
+  <g transform="translate(80, 390)">
+    <text x="0" y="0" fill="#e2e8f0" font-family="ui-serif, Georgia, serif" font-size="22" font-style="italic" font-weight="500">
+      "In the end, standard tooling creates leverage."
+    </text>
+    <text x="0" y="34" fill="#7d8aa5" font-family="ui-sans-serif, sans-serif" font-size="14">
+      — Laurent Le Brun · Ex-Google Dev Tools Tech Lead · 2011–2024
+    </text>
+  </g>
+
+  <!-- 评分徽章 -->
+  <g transform="translate(1000, 70)">
+    <rect x="0" y="0" width="140" height="80" rx="12" fill="#0f1729" stroke="url(#cider)" stroke-width="2"/>
+    <text x="70" y="28" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">多模综合评分</text>
+    <text x="70" y="62" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="32" font-weight="800" text-anchor="middle">8.83/10</text>
+  </g>
+
+  <!-- 底部 -->
+  <text x="80" y="600" fill="#5d6a85" font-family="ui-monospace, monospace" font-size="13">
+    laurent.le-brun.eu · 2026-05-09 · HN 442↑
+  </text>
+  <text x="1120" y="600" fill="#5d6a85" font-family="ui-monospace, monospace" font-size="13" text-anchor="end">
+    xiejiayun.github.io
+  </text>
+</svg>

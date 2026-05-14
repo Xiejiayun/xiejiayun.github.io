@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#131a2e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- 中心节点 -->
+  <g transform="translate(700, 450)">
+    <circle r="100" fill="#1e293b" stroke="#ffb454" stroke-width="3" filter="url(#glow)"/>
+    <text y="-12" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="20" font-weight="800" text-anchor="middle">Google IDE</text>
+    <text y="14" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="14" font-weight="600" text-anchor="middle">编年史</text>
+    <text y="36" fill="#9ab" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">2011 → 2026</text>
+  </g>
+
+  <!-- 五大主分支线 -->
+  <g stroke="#4f8fff" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 700 350 Q 500 230 250 180"/>
+    <path d="M 800 450 Q 1000 380 1200 280"/>
+    <path d="M 800 480 Q 1050 580 1200 680"/>
+    <path d="M 600 480 Q 380 580 200 680"/>
+    <path d="M 600 380 Q 380 280 180 220"/>
+  </g>
+
+  <!-- 分支 1：碎片化（左上） -->
+  <g transform="translate(140, 130)">
+    <rect width="240" height="110" rx="10" fill="#1e293b" stroke="#4f8fff" stroke-width="2"/>
+    <text x="120" y="32" fill="#7fb0ff" font-family="ui-sans-serif, sans-serif" font-size="16" font-weight="700" text-anchor="middle">① 2011 碎片化</text>
+    <text x="20" y="60" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• Vim/Emacs/Eclipse/IntelliJ</text>
+    <text x="20" y="80" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• Jeff Dean: "doesn't matter"</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 集成需各 IDE 重复实现</text>
+  </g>
+
+  <!-- 分支 2：Cloud IDE 萌芽（右上） -->
+  <g transform="translate(1140, 200)">
+    <rect width="240" height="110" rx="10" fill="#1e293b" stroke="#7c5cff" stroke-width="2"/>
+    <text x="120" y="32" fill="#a48cff" font-family="ui-sans-serif, sans-serif" font-size="16" font-weight="700" text-anchor="middle">② 2013 Cider 萌芽</text>
+    <text x="20" y="60" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 起点：tech writer 修 markdown</text>
+    <text x="20" y="80" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 轻客户端 + 强后端</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 引入 LSP → 真正变 IDE</text>
+  </g>
+
+  <!-- 分支 3：VSCode 融合（右下） -->
+  <g transform="translate(1140, 660)">
+    <rect width="240" height="110" rx="10" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="120" y="32" fill="#67e8f9" font-family="ui-sans-serif, sans-serif" font-size="16" font-weight="700" text-anchor="middle">③ 2020 Cider V</text>
+    <text x="20" y="60" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 保留后端、前端换 VSCode</text>
+    <text x="20" y="80" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 软 fork：月度同步 upstream</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 5000 → 80% 用户迁移</text>
+  </g>
+
+  <!-- 分支 4：AI 集成（左下） -->
+  <g transform="translate(20, 660)">
+    <rect width="240" height="110" rx="10" fill="#1e293b" stroke="#ffb454" stroke-width="2"/>
+    <text x="120" y="32" fill="#ffb454" font-family="ui-sans-serif, sans-serif" font-size="16" font-weight="700" text-anchor="middle">④ 2023 AI 集成</text>
+    <text x="20" y="60" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• AI Code Completion</text>
+    <text x="20" y="80" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• Smart Paste（上下文感知）</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• ML 解析 review 评论</text>
+  </g>
+
+  <!-- 分支 5：杠杆（最重要，正左） -->
+  <g transform="translate(20, 130)">
+    <rect width="240" height="110" rx="10" fill="#1e293b" stroke="#ff7e54" stroke-width="3"/>
+    <text x="120" y="32" fill="#ff7e54" font-family="ui-sans-serif, sans-serif" font-size="16" font-weight="700" text-anchor="middle">⑤ 杠杆论</text>
+    <text x="20" y="60" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 标准化 → 边际收益放大</text>
+    <text x="20" y="80" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• 100+ 内部扩展爆发</text>
+    <text x="20" y="100" fill="#cbd5e1" font-family="ui-sans-serif, sans-serif" font-size="12">• AI features 单点集成</text>
+  </g>
+
+  <!-- 子分支：Cider 后端架构 -->
+  <g stroke="#7c5cff" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M 1240 310 L 1280 380"/>
+    <path d="M 1240 310 L 1180 380"/>
+    <path d="M 1240 310 L 1080 380"/>
+  </g>
+  <g transform="translate(1020, 380)">
+    <rect width="160" height="40" rx="6" fill="#161f33" stroke="#7c5cff" stroke-width="1"/>
+    <text x="80" y="26" fill="#a48cff" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">Language Graph</text>
+  </g>
+  <g transform="translate(1110, 460)">
+    <rect width="160" height="40" rx="6" fill="#161f33" stroke="#7c5cff" stroke-width="1"/>
+    <text x="80" y="26" fill="#a48cff" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">Incremental Index</text>
+  </g>
+  <g transform="translate(1200, 380)">
+    <rect width="160" height="40" rx="6" fill="#161f33" stroke="#7c5cff" stroke-width="1"/>
+    <text x="80" y="26" fill="#a48cff" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">Historical Snapshot</text>
+  </g>
+
+  <!-- 子分支：杠杆三层 -->
+  <g stroke="#ff7e54" stroke-width="1.5" fill="none" opacity="0.4">
+    <path d="M 140 240 L 100 320"/>
+    <path d="M 140 240 L 160 320"/>
+    <path d="M 140 240 L 220 320"/>
+  </g>
+  <g transform="translate(20, 320)">
+    <rect width="160" height="40" rx="6" fill="#231a14" stroke="#ff7e54" stroke-width="1"/>
+    <text x="80" y="26" fill="#ff7e54" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">单点改进 = 全公司收益</text>
+  </g>
+  <g transform="translate(100, 380)">
+    <rect width="160" height="40" rx="6" fill="#231a14" stroke="#ff7e54" stroke-width="1"/>
+    <text x="80" y="26" fill="#ff7e54" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">100+ 内部 Extension</text>
+  </g>
+  <g transform="translate(180, 320)">
+    <rect width="160" height="40" rx="6" fill="#231a14" stroke="#ff7e54" stroke-width="1"/>
+    <text x="80" y="26" fill="#ff7e54" font-family="ui-sans-serif, sans-serif" font-size="12" text-anchor="middle">AI 集成可行</text>
+  </g>
+
+  <!-- 标题 -->
+  <text x="700" y="55" fill="#fff" font-family="ui-sans-serif, sans-serif" font-size="28" font-weight="800" text-anchor="middle">A History of IDEs at Google · 思维导图</text>
+  <text x="700" y="85" fill="#7d8aa5" font-family="ui-sans-serif, sans-serif" font-size="14" text-anchor="middle">从碎片化 → Cloud IDE → VSCode 融合 → AI 集成 → 杠杆释放</text>
+
+  <!-- 底部 -->
+  <text x="700" y="870" fill="#5d6a85" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">
+    Source: laurent.le-brun.eu · 思维导图由 xiejiayun.github.io 整理
+  </text>
+</svg>
