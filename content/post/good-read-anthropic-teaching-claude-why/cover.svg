@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0d12"/>
+      <stop offset="50%" stop-color="#161a26"/>
+      <stop offset="100%" stop-color="#1f1422"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d97757"/>
+      <stop offset="100%" stop-color="#e6a47c"/>
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f2e8e0"/>
+      <stop offset="100%" stop-color="#d97757"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative grid lines -->
+  <g stroke="#2a2f3d" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="510" x2="1200" y2="510"/>
+    <line x1="100" y1="0" x2="100" y2="630"/>
+    <line x1="1100" y1="0" x2="1100" y2="630"/>
+  </g>
+
+  <!-- Top label -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="180" height="36" rx="18" fill="#d97757" opacity="0.18"/>
+    <text x="90" y="24" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="16" font-weight="600">好文共赏</text>
+  </g>
+
+  <text x="280" y="105" fill="#7d8499" font-family="ui-monospace, monospace" font-size="14">Editor's Pick · 2026-05-14</text>
+
+  <!-- Main title -->
+  <g transform="translate(80, 200)" font-family="ui-sans-serif, system-ui">
+    <text x="0" y="0" fill="url(#text-grad)" font-size="56" font-weight="800">教 Claude</text>
+    <text x="290" y="0" fill="#f2e8e0" font-size="56" font-weight="800">"为什么"</text>
+    <text x="0" y="80" fill="#f2e8e0" font-size="36" font-weight="500">从演示动作到传授原则</text>
+    <text x="0" y="125" fill="#9ba3b3" font-size="24" font-weight="400">— Anthropic 把对齐训练效率提升了 28×</text>
+  </g>
+
+  <!-- Key numbers -->
+  <g transform="translate(80, 410)" font-family="ui-monospace, monospace">
+    <g>
+      <text x="0" y="0" fill="#d97757" font-size="42" font-weight="700">96% → 0%</text>
+      <text x="0" y="28" fill="#7d8499" font-size="14">Agentic 勒索率</text>
+    </g>
+    <g transform="translate(330, 0)">
+      <text x="0" y="0" fill="#d97757" font-size="42" font-weight="700">28×</text>
+      <text x="0" y="28" fill="#7d8499" font-size="14">Token 效率提升</text>
+    </g>
+    <g transform="translate(540, 0)">
+      <text x="0" y="0" fill="#d97757" font-size="42" font-weight="700">19×</text>
+      <text x="0" y="28" fill="#7d8499" font-size="14">用宪法重写的回报</text>
+    </g>
+    <g transform="translate(820, 0)">
+      <text x="0" y="0" fill="#d97757" font-size="42" font-weight="700">3M</text>
+      <text x="0" y="28" fill="#7d8499" font-size="14">tokens 难题咨询数据</text>
+    </g>
+  </g>
+
+  <!-- Bottom info -->
+  <g transform="translate(80, 575)" font-family="ui-sans-serif, system-ui">
+    <circle cx="6" cy="-6" r="4" fill="#d97757"/>
+    <text x="20" y="0" fill="#7d8499" font-size="14">anthropic.com/research/teaching-claude-why · alignment.anthropic.com</text>
+  </g>
+  <g transform="translate(80, 600)" font-family="ui-sans-serif, system-ui">
+    <text x="0" y="0" fill="#4a5266" font-size="12">多模评分 · Opus 9.0 / Sonnet 8.8 / Gemini 8.7 · 综合 8.83</text>
+  </g>
+
+  <!-- Decorative circuit-like element top right -->
+  <g transform="translate(1000, 80)" stroke="#d97757" stroke-width="1.5" fill="none" opacity="0.5" filter="url(#glow)">
+    <circle cx="0" cy="0" r="40"/>
+    <circle cx="0" cy="0" r="60"/>
+    <circle cx="0" cy="0" r="80"/>
+    <line x1="-95" y1="0" x2="-40" y2="0"/>
+    <line x1="40" y1="0" x2="95" y2="0"/>
+    <line x1="0" y1="-95" x2="0" y2="-40"/>
+    <line x1="0" y1="40" x2="0" y2="95"/>
+    <circle cx="0" cy="0" r="6" fill="#d97757"/>
+  </g>
+
+  <!-- Right side accent bar -->
+  <rect x="1190" y="200" width="4" height="230" fill="url(#accent)"/>
+</svg>

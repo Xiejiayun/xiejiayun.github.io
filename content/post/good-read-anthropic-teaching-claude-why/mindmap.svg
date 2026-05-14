@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b0d12"/>
+      <stop offset="100%" stop-color="#161a26"/>
+    </linearGradient>
+    <radialGradient id="centerNode" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#e6a47c"/>
+      <stop offset="100%" stop-color="#d97757"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="800" y="50" text-anchor="middle" fill="#f2e8e0" font-family="ui-sans-serif, system-ui" font-size="26" font-weight="700">Teaching Claude Why · 思维导图</text>
+  <text x="800" y="80" text-anchor="middle" fill="#7d8499" font-family="ui-monospace, monospace" font-size="14">问题 → 诊断 → 三件套 → 规则 → 局限</text>
+
+  <!-- Center node -->
+  <g transform="translate(800, 500)">
+    <circle r="100" fill="url(#centerNode)" opacity="0.85"/>
+    <text y="-10" text-anchor="middle" fill="#0b0d12" font-family="ui-sans-serif, system-ui" font-size="22" font-weight="800">原则 &gt; 演示</text>
+    <text y="20" text-anchor="middle" fill="#0b0d12" font-family="ui-sans-serif, system-ui" font-size="18" font-weight="600">28× efficiency</text>
+    <text y="46" text-anchor="middle" fill="#0b0d12" font-family="ui-monospace, monospace" font-size="12">96% → 0%</text>
+  </g>
+
+  <!-- Connections to branches -->
+  <g stroke="#d97757" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 720 480 Q 500 380 280 280"/>
+    <path d="M 720 520 Q 500 620 280 720"/>
+    <path d="M 880 480 Q 1100 380 1320 280"/>
+    <path d="M 880 500 Q 1100 500 1320 500"/>
+    <path d="M 880 520 Q 1100 620 1320 720"/>
+    <path d="M 800 400 Q 800 250 800 150"/>
+    <path d="M 800 600 Q 800 800 800 920"/>
+  </g>
+
+  <!-- Branch: TOP - Problem -->
+  <g transform="translate(800, 150)">
+    <rect x="-200" y="-40" width="400" height="80" rx="8" fill="#1f2433" stroke="#3a4053"/>
+    <text y="-12" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="18" font-weight="700">病例 · Agentic Misalignment</text>
+    <text y="14" text-anchor="middle" fill="#9ba3b3" font-size="13" font-family="ui-sans-serif, system-ui">16 个前沿模型在虚构企业场景中</text>
+    <text y="32" text-anchor="middle" fill="#9ba3b3" font-size="13" font-family="ui-sans-serif, system-ui">自发选择勒索 / 泄密 / 自保 · Claude 4 勒索率 96%</text>
+  </g>
+
+  <!-- Branch: TOP-LEFT - Diagnosis -->
+  <g transform="translate(280, 280)">
+    <rect x="-180" y="-50" width="360" height="100" rx="8" fill="#1f2433" stroke="#3a4053"/>
+    <text y="-22" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="17" font-weight="700">诊断</text>
+    <text y="0" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">问题不是 RLHF 奖励错了</text>
+    <text y="20" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">而是 agentic 场景训练空缺</text>
+    <text y="40" text-anchor="middle" fill="#9ba3b3" font-size="12" font-family="ui-monospace, monospace">模型回退到科幻预训练先验</text>
+  </g>
+
+  <!-- Branch: BOTTOM-LEFT - 失败方法 -->
+  <g transform="translate(280, 720)">
+    <rect x="-180" y="-60" width="360" height="120" rx="8" fill="#1f2433" stroke="#3a4053"/>
+    <text y="-32" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="17" font-weight="700">第一次失败</text>
+    <text y="-8" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">用同分布数据训练评测</text>
+    <text y="12" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">→ 仅 22% → 15% 几乎没改善</text>
+    <text y="36" text-anchor="middle" fill="#d97757" font-size="12" font-family="ui-monospace, monospace">注入"显式说出价值观" → 3%</text>
+    <text y="54" text-anchor="middle" fill="#9ba3b3" font-size="12" font-family="ui-sans-serif, system-ui">关键洞见：推理过程比答案重要</text>
+  </g>
+
+  <!-- Branch: TOP-RIGHT - SDF -->
+  <g transform="translate(1320, 280)">
+    <rect x="-180" y="-50" width="360" height="100" rx="8" fill="#1f2433" stroke="#3a4053"/>
+    <text y="-22" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="17" font-weight="700">三件套 ① · SDF</text>
+    <text y="0" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">合成宪法文档 + 虚构 AI 故事</text>
+    <text y="20" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">改造预训练先验中的 AI 形象</text>
+    <text y="40" text-anchor="middle" fill="#d97757" font-size="12" font-family="ui-monospace, monospace">勒索率 65% → 19% (RL 后保持)</text>
+  </g>
+
+  <!-- Branch: RIGHT - Difficult Advice -->
+  <g transform="translate(1320, 500)">
+    <rect x="-180" y="-60" width="360" height="120" rx="8" fill="#1f2433" stroke="#d97757"/>
+    <text y="-34" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="17" font-weight="700">三件套 ② · Difficult Advice</text>
+    <text y="-10" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">用户咨询伦理难题, AI 给宪法回答</text>
+    <text y="10" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">3M tokens · 与评测分布完全不同</text>
+    <text y="32" text-anchor="middle" fill="#d97757" font-size="13" font-family="ui-monospace, monospace" font-weight="700">28× 数据效率 · 还泛化得更好</text>
+    <text y="52" text-anchor="middle" fill="#9ba3b3" font-size="12" font-family="ui-sans-serif, system-ui">步骤 6 "用宪法重写" 贡献 19× 收益</text>
+  </g>
+
+  <!-- Branch: BOTTOM-RIGHT - RL env -->
+  <g transform="translate(1320, 720)">
+    <rect x="-180" y="-50" width="360" height="100" rx="8" fill="#1f2433" stroke="#3a4053"/>
+    <text y="-22" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="17" font-weight="700">三件套 ③ · 多样化 RL 环境</text>
+    <text y="0" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">给安全 RL 加入工具定义</text>
+    <text y="20" text-anchor="middle" fill="#f2e8e0" font-size="13" font-family="ui-sans-serif, system-ui">即使工具对任务无用</text>
+    <text y="40" text-anchor="middle" fill="#9ba3b3" font-size="12" font-family="ui-monospace, monospace">扩展"上下文形态"的训练覆盖</text>
+  </g>
+
+  <!-- Branch: BOTTOM - 4 Rules + Limit -->
+  <g transform="translate(800, 920)">
+    <rect x="-450" y="-40" width="900" height="80" rx="8" fill="#1f2433" stroke="#3a4053"/>
+    <text y="-12" text-anchor="middle" fill="#e6a47c" font-family="ui-sans-serif, system-ui" font-size="17" font-weight="700">四条可迁移规则</text>
+    <text y="14" text-anchor="middle" fill="#9ba3b3" font-size="13" font-family="ui-sans-serif, system-ui">① 评测分布训练刷分但不泛化 · ② 原则比演示重要 · ③ 数据质量 &gt; 数据数量 · ④ 上下文形态也是分布</text>
+    <text y="32" text-anchor="middle" fill="#7d8499" font-size="12" font-family="ui-sans-serif, system-ui">局限：当前审计方法仍不足以排除"灾难性自主行动"场景</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="800" y="985" text-anchor="middle" fill="#4a5266" font-family="ui-monospace, monospace" font-size="11">好文共赏 · Anthropic Teaching Claude Why · 2026-05-08</text>
+</svg>
