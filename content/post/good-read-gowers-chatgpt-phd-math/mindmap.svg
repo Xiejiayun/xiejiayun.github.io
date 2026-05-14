@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" font-family="-apple-system, 'PingFang SC', sans-serif">
+  <defs>
+    <linearGradient id="bgmm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#13183f"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#7c9eff"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bgmm)"/>
+
+  <!-- 中心节点 -->
+  <g transform="translate(700, 450)">
+    <ellipse cx="0" cy="0" rx="170" ry="58" fill="#13183f" stroke="url(#g1)" stroke-width="2.5"/>
+    <text x="0" y="-4" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Gowers × ChatGPT 5.5 Pro</text>
+    <text x="0" y="24" text-anchor="middle" font-size="14" fill="#a0a4d6">2026-05-08 · 加性数论 · PhD-级证明</text>
+  </g>
+
+  <!-- 五条分支线 -->
+  <g stroke="url(#g1)" stroke-width="1.8" fill="none" opacity="0.7">
+    <path d="M 530 410 Q 380 320 220 250"/>
+    <path d="M 530 490 Q 380 580 220 650"/>
+    <path d="M 870 410 Q 1020 320 1180 250"/>
+    <path d="M 870 490 Q 1020 580 1180 650"/>
+    <path d="M 700 510 Q 700 650 700 770"/>
+  </g>
+
+  <!-- Branch 1: 实验过程 (左上) -->
+  <g transform="translate(220, 250)">
+    <rect x="-170" y="-50" width="340" height="100" rx="10" fill="#1a1f4a" stroke="#7c9eff" stroke-width="1.5"/>
+    <text x="0" y="-22" text-anchor="middle" font-size="16" font-weight="bold" fill="#7c9eff">① 实验过程</text>
+    <text x="0" y="2" text-anchor="middle" font-size="13" fill="#d0d4f0">取 Nathanson 公开问题</text>
+    <text x="0" y="22" text-anchor="middle" font-size="13" fill="#d0d4f0">17 分钟思考 + 2 分钟 LaTeX</text>
+    <text x="0" y="40" text-anchor="middle" font-size="13" fill="#a0a4d6">零数学输入 · 全程公开 prompt</text>
+  </g>
+
+  <!-- Branch 2: 技术核心 (左下) -->
+  <g transform="translate(220, 650)">
+    <rect x="-170" y="-60" width="340" height="120" rx="10" fill="#1a1f4a" stroke="#7c9eff" stroke-width="1.5"/>
+    <text x="0" y="-34" text-anchor="middle" font-size="16" font-weight="bold" fill="#7c9eff">② 技术突破</text>
+    <text x="0" y="-12" text-anchor="middle" font-size="13" fill="#d0d4f0">指数上界 → 多项式上界</text>
+    <text x="0" y="8" text-anchor="middle" font-size="13" fill="#d0d4f0">引入 B_h-set · h-dissociated</text>
+    <text x="0" y="28" text-anchor="middle" font-size="13" fill="#d0d4f0">改进 Rajagopal 构造</text>
+    <text x="0" y="48" text-anchor="middle" font-size="13" fill="#a0a4d6">Isaac 评估：原创·巧妙</text>
+  </g>
+
+  <!-- Branch 3: 证伪/可信度 (右上) -->
+  <g transform="translate(1180, 250)">
+    <rect x="-170" y="-50" width="340" height="100" rx="10" fill="#1a1f4a" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="0" y="-22" text-anchor="middle" font-size="16" font-weight="bold" fill="#c084fc">③ 验证链</text>
+    <text x="0" y="2" text-anchor="middle" font-size="13" fill="#d0d4f0">Gowers 自核 → Nathanson 转</text>
+    <text x="0" y="22" text-anchor="middle" font-size="13" fill="#d0d4f0">Rajagopal 评 "几乎肯定正确"</text>
+    <text x="0" y="40" text-anchor="middle" font-size="13" fill="#a0a4d6">两份 preprint 公开</text>
+  </g>
+
+  <!-- Branch 4: 对研究培养的冲击 (右下) -->
+  <g transform="translate(1180, 650)">
+    <rect x="-170" y="-60" width="340" height="120" rx="10" fill="#1a1f4a" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="0" y="-34" text-anchor="middle" font-size="16" font-weight="bold" fill="#c084fc">④ 研究教育冲击</text>
+    <text x="0" y="-12" text-anchor="middle" font-size="13" fill="#d0d4f0">"温和入门题" 时代结束</text>
+    <text x="0" y="8" text-anchor="middle" font-size="13" fill="#d0d4f0">PhD 门槛 = LLM 解不了</text>
+    <text x="0" y="28" text-anchor="middle" font-size="13" fill="#d0d4f0">数学家身份的重塑</text>
+    <text x="0" y="48" text-anchor="middle" font-size="13" fill="#a0a4d6">arXiv 政策需重新审视</text>
+  </g>
+
+  <!-- Branch 5: 元问题 (下) -->
+  <g transform="translate(700, 770)">
+    <rect x="-260" y="-45" width="520" height="90" rx="10" fill="#1a1f4a" stroke="url(#g1)" stroke-width="1.8"/>
+    <text x="0" y="-18" text-anchor="middle" font-size="16" font-weight="bold" fill="url(#g1)">⑤ 元问题：什么算"AI 的成果"</text>
+    <text x="0" y="6" text-anchor="middle" font-size="13" fill="#d0d4f0">"训练 PhD" 这件事的最低门槛被抬升</text>
+    <text x="0" y="26" text-anchor="middle" font-size="13" fill="#a0a4d6">原创性的定义 · 可发表性 · 学术信用归属</text>
+  </g>
+
+  <!-- 装饰水印 -->
+  <text x="1380" y="880" text-anchor="end" font-size="12" fill="#3b3f6e">xiejiayun.github.io · 好文共赏 · 思维导图</text>
+</svg>
