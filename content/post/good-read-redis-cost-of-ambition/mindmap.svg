@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="mmBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#0f1a2e"/>
+    </linearGradient>
+    <style>
+      .root { fill:#dc382c; }
+      .b1 { fill:#1f4d8a; }
+      .b2 { fill:#4d7a4d; }
+      .b3 { fill:#8a5a1a; }
+      .b4 { fill:#5e2e8a; }
+      .lbl { fill:#f3f4f6; font-family: ui-sans-serif,system-ui,sans-serif; }
+      .sub { fill:#d1d5db; font-family: ui-sans-serif,system-ui,sans-serif; }
+      .edge { stroke:#475569; stroke-width:2; fill:none; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#mmBg)"/>
+
+  <!-- title -->
+  <text x="20" y="40" class="lbl" font-size="22" font-weight="700">Redis and the Cost of Ambition · 思维导图</text>
+  <text x="20" y="65" class="sub" font-size="14">Charles Leifer, 2026-05-12 · 好文共赏</text>
+
+  <!-- root -->
+  <g transform="translate(700,450)">
+    <ellipse cx="0" cy="0" rx="160" ry="60" class="root" opacity="0.92"/>
+    <text x="0" y="-5" text-anchor="middle" class="lbl" font-size="18" font-weight="800">PR #15162</text>
+    <text x="0" y="18" text-anchor="middle" class="lbl" font-size="14">新 Array 类型 · 22258 行</text>
+  </g>
+
+  <!-- Top branch: TECH -->
+  <path class="edge" d="M700,390 C700,280 460,260 320,200"/>
+  <g transform="translate(180,140)">
+    <rect width="280" height="60" rx="12" class="b1" opacity="0.9"/>
+    <text x="20" y="38" class="lbl" font-size="20" font-weight="700">① 技术设计的稀释</text>
+  </g>
+  <g class="sub" font-size="13" transform="translate(180,220)">
+    <text y="0">• 单线程 + 事件驱动 + 内存（三位一体）</text>
+    <text y="20">• 协议：RESP2 一小时可实现</text>
+    <text y="40">• 数据结构：4 个克制原语</text>
+    <text y="60">• RESP3 打碎 request/reply 假设</text>
+    <text y="80">• 客户端缓存：缓存又需要缓存</text>
+    <text y="100">• 新 Array：与 JSON/TS/Sorted-Set 重叠</text>
+  </g>
+
+  <!-- Right branch: BIZ -->
+  <path class="edge" d="M860,450 C1000,440 1100,360 1180,300"/>
+  <g transform="translate(1080,240)">
+    <rect width="280" height="60" rx="12" class="b2" opacity="0.9"/>
+    <text x="20" y="38" class="lbl" font-size="20" font-weight="700">② 商业 / License</text>
+  </g>
+  <g class="sub" font-size="13" transform="translate(1080,320)">
+    <text y="0">• Garantia Data → Redis Labs → Redis Inc</text>
+    <text y="20">• 拿到 Redis 商标权</text>
+    <text y="40">• 2024 BSD → AGPL 翻车</text>
+    <text y="60">• 2025 退守三授权（AGPL/SSPL/RSALv2）</text>
+    <text y="80">• 2026 主打 "Real-Time Context Engine"</text>
+    <text y="100">• "Try Free" + "Get a Demo" 矛盾共存</text>
+  </g>
+
+  <!-- Bottom-right: FAILURES -->
+  <path class="edge" d="M780,510 C880,640 1020,720 1180,720"/>
+  <g transform="translate(1080,690)">
+    <rect width="280" height="60" rx="12" class="b3" opacity="0.9"/>
+    <text x="20" y="38" class="lbl" font-size="20" font-weight="700">③ 失败案例</text>
+  </g>
+  <g class="sub" font-size="13" transform="translate(1080,770)">
+    <text y="0">• Disque (2015)：astronaut mode</text>
+    <text y="20">  → 10 年后实质废弃</text>
+    <text y="40">• Redis-Raft：Jepsen 报告 21 个 bug</text>
+    <text y="60">  → 5 个会丢已提交写入</text>
+    <text y="80">• RedisGraph 被废弃</text>
+  </g>
+
+  <!-- Bottom-left: ECO / Valkey -->
+  <path class="edge" d="M620,510 C520,640 360,720 220,720"/>
+  <g transform="translate(20,690)">
+    <rect width="280" height="60" rx="12" class="b4" opacity="0.9"/>
+    <text x="20" y="38" class="lbl" font-size="20" font-weight="700">④ 市场的判决</text>
+  </g>
+  <g class="sub" font-size="13" transform="translate(20,770)">
+    <text y="0">• Valkey fork（Linux Foundation 托管）</text>
+    <text y="20">• AWS/Google/Oracle/Ericsson 支持</text>
+    <text y="40">• 投资重心：多线程 / 内存 / 集群</text>
+    <text y="60">• 不追新功能 bullet point</text>
+    <text y="80">• "Redis 2011 的灵魂换了身份继续活"</text>
+  </g>
+
+  <!-- Top-right: PHIL -->
+  <path class="edge" d="M860,420 C1000,360 1100,260 1180,180"/>
+  <g transform="translate(1080,120)">
+    <rect width="280" height="60" rx="12" class="b1" opacity="0.7"/>
+    <text x="20" y="38" class="lbl" font-size="20" font-weight="700">⑤ 文化 / 哲学</text>
+  </g>
+  <g class="sub" font-size="13" transform="translate(1080,200)">
+    <text y="0">• Brooks Second System Effect</text>
+    <text y="20">• Ambition 是一种损耗品</text>
+    <text y="40">• 让你成功的气质 = 让你走偏的气质</text>
+  </g>
+
+  <!-- Left mid: HISTORY -->
+  <path class="edge" d="M540,450 C400,440 280,440 180,440"/>
+  <g transform="translate(20,410)">
+    <rect width="280" height="60" rx="12" class="b2" opacity="0.7"/>
+    <text x="20" y="38" class="lbl" font-size="20" font-weight="700">⑥ Redis 时间轴</text>
+  </g>
+  <g class="sub" font-size="13" transform="translate(20,490)">
+    <text y="0">• 2009 antirez 用 TCL 写出第一版</text>
+    <text y="20">• 2011 Web2.0 全栈普及</text>
+    <text y="40">• 2015 Disque · 2017 Manifesto</text>
+    <text y="60">• 2020 Redis-Raft Jepsen 评估</text>
+    <text y="80">• 2024 BSD→AGPL · Valkey fork</text>
+    <text y="100">• 2026 AI Context Engine 转向</text>
+  </g>
+
+</svg>
