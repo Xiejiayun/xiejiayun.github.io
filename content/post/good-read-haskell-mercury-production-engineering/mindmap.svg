@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#161430"/>
+    </linearGradient>
+    <style>
+      .root { fill: #f8fafc; font: 700 22px ui-sans-serif,system-ui,sans-serif; }
+      .b1 { fill: #fde68a; font: 700 18px ui-sans-serif,system-ui,sans-serif; }
+      .b2 { fill: #a7f3d0; font: 700 18px ui-sans-serif,system-ui,sans-serif; }
+      .b3 { fill: #93c5fd; font: 700 18px ui-sans-serif,system-ui,sans-serif; }
+      .b4 { fill: #f9a8d4; font: 700 18px ui-sans-serif,system-ui,sans-serif; }
+      .b5 { fill: #c4b5fd; font: 700 18px ui-sans-serif,system-ui,sans-serif; }
+      .b6 { fill: #fca5a5; font: 700 18px ui-sans-serif,system-ui,sans-serif; }
+      .leaf { fill: #e2e8f0; font: 500 14px ui-sans-serif,system-ui,sans-serif; }
+      .edge { stroke: #64748b; stroke-width: 1.5; fill: none; opacity: 0.7; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- center -->
+  <g transform="translate(800,500)">
+    <ellipse cx="0" cy="0" rx="160" ry="80" fill="#1f2937" stroke="#a78bfa" stroke-width="3"/>
+    <text class="root" text-anchor="middle" y="-10">Mercury Haskell</text>
+    <text class="root" text-anchor="middle" y="22" fill="#a78bfa">2M lines · $248B / yr</text>
+  </g>
+
+  <!-- branches: 6 main -->
+
+  <!-- B1 Safety-II 顶左 -->
+  <path class="edge" d="M680 480 C 540 380, 380 280, 220 220"/>
+  <g transform="translate(70,200)">
+    <rect width="320" height="50" rx="10" fill="#1f2937" stroke="#fde68a"/>
+    <text class="b1" x="20" y="32">1. Safety-II 视角</text>
+  </g>
+  <g transform="translate(40,260)" class="leaf">
+    <text y="0">• 不只研究"为什么坏"</text>
+    <text y="22">• 更研究"为什么平时不坏"</text>
+    <text y="44">• 可靠性 = 适应性容量</text>
+    <text y="66">• Hollnagel / Woods 谱系</text>
+  </g>
+
+  <!-- B2 Purity as boundary 顶中 -->
+  <path class="edge" d="M800 420 C 800 320, 800 260, 800 180"/>
+  <g transform="translate(640,130)">
+    <rect width="320" height="50" rx="10" fill="#1f2937" stroke="#a7f3d0"/>
+    <text class="b2" x="20" y="32">2. 纯 = 边界，不是属性</text>
+  </g>
+  <g transform="translate(620,195)" class="leaf">
+    <text y="0">• runST :: ∀ s . ST s a → a</text>
+    <text y="22">• bytestring/text 内部全是 unsafe</text>
+    <text y="44">• 内部为所欲为，出口锁死</text>
+    <text y="66">• 同样原则适用于连接池/熔断</text>
+  </g>
+
+  <!-- B3 Types encode operational lore 顶右 -->
+  <path class="edge" d="M920 480 C 1060 380, 1220 280, 1380 220"/>
+  <g transform="translate(1210,200)">
+    <rect width="320" height="50" rx="10" fill="#1f2937" stroke="#93c5fd"/>
+    <text class="b3" x="20" y="32">3. 类型 = 制度记忆</text>
+  </g>
+  <g transform="translate(1190,260)" class="leaf">
+    <text y="0">• data Transact a / commit</text>
+    <text y="22">• 把咒语变成唯一入口</text>
+    <text y="44">• 老员工离职，约束留下</text>
+    <text y="66">• 编译器是更好的 wiki</text>
+  </g>
+
+  <!-- B4 Durable execution 底左 -->
+  <path class="edge" d="M680 540 C 540 640, 380 740, 220 800"/>
+  <g transform="translate(60,760)">
+    <rect width="340" height="50" rx="10" fill="#1f2937" stroke="#f9a8d4"/>
+    <text class="b4" x="20" y="32">4. Durable Execution</text>
+  </g>
+  <g transform="translate(40,820)" class="leaf">
+    <text y="0">• Temporal = "Frankenstein 义肢"</text>
+    <text y="22">• workflow = pure fn over history</text>
+    <text y="44">• 删手卷状态机的快感</text>
+    <text y="66">• 开源 hs-temporal-sdk</text>
+  </g>
+
+  <!-- B5 Observability by design 底中 -->
+  <path class="edge" d="M800 580 C 800 700, 800 760, 800 830"/>
+  <g transform="translate(620,830)">
+    <rect width="360" height="50" rx="10" fill="#1f2937" stroke="#c4b5fd"/>
+    <text class="b5" x="20" y="32">5. 可观测性 = 设计决策</text>
+  </g>
+  <g transform="translate(600,895)" class="leaf">
+    <text y="0">• records of functions</text>
+    <text y="22">• interceptor monoid: mconcat […]</text>
+    <text y="44">• 不信任不能 instrument 的库</text>
+    <text y="66">• hs-opentelemetry 标准化</text>
+  </g>
+
+  <!-- B6 Idealist liability 底右 -->
+  <path class="edge" d="M920 540 C 1060 640, 1220 740, 1380 800"/>
+  <g transform="translate(1210,760)">
+    <rect width="340" height="50" rx="10" fill="#1f2937" stroke="#fca5a5"/>
+    <text class="b6" x="20" y="32">6. 理想主义 = 生产负债</text>
+  </g>
+  <g transform="translate(1190,820)" class="leaf">
+    <text y="0">• Haskell 吸引理想主义者</text>
+    <text y="22">• 必须主动培育 pragmatism</text>
+    <text y="44">• 类型≠宗教，是 power tool</text>
+    <text y="66">• 招生态 vs 招性向</text>
+  </g>
+
+  <!-- caption -->
+  <text x="800" y="50" text-anchor="middle" class="root" fill="#a78bfa">
+    Mercury · 200 万行 Haskell · 6 大命题
+  </text>
+  <text x="800" y="980" text-anchor="middle" fill="#94a3b8" font="14px ui-sans-serif">
+    导读：xiejiayun.github.io · 好文共赏 · 2026-05-14
+  </text>
+</svg>
