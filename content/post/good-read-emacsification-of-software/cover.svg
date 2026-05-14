@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f17"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1f2937" stroke-width="1" opacity="0.5">
+    <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200 M0 500 H1200"/>
+    <path d="M100 0 V630 M200 0 V630 M300 0 V630 M400 0 V630 M500 0 V630 M600 0 V630 M700 0 V630 M800 0 V630 M900 0 V630 M1000 0 V630 M1100 0 V630"/>
+  </g>
+
+  <!-- top tag -->
+  <g transform="translate(80, 80)">
+    <rect width="170" height="40" rx="20" fill="none" stroke="url(#accent)" stroke-width="1.5"/>
+    <text x="85" y="26" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" fill="#e5e7eb" text-anchor="middle" letter-spacing="2">好文共赏</text>
+  </g>
+
+  <!-- main title (English) -->
+  <g transform="translate(80, 200)" filter="url(#glow)">
+    <text font-family="ui-monospace,Menlo,Consolas,monospace" font-size="64" font-weight="700" fill="url(#accent)" letter-spacing="-1">
+      <tspan x="0" y="0">The Emacsification</tspan>
+      <tspan x="0" y="80">of Software</tspan>
+    </text>
+  </g>
+
+  <!-- subtitle -->
+  <g transform="translate(80, 400)">
+    <text font-family="ui-sans-serif,system-ui,sans-serif" font-size="28" fill="#94a3b8">
+      <tspan x="0" y="0">个人软件的复兴 · 当 AI Agent</tspan>
+      <tspan x="0" y="40">遇上 Emacs 文化</tspan>
+    </text>
+  </g>
+
+  <!-- prompt-like decoration -->
+  <g transform="translate(80, 520)" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="18">
+    <text x="0" y="0" fill="#22d3ee">$</text>
+    <text x="24" y="0" fill="#cbd5e1">claude build --personal --native --weird</text>
+    <rect x="395" y="-14" width="10" height="18" fill="#22d3ee">
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- right side parenthesis motif -->
+  <g transform="translate(960, 100)" stroke="url(#accent)" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M40 0 C-20 80, -20 360, 40 440"/>
+    <path d="M120 0 C180 80, 180 360, 120 440"/>
+    <text x="80" y="240" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="36" fill="#e5e7eb" text-anchor="middle">.emacs</text>
+  </g>
+
+  <!-- source -->
+  <text x="80" y="595" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="14" fill="#64748b">
+    sockpuppet.org · Thomas Ptacek · 2026-05-12 · Editor's Pick
+  </text>
+</svg>
