@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg3)"/>
+  <!-- business model icons -->
+  <rect x="760" y="150" width="140" height="80" rx="8" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <text x="790" y="195" font-family="monospace" font-size="14" fill="#f59e0b" opacity="0.7">订阅制</text>
+  <rect x="930" y="150" width="140" height="80" rx="8" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <text x="960" y="195" font-family="monospace" font-size="14" fill="#f59e0b" opacity="0.7">买断制</text>
+  <rect x="845" y="260" width="140" height="80" rx="8" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <text x="860" y="305" font-family="monospace" font-size="14" fill="#f59e0b" opacity="0.7">免费增值</text>
+  <line x1="900" y1="230" x2="930" y2="230" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <line x1="830" y1="230" x2="860" y2="260" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <line x1="1000" y1="230" x2="970" y2="260" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <text x="60" y="250" font-family="sans-serif" font-size="44" font-weight="bold" fill="#f59e0b">育儿 App 的钱从哪里来？</text>
+  <text x="60" y="310" font-family="sans-serif" font-size="26" fill="#e5e7eb">订阅 · 买断 · 免费增值三大模式拆解</text>
+  <rect x="60" y="335" width="320" height="3" fill="#f59e0b" opacity="0.8"/>
+  <text x="60" y="385" font-family="sans-serif" font-size="16" fill="#9ca3af">独立开发者变现策略指南</text>
+</svg>

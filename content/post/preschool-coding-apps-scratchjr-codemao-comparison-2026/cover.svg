@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg1)"/>
+  <!-- decorative code blocks -->
+  <rect x="750" y="140" width="160" height="90" rx="8" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <text x="780" y="185" font-family="monospace" font-size="13" fill="#f59e0b" opacity="0.7">ScratchJr</text>
+  <rect x="940" y="140" width="160" height="90" rx="8" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <text x="970" y="185" font-family="monospace" font-size="13" fill="#f59e0b" opacity="0.7">编程猫</text>
+  <rect x="840" y="270" width="160" height="90" rx="8" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.5"/>
+  <text x="855" y="315" font-family="monospace" font-size="13" fill="#f59e0b" opacity="0.7">Swift Play</text>
+  <line x1="910" y1="230" x2="940" y2="230" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <line x1="830" y1="230" x2="830" y2="270" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <line x1="1020" y1="230" x2="1020" y2="270" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+  <text x="60" y="250" font-family="sans-serif" font-size="44" font-weight="bold" fill="#f59e0b">幼儿编程启蒙三巨头横评</text>
+  <text x="60" y="310" font-family="sans-serif" font-size="26" fill="#e5e7eb">ScratchJr · 编程猫 · Swift Playgrounds</text>
+  <rect x="60" y="335" width="320" height="3" fill="#f59e0b" opacity="0.8"/>
+  <text x="60" y="385" font-family="sans-serif" font-size="16" fill="#9ca3af">谁更适合 4-7 岁孩子？</text>
+</svg>
