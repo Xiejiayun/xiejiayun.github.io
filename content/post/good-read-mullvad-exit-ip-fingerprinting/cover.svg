@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1620"/>
+      <stop offset="100%" stop-color="#1a2638"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffcc4d"/>
+      <stop offset="100%" stop-color="#ff8a47"/>
+    </linearGradient>
+    <linearGradient id="iv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5ad6ff"/>
+      <stop offset="100%" stop-color="#3a7fc4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- header tag -->
+  <g transform="translate(60,60)">
+    <rect width="180" height="36" rx="18" fill="#ffcc4d22" stroke="#ffcc4d" stroke-width="1.5"/>
+    <text x="90" y="24" text-anchor="middle" fill="#ffcc4d" font-size="16" font-weight="600">📌 好文共赏</text>
+  </g>
+
+  <!-- main title -->
+  <text x="60" y="190" fill="#f4f6f8" font-size="48" font-weight="700">8.2 万亿种可能</text>
+  <text x="60" y="250" fill="#f4f6f8" font-size="48" font-weight="700">里只剩 <tspan fill="url(#accent)">284</tspan> 种</text>
+  <text x="60" y="305" fill="#9aa6b4" font-size="22" font-weight="400">tmctmt 用一夜脚本</text>
+  <text x="60" y="335" fill="#9aa6b4" font-size="22" font-weight="400">把 Mullvad 用户重新指纹化</text>
+
+  <!-- visual: the collapsing combinations -->
+  <g transform="translate(720,140)">
+    <!-- 8.2T blob -->
+    <circle cx="120" cy="120" r="120" fill="url(#iv)" opacity="0.18"/>
+    <text x="120" y="115" text-anchor="middle" fill="#5ad6ff" font-size="28" font-weight="600">8.2T</text>
+    <text x="120" y="140" text-anchor="middle" fill="#5ad6ff" font-size="16">theoretical</text>
+
+    <!-- arrow -->
+    <line x1="250" y1="120" x2="290" y2="120" stroke="#ff8a47" stroke-width="3"/>
+    <polygon points="290,113 308,120 290,127" fill="#ff8a47"/>
+
+    <!-- 284 blob -->
+    <circle cx="370" cy="120" r="50" fill="url(#accent)" opacity="0.35"/>
+    <text x="370" y="115" text-anchor="middle" fill="#ffcc4d" font-size="28" font-weight="700">284</text>
+    <text x="370" y="138" text-anchor="middle" fill="#ffcc4d" font-size="14">observed</text>
+  </g>
+
+  <!-- footer line -->
+  <g transform="translate(60,500)">
+    <text fill="#9aa6b4" font-size="18" font-weight="500">深度导读 / 隐私 · VPN · RNG 侧信道 · WireGuard</text>
+    <text y="34" fill="#5e6b7a" font-size="14">原文：tmctmt.com  ·  评分 8.8/10  ·  2026-05-15</text>
+  </g>
+
+  <!-- decorative dots representing IP positions -->
+  <g opacity="0.6" transform="translate(60,420)">
+    <circle cx="0" cy="0" r="3" fill="#ffcc4d"/>
+    <circle cx="20" cy="0" r="3" fill="#ffcc4d"/>
+    <circle cx="40" cy="0" r="3" fill="#5ad6ff"/>
+    <circle cx="60" cy="0" r="3" fill="#5ad6ff"/>
+    <circle cx="80" cy="0" r="3" fill="#5ad6ff"/>
+    <circle cx="100" cy="0" r="3" fill="#5ad6ff"/>
+    <circle cx="120" cy="0" r="3" fill="#5ad6ff"/>
+    <circle cx="140" cy="0" r="3" fill="#5ad6ff"/>
+    <circle cx="160" cy="0" r="3" fill="#ff8a47"/>
+    <circle cx="180" cy="0" r="3" fill="#5ad6ff"/>
+    <circle cx="200" cy="0" r="3" fill="#5ad6ff"/>
+    <text x="220" y="5" fill="#5e6b7a" font-size="12">↑ 所有服务器，同一个 r = 0.816</text>
+  </g>
+</svg>

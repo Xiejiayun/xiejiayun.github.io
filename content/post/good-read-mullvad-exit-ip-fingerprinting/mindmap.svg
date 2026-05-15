@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1b26"/>
+      <stop offset="100%" stop-color="#1a2638"/>
+    </linearGradient>
+    <radialGradient id="center" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffcc4d"/>
+      <stop offset="100%" stop-color="#ff8a47"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="700" y="50" text-anchor="middle" fill="#9aa6b4" font-size="20">Mullvad Exit IP Fingerprinting · 思维导图</text>
+
+  <!-- center node -->
+  <g transform="translate(700,450)">
+    <circle r="100" fill="url(#center)"/>
+    <text y="-10" text-anchor="middle" fill="#1a1a1a" font-size="18" font-weight="700">Mullvad</text>
+    <text y="14" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Exit IP</text>
+    <text y="36" text-anchor="middle" fill="#1a1a1a" font-size="16" font-weight="600">Fingerprint</text>
+  </g>
+
+  <!-- branches: 6 main directions -->
+  <!-- 1. The Setup (top-left) -->
+  <line x1="700" y1="450" x2="280" y2="180" stroke="#5ad6ff" stroke-width="2.5"/>
+  <g transform="translate(110,140)">
+    <rect width="280" height="80" rx="10" fill="#5ad6ff22" stroke="#5ad6ff" stroke-width="1.5"/>
+    <text x="20" y="28" fill="#5ad6ff" font-size="16" font-weight="600">① 实验 Setup</text>
+    <text x="20" y="50" fill="#cfd8e3" font-size="13">578 服务器 · 每服务器多 IP 池</text>
+    <text x="20" y="68" fill="#cfd8e3" font-size="13">pubkey → 确定性出口 IP</text>
+  </g>
+
+  <!-- 2. Data Run (top-center) -->
+  <line x1="700" y1="450" x2="700" y2="160" stroke="#76e4a4" stroke-width="2.5"/>
+  <g transform="translate(560,80)">
+    <rect width="280" height="80" rx="10" fill="#76e4a422" stroke="#76e4a4" stroke-width="1.5"/>
+    <text x="20" y="28" fill="#76e4a4" font-size="16" font-weight="600">② 一夜脚本</text>
+    <text x="20" y="50" fill="#cfd8e3" font-size="13">3650 个 pubkey × 9 服务器</text>
+    <text x="20" y="68" fill="#cfd8e3" font-size="13">→ 完整 IP 池边界图</text>
+  </g>
+
+  <!-- 3. Surprise (top-right) -->
+  <line x1="700" y1="450" x2="1120" y2="180" stroke="#ff8a47" stroke-width="2.5"/>
+  <g transform="translate(1010,140)">
+    <rect width="280" height="80" rx="10" fill="#ff8a4722" stroke="#ff8a47" stroke-width="1.5"/>
+    <text x="20" y="28" fill="#ff8a47" font-size="16" font-weight="600">③ 反直觉发现</text>
+    <text x="20" y="50" fill="#cfd8e3" font-size="13">理论 8.2T 组合</text>
+    <text x="20" y="68" fill="#cfd8e3" font-size="13">实测仅 284 种</text>
+  </g>
+
+  <!-- 4. The Math (bottom-right) -->
+  <line x1="700" y1="450" x2="1120" y2="720" stroke="#c084fc" stroke-width="2.5"/>
+  <g transform="translate(1010,680)">
+    <rect width="280" height="80" rx="10" fill="#c084fc22" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="20" y="28" fill="#c084fc" font-size="16" font-weight="600">④ 数学解释</text>
+    <text x="20" y="50" fill="#cfd8e3" font-size="13">所有服务器同一个 r</text>
+    <text x="20" y="68" fill="#cfd8e3" font-size="13">index = ⌊r × pool_size⌋</text>
+  </g>
+
+  <!-- 5. Root Cause (bottom-center) -->
+  <line x1="700" y1="450" x2="700" y2="740" stroke="#ffcc4d" stroke-width="2.5"/>
+  <g transform="translate(560,760)">
+    <rect width="280" height="80" rx="10" fill="#ffcc4d22" stroke="#ffcc4d" stroke-width="1.5"/>
+    <text x="20" y="28" fill="#ffcc4d" font-size="16" font-weight="600">⑤ 根因</text>
+    <text x="20" y="50" fill="#cfd8e3" font-size="13">Rust rand_range(0..bound)</text>
+    <text x="20" y="68" fill="#cfd8e3" font-size="13">改 bound 不消耗 entropy</text>
+  </g>
+
+  <!-- 6. Impact (bottom-left) -->
+  <line x1="700" y1="450" x2="280" y2="720" stroke="#f87171" stroke-width="2.5"/>
+  <g transform="translate(110,680)">
+    <rect width="280" height="80" rx="10" fill="#f8717122" stroke="#f87171" stroke-width="1.5"/>
+    <text x="20" y="28" fill="#f87171" font-size="16" font-weight="600">⑥ 攻击面</text>
+    <text x="20" y="50" fill="#cfd8e3" font-size="13">100K 用户 → 340 个嫌疑</text>
+    <text x="20" y="68" fill="#cfd8e3" font-size="13">&gt;99% 去匿名化精度</text>
+  </g>
+
+  <!-- 7. Mitigation (left) -->
+  <line x1="700" y1="450" x2="120" y2="460" stroke="#34d399" stroke-width="2.5"/>
+  <g transform="translate(20,420)">
+    <rect width="200" height="80" rx="10" fill="#34d39922" stroke="#34d399" stroke-width="1.5"/>
+    <text x="15" y="28" fill="#34d399" font-size="16" font-weight="600">⑦ 用户缓解</text>
+    <text x="15" y="50" fill="#cfd8e3" font-size="12">登出 → 强制轮换 pubkey</text>
+    <text x="15" y="68" fill="#cfd8e3" font-size="12">少切服务器</text>
+  </g>
+
+  <!-- 8. Vendor Response (right) -->
+  <line x1="700" y1="450" x2="1280" y2="460" stroke="#60a5fa" stroke-width="2.5"/>
+  <g transform="translate(1180,420)">
+    <rect width="200" height="80" rx="10" fill="#60a5fa22" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="15" y="28" fill="#60a5fa" font-size="16" font-weight="600">⑧ 厂商响应</text>
+    <text x="15" y="50" fill="#cfd8e3" font-size="12">Co-CEO HN 评论致歉</text>
+    <text x="15" y="68" fill="#cfd8e3" font-size="12">子集灰度热修</text>
+  </g>
+
+  <!-- footer -->
+  <text x="700" y="870" text-anchor="middle" fill="#5e6b7a" font-size="14">作者 tmctmt · 2026-05-14 · HN 445 pts / 257 评论</text>
+</svg>
