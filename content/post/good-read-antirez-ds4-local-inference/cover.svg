@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f78166"/>
+      <stop offset="100%" stop-color="#ffa657"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#f78166" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="180" r="320" fill="url(#glow)"/>
+
+  <!-- Top tag -->
+  <rect x="60" y="60" width="220" height="42" rx="21" fill="none" stroke="url(#accent)" stroke-width="2"/>
+  <text x="170" y="89" text-anchor="middle" font-family="-apple-system, 'SF Pro', 'PingFang SC', sans-serif" font-size="20" fill="#f78166" font-weight="600">📌 好文共赏</text>
+
+  <!-- Date -->
+  <text x="1140" y="89" text-anchor="end" font-family="ui-monospace, 'SF Mono', monospace" font-size="18" fill="#7d8590">2026-05-15</text>
+
+  <!-- Big title -->
+  <text x="60" y="200" font-family="-apple-system, 'SF Pro Display', 'PingFang SC', sans-serif" font-size="56" fill="#e6edf3" font-weight="700">antirez 一周写出 DS4</text>
+  <text x="60" y="270" font-family="-apple-system, 'SF Pro Display', 'PingFang SC', sans-serif" font-size="36" fill="#c9d1d9" font-weight="500">把 DeepSeek v4 Flash</text>
+  <text x="60" y="320" font-family="-apple-system, 'SF Pro Display', 'PingFang SC', sans-serif" font-size="36" fill="#c9d1d9" font-weight="500">装进 128GB MacBook</text>
+
+  <!-- Code-like detail block -->
+  <g transform="translate(60, 380)">
+    <rect width="600" height="160" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <text x="20" y="35" font-family="ui-monospace, 'SF Mono', monospace" font-size="16" fill="#7ee787">$ git clone antirez/ds4</text>
+    <text x="20" y="62" font-family="ui-monospace, 'SF Mono', monospace" font-size="16" fill="#79c0ff">$ make           # Metal</text>
+    <text x="20" y="89" font-family="ui-monospace, 'SF Mono', monospace" font-size="16" fill="#79c0ff">$ ./ds4-server --ctx 100000 \</text>
+    <text x="20" y="113" font-family="ui-monospace, 'SF Mono', monospace" font-size="16" fill="#79c0ff">    --kv-disk-dir /tmp/ds4-kv</text>
+    <text x="20" y="140" font-family="ui-monospace, 'SF Mono', monospace" font-size="14" fill="#8b949e"># 一周 8.8k stars · 单模型引擎 · KV cache as disk citizen</text>
+  </g>
+
+  <!-- Right side keywords -->
+  <g transform="translate(720, 380)" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="18" fill="#e6edf3">
+    <text x="0" y="0" font-weight="600" fill="#f78166">关键词</text>
+    <text x="0" y="32">· 单模型推理引擎</text>
+    <text x="0" y="60">· 2/8 bit 不对称量化</text>
+    <text x="0" y="88">· MLA · imatrix · MTP</text>
+    <text x="0" y="116">· KV cache 持久化</text>
+    <text x="0" y="144">· GPT 5.5 协作开发</text>
+  </g>
+
+  <!-- Bottom -->
+  <line x1="60" y1="580" x2="1140" y2="580" stroke="#30363d" stroke-width="1"/>
+  <text x="60" y="610" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#7d8590">Editor's Pick · Opus 9.0 / Sonnet 8.7 / Gemini 8.8 · 综合 8.83/10</text>
+  <text x="1140" y="610" text-anchor="end" font-family="ui-monospace, monospace" font-size="14" fill="#7d8590">antirez.com/news/165</text>
+</svg>

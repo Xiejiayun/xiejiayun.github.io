@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0a0e13"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#f78166" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .root { font-family: -apple-system, 'PingFang SC', sans-serif; font-size: 22px; font-weight: 700; fill: #f0f6fc; }
+      .branch { font-family: -apple-system, 'PingFang SC', sans-serif; font-size: 16px; font-weight: 600; fill: #e6edf3; }
+      .leaf { font-family: -apple-system, 'PingFang SC', sans-serif; font-size: 13px; fill: #c9d1d9; }
+      .small { font-family: -apple-system, 'PingFang SC', sans-serif; font-size: 11px; fill: #8b949e; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <circle cx="700" cy="450" r="280" fill="url(#centerGlow)"/>
+
+  <!-- Title -->
+  <text x="700" y="40" text-anchor="middle" class="root" font-size="24" fill="#f78166">DS4 · DwarfStar 4 思维导图</text>
+  <text x="700" y="65" text-anchor="middle" class="small">antirez · DeepSeek v4 Flash 专用本地推理引擎 · 2026-05</text>
+
+  <!-- Center node -->
+  <g>
+    <ellipse cx="700" cy="450" rx="120" ry="60" fill="#161b22" stroke="#f78166" stroke-width="2"/>
+    <text x="700" y="445" text-anchor="middle" class="root" font-size="20">DS4</text>
+    <text x="700" y="468" text-anchor="middle" class="leaf">single-model engine</text>
+  </g>
+
+  <!-- Branch lines -->
+  <g stroke="#30363d" stroke-width="1.5" fill="none">
+    <!-- to top-left -->
+    <path d="M 620 410 Q 450 320 280 230"/>
+    <!-- to top -->
+    <path d="M 700 390 Q 700 280 700 180"/>
+    <!-- to top-right -->
+    <path d="M 780 410 Q 950 320 1120 230"/>
+    <!-- to right -->
+    <path d="M 820 450 Q 1000 450 1200 450"/>
+    <!-- to bottom-right -->
+    <path d="M 780 490 Q 950 580 1120 670"/>
+    <!-- to bottom -->
+    <path d="M 700 510 Q 700 620 700 720"/>
+    <!-- to bottom-left -->
+    <path d="M 620 490 Q 450 580 280 670"/>
+    <!-- to left -->
+    <path d="M 580 450 Q 400 450 200 450"/>
+  </g>
+
+  <!-- Branch 1: 模型 (top-left) -->
+  <g transform="translate(140, 175)">
+    <rect width="280" height="115" rx="8" fill="#161b22" stroke="#79c0ff" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#79c0ff">① 模型选择</text>
+    <text x="16" y="52" class="leaf">· DeepSeek v4 Flash（284B MoE）</text>
+    <text x="16" y="72" class="leaf">· 1M token 上下文</text>
+    <text x="16" y="92" class="leaf">· Thinking 长度 ∝ 问题复杂度</text>
+    <text x="16" y="108" class="leaf">· MLA 风格 KV 压缩</text>
+  </g>
+
+  <!-- Branch 2: 量化 (top) -->
+  <g transform="translate(560, 80)">
+    <rect width="280" height="105" rx="8" fill="#161b22" stroke="#7ee787" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#7ee787">② 不对称量化</text>
+    <text x="16" y="52" class="leaf">· 路由专家 up/gate: IQ2_XXS</text>
+    <text x="16" y="72" class="leaf">· 路由专家 down: Q2_K</text>
+    <text x="16" y="92" class="leaf">· 共享专家/projection: 不动</text>
+  </g>
+
+  <!-- Branch 3: imatrix (top-right) -->
+  <g transform="translate(980, 175)">
+    <rect width="280" height="115" rx="8" fill="#161b22" stroke="#d2a8ff" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#d2a8ff">③ imatrix 校准</text>
+    <text x="16" y="52" class="leaf">· activation-aware 重要性</text>
+    <text x="16" y="72" class="leaf">· 自带 calibration corpus</text>
+    <text x="16" y="92" class="leaf">· 对照官方 logits 验证</text>
+    <text x="16" y="108" class="leaf">· quality-testing 管线</text>
+  </g>
+
+  <!-- Branch 4: 后端 (right) -->
+  <g transform="translate(1210, 395)">
+    <rect width="180" height="115" rx="8" fill="#161b22" stroke="#ffa657" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#ffa657">④ 三个后端</text>
+    <text x="16" y="52" class="leaf">· Metal（首要）</text>
+    <text x="16" y="72" class="leaf">· CUDA / GB10 Spark</text>
+    <text x="16" y="92" class="leaf">· ROCm（独立分支）</text>
+    <text x="16" y="108" class="leaf">· CPU 仅诊断</text>
+  </g>
+
+  <!-- Branch 5: KV cache (bottom-right) -->
+  <g transform="translate(980, 615)">
+    <rect width="280" height="115" rx="8" fill="#161b22" stroke="#f78166" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#f78166">⑤ KV cache 持久化</text>
+    <text x="16" y="52" class="leaf">· 磁盘一等公民</text>
+    <text x="16" y="72" class="leaf">· prefix 跨重启复用</text>
+    <text x="16" y="92" class="leaf">· 对话挂起/恢复</text>
+    <text x="16" y="108" class="leaf">· NVMe 6+GB/s 顺序读</text>
+  </g>
+
+  <!-- Branch 6: API (bottom) -->
+  <g transform="translate(560, 720)">
+    <rect width="280" height="115" rx="8" fill="#161b22" stroke="#a5d6ff" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#a5d6ff">⑥ Agent 兼容服务器</text>
+    <text x="16" y="52" class="leaf">· /v1/chat/completions（OpenAI）</text>
+    <text x="16" y="72" class="leaf">· /v1/responses（Codex）</text>
+    <text x="16" y="92" class="leaf">· /v1/messages（Anthropic）</text>
+    <text x="16" y="108" class="leaf">· DSML exact replay</text>
+  </g>
+
+  <!-- Branch 7: Steering (bottom-left) -->
+  <g transform="translate(140, 615)">
+    <rect width="280" height="115" rx="8" fill="#161b22" stroke="#ff7b72" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#ff7b72">⑦ Vector Steering</text>
+    <text x="16" y="52" class="leaf">· 推理时改 hidden states</text>
+    <text x="16" y="72" class="leaf">· 不需要 fine-tune</text>
+    <text x="16" y="92" class="leaf">· 风格属性（verbosity 等）</text>
+    <text x="16" y="108" class="leaf">· dir-steering/ 子项目</text>
+  </g>
+
+  <!-- Branch 8: 哲学 (left) -->
+  <g transform="translate(20, 395)">
+    <rect width="180" height="115" rx="8" fill="#161b22" stroke="#56d364" stroke-width="1.5"/>
+    <text x="16" y="28" class="branch" fill="#56d364">⑧ 设计哲学</text>
+    <text x="16" y="52" class="leaf">· intentionally narrow</text>
+    <text x="16" y="72" class="leaf">· GPT 5.5 协作</text>
+    <text x="16" y="92" class="leaf">· KV = disk citizen</text>
+    <text x="16" y="108" class="leaf">· 一周 8.8k ⭐</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="700" y="870" text-anchor="middle" class="small">数据源：antirez.com/news/165 · github.com/antirez/ds4 · 截至 2026-05-15</text>
+</svg>
