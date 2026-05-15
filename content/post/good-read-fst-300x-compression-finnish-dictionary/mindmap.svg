@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <radialGradient id="bg" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#162250"/>
+      <stop offset="100%" stop-color="#080d1f"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="700" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#e2e8f0">FST 300x 压缩思维导图</text>
+  <text x="700" y="92" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#94a3b8">把 3 GB SQLite 压成 10 MB 的所有支撑论点</text>
+
+  <!-- center node -->
+  <g transform="translate(700, 450)">
+    <circle r="80" fill="#7df9ff" fill-opacity="0.15" stroke="#7df9ff" stroke-width="2" filter="url(#glow)"/>
+    <text y="-8" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#7df9ff">FST</text>
+    <text y="22" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#cbd5e1">Finite State Transducer</text>
+  </g>
+
+  <!-- branches -->
+  <!-- top: data structure lineage -->
+  <g stroke="#a78bfa" stroke-width="2" fill="none" stroke-opacity="0.5">
+    <path d="M 700,370 Q 700,250 400,180"/>
+    <path d="M 700,370 Q 700,250 1000,180"/>
+  </g>
+  <g transform="translate(280, 130)">
+    <rect width="260" height="100" rx="10" fill="#a78bfa" fill-opacity="0.1" stroke="#a78bfa" stroke-opacity="0.4"/>
+    <text x="130" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#a78bfa">数据结构演化</text>
+    <text x="130" y="60" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#cbd5e1">trie → DAFSA → FST</text>
+    <text x="130" y="82" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94a3b8">前缀共享 → +后缀共享 → +权重</text>
+  </g>
+  <g transform="translate(880, 130)">
+    <rect width="260" height="100" rx="10" fill="#a78bfa" fill-opacity="0.1" stroke="#a78bfa" stroke-opacity="0.4"/>
+    <text x="130" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#a78bfa">学术祖文</text>
+    <text x="130" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#cbd5e1">Daciuk 2000 算法</text>
+    <text x="130" y="82" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94a3b8">Mike McCandless / Lucene 4.0</text>
+  </g>
+
+  <!-- left: linguistic context -->
+  <g stroke="#7df9ff" stroke-width="2" fill="none" stroke-opacity="0.5">
+    <path d="M 620,450 Q 450,450 280,400"/>
+    <path d="M 620,450 Q 450,450 280,500"/>
+  </g>
+  <g transform="translate(40, 350)">
+    <rect width="240" height="100" rx="10" fill="#7df9ff" fill-opacity="0.1" stroke="#7df9ff" stroke-opacity="0.4"/>
+    <text x="120" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#7df9ff">芬兰语形态学</text>
+    <text x="120" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">15 cases × 2 plurals</text>
+    <text x="120" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">× 6 possessives × N clitics</text>
+  </g>
+  <g transform="translate(40, 460)">
+    <rect width="240" height="100" rx="10" fill="#7df9ff" fill-opacity="0.1" stroke="#7df9ff" stroke-opacity="0.4"/>
+    <text x="120" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#7df9ff">问题规模</text>
+    <text x="120" y="60" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#cbd5e1">400k → 40-60M</text>
+    <text x="120" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#94a3b8">词形数量爆炸</text>
+  </g>
+
+  <!-- right: Rust ecosystem -->
+  <g stroke="#fbbf24" stroke-width="2" fill="none" stroke-opacity="0.5">
+    <path d="M 780,450 Q 950,450 1120,400"/>
+    <path d="M 780,450 Q 950,450 1120,500"/>
+  </g>
+  <g transform="translate(1120, 350)">
+    <rect width="240" height="100" rx="10" fill="#fbbf24" fill-opacity="0.1" stroke="#fbbf24" stroke-opacity="0.4"/>
+    <text x="120" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#fbbf24">BurntSushi/fst</text>
+    <text x="120" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">2015 写于 Common Crawl</text>
+    <text x="120" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">indexed 1.6B URLs</text>
+  </g>
+  <g transform="translate(1120, 460)">
+    <rect width="240" height="100" rx="10" fill="#fbbf24" fill-opacity="0.1" stroke="#fbbf24" stroke-opacity="0.4"/>
+    <text x="120" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#fbbf24">Rust 闪光点</text>
+    <text x="120" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">mmap + 跨平台单二进制</text>
+    <text x="120" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">+ 系统级零拷贝</text>
+  </g>
+
+  <!-- bottom: engineering philosophy -->
+  <g stroke="#34d399" stroke-width="2" fill="none" stroke-opacity="0.5">
+    <path d="M 700,530 Q 700,650 400,750"/>
+    <path d="M 700,530 Q 700,650 1000,750"/>
+  </g>
+  <g transform="translate(260, 700)">
+    <rect width="300" height="100" rx="10" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.4"/>
+    <text x="150" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#34d399">做坏的简单事</text>
+    <text x="150" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">v1: SQLite + FTS 3GB</text>
+    <text x="150" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">"the bad easy thing first"</text>
+  </g>
+  <g transform="translate(840, 700)">
+    <rect width="300" height="100" rx="10" fill="#34d399" fill-opacity="0.1" stroke="#34d399" stroke-opacity="0.4"/>
+    <text x="150" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#34d399">解决一个问题两次</text>
+    <text x="150" y="60" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">9 个月后：FST 10 MB</text>
+    <text x="150" y="80" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="13" fill="#cbd5e1">"reinvent a few wheels"</text>
+  </g>
+
+  <!-- caption -->
+  <text x="700" y="870" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#64748b">来源：til.andrew-quinn.me / burntsushi.net  ·  绘制：xiejiayun.github.io 2026</text>
+</svg>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#162250"/>
+    </linearGradient>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7df9ff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1e3a8a" stroke-opacity="0.18" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+  </g>
+
+  <!-- corner tag -->
+  <g transform="translate(60, 60)">
+    <rect width="180" height="36" rx="6" fill="#7df9ff" fill-opacity="0.12" stroke="#7df9ff" stroke-opacity="0.4"/>
+    <text x="90" y="24" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#7df9ff" letter-spacing="2">好文共赏 · GOOD READ</text>
+  </g>
+
+  <!-- main title -->
+  <g transform="translate(60, 170)">
+    <text font-family="ui-serif, Georgia, serif" font-size="64" font-weight="700" fill="#e2e8f0">
+      <tspan x="0" dy="0">把 3 GB SQLite</tspan>
+      <tspan x="0" dy="80" fill="url(#grad)" filter="url(#glow)">压成 10 MB</tspan>
+    </text>
+    <text x="0" y="260" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="500" fill="#94a3b8">
+      一位芬兰语词典作者重新发现 FST 的周末
+    </text>
+  </g>
+
+  <!-- decorative graph: trie -> dafsa -> fst -->
+  <g transform="translate(60, 480)" font-family="ui-monospace, monospace" font-size="20" fill="#7df9ff">
+    <g>
+      <circle cx="20" cy="20" r="14" fill="none" stroke="#7df9ff" stroke-width="2"/>
+      <text x="20" y="26" text-anchor="middle" fill="#7df9ff" font-size="14">T</text>
+    </g>
+    <text x="50" y="26" fill="#94a3b8">Trie</text>
+    <text x="125" y="26" fill="#475569">→</text>
+    <g transform="translate(150,0)">
+      <circle cx="20" cy="20" r="14" fill="none" stroke="#a78bfa" stroke-width="2"/>
+      <text x="20" y="26" text-anchor="middle" fill="#a78bfa" font-size="14">D</text>
+    </g>
+    <text x="180" y="26" fill="#94a3b8">DAFSA</text>
+    <text x="265" y="26" fill="#475569">→</text>
+    <g transform="translate(290,0)">
+      <circle cx="20" cy="20" r="14" fill="#7df9ff"/>
+      <text x="20" y="26" text-anchor="middle" fill="#0b1020" font-size="14" font-weight="700">F</text>
+    </g>
+    <text x="320" y="26" fill="#e2e8f0" font-weight="600">FST · 300×</text>
+  </g>
+
+  <!-- numeric callout -->
+  <g transform="translate(840, 200)">
+    <text font-family="ui-monospace, monospace" font-size="180" font-weight="800" fill="#7df9ff" fill-opacity="0.18" text-anchor="end" x="220">300x</text>
+    <text x="0" y="240" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#64748b" letter-spacing="1">memory reduction</text>
+  </g>
+
+  <!-- footer -->
+  <text x="60" y="600" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#64748b">Andrew Quinn · til.andrew-quinn.me · 2026-05-10</text>
+  <text x="1140" y="600" text-anchor="end" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#64748b">xiejiayun.github.io · 2026-05-14</text>
+</svg>
