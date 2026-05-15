@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e1a"/>
+      <stop offset="0.5" stop-color="#13182a"/>
+      <stop offset="1" stop-color="#070912"/>
+    </linearGradient>
+    <linearGradient id="funnel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b6cff" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#9d6cff" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#ff6c8a" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b6cff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ff6c8a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softblur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1d2540" stroke-width="0.5" opacity="0.45">
+    <path d="M0 110 H1200"/><path d="M0 210 H1200"/><path d="M0 310 H1200"/>
+    <path d="M0 410 H1200"/><path d="M0 510 H1200"/>
+    <path d="M200 0 V630"/><path d="M400 0 V630"/><path d="M600 0 V630"/>
+    <path d="M800 0 V630"/><path d="M1000 0 V630"/>
+  </g>
+
+  <!-- diffused glow behind funnel -->
+  <ellipse cx="900" cy="320" rx="240" ry="220" fill="url(#glow)" filter="url(#softblur)"/>
+
+  <!-- The funnel shape on the right side -->
+  <g transform="translate(700,80)">
+    <!-- top wide ring -->
+    <ellipse cx="200" cy="20" rx="180" ry="22" fill="none" stroke="#5b6cff" stroke-width="2.5" opacity="0.95"/>
+    <text x="200" y="-2" text-anchor="middle" fill="#aab4ff" font-family="Inter, system-ui, sans-serif" font-size="13" letter-spacing="2">UNIVERSAL API · 2024</text>
+
+    <!-- second ring -->
+    <ellipse cx="200" cy="120" rx="145" ry="18" fill="none" stroke="#7b6cff" stroke-width="2.5" opacity="0.95"/>
+    <text x="200" y="98" text-anchor="middle" fill="#b9b4ff" font-family="Inter, system-ui, sans-serif" font-size="12" letter-spacing="1.5">KYC TIER · COMMERCIAL</text>
+
+    <!-- third ring -->
+    <ellipse cx="200" cy="220" rx="105" ry="14" fill="none" stroke="#a76cff" stroke-width="2.5" opacity="0.95"/>
+    <text x="200" y="198" text-anchor="middle" fill="#d2b4ff" font-family="Inter, system-ui, sans-serif" font-size="12" letter-spacing="1.5">SELECT PARTNERS · MYTHOS LIST</text>
+
+    <!-- fourth ring -->
+    <ellipse cx="200" cy="320" rx="70" ry="10" fill="none" stroke="#d96cff" stroke-width="2.5" opacity="0.95"/>
+    <text x="200" y="302" text-anchor="middle" fill="#eccbff" font-family="Inter, system-ui, sans-serif" font-size="11" letter-spacing="1.5">DEFENDERS</text>
+
+    <!-- bottom narrow -->
+    <ellipse cx="200" cy="400" rx="32" ry="6" fill="url(#funnel)" opacity="0.95"/>
+    <text x="200" y="426" text-anchor="middle" fill="#ff96b3" font-family="Inter, system-ui, sans-serif" font-size="11" letter-spacing="2">NSA · IC · GOV</text>
+
+    <!-- side connecting lines -->
+    <path d="M20 20 L55 120 L95 220 L130 320 L168 400" stroke="url(#funnel)" stroke-width="1.2" fill="none" opacity="0.6"/>
+    <path d="M380 20 L345 120 L305 220 L270 320 L232 400" stroke="url(#funnel)" stroke-width="1.2" fill="none" opacity="0.6"/>
+  </g>
+
+  <!-- LEFT side: title & metadata -->
+  <g transform="translate(70,90)">
+    <text x="0" y="0" fill="#8c97c4" font-family="Inter, system-ui, sans-serif" font-size="14" letter-spacing="6">好文共赏 · EDITOR'S PICK</text>
+    <rect x="0" y="14" width="42" height="3" fill="#5b6cff"/>
+
+    <text x="0" y="78" fill="#ffffff" font-family="'Source Han Serif SC','Songti SC',serif" font-size="42" font-weight="700">前沿 AI 的</text>
+    <text x="0" y="128" fill="#ffffff" font-family="'Source Han Serif SC','Songti SC',serif" font-size="42" font-weight="700">Andy Warhol 时代</text>
+    <text x="0" y="174" fill="#ff7aa1" font-family="'Source Han Serif SC','Songti SC',serif" font-size="42" font-weight="700">即将结束</text>
+
+    <line x1="0" y1="206" x2="120" y2="206" stroke="#5b6cff" stroke-width="2"/>
+
+    <text x="0" y="240" fill="#aab4d6" font-family="Inter, system-ui, sans-serif" font-size="17">Cut Off — Anton Leicht / Threading the Needle</text>
+    <text x="0" y="266" fill="#7c87b0" font-family="Inter, system-ui, sans-serif" font-size="14">2026-05-13 · 政治经济学 · 8000 字长文</text>
+
+    <!-- tags -->
+    <g transform="translate(0,310)" font-family="Inter, sans-serif" font-size="12" fill="#dadffb">
+      <rect x="0" y="0" width="90" height="26" rx="13" fill="#1c2547" stroke="#3a4787" stroke-width="1"/>
+      <text x="45" y="17" text-anchor="middle">前沿模型</text>
+      <rect x="98" y="0" width="78" height="26" rx="13" fill="#241b40" stroke="#5a3aa1" stroke-width="1"/>
+      <text x="137" y="17" text-anchor="middle">Mythos</text>
+      <rect x="184" y="0" width="86" height="26" rx="13" fill="#332040" stroke="#7a3a9b" stroke-width="1"/>
+      <text x="227" y="17" text-anchor="middle">算力稀缺</text>
+      <rect x="278" y="0" width="100" height="26" rx="13" fill="#421f3a" stroke="#a13a78" stroke-width="1"/>
+      <text x="328" y="17" text-anchor="middle">中等国家</text>
+    </g>
+
+    <!-- scoreline -->
+    <g transform="translate(0,360)">
+      <text x="0" y="0" fill="#7c87b0" font-family="Inter, sans-serif" font-size="13" letter-spacing="3">MULTI-MODEL SCORE</text>
+      <text x="0" y="34" fill="#ffffff" font-family="Inter, sans-serif" font-size="28" font-weight="700">9.0<tspan fill="#7c87b0" font-size="20"> / 10</tspan></text>
+      <text x="70" y="34" fill="#aab4d6" font-family="Inter, sans-serif" font-size="13">Opus 9.0 · Sonnet 8.9 · Gemini 9.0</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g transform="translate(70,580)" font-family="Inter, sans-serif" fill="#5a6391" font-size="12">
+    <text>xiejiayun.github.io / good-reads</text>
+    <text x="1060" text-anchor="end">No. 8 · 2026-05-15</text>
+  </g>
+</svg>

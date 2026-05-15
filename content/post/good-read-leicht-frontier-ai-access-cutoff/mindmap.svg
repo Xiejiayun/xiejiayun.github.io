@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1024"/>
+      <stop offset="1" stop-color="#070918"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5b6cff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#5b6cff" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .center { fill: #1e2a5c; stroke: #6b80ff; stroke-width: 2.5; }
+      .center-label { fill: #ffffff; font-family: 'Source Han Serif SC',serif; font-size: 22px; font-weight: 700; text-anchor: middle; }
+      .branch-cause { fill: #1e2547; stroke: #5b6cff; stroke-width: 2; }
+      .branch-effect { fill: #2a1a3a; stroke: #a76cff; stroke-width: 2; }
+      .branch-fix { fill: #2a1f30; stroke: #ff6c8a; stroke-width: 2; }
+      .branch-label { font-family: 'Source Han Serif SC',serif; font-size: 16px; font-weight: 600; text-anchor: middle; fill: #ffffff; }
+      .sub-cause { fill: #131a36; stroke: #4a5db5; stroke-width: 1.5; }
+      .sub-effect { fill: #1c1228; stroke: #7a4dc0; stroke-width: 1.5; }
+      .sub-fix { fill: #261822; stroke: #c84d72; stroke-width: 1.5; }
+      .sub-label { font-family: 'Inter','PingFang SC',sans-serif; font-size: 12px; text-anchor: middle; fill: #d8def6; }
+      .sub-label-bold { font-family: 'Inter','PingFang SC',sans-serif; font-size: 12.5px; text-anchor: middle; fill: #ffffff; font-weight: 600; }
+      .connector { stroke: #3a4380; stroke-width: 1.2; fill: none; opacity: 0.85; }
+      .connector-cause { stroke: #5b6cff; stroke-width: 1.6; fill: none; opacity: 0.85; }
+      .connector-effect { stroke: #a76cff; stroke-width: 1.6; fill: none; opacity: 0.85; }
+      .connector-fix { stroke: #ff6c8a; stroke-width: 1.6; fill: none; opacity: 0.85; }
+      .title { font-family: 'Source Han Serif SC',serif; fill: #ffffff; }
+      .legend { font-family: 'Inter',sans-serif; fill: #aab4d6; font-size: 13px; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg2)"/>
+  <ellipse cx="700" cy="450" rx="500" ry="300" fill="url(#centerGlow)"/>
+
+  <!-- title -->
+  <text x="40" y="50" class="title" font-size="28" font-weight="700">《Cut Off》思维导图</text>
+  <text x="40" y="80" class="legend">Anton Leicht · 2026-05-13 · Mythos 时刻之后的前沿 AI 政治经济学</text>
+
+  <!-- legend bar -->
+  <g transform="translate(960,40)">
+    <rect width="20" height="20" rx="4" class="branch-cause"/>
+    <text x="28" y="15" class="legend">3 条结构性趋势（因）</text>
+    <rect x="0" y="28" width="20" height="20" rx="4" class="branch-effect"/>
+    <text x="28" y="43" class="legend">3 重后果（果）</text>
+    <rect x="0" y="56" width="20" height="20" rx="4" class="branch-fix"/>
+    <text x="28" y="71" class="legend">4 条对冲方案（解）</text>
+  </g>
+
+  <!-- center -->
+  <g transform="translate(700,450)">
+    <circle r="105" class="center"/>
+    <text y="-10" class="center-label">前沿 AI 访问权</text>
+    <text y="20" class="center-label" fill="#ff96b3">即将稀缺与选择性</text>
+    <text y="48" font-family="Inter,sans-serif" font-size="11" fill="#9ba6ce" text-anchor="middle" letter-spacing="2">CUT OFF</text>
+  </g>
+
+  <!-- ============ CAUSES (LEFT) ============ -->
+  <!-- C1 Security & Distillation -->
+  <g transform="translate(220,180)">
+    <rect x="-130" y="-32" width="260" height="64" rx="12" class="branch-cause"/>
+    <text class="branch-label" y="-6">① 安全 & 蒸馏</text>
+    <text class="branch-label" y="18" font-size="13" fill="#aac0ff">Security &amp; Distillation</text>
+  </g>
+  <path d="M350 180 Q500 250 595 410" class="connector-cause"/>
+
+  <g transform="translate(60,290)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">误用 / 防御先发</text>
+    <text class="sub-label" y="14">Misuse-then-Defender 模型</text>
+  </g>
+  <path d="M160 285 Q170 230 200 200" class="connector"/>
+
+  <g transform="translate(60,365)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">蒸馏威胁</text>
+    <text class="sub-label" y="14">Fast-Follower R&amp;D 回报塌陷</text>
+  </g>
+  <path d="M160 360 Q190 270 215 215" class="connector"/>
+
+  <g transform="translate(60,438)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">数据中心安保差</text>
+    <text class="sub-label" y="14">Weight Theft Risk</text>
+  </g>
+  <path d="M160 435 Q200 300 220 225" class="connector"/>
+
+  <!-- C2 Compute Crunch -->
+  <g transform="translate(220,565)">
+    <rect x="-130" y="-32" width="260" height="64" rx="12" class="branch-cause"/>
+    <text class="branch-label" y="-6">② 算力紧缺</text>
+    <text class="branch-label" y="18" font-size="13" fill="#aac0ff">Compute Crunch</text>
+  </g>
+  <path d="M350 565 Q500 510 595 480" class="connector-cause"/>
+
+  <g transform="translate(60,650)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">边际成本非零</text>
+    <text class="sub-label" y="14">Non-Software-Like Economics</text>
+  </g>
+  <path d="M160 650 Q180 600 210 575" class="connector"/>
+
+  <g transform="translate(60,720)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">效率曲线无效</text>
+    <text class="sub-label" y="14">仅救上一代，不救前沿</text>
+  </g>
+  <path d="M160 715 Q200 640 215 605" class="connector"/>
+
+  <g transform="translate(60,790)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">Anthropic↔xAI 算力交易</text>
+    <text class="sub-label" y="14">紧缺已逼竞争对手互补</text>
+  </g>
+  <path d="M160 785 Q210 680 220 615" class="connector"/>
+
+  <!-- C3 US Gov -->
+  <g transform="translate(220,820)" />
+  <g transform="translate(700,840)">
+    <rect x="-140" y="-32" width="280" height="64" rx="12" class="branch-cause"/>
+    <text class="branch-label" y="-6">③ 美国政府介入</text>
+    <text class="branch-label" y="18" font-size="13" fill="#aac0ff">U.S. Gov Pre-Deployment Authority</text>
+  </g>
+  <path d="M700 808 Q700 700 700 555" class="connector-cause"/>
+
+  <g transform="translate(490,740)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">NSA 想看零日</text>
+    <text class="sub-label" y="14">EternalBlue 历史复演</text>
+  </g>
+  <path d="M520 720 Q580 690 670 555" class="connector"/>
+
+  <g transform="translate(910,740)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-cause"/>
+    <text class="sub-label-bold" y="-4">Trump bundle 外交</text>
+    <text class="sub-label" y="14">AI 杠杆与贸易绑定</text>
+  </g>
+  <path d="M880 720 Q820 690 730 555" class="connector"/>
+
+  <!-- ============ EFFECTS (RIGHT TOP) ============ -->
+  <g transform="translate(1180,180)">
+    <rect x="-150" y="-32" width="300" height="64" rx="12" class="branch-effect"/>
+    <text class="branch-label" y="-6">前沿模型分发漏斗</text>
+    <text class="branch-label" y="18" font-size="13" fill="#d6b4ff">4-Tier Distribution Funnel</text>
+  </g>
+  <path d="M1050 180 Q900 250 805 410" class="connector-effect"/>
+
+  <g transform="translate(1230,290)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-effect"/>
+    <text class="sub-label-bold" y="-4">国家安全先过手</text>
+    <text class="sub-label" y="14">NSA / IC apparatus</text>
+  </g>
+  <path d="M1130 285 Q1130 230 1100 200" class="connector"/>
+
+  <g transform="translate(1230,365)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-effect"/>
+    <text class="sub-label-bold" y="-4">Mythos 白名单</text>
+    <text class="sub-label" y="14">少数美国系防御方</text>
+  </g>
+  <path d="M1130 360 Q1140 270 1115 215" class="connector"/>
+
+  <g transform="translate(1230,438)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-effect"/>
+    <text class="sub-label-bold" y="-4">高 KYC 企业</text>
+    <text class="sub-label" y="14">合规可控者拿到无门控</text>
+  </g>
+  <path d="M1130 435 Q1145 300 1120 225" class="connector"/>
+
+  <g transform="translate(1230,510)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" class="sub-effect"/>
+    <text class="sub-label-bold" y="-4">消费者只到产品层</text>
+    <text class="sub-label" y="14">Chatbot / Coding Agent</text>
+  </g>
+  <path d="M1130 508 Q1130 470 1115 470" class="connector"/>
+
+  <!-- Middle Power Trap effect -->
+  <g transform="translate(1180,575)">
+    <rect x="-140" y="-32" width="280" height="64" rx="12" class="branch-effect"/>
+    <text class="branch-label" y="-6">中等国家陷阱</text>
+    <text class="branch-label" y="18" font-size="13" fill="#d6b4ff">Middle Power Strategy Mismatch</text>
+  </g>
+  <path d="M1050 575 Q900 530 805 490" class="connector-effect"/>
+
+  <!-- ============ FIXES (BOTTOM) ============ -->
+  <g transform="translate(280,890)" />
+  <!-- 4 fixes laid horizontally near bottom around center -->
+  <g transform="translate(290,700)">
+    <rect x="-120" y="-28" width="240" height="56" rx="10" class="branch-fix"/>
+    <text class="branch-label" y="-4">解 a · 让世界更安全</text>
+    <text class="branch-label" y="16" font-size="12" fill="#ffb4c4">Reduce Misuse Surface</text>
+  </g>
+  <path d="M335 670 Q500 580 620 510" class="connector-fix"/>
+
+  <g transform="translate(580,790)">
+    <rect x="-120" y="-28" width="240" height="56" rx="10" class="branch-fix"/>
+    <text class="branch-label" y="-4">解 b · 多建数据中心</text>
+    <text class="branch-label" y="16" font-size="12" fill="#ffb4c4">More GPUs Online Now</text>
+  </g>
+  <path d="M580 760 Q640 640 660 525" class="connector-fix"/>
+
+  <g transform="translate(880,790)">
+    <rect x="-130" y="-28" width="260" height="56" rx="10" class="branch-fix"/>
+    <text class="branch-label" y="-4">解 c · 用算力换访问权</text>
+    <text class="branch-label" y="16" font-size="12" fill="#ffb4c4">Compute-for-Access Deals</text>
+  </g>
+  <path d="M880 760 Q830 640 770 525" class="connector-fix"/>
+
+  <g transform="translate(1140,700)">
+    <rect x="-130" y="-28" width="260" height="56" rx="10" class="branch-fix"/>
+    <text class="branch-label" y="-4">解 d · 保留 Contingency</text>
+    <text class="branch-label" y="16" font-size="12" fill="#ffb4c4">Self-Build Capability Seeds</text>
+  </g>
+  <path d="M1090 672 Q920 580 800 510" class="connector-fix"/>
+
+  <!-- bottom signature -->
+  <text x="700" y="875" text-anchor="middle" class="legend" font-size="12">
+    "We are headed for the end of the Andy Warhol era of AI access." — Anton Leicht
+  </text>
+</svg>
