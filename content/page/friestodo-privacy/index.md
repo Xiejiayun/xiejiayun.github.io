@@ -3,6 +3,7 @@ title: "薯条清单 隐私政策"
 description: "FriesTodo / 薯条清单 应用的隐私政策"
 type: "page"
 date: 2026-05-15
+disable_comments: true
 ---
 
 # 薯条清单（FriesTodo）隐私政策
