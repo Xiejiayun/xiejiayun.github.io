@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#10152e"/>
+      <stop offset="100%" stop-color="#04060f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- background glow -->
+  <ellipse cx="950" cy="320" rx="350" ry="280" fill="url(#glow)"/>
+  <ellipse cx="200" cy="500" rx="280" ry="220" fill="url(#glow)" opacity="0.4"/>
+
+  <!-- decorative connections - a phylogenetic / evolutionary tree -->
+  <g stroke="#4f46e5" stroke-width="1.4" stroke-opacity="0.55" fill="none">
+    <!-- trunk -->
+    <path d="M 900 540 Q 900 500 900 450" />
+    <!-- first split -->
+    <path d="M 900 450 Q 900 420 820 380" />
+    <path d="M 900 450 Q 900 420 980 380" />
+    <!-- second split left -->
+    <path d="M 820 380 Q 780 340 740 300" />
+    <path d="M 820 380 Q 800 340 870 320" />
+    <!-- second split right -->
+    <path d="M 980 380 Q 1020 340 1060 300" />
+    <path d="M 980 380 Q 970 340 920 320" />
+    <!-- further -->
+    <path d="M 740 300 Q 700 260 700 220" />
+    <path d="M 740 300 Q 760 260 800 240" />
+    <path d="M 1060 300 Q 1100 260 1100 220" />
+    <path d="M 1060 300 Q 1040 260 1000 240" />
+    <!-- top branches -->
+    <path d="M 700 220 L 670 170" />
+    <path d="M 700 220 L 720 160" />
+    <path d="M 1100 220 L 1080 170" />
+    <path d="M 1100 220 L 1130 160" />
+    <path d="M 870 320 L 870 280" />
+    <path d="M 920 320 L 920 280" />
+  </g>
+
+  <!-- evolution generation nodes -->
+  <g fill="#a855f7">
+    <circle cx="900" cy="540" r="6"/>
+    <circle cx="820" cy="380" r="4.5"/>
+    <circle cx="980" cy="380" r="4.5"/>
+    <circle cx="740" cy="300" r="4"/>
+    <circle cx="870" cy="320" r="4"/>
+    <circle cx="920" cy="320" r="4"/>
+    <circle cx="1060" cy="300" r="4"/>
+    <circle cx="700" cy="220" r="3.5"/>
+    <circle cx="800" cy="240" r="3.5"/>
+    <circle cx="1000" cy="240" r="3.5"/>
+    <circle cx="1100" cy="220" r="3.5"/>
+  </g>
+  <g fill="#ec4899">
+    <circle cx="670" cy="170" r="5"/>
+    <circle cx="720" cy="160" r="6"/>
+    <circle cx="1080" cy="170" r="5"/>
+    <circle cx="1130" cy="160" r="6"/>
+    <circle cx="870" cy="280" r="5"/>
+    <circle cx="920" cy="280" r="5"/>
+  </g>
+
+  <!-- corner small grid dots -->
+  <g fill="#3b3f5c">
+    <circle cx="60" cy="80" r="1.4"/><circle cx="100" cy="80" r="1.4"/><circle cx="140" cy="80" r="1.4"/>
+    <circle cx="60" cy="120" r="1.4"/><circle cx="100" cy="120" r="1.4"/><circle cx="140" cy="120" r="1.4"/>
+    <circle cx="60" cy="160" r="1.4"/><circle cx="100" cy="160" r="1.4"/><circle cx="140" cy="160" r="1.4"/>
+  </g>
+
+  <!-- header band -->
+  <text x="60" y="100" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#94a3b8" letter-spacing="3">好文共赏 · EDITOR'S PICK</text>
+
+  <!-- title -->
+  <text x="60" y="200" font-family="Helvetica,Arial,sans-serif" font-size="48" font-weight="800" fill="#ffffff">AlphaEvolve</text>
+  <text x="60" y="248" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="600" fill="#cbd5e1">一年间的</text>
+  <text x="186" y="248" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="700" fill="url(#accent)">12 项 Receipts</text>
+
+  <!-- divider -->
+  <rect x="60" y="278" width="120" height="3" fill="url(#accent)"/>
+
+  <!-- key bullets -->
+  <g font-family="Helvetica,Arial,sans-serif" font-size="19" fill="#e2e8f0">
+    <text x="60" y="330">▸ DeepConsensus 变异检出错误 ↓ 30%</text>
+    <text x="60" y="362">▸ Willow 量子电路误差 ↓ 10×</text>
+    <text x="60" y="394">▸ 下一代 TPU 硅里集成 AI 写的电路</text>
+    <text x="60" y="426">▸ Spanner 写放大 ↓ 20%</text>
+    <text x="60" y="458">▸ Klarna 训练 2× · Schrödinger 推理 4×</text>
+    <text x="60" y="490">▸ 与 Terence Tao 合作解 Erdős #1026</text>
+  </g>
+
+  <!-- bottom band -->
+  <line x1="60" y1="540" x2="1140" y2="540" stroke="#1e293b" stroke-width="1"/>
+  <text x="60" y="575" font-family="Helvetica,Arial,sans-serif" font-size="16" fill="#64748b">Google DeepMind · 2026-05-07 · 综合评分 9.07/10</text>
+  <text x="60" y="600" font-family="Helvetica,Arial,sans-serif" font-size="16" fill="#7c3aed">deepmind.google/blog/alphaevolve-impact/</text>
+</svg>

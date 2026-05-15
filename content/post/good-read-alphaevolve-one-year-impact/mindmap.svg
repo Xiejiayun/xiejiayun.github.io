@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bgm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#04060f"/>
+    </linearGradient>
+    <linearGradient id="centerg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bgm)"/>
+
+  <!-- title -->
+  <text x="800" y="48" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#e2e8f0">AlphaEvolve · 一图看懂周年答卷</text>
+  <text x="800" y="76" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#64748b">系统组件 · 12 项 Receipts · 边界条件 · 行业含义</text>
+
+  <!-- center -->
+  <g>
+    <circle cx="800" cy="500" r="80" fill="url(#centerg)"/>
+    <text x="800" y="495" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="700" fill="#ffffff">AlphaEvolve</text>
+    <text x="800" y="518" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#e9d5ff">Gemini × Evolutionary loop</text>
+  </g>
+
+  <!-- 4 main branches -->
+  <!-- Branch 1: System Components (top-left) -->
+  <g stroke="#7c3aed" stroke-width="2" fill="none">
+    <path d="M 760 460 Q 600 380 380 260" />
+  </g>
+  <rect x="100" y="200" width="280" height="56" rx="8" fill="#1e1b4b" stroke="#7c3aed"/>
+  <text x="240" y="234" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#c4b5fd">①系统组件</text>
+
+  <g font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5e1">
+    <rect x="20" y="280" width="320" height="34" rx="6" fill="#1e293b" stroke="#4338ca" stroke-width="1"/>
+    <text x="36" y="302">Prompt Sampler（从历代代码挑母本）</text>
+
+    <rect x="20" y="324" width="320" height="34" rx="6" fill="#1e293b" stroke="#4338ca"/>
+    <text x="36" y="346">Gemini Flash（广度）+ Pro（深度）双模</text>
+
+    <rect x="20" y="368" width="320" height="34" rx="6" fill="#1e293b" stroke="#4338ca"/>
+    <text x="36" y="390">Automated Evaluator（编译/测试/打分）</text>
+
+    <rect x="20" y="412" width="320" height="34" rx="6" fill="#1e293b" stroke="#4338ca"/>
+    <text x="36" y="434">Programs Database（MAP-Elites 多样性）</text>
+  </g>
+
+  <!-- Branch 2: 12 Receipts (right) -->
+  <g stroke="#ec4899" stroke-width="2" fill="none">
+    <path d="M 880 480 Q 1100 420 1280 320" />
+  </g>
+  <rect x="1200" y="200" width="380" height="56" rx="8" fill="#4c1d95" stroke="#ec4899"/>
+  <text x="1390" y="234" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#fce7f3">② 12 项 Receipts（部分）</text>
+
+  <g font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5e1">
+    <rect x="1200" y="280" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="302">DeepConsensus 错误 ↓ 30%（基因测序）</text>
+
+    <rect x="1200" y="324" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="346">Willow 量子电路误差 ↓ 10×</text>
+
+    <rect x="1200" y="368" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="390">下一代 TPU 硅里嵌入 AI 电路</text>
+
+    <rect x="1200" y="412" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="434">Spanner 写放大 ↓ 20%</text>
+
+    <rect x="1200" y="456" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="478">Cache 替换：2 天 vs 人力数月</text>
+
+    <rect x="1200" y="500" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="522">Klarna 训练 2× / Schrödinger MLFF 4×</text>
+
+    <rect x="1200" y="544" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="566">FM Logistics TSP 优化 ↓ 10.4%</text>
+
+    <rect x="1200" y="588" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="610">Erdős #1026 与 Terence Tao 合作</text>
+
+    <rect x="1200" y="632" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="654">Ramsey 数下界 / TSP 下界改进</text>
+
+    <rect x="1200" y="676" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="698">Earth AI 灾害预测准确率 ↑ 5%</text>
+
+    <rect x="1200" y="720" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="742">AC OPF 可行率 14% → 88%</text>
+
+    <rect x="1200" y="764" width="380" height="34" rx="6" fill="#1e293b" stroke="#be185d"/>
+    <text x="1216" y="786">编译器存储节省 ~ 9%</text>
+  </g>
+
+  <!-- Branch 3: Boundary / Limits (bottom-left) -->
+  <g stroke="#f59e0b" stroke-width="2" fill="none">
+    <path d="M 760 560 Q 600 660 380 760" />
+  </g>
+  <rect x="100" y="720" width="280" height="56" rx="8" fill="#451a03" stroke="#f59e0b"/>
+  <text x="240" y="754" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#fde68a">③ 边界与批评</text>
+
+  <g font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5e1">
+    <rect x="20" y="790" width="320" height="34" rx="6" fill="#1e293b" stroke="#d97706"/>
+    <text x="36" y="812">硬约束：评估函数必须自动可算</text>
+
+    <rect x="20" y="834" width="320" height="34" rx="6" fill="#1e293b" stroke="#d97706"/>
+    <text x="36" y="856">业务逻辑无法 outcome metric → 不适用</text>
+
+    <rect x="20" y="878" width="320" height="34" rx="6" fill="#1e293b" stroke="#d97706"/>
+    <text x="36" y="900">FLOPS 投入产出比未公开</text>
+
+    <rect x="20" y="922" width="320" height="34" rx="6" fill="#1e293b" stroke="#d97706"/>
+    <text x="36" y="944">RSI ≠ AI 直接设计 AI 架构</text>
+  </g>
+
+  <!-- Branch 4: Industry Signals (bottom-right) -->
+  <g stroke="#10b981" stroke-width="2" fill="none">
+    <path d="M 870 570 Q 1050 700 1240 800" />
+  </g>
+  <rect x="1180" y="820" width="400" height="56" rx="8" fill="#064e3b" stroke="#10b981"/>
+  <text x="1380" y="854" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="700" fill="#a7f3d0">④ 职业 / 产业含义</text>
+
+  <g font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5e1">
+    <rect x="1180" y="892" width="400" height="34" rx="6" fill="#1e293b" stroke="#059669"/>
+    <text x="1196" y="914">\"启发式工程\"工种被压缩 → PR 评审化</text>
+
+    <rect x="1180" y="936" width="400" height="34" rx="6" fill="#1e293b" stroke="#059669"/>
+    <text x="1196" y="958">高杠杆技能转向：评估函数设计</text>
+  </g>
+
+  <!-- legend -->
+  <g font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#64748b">
+    <text x="1450" y="980" text-anchor="end">© 好文共赏 · 2026-05-15</text>
+  </g>
+</svg>
