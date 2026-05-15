@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0e14"/>
+      <stop offset="50%" stop-color="#101822"/>
+      <stop offset="100%" stop-color="#0a0d12"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#ff7043"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#42a5f5"/>
+      <stop offset="100%" stop-color="#1e88e5"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1a2230" stroke-width="1" opacity="0.45">
+    <path d="M0 0 L1200 0 M0 70 L1200 70 M0 140 L1200 140 M0 210 L1200 210 M0 280 L1200 280 M0 350 L1200 350 M0 420 L1200 420 M0 490 L1200 490 M0 560 L1200 560 M0 630 L1200 630"/>
+    <path d="M0 0 L0 630 M100 0 L100 630 M200 0 L200 630 M300 0 L300 630 M400 0 L400 630 M500 0 L500 630 M600 0 L600 630 M700 0 L700 630 M800 0 L800 630 M900 0 L900 630 M1000 0 L1000 630 M1100 0 L1100 630 M1200 0 L1200 630"/>
+  </g>
+
+  <!-- badge -->
+  <g transform="translate(60,60)">
+    <rect width="170" height="44" rx="6" fill="#1a2330" stroke="#3b4a5e"/>
+    <text x="85" y="29" text-anchor="middle" fill="#bcd2f0" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="18" letter-spacing="2">好文共赏</text>
+  </g>
+  <text x="245" y="90" fill="#6a7990" font-family="ui-monospace, monospace" font-size="14">good-read · synacktiv · 2026-05-15</text>
+
+  <!-- title -->
+  <text x="60" y="180" fill="#f4f7fb" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="44" font-weight="700">用咖啡和 IDA 绕过 Tesla</text>
+  <text x="60" y="232" fill="#f4f7fb" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="44" font-weight="700">充电桩的 anti-downgrade</text>
+  <text x="60" y="282" fill="#9fb4d0" font-family="-apple-system, 'Helvetica Neue', sans-serif" font-size="22">在 ratchet 里找到了一道顺序裂缝</text>
+
+  <!-- diagram: A/B slots + ratchet -->
+  <g transform="translate(60,330)" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="13" fill="#cbd5e1">
+    <!-- Slot 0 -->
+    <rect x="0" y="0" width="220" height="60" rx="6" fill="#0f1822" stroke="#2c3f55"/>
+    <text x="110" y="25" text-anchor="middle" fill="#9fb4d0" font-size="12">SLOT 0 · physical flash</text>
+    <text x="110" y="46" text-anchor="middle" fill="#f4f7fb">firmware bytes</text>
+
+    <!-- Slot 1 -->
+    <rect x="240" y="0" width="220" height="60" rx="6" fill="#0f1822" stroke="#2c3f55"/>
+    <text x="350" y="25" text-anchor="middle" fill="#9fb4d0" font-size="12">SLOT 1 · physical flash</text>
+    <text x="350" y="46" text-anchor="middle" fill="#f4f7fb">firmware bytes</text>
+
+    <!-- Partition table -->
+    <rect x="0" y="80" width="460" height="40" rx="6" fill="#15202d" stroke="#3b4a5e"/>
+    <text x="230" y="105" text-anchor="middle" fill="#bcd2f0" font-size="13">partition table · gen_level (bootloader 看这里)</text>
+
+    <!-- ratchet symbol -->
+    <g transform="translate(540,0)">
+      <rect x="0" y="0" width="220" height="120" rx="6" fill="#1a0f0f" stroke="#5b2b2b"/>
+      <text x="110" y="28" text-anchor="middle" fill="#ff8a80" font-size="13">anti-downgrade ratchet</text>
+      <text x="110" y="50" text-anchor="middle" fill="#ffccbc" font-size="11">only enforced in</text>
+      <text x="110" y="68" text-anchor="middle" fill="url(#redGrad)" font-size="16" font-weight="700">UDS routine 0x201</text>
+      <text x="110" y="92" text-anchor="middle" fill="#ffccbc" font-size="11">bootloader 不检查 ratchet</text>
+      <text x="110" y="108" text-anchor="middle" fill="#ffccbc" font-size="11">→ 单点防御 = 单点旁路</text>
+    </g>
+
+    <!-- arrows: bypass sequence -->
+    <g transform="translate(820,0)">
+      <text x="0" y="14" fill="#9fb4d0" font-size="12">BYPASS</text>
+      <text x="0" y="38" fill="#f4f7fb" font-size="14">① 写新固件 + 0x201 ✓</text>
+      <text x="0" y="60" fill="#f4f7fb" font-size="14">② 再发 0xFF00 擦同 slot</text>
+      <text x="0" y="82" fill="#f4f7fb" font-size="14">③ 灌入旧固件（不发 0x201）</text>
+      <text x="0" y="104" fill="#f4f7fb" font-size="14">④ 0x202 重启 → root</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <g transform="translate(60,560)">
+    <text x="0" y="0" fill="#5b6b82" font-family="ui-monospace, monospace" font-size="13">SWCAN 33.3 kbps · IDA · UDS ISO 14229 · Pwn2Own Automotive 2025 · David Berard</text>
+    <text x="0" y="22" fill="#6a7990" font-family="-apple-system, sans-serif" font-size="14">好文共赏 · xiejiayun.github.io</text>
+  </g>
+
+  <!-- accent line -->
+  <rect x="60" y="120" width="60" height="4" fill="url(#redGrad)"/>
+</svg>

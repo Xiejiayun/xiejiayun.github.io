@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0e14"/>
+      <stop offset="100%" stop-color="#0a0d12"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#ff7043"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="60" y="50" fill="#9fb4d0" font-family="-apple-system, sans-serif" font-size="14" letter-spacing="2">MINDMAP · Tesla Wall Connector anti-downgrade bypass</text>
+
+  <!-- root -->
+  <g>
+    <rect x="560" y="80" width="280" height="64" rx="8" fill="#1a2230" stroke="#3b4a5e" stroke-width="2"/>
+    <text x="700" y="110" text-anchor="middle" fill="#f4f7fb" font-family="-apple-system, sans-serif" font-size="20" font-weight="700">Tesla Wall Connector</text>
+    <text x="700" y="132" text-anchor="middle" fill="#9fb4d0" font-family="-apple-system, sans-serif" font-size="14">Pwn2Own Automotive 2025 + 24.44.3 修复</text>
+  </g>
+
+  <!-- 5 branches -->
+  <!-- 1: Pwn2Own 原链 -->
+  <g>
+    <line x1="700" y1="144" x2="180" y2="240" stroke="#3b4a5e" stroke-width="2"/>
+    <rect x="60" y="240" width="240" height="48" rx="6" fill="#0f1822" stroke="#5577aa" stroke-width="2"/>
+    <text x="180" y="270" text-anchor="middle" fill="#9fb4d0" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">① 原 Pwn2Own 链</text>
+    <g font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">
+      <text x="60" y="320">· 充电连接器作为攻击面</text>
+      <text x="60" y="345">· SWCAN @ 33.3 kbps</text>
+      <text x="60" y="370">· UDS (ISO 14229)</text>
+      <text x="60" y="395">· 写旧签名固件 → telnet</text>
+      <text x="60" y="420">· buffer overflow → root</text>
+    </g>
+  </g>
+
+  <!-- 2: 修复内容 -->
+  <g>
+    <line x1="700" y1="144" x2="430" y2="240" stroke="#3b4a5e" stroke-width="2"/>
+    <rect x="320" y="240" width="240" height="48" rx="6" fill="#0f1822" stroke="#aa6633" stroke-width="2"/>
+    <text x="440" y="270" text-anchor="middle" fill="#ffb070" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">② 24.44.3 修复</text>
+    <g font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">
+      <text x="320" y="320">· 新函数 check_image_</text>
+      <text x="320" y="340">  and_antidowngrade()</text>
+      <text x="320" y="370">· 固件段加 VRS2 字段</text>
+      <text x="320" y="395">· PSM 维护 current_ratchet</text>
+      <text x="320" y="420">· UDS 0x201 内部强制比较</text>
+    </g>
+  </g>
+
+  <!-- 3: 反编译观察 -->
+  <g>
+    <line x1="700" y1="144" x2="700" y2="240" stroke="#3b4a5e" stroke-width="2"/>
+    <rect x="580" y="240" width="240" height="48" rx="6" fill="#0f1822" stroke="#aaaa55" stroke-width="2"/>
+    <text x="700" y="270" text-anchor="middle" fill="#ffe57f" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">③ IDA 三层观察</text>
+    <g font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">
+      <text x="580" y="320">· bootloader 无 ratchet 检查</text>
+      <text x="580" y="345">· g_boot_flags 启动时锁死</text>
+      <text x="580" y="370">· part_write_layout() 只写</text>
+      <text x="580" y="390">  gen_level 不动 firmware</text>
+      <text x="580" y="415">· 0xFF00 擦内容 不擦 layout</text>
+    </g>
+  </g>
+
+  <!-- 4: 顺序绕过 -->
+  <g>
+    <line x1="700" y1="144" x2="960" y2="240" stroke="#3b4a5e" stroke-width="2"/>
+    <rect x="840" y="240" width="260" height="48" rx="6" fill="#1a0f0f" stroke="url(#redGrad)" stroke-width="2"/>
+    <text x="970" y="270" text-anchor="middle" fill="#ff8a80" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">④ 顺序绕过</text>
+    <g font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">
+      <text x="840" y="320">a) 0xFF00 + 新固件 + 0x201</text>
+      <text x="840" y="340">   ↳ 分区表 gen_level 升级</text>
+      <text x="840" y="370">b) 再发 0xFF00（同 slot）</text>
+      <text x="840" y="390">   ↳ 内容被擦 layout 不变</text>
+      <text x="840" y="420">c) 灌入旧固件 → 0x202 重启</text>
+      <text x="840" y="445">   ↳ 跳过 0x201 = 跳过 ratchet</text>
+    </g>
+  </g>
+
+  <!-- 5: 修复建议 -->
+  <g>
+    <line x1="700" y1="144" x2="1240" y2="240" stroke="#3b4a5e" stroke-width="2"/>
+    <rect x="1130" y="240" width="230" height="48" rx="6" fill="#0f1822" stroke="#55aa77" stroke-width="2"/>
+    <text x="1245" y="270" text-anchor="middle" fill="#a5d6a7" font-family="-apple-system, sans-serif" font-size="16" font-weight="600">⑤ 修复建议</text>
+    <g font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">
+      <text x="1130" y="320">· ratchet 检查也放进</text>
+      <text x="1130" y="340">  bootloader</text>
+      <text x="1130" y="370">· 0xFF00 擦时同时失效 layout</text>
+      <text x="1130" y="395">· 0x201 成功后强制重启</text>
+      <text x="1130" y="420">· 拒绝同会话二次更新</text>
+    </g>
+  </g>
+
+  <!-- bottom: 范式总结 -->
+  <g>
+    <rect x="60" y="540" width="1280" height="200" rx="8" fill="#0f1822" stroke="#2c3f55"/>
+    <text x="80" y="580" fill="#bcd2f0" font-family="-apple-system, sans-serif" font-size="18" font-weight="600">范式：状态机间的耦合错位</text>
+    <g font-family="-apple-system, sans-serif" font-size="14" fill="#cbd5e1">
+      <text x="80" y="615">· 每段代码单独看都正确</text>
+      <text x="80" y="640">· 但调用顺序、全局变量、物理资源之间存在没被预料的可达路径</text>
+      <text x="80" y="665">· 单元测试看不见"两次 0xFF00"是异常用法</text>
+      <text x="80" y="690">· 集成测试默认走"合法升级"</text>
+      <text x="80" y="715">· 补丁的形状（Completeness / Invariance / Persistence）才是关键</text>
+    </g>
+    <g font-family="-apple-system, sans-serif" font-size="14" fill="#9fb4d0">
+      <text x="720" y="615">姐妹案例（站内已发）：</text>
+      <text x="720" y="640">· Cloudflare CUBIC × QUIC 14ms 死亡螺旋</text>
+      <text x="720" y="665">· TanStack npm 三独立模块组合致命</text>
+      <text x="720" y="690">· HDD 固件反编译 / RAV4 modem 拔除</text>
+      <text x="720" y="715">· Calif/Mythos M5 MIE 五日突破（对照）</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <text x="60" y="850" fill="#5b6b82" font-family="ui-monospace, monospace" font-size="13">好文共赏 · 2026-05-15 · synacktiv.com/en/publications/exploiting-the-tesla-wall-connector-from-its-charge-port-connector-part-2-bypassing</text>
+</svg>
