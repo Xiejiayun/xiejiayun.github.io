@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="55%" stop-color="#11172b"/>
+      <stop offset="100%" stop-color="#1a1230"/>
+    </linearGradient>
+    <linearGradient id="redglow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a4e"/>
+      <stop offset="100%" stop-color="#ffae3d"/>
+    </linearGradient>
+    <linearGradient id="blueglow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ea1ff"/>
+      <stop offset="100%" stop-color="#7eb6ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g opacity="0.07" stroke="#9fb6e8" stroke-width="1">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200"/>
+    <path d="M80 0 V630 M200 0 V630 M320 0 V630 M440 0 V630 M560 0 V630 M680 0 V630 M800 0 V630 M920 0 V630 M1040 0 V630 M1160 0 V630"/>
+  </g>
+
+  <!-- badge -->
+  <g transform="translate(60,50)">
+    <rect width="180" height="40" rx="20" fill="#1c2545" stroke="#3a4d7a" stroke-width="1"/>
+    <text x="90" y="26" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#9bc4ff" text-anchor="middle">好文共赏 · 2026-05-15</text>
+  </g>
+
+  <!-- title -->
+  <g transform="translate(60,140)">
+    <text x="0" y="0" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="56" font-weight="800" fill="#f4f6fb">五天，</text>
+    <text x="270" y="0" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="56" font-weight="800" fill="url(#redglow)" filter="url(#glow)">攻破 Apple 五年</text>
+    <text x="0" y="80" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="38" font-weight="600" fill="#cfd6e8">Calif 团队把 MIE 撕开了一道口子</text>
+  </g>
+
+  <!-- duel boxes -->
+  <g transform="translate(60,310)">
+    <!-- Left: Apple -->
+    <rect x="0" y="0" width="500" height="180" rx="14" fill="#152042" stroke="#2c4477" stroke-width="1.5"/>
+    <text x="24" y="40" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="url(#blueglow)">Apple · MIE</text>
+    <text x="24" y="80" font-family="-apple-system, sans-serif" font-size="44" font-weight="800" fill="#f4f6fb">5 年</text>
+    <text x="180" y="80" font-family="-apple-system, sans-serif" font-size="22" fill="#9fb6e8">·  亿美元级研发</text>
+    <text x="24" y="120" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#9fb6e8">EMTE · kalloc_type · xzone</text>
+    <text x="24" y="148" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#9fb6e8">Tag Confidentiality Enforcement</text>
+
+    <!-- VS -->
+    <g transform="translate(540, 70)">
+      <circle cx="20" cy="20" r="30" fill="#1a1230" stroke="#ff5a4e" stroke-width="2"/>
+      <text x="20" y="28" font-family="-apple-system, sans-serif" font-size="22" font-weight="800" fill="#ff5a4e" text-anchor="middle">VS</text>
+    </g>
+
+    <!-- Right: Calif -->
+    <rect x="620" y="0" width="500" height="180" rx="14" fill="#2b1430" stroke="#7a3055" stroke-width="1.5"/>
+    <text x="644" y="40" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="url(#redglow)">Calif × Mythos Preview</text>
+    <text x="644" y="80" font-family="-apple-system, sans-serif" font-size="44" font-weight="800" fill="#f4f6fb">5 天</text>
+    <text x="800" y="80" font-family="-apple-system, sans-serif" font-size="22" fill="#f0a89c">·  4 个人 · 1 个 AI 副驾驶</text>
+    <text x="644" y="120" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#f0a89c">Bruce Dang · Dion Blazakis · Josh Maine</text>
+    <text x="644" y="148" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#f0a89c">data-only kernel LPE → root on macOS 26.4.1</text>
+  </g>
+
+  <!-- footer -->
+  <g transform="translate(60,540)">
+    <text x="0" y="0" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" fill="#7a8aa8">关键词：MIE / EMTE / data-only exploit / Mythos / Apple Silicon M5 / AI bugmageddon</text>
+    <text x="0" y="34" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" fill="#54607a">原文：blog.calif.io · Khanh · 2026-05-14 · 多模评分 9.1 / 10</text>
+  </g>
+</svg>

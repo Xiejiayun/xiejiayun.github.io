@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#16102b"/>
+    </linearGradient>
+    <style>
+      .lbl { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #e8edf7; }
+      .lbl-sm { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; fill: #b9c5dd; font-size: 14px; }
+      .branch { stroke-width: 2.2; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg2)"/>
+
+  <!-- Center node -->
+  <g transform="translate(700,450)">
+    <circle r="120" fill="#1c2545" stroke="#5a85d1" stroke-width="3"/>
+    <text class="lbl" font-size="22" font-weight="800" text-anchor="middle" y="-10">五天攻破</text>
+    <text class="lbl" font-size="22" font-weight="800" text-anchor="middle" y="20">MIE 防线</text>
+    <text class="lbl-sm" text-anchor="middle" y="50" fill="#9fb6e8">Calif × Mythos</text>
+  </g>
+
+  <!-- ===== Branch 1 (top-left): Apple MIE 三层防御 ===== -->
+  <g>
+    <path class="branch" d="M610 380 Q420 260, 230 200" stroke="#4ea1ff"/>
+    <g transform="translate(40,140)">
+      <rect width="280" height="120" rx="14" fill="#152042" stroke="#4ea1ff"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#9bc4ff">① MIE 三层防御</text>
+      <text class="lbl-sm" x="20" y="60">EMTE 同步标签校验</text>
+      <text class="lbl-sm" x="20" y="80">kalloc_type / xzone malloc</text>
+      <text class="lbl-sm" x="20" y="100">Tag Confidentiality Enforcement</text>
+    </g>
+  </g>
+
+  <!-- ===== Branch 2 (top-mid-left): 历史防线对照 ===== -->
+  <g>
+    <path class="branch" d="M650 340 Q540 200, 460 140" stroke="#4ea1ff"/>
+    <g transform="translate(350,40)">
+      <rect width="260" height="100" rx="14" fill="#152042" stroke="#4ea1ff"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#9bc4ff">② 防线演进史</text>
+      <text class="lbl-sm" x="20" y="60">DEP→ASLR→PAC→MIE</text>
+      <text class="lbl-sm" x="20" y="80">每代封掉一类利用学</text>
+    </g>
+  </g>
+
+  <!-- ===== Branch 3 (top-right): Calif 团队配置 ===== -->
+  <g>
+    <path class="branch" d="M790 340 Q900 180, 1050 110" stroke="#ff5a4e"/>
+    <g transform="translate(1010,40)">
+      <rect width="350" height="120" rx="14" fill="#2b1430" stroke="#ff5a4e"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#ffae3d">③ Calif 四人小队</text>
+      <text class="lbl-sm" x="20" y="60">Bruce Dang · 微软 MSRC / Stuxnet</text>
+      <text class="lbl-sm" x="20" y="80">Dion Blazakis · JIT spray 之父</text>
+      <text class="lbl-sm" x="20" y="100">Josh Maine · 工具链 · + Khanh</text>
+    </g>
+  </g>
+
+  <!-- ===== Branch 4 (right): 时间线 ===== -->
+  <g>
+    <path class="branch" d="M820 430 Q1010 380, 1180 350" stroke="#ff5a4e"/>
+    <g transform="translate(1080,280)">
+      <rect width="300" height="140" rx="14" fill="#2b1430" stroke="#ff5a4e"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#ffae3d">④ 五天时间线</text>
+      <text class="lbl-sm" x="20" y="60">4-25 Bruce 找到首批 bug</text>
+      <text class="lbl-sm" x="20" y="80">4-27 Dion 加入做利用学</text>
+      <text class="lbl-sm" x="20" y="100">5-01 Josh 工具链上 + 跑通 root</text>
+      <text class="lbl-sm" x="20" y="120">5-12 Apple Park 现场交付</text>
+    </g>
+  </g>
+
+  <!-- ===== Branch 5 (bottom-right): Mythos 分工 ===== -->
+  <g>
+    <path class="branch" d="M790 540 Q930 660, 1100 740" stroke="#ff5a4e"/>
+    <g transform="translate(1010,700)">
+      <rect width="360" height="140" rx="14" fill="#2b1430" stroke="#ff5a4e"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#ffae3d">⑤ AI ↔ 人分工</text>
+      <text class="lbl-sm" x="20" y="60">Mythos：bug 类的变体扩散</text>
+      <text class="lbl-sm" x="20" y="80">Mythos：跨函数代码推理</text>
+      <text class="lbl-sm" x="20" y="100">人类：新缓解机制的旁路构造</text>
+      <text class="lbl-sm" x="20" y="120">人类：primitive → exploit 拼接</text>
+    </g>
+  </g>
+
+  <!-- ===== Branch 6 (bottom): 利用细节 ===== -->
+  <g>
+    <path class="branch" d="M700 570 Q700 700, 700 770" stroke="#a366ff"/>
+    <g transform="translate(530,770)">
+      <rect width="340" height="100" rx="14" fill="#1a1230" stroke="#a366ff"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#c79bff">⑥ 漏洞利用形态</text>
+      <text class="lbl-sm" x="20" y="60">data-only kernel LPE</text>
+      <text class="lbl-sm" x="20" y="80">两个 vuln · 普通系统调用 · root</text>
+    </g>
+  </g>
+
+  <!-- ===== Branch 7 (bottom-left): 行业影响 ===== -->
+  <g>
+    <path class="branch" d="M610 540 Q450 680, 290 760" stroke="#3dd2a4"/>
+    <g transform="translate(20,700)">
+      <rect width="320" height="140" rx="14" fill="#102b22" stroke="#3dd2a4"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#7aebc4">⑦ 行业冲击波</text>
+      <text class="lbl-sm" x="20" y="60">mercenary spyware 价格通缩</text>
+      <text class="lbl-sm" x="20" y="80">patch gap 窗口被压缩</text>
+      <text class="lbl-sm" x="20" y="100">"AI bugmageddon" 开场</text>
+      <text class="lbl-sm" x="20" y="120">4-10 人精品安全队涌现</text>
+    </g>
+  </g>
+
+  <!-- ===== Branch 8 (mid-left): data-only 原理 ===== -->
+  <g>
+    <path class="branch" d="M580 450 Q380 480, 220 500" stroke="#a366ff"/>
+    <g transform="translate(20,440)">
+      <rect width="200" height="120" rx="14" fill="#1a1230" stroke="#a366ff"/>
+      <text class="lbl" font-size="20" font-weight="700" x="20" y="34" fill="#c79bff">⑧ data-only 的窄路</text>
+      <text class="lbl-sm" x="20" y="60">不动控制流</text>
+      <text class="lbl-sm" x="20" y="80">只翻判定布尔位</text>
+      <text class="lbl-sm" x="20" y="100">cred / capability / perm bits</text>
+    </g>
+  </g>
+
+  <!-- Header -->
+  <text class="lbl" font-size="28" font-weight="800" x="40" y="50" fill="#f4f6fb">Calif × Apple MIE：八条认知主干</text>
+</svg>
