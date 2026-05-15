@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#020610"/>
+    </radialGradient>
+    <style>
+      .lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 700; }
+      .center-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 900; fill: #fef08a; }
+      .sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 500; fill: #cbd5e1; }
+      .code { font-family: ui-monospace, Menlo, monospace; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="700" y="48" class="center-text" font-size="28" text-anchor="middle">O(x)Caml in Space · Borealis 思维导图</text>
+  <text x="700" y="78" class="sub" font-size="16" text-anchor="middle">2026-04-23 in orbit · pure-OCaml CCSDS stack · 5–10 MB binary</text>
+
+  <!-- center node -->
+  <g transform="translate(700,460)">
+    <circle r="92" fill="#7c2d12" stroke="#f59e0b" stroke-width="3"/>
+    <text class="center-text" font-size="22" text-anchor="middle" y="-6">Borealis</text>
+    <text class="center-text" font-size="14" text-anchor="middle" y="18">in orbit</text>
+    <text class="sub" font-size="12" text-anchor="middle" y="40">23 Apr 2026</text>
+  </g>
+
+  <!-- branches: NW, N, NE, E, SE, S, SW, W -->
+
+  <!-- 1. NW: Why OCaml -->
+  <g>
+    <path d="M 620 410 Q 460 320 280 220" stroke="#22d3ee" stroke-width="2.5" fill="none"/>
+    <rect x="60" y="180" width="280" height="120" rx="10" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="200" y="208" class="lbl" font-size="18" fill="#22d3ee" text-anchor="middle">为什么是 OCaml</text>
+    <text x="80" y="232" class="sub" font-size="13">• 70% CVE = memory bugs (MSRC/Chromium)</text>
+    <text x="80" y="252" class="sub" font-size="13">• 卫星运行 10–15 年，无法重启换内核</text>
+    <text x="80" y="272" class="sub" font-size="13">• GADT + 类型系统 = 协议状态机不变量</text>
+    <text x="80" y="292" class="sub" font-size="13">• 同一份代码 = 飞控 / 地面 / oracle</text>
+  </g>
+
+  <!-- 2. N: CCSDS Stack -->
+  <g>
+    <path d="M 700 368 L 700 240" stroke="#a78bfa" stroke-width="2.5" fill="none"/>
+    <rect x="500" y="120" width="400" height="120" rx="10" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+    <text x="700" y="148" class="lbl" font-size="18" fill="#a78bfa" text-anchor="middle">CCSDS 协议栈（pure-OCaml）</text>
+    <text x="520" y="172" class="sub" font-size="13">• 物理 → SDLP → COP-1/CFDP → BPv7</text>
+    <text x="520" y="192" class="sub" font-size="13">• 安全：SDLS / BPSec / OTAR</text>
+    <text x="520" y="212" class="sub" font-size="13">• Wire format 由 ocaml-wire 描述 schema</text>
+    <text x="520" y="232" class="sub" font-size="13">• 反向通过 EverParse → F* 形式化验证</text>
+  </g>
+
+  <!-- 3. NE: Threat model -->
+  <g>
+    <path d="M 780 410 Q 940 320 1120 220" stroke="#fb7185" stroke-width="2.5" fill="none"/>
+    <rect x="1060" y="180" width="290" height="120" rx="10" fill="#0f172a" stroke="#fb7185" stroke-width="2"/>
+    <text x="1205" y="208" class="lbl" font-size="18" fill="#fb7185" text-anchor="middle">威胁模型 · 共生卫星</text>
+    <text x="1080" y="232" class="sub" font-size="13">• Hosted payload = 多租户共享总线</text>
+    <text x="1080" y="252" class="sub" font-size="13">• 内核 CVE 滚动：Copy Fail / Dirty Frag</text>
+    <text x="1080" y="272" class="sub" font-size="13">• 在轨打 kernel 补丁 = 慢甚至不可行</text>
+    <text x="1080" y="292" class="sub" font-size="13">• 唯一持久保证 = 每个 bundle 的密码学包裹</text>
+  </g>
+
+  <!-- 4. E: OxCaml perf -->
+  <g>
+    <path d="M 792 460 L 1080 460" stroke="#34d399" stroke-width="2.5" fill="none"/>
+    <rect x="1080" y="400" width="290" height="120" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="2"/>
+    <text x="1225" y="428" class="lbl" font-size="18" fill="#34d399" text-anchor="middle">OxCaml · 性能</text>
+    <text x="1100" y="452" class="sub" font-size="13">• locality / uniqueness / capabilities</text>
+    <text x="1100" y="472" class="code" font-size="13" fill="#cbd5e1">  exclave_ stack_ { apid; … }</text>
+    <text x="1100" y="492" class="sub" font-size="13">• p99.9: 29 ns → 9 ns</text>
+    <text x="1100" y="512" class="sub" font-size="13">• 394 minor GC → 0 (25 M packets)</text>
+  </g>
+
+  <!-- 5. SE: PQ Crypto -->
+  <g>
+    <path d="M 780 510 Q 940 600 1120 700" stroke="#f472b6" stroke-width="2.5" fill="none"/>
+    <rect x="1060" y="620" width="290" height="120" rx="10" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+    <text x="1205" y="648" class="lbl" font-size="18" fill="#f472b6" text-anchor="middle">PQ 密码学 · OTAR</text>
+    <text x="1080" y="672" class="sub" font-size="13">• ML-DSA-65 后量子签名</text>
+    <text x="1080" y="692" class="sub" font-size="13">• NASA-STD-1006A 把 PQ 设为强制</text>
+    <text x="1080" y="712" class="sub" font-size="13">• OTAR 不需重新烧录卫星</text>
+    <text x="1080" y="732" class="sub" font-size="13">• 首次公开 in-orbit PQ OTAR 演示</text>
+  </g>
+
+  <!-- 6. S: Verified Crypto -->
+  <g>
+    <path d="M 700 552 L 700 700" stroke="#fde047" stroke-width="2.5" fill="none"/>
+    <rect x="500" y="700" width="400" height="120" rx="10" fill="#0f172a" stroke="#fde047" stroke-width="2"/>
+    <text x="700" y="728" class="lbl" font-size="18" fill="#fde047" text-anchor="middle">可验证密码学链路</text>
+    <text x="520" y="752" class="sub" font-size="13">• libcrux：Rust 实现，机器验证</text>
+    <text x="520" y="772" class="sub" font-size="13">• fiat-crypto：Coq 生成的算术常数时间</text>
+    <text x="520" y="792" class="sub" font-size="13">• EverParse：F* 验证的二进制解析器</text>
+    <text x="520" y="812" class="sub" font-size="13">• GADT 拒绝非法协议状态于编译期</text>
+  </g>
+
+  <!-- 7. SW: nqsb lineage -->
+  <g>
+    <path d="M 620 510 Q 460 600 280 700" stroke="#60a5fa" stroke-width="2.5" fill="none"/>
+    <rect x="60" y="620" width="280" height="120" rx="10" fill="#0f172a" stroke="#60a5fa" stroke-width="2"/>
+    <text x="200" y="648" class="lbl" font-size="18" fill="#60a5fa" text-anchor="middle">nqsb-TLS 谱系</text>
+    <text x="80" y="672" class="sub" font-size="13">• USENIX Security 2015</text>
+    <text x="80" y="692" class="sub" font-size="13">• Functional core = 跨场景同一份代码</text>
+    <text x="80" y="712" class="sub" font-size="13">• Nitrokey NetHSM 量产十年</text>
+    <text x="80" y="732" class="sub" font-size="13">• 用功能式核心当 reference impl</text>
+  </g>
+
+  <!-- 8. W: Unikernel arc -->
+  <g>
+    <path d="M 608 460 L 340 460" stroke="#f97316" stroke-width="2.5" fill="none"/>
+    <rect x="60" y="400" width="280" height="120" rx="10" fill="#0f172a" stroke="#f97316" stroke-width="2"/>
+    <text x="200" y="428" class="lbl" font-size="18" fill="#f97316" text-anchor="middle">Unikernel 12 年弧线</text>
+    <text x="80" y="452" class="sub" font-size="13">• ASPLOS 2013：MirageOS 论文</text>
+    <text x="80" y="472" class="sub" font-size="13">• ICFP 2025：Docker Desktop 上的 Mirage</text>
+    <text x="80" y="492" class="sub" font-size="13">• 2026：进入轨道，作为 Linux 进程</text>
+    <text x="80" y="512" class="sub" font-size="13">• "重要的是 OS 上面的栈"</text>
+  </g>
+
+  <!-- footer -->
+  <text x="700" y="870" class="sub" font-size="13" text-anchor="middle">深度导读 · gazagnaire.org/blog/2026-05-14-borealis.html · Parsimoni × Tarides × MirageOS</text>
+</svg>
