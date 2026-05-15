@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <line x1="100" y1="400" x2="1100" y2="400" stroke="#d4a017" stroke-width="0.5" opacity="0.3"/>
+  <text x="600" y="300" fill="#fbbf24" font-size="42" text-anchor="middle" font-family="sans-serif" font-weight="bold">学完即走</text>
+  <text x="600" y="360" fill="#d4a017" font-size="20" text-anchor="middle" font-family="sans-serif" opacity="0.7">儿童教育 App 反成瘾 UI 设计指南</text>
+  <rect x="520" y="500" width="160" height="36" rx="18" fill="none" stroke="#d4a017" stroke-width="1" opacity="0.4"/>
+  <text x="600" y="524" fill="#d4a017" font-size="14" text-anchor="middle" font-family="sans-serif" opacity="0.6">育儿</text>
+</svg>

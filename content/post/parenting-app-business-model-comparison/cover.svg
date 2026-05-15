@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g stroke="#d4a017" stroke-width="1.5" fill="none" opacity="0.3">
+    <circle cx="300" cy="315" r="120"/><circle cx="600" cy="315" r="120"/><circle cx="900" cy="315" r="120"/>
+  </g>
+  <text x="300" y="310" fill="#d4a017" font-size="16" text-anchor="middle" font-family="sans-serif" opacity="0.6">订阅制</text>
+  <text x="600" y="310" fill="#d4a017" font-size="16" text-anchor="middle" font-family="sans-serif" opacity="0.6">买断制</text>
+  <text x="900" y="310" fill="#d4a017" font-size="16" text-anchor="middle" font-family="sans-serif" opacity="0.6">免费增值</text>
+  <text x="600" y="560" fill="#fbbf24" font-size="36" text-anchor="middle" font-family="sans-serif" font-weight="bold">育儿 App 的钱从哪来？</text>
+  <text x="600" y="600" fill="#d4a017" font-size="18" text-anchor="middle" font-family="sans-serif" opacity="0.7">订阅、买断与免费增值三种模式深度拆解</text>
+</svg>
