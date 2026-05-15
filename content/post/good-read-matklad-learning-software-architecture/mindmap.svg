@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="800" y="50" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="24" font-weight="700" text-anchor="middle">matklad · Learning Software Architecture · 思维导图</text>
+  <text x="800" y="78" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="14" text-anchor="middle">code &lt; architecture &lt; social issues — Conway's Law 在 rust-analyzer 中的活体解剖</text>
+
+  <!-- CENTER NODE -->
+  <g transform="translate(800, 500)">
+    <circle r="110" fill="#21262d" stroke="#ffa657" stroke-width="3"/>
+    <text y="-20" fill="#ffa657" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" text-anchor="middle">激励 → 架构 → 代码</text>
+    <text y="10" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="14" text-anchor="middle">三层因果链</text>
+    <text y="35" fill="#7ee787" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">matklad 母题</text>
+  </g>
+
+  <!-- Branch 1: TOP-LEFT — 元观察 -->
+  <g>
+    <path d="M 720 430 Q 600 350 460 280" stroke="#79c0ff" stroke-width="2" fill="none"/>
+    <g transform="translate(280, 240)">
+      <rect width="320" height="80" rx="10" fill="#0d1117" stroke="#79c0ff" stroke-width="2"/>
+      <text x="160" y="30" fill="#79c0ff" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">① 元观察</text>
+      <text x="160" y="55" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle">设计是被项目推着学的</text>
+      <text x="160" y="72" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle">大学课程是"幼稚园消防员"</text>
+    </g>
+    <g transform="translate(80, 140)">
+      <rect width="200" height="50" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="100" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">第一性原理</text>
+      <text x="100" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">+ 随机博文 = 可推出</text>
+    </g>
+    <line x1="280" y1="280" x2="220" y2="190" stroke="#30363d" stroke-width="1"/>
+    <g transform="translate(80, 210)">
+      <rect width="200" height="50" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="100" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">IntelliJ Rust 偶然</text>
+      <text x="100" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">让 matklad 成"架构师"</text>
+    </g>
+    <line x1="280" y1="280" x2="220" y2="260" stroke="#30363d" stroke-width="1"/>
+  </g>
+
+  <!-- Branch 2: TOP-RIGHT — Conway 定律 -->
+  <g>
+    <path d="M 880 430 Q 1000 350 1140 280" stroke="#d2a8ff" stroke-width="2" fill="none"/>
+    <g transform="translate(1000, 240)">
+      <rect width="320" height="80" rx="10" fill="#0d1117" stroke="#d2a8ff" stroke-width="2"/>
+      <text x="160" y="30" fill="#d2a8ff" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">② Conway 定律</text>
+      <text x="160" y="55" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle">代码 &lt; 架构 &lt; 社会问题</text>
+      <text x="160" y="72" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle">(Evan Martin / neugierig)</text>
+    </g>
+    <g transform="translate(1320, 140)">
+      <rect width="220" height="50" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="110" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">激励场（Field of Incentives）</text>
+      <text x="110" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">scientific vs industrial</text>
+    </g>
+    <line x1="1320" y1="280" x2="1380" y2="190" stroke="#30363d" stroke-width="1"/>
+    <g transform="translate(1320, 210)">
+      <rect width="220" height="50" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="110" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">两条出路</text>
+      <text x="110" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">设计激励 / 屈服于激励</text>
+    </g>
+    <line x1="1320" y1="280" x2="1380" y2="260" stroke="#30363d" stroke-width="1"/>
+  </g>
+
+  <!-- Branch 3: BOTTOM-LEFT — rust-analyzer 双层架构 -->
+  <g>
+    <path d="M 720 570 Q 600 650 460 720" stroke="#ffa657" stroke-width="2" fill="none"/>
+    <g transform="translate(280, 680)">
+      <rect width="320" height="80" rx="10" fill="#0d1117" stroke="#ffa657" stroke-width="2"/>
+      <text x="160" y="30" fill="#ffa657" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">③ rust-analyzer 双层架构</text>
+      <text x="160" y="55" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle">核心脊梁 + 功能层</text>
+      <text x="160" y="72" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle">Conway 定律的活体样本</text>
+    </g>
+    <g transform="translate(40, 780)">
+      <rect width="240" height="60" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="120" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">脊梁层：少数高手</text>
+      <text x="120" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">无 rustc 依赖 · 稳定版编译</text>
+      <text x="120" y="55" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">几秒测试 · 质量极挑剔</text>
+    </g>
+    <line x1="280" y1="720" x2="280" y2="780" stroke="#30363d" stroke-width="1"/>
+    <g transform="translate(40, 860)">
+      <rect width="240" height="60" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="120" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">功能层：周末战士</text>
+      <text x="120" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">catch_unwind 隔离</text>
+      <text x="120" y="55" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">不可变快照 · happy path 即可</text>
+    </g>
+    <line x1="280" y1="760" x2="280" y2="860" stroke="#30363d" stroke-width="1"/>
+  </g>
+
+  <!-- Branch 4: BOTTOM-RIGHT — 反思 / 警告 / 书单 -->
+  <g>
+    <path d="M 880 570 Q 1000 650 1140 720" stroke="#7ee787" stroke-width="2" fill="none"/>
+    <g transform="translate(1000, 680)">
+      <rect width="320" height="80" rx="10" fill="#0d1117" stroke="#7ee787" stroke-width="2"/>
+      <text x="160" y="30" fill="#7ee787" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" text-anchor="middle">④ 警告与书单</text>
+      <text x="160" y="55" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle">未来以最不便的方式发生</text>
+      <text x="160" y="72" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="11" text-anchor="middle">+ 一份反消费主义书单</text>
+    </g>
+    <g transform="translate(1320, 780)">
+      <rect width="240" height="60" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="120" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">rust-analyzer 的反讽</text>
+      <text x="120" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">本是实验 / 原型</text>
+      <text x="120" y="55" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">现成 Rust 生态基础设施</text>
+    </g>
+    <line x1="1320" y1="720" x2="1320" y2="780" stroke="#30363d" stroke-width="1"/>
+    <g transform="translate(1320, 860)">
+      <rect width="240" height="60" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="120" y="22" fill="#e6edf3" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" text-anchor="middle">推荐阅读</text>
+      <text x="120" y="40" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">Bernhardt Boundaries · ∅MQ guide</text>
+      <text x="120" y="55" fill="#8b949e" font-family="-apple-system, sans-serif" font-size="10" text-anchor="middle">Ted Kaminski · Jamii Reflections</text>
+    </g>
+    <line x1="1320" y1="760" x2="1320" y2="860" stroke="#30363d" stroke-width="1"/>
+  </g>
+
+  <!-- footer -->
+  <text x="800" y="980" fill="#6e7681" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">© 2026 · 好文共赏 · matklad: Learning Software Architecture · mindmap by Hermes Agent</text>
+</svg>
