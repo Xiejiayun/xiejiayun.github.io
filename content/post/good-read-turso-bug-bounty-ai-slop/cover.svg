@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="50%" stop-color="#101a2e"/>
+      <stop offset="100%" stop-color="#1a0b25"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5a8a"/>
+      <stop offset="100%" stop-color="#a259f7"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3ddc97"/>
+      <stop offset="100%" stop-color="#2cb67d"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#1f2a44" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Top badge -->
+  <rect x="60" y="60" width="190" height="42" rx="6" fill="#1f2a44" stroke="#a259f7" stroke-width="1.5"/>
+  <text x="155" y="88" font-family="ui-monospace,Menlo,monospace" font-size="20" fill="#a259f7" text-anchor="middle" font-weight="700">好文共赏</text>
+
+  <!-- Author / date row -->
+  <text x="280" y="88" font-family="ui-monospace,Menlo,monospace" font-size="18" fill="#7aa2f7">Glauber Costa · 2026-05-12</text>
+
+  <!-- Main title -->
+  <text x="60" y="195" font-family="'PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="48" fill="#f7f9fb" font-weight="700">Turso 关掉了那扇付费的门</text>
+
+  <!-- Subtitle line 1 -->
+  <text x="60" y="260" font-family="'PingFang SC','Noto Sans CJK SC',sans-serif" font-size="28" fill="#c9d1d9" font-weight="500">当 LLM 把开源 bug 赏金</text>
+  <text x="60" y="298" font-family="'PingFang SC','Noto Sans CJK SC',sans-serif" font-size="28" fill="#c9d1d9" font-weight="500">变成一台无成本造谣机</text>
+
+  <!-- The chart-ish visual: flowchart-style boxes -->
+  <g transform="translate(60,360)">
+    <!-- Box 1: Bug Bounty -->
+    <rect x="0" y="0" width="240" height="80" rx="10" fill="#162033" stroke="#3ddc97" stroke-width="2"/>
+    <text x="120" y="34" font-family="ui-monospace,Menlo,monospace" font-size="18" fill="#3ddc97" text-anchor="middle" font-weight="700">$1000 Bounty</text>
+    <text x="120" y="58" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#8b949e" text-anchor="middle">data corruption</text>
+
+    <!-- Arrow 1 -->
+    <line x1="245" y1="40" x2="320" y2="40" stroke="#a259f7" stroke-width="2"/>
+    <polygon points="320,35 332,40 320,45" fill="#a259f7"/>
+
+    <!-- Box 2: 5 special people -->
+    <rect x="335" y="0" width="240" height="80" rx="10" fill="#162033" stroke="#7aa2f7" stroke-width="2"/>
+    <text x="455" y="34" font-family="ui-monospace,Menlo,monospace" font-size="18" fill="#7aa2f7" text-anchor="middle" font-weight="700">5 special people</text>
+    <text x="455" y="58" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#8b949e" text-anchor="middle">→ +10 SQLite bugs</text>
+
+    <!-- Arrow 2: "singularity" -->
+    <line x1="580" y1="40" x2="655" y2="40" stroke="url(#accent)" stroke-width="3" filter="url(#glow)"/>
+    <polygon points="655,33 670,40 655,47" fill="#ff5a8a"/>
+    <text x="617" y="22" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#ff5a8a" text-anchor="middle">"singularity"</text>
+
+    <!-- Box 3: Slop army -->
+    <rect x="670" y="0" width="240" height="80" rx="10" fill="#2a1532" stroke="#ff5a8a" stroke-width="2"/>
+    <text x="790" y="34" font-family="ui-monospace,Menlo,monospace" font-size="18" fill="#ff5a8a" text-anchor="middle" font-weight="700">An army of slop</text>
+    <text x="790" y="58" font-family="ui-monospace,Menlo,monospace" font-size="13" fill="#c9b6d4" text-anchor="middle">released overnight</text>
+
+    <!-- Bottom: math -->
+    <text x="455" y="160" font-family="ui-monospace,Menlo,monospace" font-size="22" fill="#f7f9fb" text-anchor="middle">cost(submit) ≈ $0.001  vs.  cost(review) ≈ $50</text>
+    <text x="455" y="195" font-family="ui-monospace,Menlo,monospace" font-size="22" fill="#ff5a8a" text-anchor="middle">→ retire the program</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="60" y="600" font-family="ui-monospace,Menlo,monospace" font-size="14" fill="#5a6677">#OSS治理  #AI-Slop  #DeterministicSimulation  #SQLite  #BugBounty</text>
+</svg>

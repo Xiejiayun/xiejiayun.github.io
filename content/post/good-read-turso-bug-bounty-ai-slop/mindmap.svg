@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="100%" stop-color="#150b22"/>
+    </linearGradient>
+    <radialGradient id="hub" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff5a8a"/>
+      <stop offset="100%" stop-color="#5a1232"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- Central hub -->
+  <circle cx="700" cy="450" r="100" fill="url(#hub)" stroke="#ff5a8a" stroke-width="3"/>
+  <text x="700" y="440" font-family="'PingFang SC',sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="700">Turso 关掉</text>
+  <text x="700" y="468" font-family="'PingFang SC',sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="700">Bug Bounty</text>
+
+  <!-- Branches -->
+  <!-- Branch 1: Background (top-left) -->
+  <g>
+    <line x1="640" y1="380" x2="350" y2="180" stroke="#3ddc97" stroke-width="2"/>
+    <rect x="80" y="100" width="290" height="160" rx="10" fill="#162033" stroke="#3ddc97" stroke-width="2"/>
+    <text x="225" y="135" font-family="'PingFang SC',sans-serif" font-size="20" fill="#3ddc97" text-anchor="middle" font-weight="700">背景 / Setup</text>
+    <text x="225" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">Turso = SQLite Rust 重写</text>
+    <text x="225" y="186" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">DST + Antithesis</text>
+    <text x="225" y="207" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">$1000 / data-corruption bug</text>
+    <text x="225" y="228" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">必须改进仿真器 generator</text>
+    <text x="225" y="249" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">运行约 1 年</text>
+  </g>
+
+  <!-- Branch 2: Pre-singularity (top) -->
+  <g>
+    <line x1="700" y1="350" x2="700" y2="180" stroke="#7aa2f7" stroke-width="2"/>
+    <rect x="555" y="80" width="290" height="160" rx="10" fill="#162033" stroke="#7aa2f7" stroke-width="2"/>
+    <text x="700" y="115" font-family="'PingFang SC',sans-serif" font-size="20" fill="#7aa2f7" text-anchor="middle" font-weight="700">Pre-Singularity</text>
+    <text x="700" y="145" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">5 个 incredibly special people</text>
+    <text x="700" y="166" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">Alperen → 加入团队</text>
+    <text x="700" y="187" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">Mikael → 雇佣</text>
+    <text x="700" y="208" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">Pavan → 形式化方法</text>
+    <text x="700" y="229" font-family="ui-monospace,monospace" font-size="13" fill="#3ddc97" text-anchor="middle">→ 10+ SQLite 主线 bug</text>
+  </g>
+
+  <!-- Branch 3: Singularity (top-right) -->
+  <g>
+    <line x1="760" y1="380" x2="1050" y2="180" stroke="#ff5a8a" stroke-width="2"/>
+    <rect x="1030" y="100" width="290" height="170" rx="10" fill="#2a1532" stroke="#ff5a8a" stroke-width="2"/>
+    <text x="1175" y="135" font-family="'PingFang SC',sans-serif" font-size="20" fill="#ff5a8a" text-anchor="middle" font-weight="700">Singularity</text>
+    <text x="1175" y="165" font-family="ui-monospace,monospace" font-size="13" fill="#c9b6d4" text-anchor="middle">"an army of slop"</text>
+    <text x="1175" y="186" font-family="ui-monospace,monospace" font-size="13" fill="#c9b6d4" text-anchor="middle">overnight scaling</text>
+    <text x="1175" y="207" font-family="ui-monospace,monospace" font-size="13" fill="#c9b6d4" text-anchor="middle">维护者 99% 时间筛 PR</text>
+    <text x="1175" y="228" font-family="ui-monospace,monospace" font-size="13" fill="#c9b6d4" text-anchor="middle">PR 同体例 / 同语气</text>
+    <text x="1175" y="249" font-family="ui-monospace,monospace" font-size="13" fill="#c9b6d4" text-anchor="middle">em-dash + ✅ + tables</text>
+  </g>
+
+  <!-- Branch 4: Sample slop (left) -->
+  <g>
+    <line x1="600" y1="450" x2="350" y2="450" stroke="#a259f7" stroke-width="2"/>
+    <rect x="40" y="370" width="300" height="170" rx="10" fill="#1a1230" stroke="#a259f7" stroke-width="2"/>
+    <text x="190" y="405" font-family="'PingFang SC',sans-serif" font-size="20" fill="#a259f7" text-anchor="middle" font-weight="700">灌水样本</text>
+    <text x="190" y="435" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">A: 手动写坏 header → 报 bug</text>
+    <text x="190" y="455" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">B: 故意加 OOB → 报 corruption</text>
+    <text x="190" y="475" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">C: 把 feature 当 bug</text>
+    <text x="190" y="495" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">D: 维护者也看不懂</text>
+    <text x="190" y="520" font-family="ui-monospace,monospace" font-size="12" fill="#ff5a8a" text-anchor="middle">"salivating at announcement"</text>
+  </g>
+
+  <!-- Branch 5: Failed defense (right) -->
+  <g>
+    <line x1="800" y1="450" x2="1050" y2="450" stroke="#f5a623" stroke-width="2"/>
+    <rect x="1050" y="370" width="310" height="170" rx="10" fill="#231a0e" stroke="#f5a623" stroke-width="2"/>
+    <text x="1205" y="405" font-family="'PingFang SC',sans-serif" font-size="20" fill="#f5a623" text-anchor="middle" font-weight="700">失败的防御</text>
+    <text x="1205" y="435" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">Vouching system 投票担保</text>
+    <text x="1205" y="458" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">→ bots 学会"申诉关闭"</text>
+    <text x="1205" y="481" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">→ Sybil attack 复刻</text>
+    <text x="1205" y="510" font-family="ui-monospace,monospace" font-size="13" fill="#ff5a8a" text-anchor="middle">复审环节同样被压垮</text>
+  </g>
+
+  <!-- Branch 6: Economic insight (bottom-left) -->
+  <g>
+    <line x1="640" y1="520" x2="350" y2="720" stroke="#3ddc97" stroke-width="2"/>
+    <rect x="50" y="650" width="320" height="160" rx="10" fill="#0e2018" stroke="#3ddc97" stroke-width="2"/>
+    <text x="210" y="685" font-family="'PingFang SC',sans-serif" font-size="20" fill="#3ddc97" text-anchor="middle" font-weight="700">经济学结论</text>
+    <text x="210" y="715" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">cost(generate slop) ≈ $0</text>
+    <text x="210" y="735" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">cost(review) ≈ $50/份</text>
+    <text x="210" y="755" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">任何 &gt; $0 奖励 → 灌水期望值正</text>
+    <text x="210" y="780" font-family="ui-monospace,monospace" font-size="13" fill="#ff5a8a" text-anchor="middle">解：拆奖励而非加门槛</text>
+  </g>
+
+  <!-- Branch 7: Why bounty mattered (bottom) -->
+  <g>
+    <line x1="700" y1="550" x2="700" y2="720" stroke="#7aa2f7" stroke-width="2"/>
+    <rect x="540" y="680" width="320" height="160" rx="10" fill="#0e1730" stroke="#7aa2f7" stroke-width="2"/>
+    <text x="700" y="715" font-family="'PingFang SC',sans-serif" font-size="20" fill="#7aa2f7" text-anchor="middle" font-weight="700">赏金的真正意义</text>
+    <text x="700" y="745" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">不是悬赏 bug</text>
+    <text x="700" y="765" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">是悬赏 generator 盲区</text>
+    <text x="700" y="785" font-family="ui-monospace,monospace" font-size="13" fill="#c9d1d9" text-anchor="middle">LLM 无法做"元认知"</text>
+    <text x="700" y="810" font-family="ui-monospace,monospace" font-size="13" fill="#3ddc97" text-anchor="middle">→ Pavan 那一类人无可替代</text>
+  </g>
+
+  <!-- Branch 8: Future (bottom-right) -->
+  <g>
+    <line x1="760" y1="520" x2="1050" y2="720" stroke="#a259f7" stroke-width="2"/>
+    <rect x="1030" y="650" width="330" height="180" rx="10" fill="#1a1230" stroke="#a259f7" stroke-width="2"/>
+    <text x="1195" y="685" font-family="'PingFang SC',sans-serif" font-size="20" fill="#a259f7" text-anchor="middle" font-weight="700">编辑预测</text>
+    <text x="1195" y="715" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">① 更多 OSS 收紧赏金</text>
+    <text x="1195" y="735" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">② 邀请制 / 押金制兴起</text>
+    <text x="1195" y="755" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">③ 反 LLM 中间件成新品类</text>
+    <text x="1195" y="775" font-family="ui-monospace,monospace" font-size="12" fill="#c9d1d9" text-anchor="middle">④ DST + 形式化方法升值</text>
+    <text x="1195" y="800" font-family="ui-monospace,monospace" font-size="12" fill="#ff5a8a" text-anchor="middle">"按身份收门票" 的协作时代</text>
+  </g>
+
+  <!-- Title at top -->
+  <text x="700" y="40" font-family="ui-monospace,monospace" font-size="18" fill="#5a6677" text-anchor="middle">好文共赏 · Mind Map · Turso "The Wonders of AI"</text>
+</svg>
