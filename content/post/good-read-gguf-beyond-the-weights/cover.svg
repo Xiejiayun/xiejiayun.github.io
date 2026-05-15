@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#1a1f3a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ecdc4"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative file blocks -->
+  <g opacity="0.18">
+    <rect x="60" y="80" width="160" height="200" rx="8" fill="none" stroke="#4ecdc4" stroke-width="2"/>
+    <text x="140" y="190" fill="#4ecdc4" font-family="ui-monospace, monospace" font-size="14" text-anchor="middle">.safetensors</text>
+    <text x="140" y="210" fill="#4ecdc4" font-family="ui-monospace, monospace" font-size="14" text-anchor="middle">+ JSONs</text>
+  </g>
+
+  <g opacity="0.85">
+    <rect x="940" y="80" width="200" height="280" rx="8" fill="none" stroke="url(#accent)" stroke-width="3"/>
+    <text x="1040" y="115" fill="#a78bfa" font-family="ui-monospace, monospace" font-size="16" text-anchor="middle" font-weight="bold">.gguf</text>
+    <line x1="960" y1="135" x2="1120" y2="135" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+    <text x="1040" y="160" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">weights</text>
+    <text x="1040" y="185" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">tokenizer</text>
+    <text x="1040" y="210" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">chat_template</text>
+    <text x="1040" y="235" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">special_tokens</text>
+    <text x="1040" y="260" fill="#cbd5e1" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">sampler.sequence</text>
+    <text x="1040" y="290" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle" opacity="0.85">— missing —</text>
+    <text x="1040" y="310" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle" opacity="0.85">tool_grammar?</text>
+    <text x="1040" y="328" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle" opacity="0.85">think_token?</text>
+    <text x="1040" y="346" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle" opacity="0.85">projection?</text>
+  </g>
+
+  <!-- Category badge -->
+  <rect x="60" y="380" width="160" height="36" rx="18" fill="url(#accent)" opacity="0.9"/>
+  <text x="140" y="404" fill="#0b1020" font-family="-apple-system, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">好文共赏</text>
+
+  <!-- Title -->
+  <text x="60" y="465" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="42" font-weight="bold" filter="url(#glow)">
+    GGUF 不只是权重
+  </text>
+  <text x="60" y="510" fill="#a78bfa" font-family="-apple-system, sans-serif" font-size="22" font-weight="600">
+    一个本地推理引擎作者眼里
+  </text>
+  <text x="60" y="540" fill="#a78bfa" font-family="-apple-system, sans-serif" font-size="22" font-weight="600">
+    单文件模型格式还缺什么
+  </text>
+
+  <!-- Tag chips -->
+  <g font-family="-apple-system, sans-serif" font-size="13">
+    <rect x="60" y="560" width="86" height="26" rx="13" fill="#4ecdc4" opacity="0.2" stroke="#4ecdc4" stroke-width="1"/>
+    <text x="103" y="578" fill="#4ecdc4" text-anchor="middle">llama.cpp</text>
+    <rect x="156" y="560" width="86" height="26" rx="13" fill="#a78bfa" opacity="0.2" stroke="#a78bfa" stroke-width="1"/>
+    <text x="199" y="578" fill="#a78bfa" text-anchor="middle">本地大模型</text>
+    <rect x="252" y="560" width="64" height="26" rx="13" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="1"/>
+    <text x="284" y="578" fill="#f59e0b" text-anchor="middle">Rust</text>
+    <rect x="326" y="560" width="92" height="26" rx="13" fill="#ec4899" opacity="0.2" stroke="#ec4899" stroke-width="1"/>
+    <text x="372" y="578" fill="#ec4899" text-anchor="middle">文件格式</text>
+  </g>
+
+  <text x="1140" y="610" fill="#475569" font-family="ui-monospace, monospace" font-size="11" text-anchor="end">xiejiayun.github.io · 2026-05-14</text>
+</svg>

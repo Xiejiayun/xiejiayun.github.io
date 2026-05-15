@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#0b1020"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- Center node -->
+  <g>
+    <circle cx="700" cy="450" r="80" fill="#a78bfa" opacity="0.25" stroke="#a78bfa" stroke-width="2"/>
+    <text x="700" y="445" fill="#f1f5f9" font-family="-apple-system, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">GGUF</text>
+    <text x="700" y="470" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-size="13" text-anchor="middle">单文件模型格式</text>
+  </g>
+
+  <!-- Branches: existing features (left side, teal) -->
+  <g stroke="#4ecdc4" stroke-width="2" fill="none">
+    <path d="M 620 450 Q 450 350 280 200"/>
+    <path d="M 620 450 Q 400 410 220 380"/>
+    <path d="M 620 450 Q 400 490 220 530"/>
+    <path d="M 620 450 Q 450 580 280 720"/>
+  </g>
+
+  <g font-family="-apple-system, sans-serif" font-size="14" text-anchor="middle">
+    <!-- existing 1 -->
+    <rect x="100" y="170" width="200" height="60" rx="8" fill="#4ecdc4" opacity="0.15" stroke="#4ecdc4" stroke-width="1.5"/>
+    <text x="200" y="195" fill="#4ecdc4" font-weight="bold">Chat Template</text>
+    <text x="200" y="215" fill="#cbd5e1" font-size="11">jinja2 脚本 · ~250 行</text>
+
+    <rect x="40" y="350" width="200" height="60" rx="8" fill="#4ecdc4" opacity="0.15" stroke="#4ecdc4" stroke-width="1.5"/>
+    <text x="140" y="375" fill="#4ecdc4" font-weight="bold">Special Tokens</text>
+    <text x="140" y="395" fill="#cbd5e1" font-size="11">&lt;eos&gt; &lt;bos&gt; &lt;tool&gt; ...</text>
+
+    <rect x="40" y="500" width="200" height="60" rx="8" fill="#4ecdc4" opacity="0.15" stroke="#4ecdc4" stroke-width="1.5"/>
+    <text x="140" y="525" fill="#4ecdc4" font-weight="bold">Sampler Chain</text>
+    <text x="140" y="545" fill="#cbd5e1" font-size="11">temp · top-k · top-p · 顺序</text>
+
+    <rect x="100" y="690" width="200" height="60" rx="8" fill="#4ecdc4" opacity="0.15" stroke="#4ecdc4" stroke-width="1.5"/>
+    <text x="200" y="715" fill="#4ecdc4" font-weight="bold">Tokenizer + Weights</text>
+    <text x="200" y="735" fill="#cbd5e1" font-size="11">量化 4/5/8 bit · vocab</text>
+  </g>
+
+  <!-- Top left: alternative formats -->
+  <g font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">
+    <text x="80" y="60" font-size="14" font-weight="bold" fill="#4ecdc4">✓ 已有的拼图</text>
+    <text x="80" y="80">（对比：safetensors 散文件、ollama OCI）</text>
+  </g>
+
+  <!-- Branches: missing features (right side, orange) -->
+  <g stroke="#f59e0b" stroke-width="2" fill="none" stroke-dasharray="6 4">
+    <path d="M 780 450 Q 950 350 1120 200"/>
+    <path d="M 780 450 Q 1000 410 1180 380"/>
+    <path d="M 780 450 Q 1000 490 1180 530"/>
+    <path d="M 780 450 Q 950 580 1120 720"/>
+  </g>
+
+  <g font-family="-apple-system, sans-serif" font-size="14" text-anchor="middle">
+    <rect x="1100" y="170" width="200" height="60" rx="8" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="1200" y="195" fill="#f59e0b" font-weight="bold">Tool Call Grammar</text>
+    <text x="1200" y="215" fill="#cbd5e1" font-size="11">每个模型都不同语法</text>
+
+    <rect x="1160" y="350" width="200" height="60" rx="8" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="1260" y="375" fill="#f59e0b" font-weight="bold">Think Tokens</text>
+    <text x="1260" y="395" fill="#cbd5e1" font-size="11">reasoning 模型必须区分</text>
+
+    <rect x="1160" y="500" width="200" height="60" rx="8" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="1260" y="525" fill="#f59e0b" font-weight="bold">Projection Model</text>
+    <text x="1260" y="545" fill="#cbd5e1" font-size="11">多模态需另一个 GGUF</text>
+
+    <rect x="1100" y="690" width="200" height="60" rx="8" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="1200" y="715" fill="#f59e0b" font-weight="bold">Feature Flags</text>
+    <text x="1200" y="735" fill="#cbd5e1" font-size="11">capability negotiation</text>
+  </g>
+
+  <g font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8" text-anchor="end">
+    <text x="1320" y="60" font-size="14" font-weight="bold" fill="#f59e0b">⚠ 仍缺的拼图</text>
+    <text x="1320" y="80">（NobodyWho 提议的扩展方向）</text>
+  </g>
+
+  <!-- Footer  -->
+  <g font-family="-apple-system, sans-serif" font-size="13" fill="#475569" text-anchor="middle">
+    <text x="700" y="850" font-size="14">现有: Chat / Special / Sampler / Weights · 缺失: Tools / Think / Projection / Flags</text>
+    <text x="700" y="875" font-size="11" opacity="0.7">主文《GGUF 不只是权重》思维导图 · xiejiayun.github.io</text>
+  </g>
+</svg>
