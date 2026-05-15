@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="goldEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="800" y="55" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="26" font-weight="800" fill="#f8fafc">HDD 固件 RE：从 ATA 命令到 JTAG 调试，再到代码 cave 注入</text>
+  <text x="800" y="85" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#94a3b8">Ryan Miceli · icode4.coffee · 2026-05-14</text>
+
+  <!-- Central node -->
+  <g transform="translate(800,500)">
+    <ellipse rx="180" ry="62" fill="#1e293b" stroke="url(#goldEdge)" stroke-width="3"/>
+    <text text-anchor="middle" y="-8" font-family="-apple-system, sans-serif" font-size="22" font-weight="800" fill="#fbbf24">HDD Firmware</text>
+    <text text-anchor="middle" y="22" font-family="-apple-system, sans-serif" font-size="20" font-weight="700" fill="#f8fafc">Reverse Engineering</text>
+  </g>
+
+  <!-- Branch 1: Motivation -->
+  <g stroke="#22d3ee" stroke-width="2" fill="none">
+    <path d="M620 500 C 500 460, 400 360, 300 300"/>
+  </g>
+  <g transform="translate(180,260)">
+    <rect width="280" height="100" rx="12" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#22d3ee">① 动机</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="14" fill="#cbd5e1">Xbox 360 read race condition</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#94a3b8">想给硬盘"加 200ms 延迟"</text>
+  </g>
+
+  <!-- Branch 2: Test subjects -->
+  <g stroke="#a78bfa" stroke-width="2" fill="none">
+    <path d="M650 460 C 540 380, 460 280, 350 180"/>
+  </g>
+  <g transform="translate(200,90)">
+    <rect width="280" height="120" rx="12" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#a78bfa">② Test Subjects</text>
+    <text x="20" y="58" font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">Samsung HM020GI (esoteric ISA)</text>
+    <text x="20" y="78" font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">Hitachi HTS545032</text>
+    <text x="20" y="98" font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">WD3200BEVT (主角)</text>
+    <text x="20" y="118" font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">Samsung PM871a (SSD)</text>
+  </g>
+
+  <!-- Branch 3: Dumping firmware -->
+  <g stroke="#10b981" stroke-width="2" fill="none">
+    <path d="M780 440 C 720 280, 660 180, 600 90"/>
+  </g>
+  <g transform="translate(500,30)">
+    <rect width="280" height="110" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#10b981">③ 拿到 firmware</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">• PC-3000 dump (论坛/求助)</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">• OEM 更新工具反编译</text>
+    <text x="20" y="100" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">• Lenovo 站点是宝藏</text>
+  </g>
+
+  <!-- Branch 4: Unpacking -->
+  <g stroke="#f59e0b" stroke-width="2" fill="none">
+    <path d="M850 440 C 900 280, 980 180, 1100 90"/>
+  </g>
+  <g transform="translate(1000,30)">
+    <rect width="320" height="110" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#f59e0b">④ 解包 / 解混淆</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">WD: 改造版 LZHUF (N=4096)</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">Samsung: nibble 位翻转混淆</text>
+    <text x="20" y="100" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">Cortex-M3 内存映射对齐 16K</text>
+  </g>
+
+  <!-- Branch 5: Flashing -->
+  <g stroke="#ec4899" stroke-width="2" fill="none">
+    <path d="M920 460 C 1020 380, 1100 280, 1220 200"/>
+  </g>
+  <g transform="translate(1120,180)">
+    <rect width="360" height="120" rx="12" fill="#1e293b" stroke="#ec4899" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#ec4899">⑤ 烧写新固件 · 3 条路</text>
+    <text x="20" y="56" font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">A. DOWNLOAD MICROCODE (ATA)</text>
+    <text x="20" y="76" font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">B. 后门 VSC (SMART log 0xBE)</text>
+    <text x="20" y="96" font-family="ui-monospace, monospace" font-size="12" fill="#cbd5e1">C. PCB 4 针 RS232 串口</text>
+    <text x="20" y="115" font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">+ SPI flash 救援 (焊上去就行)</text>
+  </g>
+
+  <!-- Branch 6: JTAG -->
+  <g stroke="#06b6d4" stroke-width="2" fill="none">
+    <path d="M940 500 C 1080 500, 1180 510, 1280 510"/>
+  </g>
+  <g transform="translate(1280,460)">
+    <rect width="300" height="120" rx="12" fill="#1e293b" stroke="#06b6d4" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#06b6d4">⑥ 给硬盘下断点</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">JTAG: 38-pin MICTOR 焊点</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">OpenOCD + FT232</text>
+    <text x="20" y="102" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">Windows BSOD 风险存在</text>
+  </g>
+
+  <!-- Branch 7: Magic trick -->
+  <g stroke="#facc15" stroke-width="2" fill="none">
+    <path d="M920 540 C 1020 620, 1100 720, 1240 800"/>
+  </g>
+  <g transform="translate(1140,780)">
+    <rect width="360" height="120" rx="12" fill="#1e293b" stroke="#facc15" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#facc15">⑦ 找读命令handler</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">设 0x41414141 内存断点</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">→ VSC dispatcher</text>
+    <text x="20" y="102" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">→ 40 元素 SATA 请求表 → DMA</text>
+  </g>
+
+  <!-- Branch 8: Overlay code -->
+  <g stroke="#fb7185" stroke-width="2" fill="none">
+    <path d="M800 560 C 800 700, 800 800, 800 870"/>
+  </g>
+  <g transform="translate(620,830)">
+    <rect width="360" height="120" rx="12" fill="#1e293b" stroke="#fb7185" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#fb7185">⑧ "代码不在 image 里"</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">服务区 overlay 模块 0x11</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">启动期才被搬入 RAM</text>
+    <text x="20" y="102" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">"先把 RAM dump 出来"</text>
+  </g>
+
+  <!-- Branch 9: Patch -->
+  <g stroke="#84cc16" stroke-width="2" fill="none">
+    <path d="M680 540 C 600 620, 500 720, 380 800"/>
+  </g>
+  <g transform="translate(120,780)">
+    <rect width="340" height="120" rx="12" fill="#1e293b" stroke="#84cc16" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#84cc16">⑨ 代码 cave 注入</text>
+    <text x="20" y="58" font-family="ui-monospace, monospace" font-size="13" fill="#cbd5e1">trampoline @ 0xFFEAB600</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">硬循环 N 拍模拟延迟</text>
+    <text x="20" y="102" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">实测 ~450ms (估算不准)</text>
+  </g>
+
+  <!-- Branch 10: Anti-climax -->
+  <g stroke="#94a3b8" stroke-width="2" fill="none">
+    <path d="M620 500 C 480 540, 380 600, 240 600"/>
+  </g>
+  <g transform="translate(40,560)">
+    <rect width="280" height="110" rx="12" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#cbd5e1">⑩ Task Failed Successfully</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">控制组测试时 exploit 自己触发了</text>
+    <text x="20" y="80" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">→ 整个 side quest 用不上</text>
+    <text x="20" y="100" font-family="-apple-system, sans-serif" font-size="13" fill="#94a3b8">→ 但 RE 技能 +999</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="800" y="980" text-anchor="middle" font-family="ui-monospace, monospace" font-size="13" fill="#475569">
+    思维导图 · 好文共赏 #good-read-hdd-firmware-hacking-jtag-ida
+  </text>
+</svg>

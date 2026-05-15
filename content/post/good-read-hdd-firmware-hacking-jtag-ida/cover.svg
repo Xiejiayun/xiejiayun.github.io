@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#10172a"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="platter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="50%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="platterMetal" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#9ca3af"/>
+      <stop offset="40%" stop-color="#6b7280"/>
+      <stop offset="80%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid pattern background -->
+  <g opacity="0.07" stroke="#22d3ee" stroke-width="0.5">
+    <path d="M0,80 L1200,80 M0,160 L1200,160 M0,240 L1200,240 M0,320 L1200,320 M0,400 L1200,400 M0,480 L1200,480 M0,560 L1200,560"/>
+    <path d="M80,0 L80,630 M160,0 L160,630 M240,0 L240,630 M320,0 L320,630 M400,0 L400,630 M480,0 L480,630 M560,0 L560,630 M640,0 L640,630 M720,0 L720,630 M800,0 L800,630 M880,0 L880,630 M960,0 L960,630 M1040,0 L1040,630 M1120,0 L1120,630"/>
+  </g>
+
+  <!-- HDD platter illustration (right side) -->
+  <g transform="translate(900,315)">
+    <!-- Outer rim -->
+    <circle r="220" fill="url(#platterMetal)" opacity="0.85"/>
+    <!-- Concentric tracks -->
+    <g fill="none" stroke="#0a0e1a" stroke-width="1" opacity="0.5">
+      <circle r="210"/>
+      <circle r="190"/>
+      <circle r="170"/>
+      <circle r="150"/>
+      <circle r="130"/>
+      <circle r="110"/>
+      <circle r="90"/>
+      <circle r="70"/>
+    </g>
+    <!-- Spindle hole -->
+    <circle r="35" fill="#0a0e1a"/>
+    <circle r="20" fill="#374151"/>
+    <circle r="6" fill="#22d3ee"/>
+
+    <!-- Read/write head arm -->
+    <g transform="rotate(-30)">
+      <path d="M 220 -8 L -30 -4 L -40 0 L -30 4 L 220 8 Z" fill="#4b5563" opacity="0.9"/>
+      <circle cx="-35" cy="0" r="14" fill="#1f2937"/>
+      <circle cx="220" cy="0" r="6" fill="#ef4444"/>
+    </g>
+
+    <!-- Highlight scratch -->
+    <path d="M -180 0 A 180 180 0 0 1 60 -170" fill="none" stroke="#22d3ee" stroke-width="2" opacity="0.4" stroke-dasharray="6 8"/>
+  </g>
+
+  <!-- Tagline category -->
+  <text x="60" y="100" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="20" fill="#22d3ee" letter-spacing="4">
+    GOOD READS · 好文共赏
+  </text>
+
+  <!-- Main title -->
+  <text x="60" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="54" font-weight="800" fill="#f8fafc">
+    把"硬盘"拆给你看：
+  </text>
+  <text x="60" y="248" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="46" font-weight="700" fill="url(#accent)">
+    一个 Xbox 360 黑客的
+  </text>
+  <text x="60" y="308" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="46" font-weight="700" fill="url(#accent)">
+    HDD 固件 RE 之旅
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="368" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" fill="#cbd5e1" font-weight="400">
+    JTAG · DOWNLOAD MICROCODE · LZHUF · ATA Passthrough
+  </text>
+  <text x="60" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" fill="#cbd5e1" font-weight="400">
+    给一块运行中的硬盘下断点是什么体验
+  </text>
+
+  <!-- Code tags -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14">
+    <rect x="60" y="438" width="200" height="32" rx="6" fill="#1e293b" stroke="#22d3ee" stroke-width="1"/>
+    <text x="160" y="459" text-anchor="middle" fill="#22d3ee">SMART_READ_LOG 0xBE</text>
+
+    <rect x="276" y="438" width="160" height="32" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1"/>
+    <text x="356" y="459" text-anchor="middle" fill="#a78bfa">ARM Cortex-M3</text>
+
+    <rect x="452" y="438" width="160" height="32" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <text x="532" y="459" text-anchor="middle" fill="#f59e0b">DMA READ EXT</text>
+  </g>
+
+  <!-- Source attribution -->
+  <text x="60" y="530" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="16" fill="#64748b">
+    原文：Ryan Miceli @ icode4.coffee · 2026-05-14
+  </text>
+  <text x="60" y="556" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" fill="#475569">
+    Samsung HM020GI · Hitachi HTS545032 · WD3200BEVT · Samsung PM871a
+  </text>
+
+  <!-- Scoring badge -->
+  <g transform="translate(60,580)">
+    <rect width="320" height="36" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-width="1"/>
+    <text x="160" y="24" text-anchor="middle" font-family="ui-monospace, monospace" font-size="14" fill="#22d3ee" font-weight="700">
+      Opus 9.0 / Sonnet 8.8 / Gemini 9.0 → 8.93
+    </text>
+  </g>
+</svg>
