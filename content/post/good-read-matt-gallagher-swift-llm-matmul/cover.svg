@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1a1d4d;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0f1535;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ffd93d;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="grid" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d4470;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#3d4470;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.15">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#4a5298" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#4a5298" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#4a5298" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="1200" y2="400" stroke="#4a5298" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="1200" y2="500" stroke="#4a5298" stroke-width="0.5"/>
+  </g>
+
+  <!-- Top tag -->
+  <rect x="60" y="55" width="220" height="40" rx="20" fill="#ff6b35" opacity="0.9"/>
+  <text x="170" y="82" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">📌 好文共赏 · Editor's Pick</text>
+
+  <!-- Date -->
+  <text x="1140" y="82" font-family="-apple-system, sans-serif" font-size="16" fill="#a5acd4" text-anchor="end">2026-05-15</text>
+
+  <!-- Main title -->
+  <text x="60" y="170" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="42" font-weight="800" fill="#ffffff">把 Swift 推到 1.1 Tflop/s</text>
+  <text x="60" y="225" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="26" font-weight="500" fill="#ffd93d">Matt Gallagher · 十种实现 · 382× 提升</text>
+
+  <!-- Performance journey -->
+  <g transform="translate(60, 280)">
+    <!-- Step 1: Basic Swift -->
+    <rect x="0" y="0" width="180" height="80" rx="8" fill="#2d3158" stroke="#4a5298" stroke-width="1.5"/>
+    <text x="90" y="28" font-family="-apple-system, sans-serif" font-size="14" fill="#a5acd4" text-anchor="middle">Basic Swift</text>
+    <text x="90" y="56" font-family="'Menlo', monospace" font-size="22" font-weight="700" fill="#ff6b6b" text-anchor="middle">2.8 Gflop/s</text>
+    <text x="90" y="72" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8" text-anchor="middle">起点</text>
+
+    <!-- Arrow -->
+    <polygon points="190,40 210,40 210,35 225,45 210,55 210,50 190,50" fill="#ffd93d"/>
+
+    <!-- Step 2: Fast Swift -->
+    <rect x="235" y="0" width="180" height="80" rx="8" fill="#2d3158" stroke="#4a5298" stroke-width="1.5"/>
+    <text x="325" y="28" font-family="-apple-system, sans-serif" font-size="14" fill="#a5acd4" text-anchor="middle">Fast Swift (CPU)</text>
+    <text x="325" y="56" font-family="'Menlo', monospace" font-size="22" font-weight="700" fill="#ffd93d" text-anchor="middle">~35 Gflop/s</text>
+    <text x="325" y="72" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8" text-anchor="middle">+ MutableSpan + Relaxed FMA</text>
+
+    <!-- Arrow -->
+    <polygon points="425,40 445,40 445,35 460,45 445,55 445,50 425,50" fill="#ffd93d"/>
+
+    <!-- Step 3: Multi-threaded -->
+    <rect x="470" y="0" width="180" height="80" rx="8" fill="#2d3158" stroke="#4a5298" stroke-width="1.5"/>
+    <text x="560" y="28" font-family="-apple-system, sans-serif" font-size="14" fill="#a5acd4" text-anchor="middle">Multi-threaded</text>
+    <text x="560" y="56" font-family="'Menlo', monospace" font-size="22" font-weight="700" fill="#a0e0ff" text-anchor="middle">~200 Gflop/s</text>
+    <text x="560" y="72" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8" text-anchor="middle">DispatchQueue.concurrentPerform</text>
+
+    <!-- Arrow -->
+    <polygon points="660,40 680,40 680,35 695,45 680,55 680,50 660,50" fill="#ffd93d"/>
+
+    <!-- Step 4: AMX -->
+    <rect x="705" y="0" width="180" height="80" rx="8" fill="#2d3158" stroke="#4a5298" stroke-width="1.5"/>
+    <text x="795" y="28" font-family="-apple-system, sans-serif" font-size="14" fill="#a5acd4" text-anchor="middle">AMX (秘密协处理器)</text>
+    <text x="795" y="56" font-family="'Menlo', monospace" font-size="22" font-weight="700" fill="#c0a0ff" text-anchor="middle">~335 Gflop/s</text>
+    <text x="795" y="72" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8" text-anchor="middle">16×16 outer product</text>
+
+    <!-- Arrow -->
+    <polygon points="895,40 915,40 915,35 930,45 915,55 915,50 895,50" fill="#ffd93d"/>
+
+    <!-- Step 5: Metal Tiled -->
+    <rect x="940" y="0" width="180" height="80" rx="8" fill="url(#accent)" stroke="#ffd93d" stroke-width="2.5" filter="url(#glow)"/>
+    <text x="1030" y="28" font-family="-apple-system, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="600">Tiled Metal GPU</text>
+    <text x="1030" y="58" font-family="'Menlo', monospace" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">1.1 Tflop/s</text>
+    <text x="1030" y="74" font-family="-apple-system, sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" opacity="0.95">382× vs Basic Swift</text>
+  </g>
+
+  <!-- Tech stack tags -->
+  <g transform="translate(60, 420)">
+    <text x="0" y="0" font-family="-apple-system, sans-serif" font-size="14" fill="#7c83b8">技术栈：</text>
+    <rect x="60" y="-18" width="78" height="28" rx="14" fill="#3d4470"/>
+    <text x="99" y="0" font-family="-apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">Swift 6.2</text>
+    <rect x="148" y="-18" width="78" height="28" rx="14" fill="#3d4470"/>
+    <text x="187" y="0" font-family="-apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">Metal</text>
+    <rect x="236" y="-18" width="78" height="28" rx="14" fill="#3d4470"/>
+    <text x="275" y="0" font-family="-apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">AMX</text>
+    <rect x="324" y="-18" width="100" height="28" rx="14" fill="#3d4470"/>
+    <text x="374" y="0" font-family="-apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">Apple Silicon</text>
+    <rect x="434" y="-18" width="92" height="28" rx="14" fill="#3d4470"/>
+    <text x="480" y="0" font-family="-apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">llm.c (GPT-2)</text>
+    <rect x="536" y="-18" width="78" height="28" rx="14" fill="#3d4470"/>
+    <text x="575" y="0" font-family="-apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">SIMD FMA</text>
+    <rect x="624" y="-18" width="100" height="28" rx="14" fill="#3d4470"/>
+    <text x="674" y="0" font-family="-apple-system, sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">MutableSpan</text>
+  </g>
+
+  <!-- Score panel -->
+  <g transform="translate(60, 475)">
+    <rect x="0" y="0" width="640" height="80" rx="10" fill="#1a1d4d" stroke="#4a5298" stroke-width="1.5" opacity="0.85"/>
+    <text x="20" y="30" font-family="-apple-system, sans-serif" font-size="13" fill="#a5acd4">多模评分</text>
+    <text x="20" y="58" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#ffd93d">综合 8.85 / 10</text>
+
+    <text x="280" y="22" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8">Opus</text>
+    <text x="280" y="48" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#ffffff">9.0</text>
+
+    <text x="370" y="22" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8">Sonnet</text>
+    <text x="370" y="48" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#ffffff">8.8</text>
+
+    <text x="460" y="22" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8">Gemini</text>
+    <text x="460" y="48" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#ffffff">8.7</text>
+
+    <text x="550" y="22" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8">阅读时长</text>
+    <text x="550" y="48" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" fill="#a0e0ff">~35 min</text>
+  </g>
+
+  <!-- Bottom byline -->
+  <text x="60" y="600" font-family="-apple-system, sans-serif" font-size="14" fill="#7c83b8">原作：Matt Gallagher · Cocoa with Love · 2026-04-18</text>
+  <text x="1140" y="600" font-family="-apple-system, sans-serif" font-size="14" fill="#7c83b8" text-anchor="end">xiejiayun.github.io</text>
+</svg>

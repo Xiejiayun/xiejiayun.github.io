@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#15193e;stop-opacity:1"/>
+    </linearGradient>
+    <radialGradient id="center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#c8470a;stop-opacity:1"/>
+    </radialGradient>
+    <linearGradient id="cpuNode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3aa3e8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e6ba8;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="amxNode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#c08aff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#7c4ec0;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="gpuNode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7aff8e;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3ec060;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="optNode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e5a800;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="700" y="40" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">把 Swift 推到 1.1 Tflop/s · 思维导图</text>
+  <text x="700" y="65" font-family="-apple-system, sans-serif" font-size="13" fill="#a5acd4" text-anchor="middle">从 Basic Swift 到 Tiled Metal · 382 倍性能旅程的关键决策点</text>
+
+  <!-- Center hub -->
+  <circle cx="700" cy="450" r="80" fill="url(#center)"/>
+  <text x="700" y="445" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Swift</text>
+  <text x="700" y="465" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">LLM 训练</text>
+  <text x="700" y="485" font-family="'Menlo', monospace" font-size="11" fill="#ffd93d" text-anchor="middle">382×</text>
+
+  <!-- Branch lines -->
+  <g stroke="#4a5298" stroke-width="1.5" fill="none" opacity="0.65">
+    <!-- Top branches -->
+    <path d="M 700 370 Q 700 280 380 200" />
+    <path d="M 700 370 Q 700 280 700 180" />
+    <path d="M 700 370 Q 700 280 1020 200" />
+
+    <!-- Left branches (CPU) -->
+    <path d="M 620 450 Q 480 450 280 400" />
+    <path d="M 620 450 Q 480 480 280 500" />
+    <path d="M 620 450 Q 480 510 280 600" />
+
+    <!-- Right branches (AMX/GPU) -->
+    <path d="M 780 450 Q 920 420 1120 380" />
+    <path d="M 780 450 Q 920 480 1120 500" />
+    <path d="M 780 450 Q 920 510 1120 620" />
+
+    <!-- Bottom branches -->
+    <path d="M 700 530 Q 700 620 380 740" />
+    <path d="M 700 530 Q 700 620 700 760" />
+    <path d="M 700 530 Q 700 620 1020 740" />
+  </g>
+
+  <!-- Top nodes: Origin / Reference -->
+  <g>
+    <!-- Top-left: llm.c reference -->
+    <rect x="270" y="160" width="220" height="80" rx="10" fill="url(#cpuNode)"/>
+    <text x="380" y="190" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">llm.c (基准)</text>
+    <text x="380" y="210" font-family="-apple-system, sans-serif" font-size="11" fill="#e8eaf6" text-anchor="middle">Karpathy · 1000 行 C</text>
+    <text x="380" y="226" font-family="'Menlo', monospace" font-size="12" fill="#ffd93d" text-anchor="middle">0.926 tokens/s</text>
+
+    <!-- Top-center: 基本目标 -->
+    <rect x="590" y="140" width="220" height="80" rx="10" fill="#2d3158" stroke="#ff6b35" stroke-width="1.5"/>
+    <text x="700" y="170" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">GPT-2 124M 训练</text>
+    <text x="700" y="190" font-family="-apple-system, sans-serif" font-size="11" fill="#a5acd4" text-anchor="middle">B=4, T=64, ~0.2 TFLOP/iter</text>
+    <text x="700" y="206" font-family="'Menlo', monospace" font-size="11" fill="#ffd93d" text-anchor="middle">6 × N × D 估算</text>
+
+    <!-- Top-right: M3 Max 硬件 -->
+    <rect x="910" y="160" width="220" height="80" rx="10" fill="url(#gpuNode)"/>
+    <text x="1020" y="190" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">M3 Max</text>
+    <text x="1020" y="210" font-family="-apple-system, sans-serif" font-size="11" fill="#e8f5e8" text-anchor="middle">16 CPU 核 · ~15 TFLOP GPU</text>
+    <text x="1020" y="226" font-family="'Menlo', monospace" font-size="12" fill="#ffd93d" text-anchor="middle">理论上限</text>
+  </g>
+
+  <!-- Left side: CPU optimizations -->
+  <g>
+    <!-- CPU 1: MutableSpan -->
+    <rect x="60" y="365" width="220" height="70" rx="10" fill="url(#optNode)"/>
+    <text x="170" y="392" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#0a0e27" text-anchor="middle">MutableSpan</text>
+    <text x="170" y="412" font-family="-apple-system, sans-serif" font-size="11" fill="#0a0e27" text-anchor="middle">消除 CoW 检查开销</text>
+    <text x="170" y="428" font-family="'Menlo', monospace" font-size="11" fill="#0a0e27" text-anchor="middle">3× 训练提速</text>
+
+    <!-- CPU 2: Relaxed FMA -->
+    <rect x="60" y="465" width="220" height="70" rx="10" fill="url(#optNode)"/>
+    <text x="170" y="492" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#0a0e27" text-anchor="middle">Relaxed.multiplyAdd</text>
+    <text x="170" y="512" font-family="-apple-system, sans-serif" font-size="11" fill="#0a0e27" text-anchor="middle">启用 fmla.4s 指令</text>
+    <text x="170" y="528" font-family="'Menlo', monospace" font-size="11" fill="#0a0e27" text-anchor="middle">9× 提速 (单行代码)</text>
+
+    <!-- CPU 3: InlineArray + Unroll -->
+    <rect x="60" y="565" width="220" height="70" rx="10" fill="url(#optNode)"/>
+    <text x="170" y="592" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#0a0e27" text-anchor="middle">InlineArray + 展开</text>
+    <text x="170" y="612" font-family="-apple-system, sans-serif" font-size="11" fill="#0a0e27" text-anchor="middle">栈分配 + LOOP_UNROLL=8</text>
+    <text x="170" y="628" font-family="'Menlo', monospace" font-size="11" fill="#0a0e27" text-anchor="middle">超过 C 性能 106.6%</text>
+  </g>
+
+  <!-- Right side: Hardware accelerators -->
+  <g>
+    <!-- Right 1: Multi-thread -->
+    <rect x="1120" y="345" width="220" height="70" rx="10" fill="url(#cpuNode)"/>
+    <text x="1230" y="372" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">DispatchQueue 并发</text>
+    <text x="1230" y="392" font-family="-apple-system, sans-serif" font-size="11" fill="#e8eaf6" text-anchor="middle">concurrentPerform (非 escaping)</text>
+    <text x="1230" y="408" font-family="'Menlo', monospace" font-size="11" fill="#ffd93d" text-anchor="middle">5.4× CPU 并行</text>
+
+    <!-- Right 2: AMX -->
+    <rect x="1120" y="465" width="220" height="70" rx="10" fill="url(#amxNode)"/>
+    <text x="1230" y="492" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">AMX 协处理器 🔒</text>
+    <text x="1230" y="512" font-family="-apple-system, sans-serif" font-size="11" fill="#f0e8ff" text-anchor="middle">16×16 outer product</text>
+    <text x="1230" y="528" font-family="'Menlo', monospace" font-size="11" fill="#ffd93d" text-anchor="middle">未文档化 · 反向工程</text>
+
+    <!-- Right 3: Metal -->
+    <rect x="1120" y="585" width="220" height="70" rx="10" fill="url(#gpuNode)"/>
+    <text x="1230" y="612" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Metal Tiled Kernel</text>
+    <text x="1230" y="632" font-family="-apple-system, sans-serif" font-size="11" fill="#e8f5e8" text-anchor="middle">threadgroup shared memory</text>
+    <text x="1230" y="648" font-family="'Menlo', monospace" font-size="11" fill="#ffd93d" text-anchor="middle">1.1 TFLOP/s · 终点</text>
+  </g>
+
+  <!-- Bottom: Insights / Conclusions -->
+  <g>
+    <!-- Bottom-left: 编译器视角 -->
+    <rect x="270" y="710" width="220" height="80" rx="10" fill="#2d3158" stroke="#a5acd4" stroke-width="1.5"/>
+    <text x="380" y="738" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">编译器视角</text>
+    <text x="380" y="758" font-family="-apple-system, sans-serif" font-size="11" fill="#a5acd4" text-anchor="middle">Swift 默认无 -ffast-math</text>
+    <text x="380" y="774" font-family="-apple-system, sans-serif" font-size="11" fill="#a5acd4" text-anchor="middle">汇编层验证每次改动</text>
+
+    <!-- Bottom-center: 投资回报 -->
+    <rect x="590" y="710" width="220" height="80" rx="10" fill="#2d3158" stroke="#ffd93d" stroke-width="1.5"/>
+    <text x="700" y="738" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#ffd93d" text-anchor="middle">80/20 法则</text>
+    <text x="700" y="758" font-family="-apple-system, sans-serif" font-size="11" fill="#e8eaf6" text-anchor="middle">CPU 4 招 = 72× 提速</text>
+    <text x="700" y="774" font-family="-apple-system, sans-serif" font-size="11" fill="#e8eaf6" text-anchor="middle">AMX/GPU = 5.3× 额外</text>
+
+    <!-- Bottom-right: Apple 封闭性 -->
+    <rect x="910" y="710" width="220" height="80" rx="10" fill="#2d3158" stroke="#c08aff" stroke-width="1.5"/>
+    <text x="1020" y="738" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="14" font-weight="700" fill="#c08aff" text-anchor="middle">Apple 双轨架构</text>
+    <text x="1020" y="758" font-family="-apple-system, sans-serif" font-size="11" fill="#e8eaf6" text-anchor="middle">Accelerate (公开 ABI)</text>
+    <text x="1020" y="774" font-family="-apple-system, sans-serif" font-size="11" fill="#e8eaf6" text-anchor="middle">AMX (私有 ISA)</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="700" y="870" font-family="-apple-system, sans-serif" font-size="11" fill="#7c83b8" text-anchor="middle">原文：Cocoa with Love · 整理：xiejiayun.github.io · 2026-05-15</text>
+</svg>
