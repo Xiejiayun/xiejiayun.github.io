@@ -4,6 +4,10 @@ description: "FriesTodo / 薯条清单 应用的隐私政策"
 type: "page"
 date: 2026-05-15
 disable_comments: true
+layout: "standalone"
+url: "/friestodo-privacy/"
+aliases:
+  - "/page/friestodo-privacy/"
 ---
 
 # 薯条清单（FriesTodo）隐私政策
