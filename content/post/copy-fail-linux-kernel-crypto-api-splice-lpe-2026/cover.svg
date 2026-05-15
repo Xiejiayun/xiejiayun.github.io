@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0612"/>
+      <stop offset="0.5" stop-color="#160a1e"/>
+      <stop offset="1" stop-color="#0a0612"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff3355" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#ff3355" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3355"/>
+      <stop offset="1" stop-color="#ff8855"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="180" r="350" fill="url(#glow)"/>
+
+  <!-- title -->
+  <text x="80" y="180" font-family="'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="800" fill="#ffffff">copy.fail</text>
+  <text x="80" y="240" font-family="'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="600" fill="#ffaabb">Linux 内核的语义裂缝</text>
+
+  <!-- decorative ASCII-like code lines -->
+  <g font-family="'Courier New', monospace" font-size="14" fill="#7766aa" opacity="0.7">
+    <text x="80" y="330">socket(AF_ALG, SOCK_SEQPACKET, 0);</text>
+    <text x="80" y="355">bind(sock, &amp;sa, sizeof(sa));</text>
+    <text x="80" y="380">setsockopt(sock, SOL_ALG, ALG_SET_KEY, key, keylen);</text>
+    <text x="80" y="405">accept(sock, NULL, NULL);</text>
+    <text x="80" y="430" fill="#ff6688">splice(sock, NULL, pipe[1], NULL, 4, SPLICE_F_MOVE);</text>
+    <text x="80" y="455" fill="#ff6688">// → 4 bytes arbitrary kernel write</text>
+    <text x="80" y="490">modprobe_path[0..4] = "/tmp/x";</text>
+    <text x="80" y="515" fill="#ffcc00">$ id</text>
+    <text x="80" y="535" fill="#88ff88">uid=0(root) gid=0(root) groups=0(root)</text>
+  </g>
+
+  <!-- tag pill -->
+  <rect x="80" y="80" width="280" height="38" rx="19" fill="url(#tag)"/>
+  <text x="105" y="106" font-family="'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">CRITICAL · LOCAL PRIVILEGE ESCALATION</text>
+
+  <!-- bottom byline -->
+  <text x="80" y="585" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#776688">AF_ALG × splice() × SKB · 三个子系统的语义碰撞</text>
+  <text x="1050" y="585" font-family="'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#554466" text-anchor="end">xiejiayun.github.io · 2026-05</text>
+</svg>

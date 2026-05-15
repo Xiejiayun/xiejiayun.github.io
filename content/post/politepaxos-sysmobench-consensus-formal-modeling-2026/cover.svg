@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06121a"/>
+      <stop offset="0.5" stop-color="#0a1e2a"/>
+      <stop offset="1" stop-color="#06121a"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5be8e0"/>
+      <stop offset="1" stop-color="#4a8ad0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#cbg)"/>
+
+  <!-- title -->
+  <text x="60" y="80" font-family="'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" fill="#ffffff">分布式共识的第三波 ·  AI 写形式化模型的真实水平</text>
+  <text x="60" y="118" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" fill="url(#cyan)">PolitePaxos × SysMoBench — Murat Demirbas, 2026</text>
+
+  <!-- timeline -->
+  <g font-family="Arial" fill="#9bd6e0">
+    <line x1="100" y1="220" x2="1100" y2="220" stroke="#5be8e0" stroke-width="2"/>
+    <circle cx="120" cy="220" r="8" fill="#5be8e0"/>
+    <text x="120" y="200" text-anchor="middle" font-size="13">1998</text>
+    <text x="120" y="252" text-anchor="middle" font-size="14" font-weight="600">Paxos</text>
+
+    <circle cx="270" cy="220" r="8" fill="#5be8e0"/>
+    <text x="270" y="200" text-anchor="middle" font-size="13">2007</text>
+    <text x="270" y="252" text-anchor="middle" font-size="14" font-weight="600">Multi-Paxos</text>
+
+    <circle cx="420" cy="220" r="8" fill="#5be8e0"/>
+    <text x="420" y="200" text-anchor="middle" font-size="13">2013</text>
+    <text x="420" y="252" text-anchor="middle" font-size="14" font-weight="600">EPaxos</text>
+
+    <circle cx="570" cy="220" r="8" fill="#5be8e0"/>
+    <text x="570" y="200" text-anchor="middle" font-size="13">2014</text>
+    <text x="570" y="252" text-anchor="middle" font-size="14" font-weight="600">Raft</text>
+
+    <circle cx="720" cy="220" r="8" fill="#5be8e0"/>
+    <text x="720" y="200" text-anchor="middle" font-size="13">2020</text>
+    <text x="720" y="252" text-anchor="middle" font-size="14" font-weight="600">Flexible Paxos</text>
+
+    <circle cx="900" cy="220" r="14" fill="#ffcc33"/>
+    <text x="900" y="195" text-anchor="middle" font-size="13" fill="#ffcc33">2026</text>
+    <text x="900" y="252" text-anchor="middle" font-size="16" font-weight="700" fill="#ffcc33">PolitePaxos</text>
+    <text x="900" y="272" text-anchor="middle" font-size="12" fill="#ffeeaa">1.5 RTT 无竞争路径</text>
+  </g>
+
+  <!-- SysMoBench scores -->
+  <g transform="translate(120,330)">
+    <text x="0" y="0" font-family="Arial" font-size="22" font-weight="700" fill="#ffffff">SysMoBench: AI 写 TLA+ 规约通过率</text>
+
+    <g transform="translate(0,30)" font-family="Arial">
+      <rect x="0" y="0" width="180" height="20" fill="#1f3a4a"/>
+      <rect x="0" y="0" width="180" height="20" fill="#3a7088"/>
+      <text x="200" y="16" font-size="14" fill="#cfe6ff">小模型: &lt;20%</text>
+
+      <rect x="0" y="30" width="270" height="20" fill="#1f3a4a"/>
+      <rect x="0" y="30" width="270" height="20" fill="#5aa3c4"/>
+      <text x="290" y="46" font-size="14" fill="#cfe6ff">微调开源模型: ~30%</text>
+
+      <rect x="0" y="60" width="500" height="20" fill="#1f3a4a"/>
+      <rect x="0" y="60" width="500" height="20" fill="#5be8e0"/>
+      <text x="520" y="76" font-size="14" fill="#cfe6ff">前沿模型 + 推理: 40-60%</text>
+
+      <rect x="0" y="90" width="720" height="20" fill="#1f3a4a"/>
+      <rect x="0" y="90" width="720" height="20" fill="#ffcc55"/>
+      <text x="740" y="106" font-size="14" fill="#fff0c5">1 年 TLA+ 经验人类: ~80%</text>
+
+      <rect x="0" y="120" width="855" height="20" fill="#1f3a4a"/>
+      <rect x="0" y="120" width="855" height="20" fill="#ffd5e2"/>
+      <text x="875" y="136" font-size="14" fill="#fff0c5">专家 5 年+: &gt;95%</text>
+    </g>
+  </g>
+
+  <!-- bottom note -->
+  <text x="600" y="565" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#ffffff">人类创意 + AI 验证 = 下一个十年的分布式系统研究 workflow</text>
+  <text x="60" y="600" font-family="Arial" font-size="14" fill="#5a7080">Murat Demirbas · Hillel Wayne · The Morning Paper · Leslie Lamport</text>
+  <text x="1140" y="600" text-anchor="end" font-family="Arial" font-size="14" fill="#5a7080">xiejiayun.github.io · 2026-05</text>
+</svg>

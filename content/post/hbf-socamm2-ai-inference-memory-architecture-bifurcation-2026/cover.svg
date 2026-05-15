@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111c"/>
+      <stop offset="0.5" stop-color="#0d1e34"/>
+      <stop offset="1" stop-color="#06101c"/>
+    </linearGradient>
+    <linearGradient id="hbm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3aa3ff"/>
+      <stop offset="1" stop-color="#1f4e8c"/>
+    </linearGradient>
+    <linearGradient id="hbf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb84a"/>
+      <stop offset="1" stop-color="#8a5a14"/>
+    </linearGradient>
+    <linearGradient id="lpddr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5be4a0"/>
+      <stop offset="1" stop-color="#1f7a52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg2)"/>
+
+  <!-- title -->
+  <text x="60" y="80" font-family="'Helvetica Neue', Arial, sans-serif" font-size="44" font-weight="800" fill="#ffffff">AI 推理内存的三条路线</text>
+  <text x="60" y="118" font-family="'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="500" fill="#88aabb">HBM × HBF × SOCAMM2 — 2026 数据中心的隐形战线</text>
+
+  <!-- HBM stack (left) -->
+  <g transform="translate(140,200)">
+    <rect x="0" y="0" width="220" height="40" rx="4" fill="url(#hbm)"/>
+    <rect x="0" y="50" width="220" height="40" rx="4" fill="url(#hbm)"/>
+    <rect x="0" y="100" width="220" height="40" rx="4" fill="url(#hbm)"/>
+    <rect x="0" y="150" width="220" height="40" rx="4" fill="url(#hbm)"/>
+    <rect x="0" y="200" width="220" height="40" rx="4" fill="url(#hbm)"/>
+    <rect x="0" y="250" width="220" height="14" fill="#0a1a30" stroke="#3aa3ff" stroke-width="2"/>
+    <text x="110" y="22" text-anchor="middle" font-family="Arial" font-size="18" font-weight="700" fill="#ffffff">HBM3E / HBM4</text>
+    <text x="110" y="69" text-anchor="middle" font-family="Arial" font-size="14" fill="#cfe6ff">1.2 TB/s</text>
+    <text x="110" y="119" text-anchor="middle" font-family="Arial" font-size="14" fill="#cfe6ff">141 GB / stack</text>
+    <text x="110" y="169" text-anchor="middle" font-family="Arial" font-size="14" fill="#cfe6ff">3 pJ/bit</text>
+    <text x="110" y="219" text-anchor="middle" font-family="Arial" font-size="14" fill="#ffd87a">训练 + KV cache</text>
+    <text x="110" y="295" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#3aa3ff">SK Hynix · Samsung · Micron</text>
+  </g>
+
+  <!-- HBF stack (middle) -->
+  <g transform="translate(490,200)">
+    <rect x="0" y="0" width="220" height="50" rx="4" fill="url(#hbf)"/>
+    <rect x="0" y="60" width="220" height="50" rx="4" fill="url(#hbf)"/>
+    <rect x="0" y="120" width="220" height="50" rx="4" fill="url(#hbf)"/>
+    <rect x="0" y="180" width="220" height="50" rx="4" fill="url(#hbf)"/>
+    <rect x="0" y="240" width="220" height="14" fill="#1a1308" stroke="#ffb84a" stroke-width="2"/>
+    <text x="110" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#ffffff">HBF (2027)</text>
+    <text x="110" y="88" text-anchor="middle" font-family="Arial" font-size="14" fill="#fff0d0">64-128 GB/s 读</text>
+    <text x="110" y="148" text-anchor="middle" font-family="Arial" font-size="14" fill="#fff0d0">512 GB / stack</text>
+    <text x="110" y="208" text-anchor="middle" font-family="Arial" font-size="14" fill="#fff0d0">权重静态存储</text>
+    <text x="110" y="285" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#ffb84a">Sandisk · Kioxia · SK Hynix</text>
+  </g>
+
+  <!-- LPDDR5X SOCAMM2 (right) -->
+  <g transform="translate(840,200)">
+    <rect x="0" y="0" width="220" height="240" rx="6" fill="#0a1a14" stroke="#5be4a0" stroke-width="2"/>
+    <text x="110" y="40" text-anchor="middle" font-family="Arial" font-size="22" font-weight="700" fill="#ffffff">SOCAMM2</text>
+    <text x="110" y="65" text-anchor="middle" font-family="Arial" font-size="14" fill="#9be0b8">LPDDR5X-9600</text>
+    <line x1="20" y1="85" x2="200" y2="85" stroke="#5be4a0" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="110" y="115" text-anchor="middle" font-family="Arial" font-size="14" fill="#cfeedb">128-256 GB / 模组</text>
+    <text x="110" y="145" text-anchor="middle" font-family="Arial" font-size="14" fill="#cfeedb">on-die ECC + side-band</text>
+    <text x="110" y="175" text-anchor="middle" font-family="Arial" font-size="14" fill="#cfeedb">省电 30-50% vs DDR5</text>
+    <text x="110" y="210" text-anchor="middle" font-family="Arial" font-size="14" fill="#fffba8">CPU 主机内存</text>
+    <text x="110" y="285" text-anchor="middle" font-family="Arial" font-size="16" font-weight="700" fill="#5be4a0">三星 · 联发科 · SK Hynix</text>
+  </g>
+
+  <!-- bottom note -->
+  <text x="600" y="560" text-anchor="middle" font-family="Arial" font-size="18" font-weight="600" fill="#ffffff">HBM 不会消失 — 但它只剩"写密集任务"这一个角色</text>
+  <text x="60" y="600" font-family="Arial" font-size="14" fill="#556677">SemiEngineering · JEDEC · SK Hynix Investor Day 2026</text>
+  <text x="1140" y="600" text-anchor="end" font-family="Arial" font-size="14" fill="#556677">xiejiayun.github.io · 2026-05</text>
+</svg>

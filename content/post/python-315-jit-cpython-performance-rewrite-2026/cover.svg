@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="pybg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1226"/>
+      <stop offset="0.5" stop-color="#1a2546"/>
+      <stop offset="1" stop-color="#0a1226"/>
+    </linearGradient>
+    <linearGradient id="pygold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd848"/>
+      <stop offset="1" stop-color="#ff8a3a"/>
+    </linearGradient>
+    <linearGradient id="pyblue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3a7bff"/>
+      <stop offset="1" stop-color="#5aaaff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#pybg)"/>
+
+  <!-- big "3.15" -->
+  <text x="60" y="220" font-family="'Helvetica Neue', Arial, sans-serif" font-size="220" font-weight="900" fill="#ffffff" opacity="0.06">3.15</text>
+
+  <!-- title -->
+  <text x="60" y="100" font-family="'Helvetica Neue', Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff">Python 3.15 — 一门 36 岁的语言开始"认真"了</text>
+  <text x="60" y="140" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="500" fill="#8db4ff">JIT 重启 · free-threaded 落地 · CPython 内部模块工程化重写</text>
+
+  <!-- three pillars -->
+  <g transform="translate(80,260)">
+    <rect x="0" y="0" width="320" height="220" rx="14" fill="#142244" stroke="#ffd848" stroke-width="2"/>
+    <text x="160" y="50" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="url(#pygold)">① JIT 回归正轨</text>
+    <text x="160" y="92" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">copy-and-patch + tier 2 IR</text>
+    <text x="160" y="120" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">type guards + deopt</text>
+    <text x="160" y="148" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">几何平均 10%+</text>
+    <text x="160" y="186" text-anchor="middle" font-family="Arial" font-size="14" fill="#ffc35a">Brandt Bucher · Mark Shannon</text>
+  </g>
+
+  <g transform="translate(440,260)">
+    <rect x="0" y="0" width="320" height="220" rx="14" fill="#142244" stroke="#5aaaff" stroke-width="2"/>
+    <text x="160" y="50" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="url(#pyblue)">② free-threaded</text>
+    <text x="160" y="92" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">PEP 703 进入正式可选</text>
+    <text x="160" y="120" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">多核扩展 3-12×</text>
+    <text x="160" y="148" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">单线程慢 5-10%</text>
+    <text x="160" y="186" text-anchor="middle" font-family="Arial" font-size="14" fill="#7eb8ff">Sam Gross · Meta · NumPy</text>
+  </g>
+
+  <g transform="translate(800,260)">
+    <rect x="0" y="0" width="320" height="220" rx="14" fill="#142244" stroke="#ff8866" stroke-width="2"/>
+    <text x="160" y="50" text-anchor="middle" font-family="Arial" font-size="26" font-weight="700" fill="#ff8866">③ 内部模块重铸</text>
+    <text x="160" y="92" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">标准库非 C 实现合法化</text>
+    <text x="160" y="120" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">_random / _md5 / _sha</text>
+    <text x="160" y="148" text-anchor="middle" font-family="Arial" font-size="16" fill="#cfdaff">Cargo 进入构建图</text>
+    <text x="160" y="186" text-anchor="middle" font-family="Arial" font-size="14" fill="#ffaa88">PSF · 发行版协调</text>
+  </g>
+
+  <!-- bottom note -->
+  <text x="600" y="540" text-anchor="middle" font-family="Arial" font-size="20" font-weight="700" fill="#ffffff">CPython 自 1989 年以来最深的一次内部重构</text>
+  <text x="60" y="600" font-family="Arial" font-size="14" fill="#5a6a88">PEP 659 · PEP 703 · PEP 744 · Faster CPython Team</text>
+  <text x="1140" y="600" text-anchor="end" font-family="Arial" font-size="14" fill="#5a6a88">xiejiayun.github.io · 2026-05</text>
+</svg>
