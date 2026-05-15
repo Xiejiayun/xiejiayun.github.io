@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0e14"/>
+      <stop offset="100%" stop-color="#0a0d12"/>
+    </linearGradient>
+    <linearGradient id="branch1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c75c2a"/>
+      <stop offset="100%" stop-color="#dea33f"/>
+    </linearGradient>
+    <linearGradient id="branch2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5cc7c2"/>
+      <stop offset="100%" stop-color="#3fc4de"/>
+    </linearGradient>
+    <linearGradient id="center" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dea33f"/>
+      <stop offset="100%" stop-color="#c75c2a"/>
+    </linearGradient>
+    <style>
+      .t-center {font: 700 22px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#0b0e14; text-anchor:middle;}
+      .t-h {font: 700 18px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#f3eadf; text-anchor:middle;}
+      .t-b {font: 14px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#cfd5df;}
+      .t-tag {font: 11px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#8a93a3;}
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- Title strip -->
+  <text x="700" y="42" class="t-h" style="font-size:22px">好文共赏 · The Limits of Rust</text>
+  <text x="700" y="68" class="t-tag" text-anchor="middle">Sylvain Kerkour · 2026-05-13 · kerkour.com</text>
+
+  <!-- Center node -->
+  <ellipse cx="700" cy="450" rx="170" ry="70" fill="url(#center)"/>
+  <text x="700" y="445" class="t-center">Rust 的边界</text>
+  <text x="700" y="475" class="t-h" style="fill:#0b0e14;font-size:15px">不要照搬 Cloudflare</text>
+
+  <!-- LEFT BRANCH: 4 痛点 -->
+  <g>
+    <path d="M530 450 Q400 400 280 280" stroke="url(#branch1)" stroke-width="3" fill="none"/>
+    <rect x="50" y="200" width="290" height="100" rx="14" fill="#1a1f2a" stroke="#c75c2a" stroke-width="1.5"/>
+    <text x="195" y="232" class="t-h">痛点 1 · async 难</text>
+    <text x="65" y="260" class="t-b">sync 阻塞 executor 几乎不可避免</text>
+    <text x="65" y="280" class="t-b">runtime 碎片：tokio/smol/glommio</text>
+  </g>
+
+  <g>
+    <path d="M530 450 Q400 430 280 410" stroke="url(#branch1)" stroke-width="3" fill="none"/>
+    <rect x="50" y="350" width="290" height="100" rx="14" fill="#1a1f2a" stroke="#c75c2a" stroke-width="1.5"/>
+    <text x="195" y="382" class="t-h">痛点 2 · 版本腐化</text>
+    <text x="65" y="410" class="t-b">2020–2026 共 54 个 release</text>
+    <text x="65" y="430" class="t-b">3 年没碰的项目升级要还 50+ 版本</text>
+  </g>
+
+  <g>
+    <path d="M530 450 Q400 480 280 540" stroke="url(#branch1)" stroke-width="3" fill="none"/>
+    <rect x="50" y="510" width="290" height="100" rx="14" fill="#1a1f2a" stroke="#c75c2a" stroke-width="1.5"/>
+    <text x="195" y="542" class="t-h">痛点 3 · stdlib 贫血</text>
+    <text x="65" y="570" class="t-b">crypto / datetime / HTTP 全靠社区</text>
+    <text x="65" y="590" class="t-b">5 个 crypto crate 同时存在 = 审计不可能</text>
+  </g>
+
+  <g>
+    <path d="M530 450 Q400 530 280 670" stroke="url(#branch1)" stroke-width="3" fill="none"/>
+    <rect x="50" y="660" width="290" height="100" rx="14" fill="#1a1f2a" stroke="#c75c2a" stroke-width="1.5"/>
+    <text x="195" y="692" class="t-h">痛点 4 · 生态碎片</text>
+    <text x="65" y="720" class="t-b">crate 频繁出现 / 频繁废弃</text>
+    <text x="65" y="740" class="t-b">仅 aws-lc-rs / boring 有 FIPS validation</text>
+  </g>
+
+  <!-- RIGHT BRANCH: 5 赢场景 -->
+  <g>
+    <path d="M870 450 Q1000 360 1120 220" stroke="url(#branch2)" stroke-width="3" fill="none"/>
+    <rect x="1060" y="170" width="290" height="90" rx="14" fill="#1a1f2a" stroke="#3fc4de" stroke-width="1.5"/>
+    <text x="1205" y="202" class="t-h">赢 1 · 跨平台 core</text>
+    <text x="1075" y="228" class="t-b">WhatsApp / Signal / Proton</text>
+    <text x="1075" y="248" class="t-b">唯一同时跨 iOS/Android/WASM/Linux</text>
+  </g>
+
+  <g>
+    <path d="M870 450 Q1000 410 1120 350" stroke="url(#branch2)" stroke-width="3" fill="none"/>
+    <rect x="1060" y="300" width="290" height="80" rx="14" fill="#1a1f2a" stroke="#3fc4de" stroke-width="1.5"/>
+    <text x="1205" y="330" class="t-h">赢 2 · 系统编程</text>
+    <text x="1075" y="358" class="t-b">守护进程、容器运行时；Go 二进制太胖</text>
+  </g>
+
+  <g>
+    <path d="M870 450 Q1000 450 1120 460" stroke="url(#branch2)" stroke-width="3" fill="none"/>
+    <rect x="1060" y="415" width="290" height="80" rx="14" fill="#1a1f2a" stroke="#3fc4de" stroke-width="1.5"/>
+    <text x="1205" y="445" class="t-h">赢 3 · 嵌入式</text>
+    <text x="1075" y="473" class="t-b">ESP32-C 系列 RISC-V，Espressif 官方 HAL</text>
+  </g>
+
+  <g>
+    <path d="M870 450 Q1000 500 1120 570" stroke="url(#branch2)" stroke-width="3" fill="none"/>
+    <rect x="1060" y="525" width="290" height="80" rx="14" fill="#1a1f2a" stroke="#3fc4de" stroke-width="1.5"/>
+    <text x="1205" y="555" class="t-h">赢 4 · 数据库</text>
+    <text x="1075" y="583" class="t-b">Neon / ParadeDB / PgDog / Turso</text>
+  </g>
+
+  <g>
+    <path d="M870 450 Q1000 550 1120 680" stroke="url(#branch2)" stroke-width="3" fill="none"/>
+    <rect x="1060" y="635" width="290" height="90" rx="14" fill="#1a1f2a" stroke="#3fc4de" stroke-width="1.5"/>
+    <text x="1205" y="667" class="t-h">赢 5 · 大规模 &amp; 团队爱 Rust</text>
+    <text x="1075" y="693" class="t-b">AWS / Cloudflare 量级 (AND 关系)</text>
+    <text x="1075" y="713" class="t-b">"loves Rust" 是文化判断不是技能判断</text>
+  </g>
+
+  <!-- bottom meta box -->
+  <rect x="320" y="785" width="760" height="80" rx="14" fill="#1a1f2a" stroke="#dea33f" stroke-width="1.5"/>
+  <text x="700" y="815" class="t-h">Meta 原则：编程语言是平台，不是产品</text>
+  <text x="700" y="842" class="t-b" text-anchor="middle">churn 速度 / stdlib 厚度 / 招聘市场 / 审计预算 — 这些才是第一类指标，不是性能 benchmark</text>
+
+  <!-- footer -->
+  <text x="700" y="888" class="t-tag" text-anchor="middle">xiejiayun.github.io · 好文共赏 · 2026-05-15</text>
+</svg>

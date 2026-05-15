@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0e14"/>
+      <stop offset="50%" stop-color="#101822"/>
+      <stop offset="100%" stop-color="#1a0e0a"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dea33f"/>
+      <stop offset="100%" stop-color="#c75c2a"/>
+    </linearGradient>
+    <linearGradient id="rustHollow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dea33f" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#c75c2a" stop-opacity="0.3"/>
+    </linearGradient>
+    <style>
+      .label {font: 700 16px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#dea33f; letter-spacing:6px;}
+      .title {font: 800 56px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#f3eadf;}
+      .sub {font: 500 26px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#cfd5df;}
+      .meta {font: 14px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#8a93a3;}
+      .kw {font: 600 22px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#dea33f;}
+      .tag {font: 12px 'PingFang SC',-apple-system,system-ui,sans-serif; fill:#5cc7c2;}
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- decorative gear-like crab silhouette (Rust mascot Ferris hint) -->
+  <g opacity="0.18">
+    <ellipse cx="1000" cy="320" rx="180" ry="110" fill="url(#rustHollow)"/>
+    <circle cx="940" cy="280" r="10" fill="#dea33f"/>
+    <circle cx="1060" cy="280" r="10" fill="#dea33f"/>
+    <path d="M850 320 Q830 280 850 240" stroke="#dea33f" stroke-width="6" fill="none"/>
+    <path d="M1150 320 Q1170 280 1150 240" stroke="#dea33f" stroke-width="6" fill="none"/>
+  </g>
+
+  <!-- top left badge -->
+  <rect x="60" y="48" width="200" height="36" rx="6" fill="#1a1f2a" stroke="#dea33f" stroke-width="1"/>
+  <text x="160" y="73" class="label" text-anchor="middle">好 文 共 赏</text>
+
+  <!-- main title -->
+  <text x="60" y="180" class="title">Rust 的边界</text>
+  <text x="60" y="240" class="title" style="font-size:36px;fill:#dea33f">在哪里？</text>
+
+  <!-- subtitle -->
+  <text x="60" y="290" class="sub">写给所有"想抄 Cloudflare 作业"</text>
+  <text x="60" y="324" class="sub">的工程团队的一封劝退信</text>
+
+  <!-- keywords row -->
+  <g transform="translate(60, 380)">
+    <rect x="0" y="0" width="140" height="40" rx="6" fill="#1a1f2a" stroke="#dea33f" stroke-width="1"/>
+    <text x="70" y="26" class="kw" text-anchor="middle" style="font-size:16px">async 难</text>
+    <rect x="158" y="0" width="160" height="40" rx="6" fill="#1a1f2a" stroke="#dea33f" stroke-width="1"/>
+    <text x="238" y="26" class="kw" text-anchor="middle" style="font-size:16px">版本腐化</text>
+    <rect x="335" y="0" width="170" height="40" rx="6" fill="#1a1f2a" stroke="#dea33f" stroke-width="1"/>
+    <text x="420" y="26" class="kw" text-anchor="middle" style="font-size:16px">stdlib 贫血</text>
+    <rect x="525" y="0" width="170" height="40" rx="6" fill="#1a1f2a" stroke="#dea33f" stroke-width="1"/>
+    <text x="610" y="26" class="kw" text-anchor="middle" style="font-size:16px">生态碎片</text>
+  </g>
+
+  <!-- author line -->
+  <text x="60" y="488" class="sub" style="font-size:18px;fill:#cfd5df">Sylvain Kerkour ·《Black Hat Rust》作者</text>
+  <text x="60" y="514" class="sub" style="font-size:18px;fill:#cfd5df">原文 14 分钟 · 2026 年 5 月 13 日</text>
+
+  <!-- bottom strip -->
+  <rect x="60" y="554" width="1080" height="2" fill="#dea33f" opacity="0.5"/>
+  <text x="60" y="588" class="meta">综合评分 8.53 / 10 · Opus 8.7 · Sonnet 8.5 · Gemini 8.4</text>
+  <text x="60" y="610" class="meta">xiejiayun.github.io · 好文共赏</text>
+
+  <!-- small tag right bottom -->
+  <text x="1140" y="610" class="tag" text-anchor="end">#Rust #编程语言 #技术选型 #async</text>
+</svg>
