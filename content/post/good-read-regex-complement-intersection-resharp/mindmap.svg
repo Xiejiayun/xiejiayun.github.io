@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#1a1f3a"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <circle cx="700" cy="450" r="320" fill="url(#centerGlow)"/>
+
+  <!-- 中心节点 -->
+  <g>
+    <ellipse cx="700" cy="450" rx="180" ry="78" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="700" y="438" fill="#f8fafc" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" font-weight="700">262,715 个 regex 问题</text>
+    <text x="700" y="468" fill="#a78bfa" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">859,351,734 次浏览</text>
+  </g>
+
+  <!-- 5 个分支 -->
+  <!-- 1. 数据集与方法论 -->
+  <g>
+    <line x1="700" y1="425" x2="280" y2="180" stroke="#7dd3fc" stroke-width="2"/>
+    <rect x="80" y="120" width="400" height="120" rx="14" fill="#0f172a" stroke="#7dd3fc" stroke-width="1.5"/>
+    <text x="100" y="155" fill="#7dd3fc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">① 数据集 &amp; 方法论</text>
+    <text x="100" y="184" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• SO 2024 Q3 data dump (106 GB XML)</text>
+    <text x="100" y="206" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• 262,715 个 &lt;regex&gt; 标签问题</text>
+    <text x="100" y="228" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• 与 fancy-regex / pcre2 / python re 对比</text>
+  </g>
+
+  <!-- 2. 补集 (complement) -->
+  <g>
+    <line x1="700" y1="425" x2="1120" y2="180" stroke="#fca5a5" stroke-width="2"/>
+    <rect x="920" y="120" width="400" height="160" rx="14" fill="#0f172a" stroke="#fca5a5" stroke-width="1.5"/>
+    <text x="940" y="155" fill="#fca5a5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">② Complement（补集）</text>
+    <text x="940" y="184" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• SO #1 (5.5M views) 就是 complement</text>
+    <text x="940" y="206" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• Tempered greedy token: ^((?!W).)*$</text>
+    <text x="940" y="228" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• Brzozowski 1964: 导数 + 补集代数</text>
+    <text x="940" y="252" fill="#a7f3d0" font-family="ui-monospace, monospace" font-size="14">  RE#:  ^.*$ &amp; ~(_*W_*)  ← 1x</text>
+    <text x="940" y="270" fill="#fca5a5" font-family="ui-monospace, monospace" font-size="14">  hack:               ← 152x ~ 69281x</text>
+  </g>
+
+  <!-- 3. 交集 (intersection) -->
+  <g>
+    <line x1="700" y1="475" x2="120" y2="490" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="40" y="400" width="380" height="160" rx="14" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="60" y="435" fill="#fbbf24" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">③ Intersection（交集）</text>
+    <text x="60" y="464" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• SO #7/#12 都是密码 intersection 题</text>
+    <text x="60" y="486" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• (?=.*A)(?=.*B) **不**等于 A &amp; B</text>
+    <text x="60" y="508" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• 反例: xyz_______AB</text>
+    <text x="60" y="532" fill="#a7f3d0" font-family="ui-monospace, monospace" font-size="14">  RE#: _*A_* &amp; _*B_* (12~535x faster)</text>
+  </g>
+
+  <!-- 4. ReDoS / 回溯灾难 -->
+  <g>
+    <line x1="700" y1="475" x2="1280" y2="490" stroke="#f472b6" stroke-width="2"/>
+    <rect x="980" y="400" width="380" height="180" rx="14" fill="#0f172a" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="1000" y="435" fill="#f472b6" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">④ 回溯灾难 / ReDoS</text>
+    <text x="1000" y="464" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• python (.*)sol(.*): 22.4s ＠ 20KB</text>
+    <text x="1000" y="486" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• Java lookbehind: 6.87s ＠ 58KB (n²)</text>
+    <text x="1000" y="508" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• CSV col 10: ^(.*?,){10}P$ 指数级</text>
+    <text x="1000" y="532" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• 232,484/262,715 个问题从未提"回溯"</text>
+    <text x="1000" y="556" fill="#fca5a5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">→ Russ Cox 2007 已经写得清清楚楚</text>
+  </g>
+
+  <!-- 5. Unicode 陷阱 -->
+  <g>
+    <line x1="700" y1="525" x2="700" y2="700" stroke="#86efac" stroke-width="2"/>
+    <rect x="430" y="700" width="540" height="160" rx="14" fill="#0f172a" stroke="#86efac" stroke-width="1.5"/>
+    <text x="450" y="735" fill="#86efac" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="700">⑤ Unicode 陷阱 &amp; 正确性</text>
+    <text x="450" y="764" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• \d 在 .NET/Python/Rust **不**等于 [0-9]</text>
+    <text x="450" y="786" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• 信用卡 ^\d{16}$ 接受 ٤٥٣٢١٦٧٨٩٠١٢٣٤٥٦</text>
+    <text x="450" y="808" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">• UTF-8 下"16 数字"可能 = 64 字节缓冲溢出</text>
+    <text x="450" y="832" fill="#fca5a5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">→ 抽象不一致 = 攻击面（不只是性能问题）</text>
+  </g>
+
+  <!-- 顶部标题 -->
+  <text x="700" y="48" fill="#a78bfa" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" letter-spacing="8">MINDMAP · 262K REGEX QUESTIONS</text>
+  <text x="700" y="78" fill="#f8fafc" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="26" font-weight="700">复制粘贴是怎么把 60 年前的代数债锁进生产代码的</text>
+</svg>

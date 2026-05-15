@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#161b35"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 装饰性正则状态机弧线 -->
+  <g stroke="#334155" stroke-width="1.2" fill="none" opacity="0.6">
+    <circle cx="120" cy="540" r="22"/>
+    <circle cx="240" cy="480" r="22"/>
+    <circle cx="360" cy="540" r="22"/>
+    <circle cx="480" cy="480" r="22"/>
+    <path d="M 142 535 Q 180 500 218 480" />
+    <path d="M 262 480 Q 300 500 338 535"/>
+    <path d="M 382 535 Q 420 500 458 480"/>
+  </g>
+
+  <!-- 顶标 -->
+  <text x="60" y="78" fill="#a78bfa" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="600" letter-spacing="6">好文共赏 · GOOD READS</text>
+
+  <!-- 主标题 -->
+  <text x="60" y="180" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="52" font-weight="800">262,715 个 regex 问题里</text>
+  <text x="60" y="248" fill="#f8fafc" font-family="ui-sans-serif, system-ui, sans-serif" font-size="52" font-weight="800">藏着的<tspan fill="url(#accent)">算法债</tspan></text>
+
+  <!-- 副标题 -->
+  <text x="60" y="298" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22">PhD 用 859,351,734 次浏览量证明 lookahead 不是 AND</text>
+
+  <!-- 中央代码对比 -->
+  <g transform="translate(60, 340)">
+    <rect width="520" height="76" rx="12" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="14">// SO top answer (152x slower)</text>
+    <text x="20" y="58" fill="#fca5a5" font-family="ui-monospace, monospace" font-size="20" font-weight="600">^((?!W).)*$</text>
+  </g>
+
+  <g transform="translate(60, 432)">
+    <rect width="520" height="76" rx="12" fill="#0f172a" stroke="url(#accent)" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="14">// RE# native complement (1x)</text>
+    <text x="20" y="58" fill="#a7f3d0" font-family="ui-monospace, monospace" font-size="20" font-weight="600">^.*$ &amp; ~(_*W_*)</text>
+  </g>
+
+  <!-- 右侧数字大字 -->
+  <g filter="url(#glow)">
+    <text x="620" y="380" fill="url(#accent)" font-family="ui-sans-serif, system-ui, sans-serif" font-size="180" font-weight="800" opacity="0.96">152×</text>
+  </g>
+  <text x="620" y="430" fill="#cbd5e1" font-family="ui-sans-serif, system-ui, sans-serif" font-size="22">SO top answer 的速度差距</text>
+  <text x="620" y="466" fill="#64748b" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18">最差路径：1,448,170× &amp; 36,756,581×</text>
+
+  <!-- 底部署名 -->
+  <line x1="60" y1="560" x2="1140" y2="560" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="592" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">原文 · Ian Erik Varatalu · iev.ee · 2026-05-10</text>
+  <text x="1140" y="592" fill="#94a3b8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="16" text-anchor="end">谢家云的技术博客 · 2026-05-15</text>
+</svg>
