@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e1a"/>
+      <stop offset="0.5" stop-color="#0f1428"/>
+      <stop offset="1" stop-color="#1a0a14"/>
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3860" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ff3860" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#ff3860" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff7a90"/>
+      <stop offset="0.5" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#9cffd3"/>
+    </linearGradient>
+    <filter id="shadow"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- 网格 -->
+  <g stroke="#1e2438" stroke-width="0.7" opacity="0.45">
+    <path d="M0,150 H1600 M0,300 H1600 M0,450 H1600 M0,600 H1600 M0,750 H1600"/>
+    <path d="M200,0 V900 M400,0 V900 M600,0 V900 M800,0 V900 M1000,0 V900 M1200,0 V900 M1400,0 V900"/>
+  </g>
+
+  <!-- 顶栏 -->
+  <rect x="50" y="50" width="320" height="44" rx="22" fill="#ff3860" opacity="0.18"/>
+  <text x="78" y="79" font-family="Menlo, monospace" font-size="20" fill="#ff7a90" font-weight="700">📌 好文共赏 · Editor's Pick</text>
+
+  <text x="1450" y="80" text-anchor="end" font-family="Menlo, monospace" font-size="16" fill="#5b6379">2026 · 05 · 15</text>
+
+  <!-- 主标题 -->
+  <text x="60" y="200" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="60" font-weight="900" fill="url(#title)">2 小时审计，5 行代码拿下内核：</text>
+  <text x="60" y="282" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="46" font-weight="800" fill="#e6ecff">Project Zero 把 Pixel 10 VPU 驱动撕开</text>
+  <text x="60" y="338" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="46" font-weight="800" fill="#e6ecff">一道圣杯级口子</text>
+
+  <!-- 副标题 -->
+  <text x="60" y="408" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="22" fill="#9aa3bd">Seth Jenkins × Jann Horn 把 Dolby UDC 0-click 移植到 Tensor G5，</text>
+  <text x="60" y="442" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="22" fill="#9aa3bd">顺手在 mediacodec 沙箱旁找到了一行漏掉边界检查的 mmap()</text>
+
+  <!-- 漏洞示意 -->
+  <g transform="translate(60,510)">
+    <!-- 三阶段 -->
+    <rect x="0" y="0" width="320" height="200" rx="14" fill="#1a2240" stroke="#3a4670" stroke-width="2"/>
+    <text x="160" y="36" text-anchor="middle" font-family="Menlo, monospace" font-size="18" fill="#9cffd3" font-weight="700">阶段 ①</text>
+    <text x="160" y="68" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="17" fill="#e6ecff">Dolby UDC 0-click</text>
+    <text x="160" y="98" text-anchor="middle" font-family="Menlo, monospace" font-size="14" fill="#9aa3bd">CVE-2025-54957</text>
+    <text x="160" y="128" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="14" fill="#9aa3bd">SMS / RCS 音频解码</text>
+    <text x="160" y="158" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="14" fill="#9aa3bd">→ mediacodec 沙箱代码执行</text>
+
+    <text x="335" y="115" font-family="Menlo, monospace" font-size="30" fill="#ff7a90">→</text>
+
+    <rect x="370" y="0" width="320" height="200" rx="14" fill="#2a1a30" stroke="#ff3860" stroke-width="2"/>
+    <text x="530" y="36" text-anchor="middle" font-family="Menlo, monospace" font-size="18" fill="#ff7a90" font-weight="700">阶段 ②（本文核心）</text>
+    <text x="530" y="68" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="17" fill="#ffd166">VPU 驱动 mmap 缺界</text>
+    <text x="530" y="98" text-anchor="middle" font-family="Menlo, monospace" font-size="14" fill="#9aa3bd">/dev/vpu · WAVE677DV</text>
+    <text x="530" y="128" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="14" fill="#9aa3bd">remap_pfn_range() 无尺寸校验</text>
+    <text x="530" y="158" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="14" fill="#9aa3bd">→ 任意物理页 → 内核 R/W</text>
+
+    <text x="705" y="115" font-family="Menlo, monospace" font-size="30" fill="#ff7a90">→</text>
+
+    <rect x="740" y="0" width="320" height="200" rx="14" fill="#101a30" stroke="#7a8aff" stroke-width="2"/>
+    <text x="900" y="36" text-anchor="middle" font-family="Menlo, monospace" font-size="18" fill="#9cffd3" font-weight="700">阶段 ③</text>
+    <text x="900" y="68" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="17" fill="#e6ecff">完整 zero-click → root</text>
+    <text x="900" y="98" text-anchor="middle" font-family="Menlo, monospace" font-size="14" fill="#9aa3bd">5 行代码任意读写</text>
+    <text x="900" y="128" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="14" fill="#9aa3bd">物理地址 KASLR 失效</text>
+    <text x="900" y="158" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="14" fill="#9aa3bd">→ 一天内写出 exploit</text>
+  </g>
+
+  <!-- 关键标签 -->
+  <g transform="translate(60,750)">
+    <rect x="0" y="0" width="170" height="38" rx="19" fill="#ff3860" opacity="0.22"/>
+    <text x="85" y="25" text-anchor="middle" font-family="Menlo, monospace" font-size="15" fill="#ffb3c1">#Pixel 10 / Tensor G5</text>
+
+    <rect x="184" y="0" width="170" height="38" rx="19" fill="#7a8aff" opacity="0.22"/>
+    <text x="269" y="25" text-anchor="middle" font-family="Menlo, monospace" font-size="15" fill="#b5beff">#Project Zero</text>
+
+    <rect x="368" y="0" width="160" height="38" rx="19" fill="#9cffd3" opacity="0.18"/>
+    <text x="448" y="25" text-anchor="middle" font-family="Menlo, monospace" font-size="15" fill="#9cffd3">#kernel R/W</text>
+
+    <rect x="542" y="0" width="190" height="38" rx="19" fill="#ffd166" opacity="0.18"/>
+    <text x="637" y="25" text-anchor="middle" font-family="Menlo, monospace" font-size="15" fill="#ffd166">#remap_pfn_range</text>
+
+    <rect x="746" y="0" width="170" height="38" rx="19" fill="#ff7a90" opacity="0.18"/>
+    <text x="831" y="25" text-anchor="middle" font-family="Menlo, monospace" font-size="15" fill="#ff7a90">#零点击攻击链</text>
+  </g>
+
+  <!-- 底部信号线 -->
+  <rect x="0" y="846" width="1600" height="3" fill="url(#redGlow)"/>
+  <text x="60" y="880" font-family="Menlo, monospace" font-size="14" fill="#5b6379">/dev/vpu · WAVE677DV · vpu_mmap() · remap_pfn_range(vm, vm->vm_start, pfn, vm->vm_end - vm->vm_start, ...)</text>
+</svg>

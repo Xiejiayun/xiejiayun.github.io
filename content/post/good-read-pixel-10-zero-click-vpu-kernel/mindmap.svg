@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1200" width="1800" height="1200">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0e1a"/>
+      <stop offset="1" stop-color="#10162a"/>
+    </linearGradient>
+    <radialGradient id="root" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff3860" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ff3860" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#mbg)"/>
+
+  <!-- 网格 -->
+  <g stroke="#1a2238" stroke-width="0.5" opacity="0.4">
+    <path d="M0,200 H1800 M0,400 H1800 M0,600 H1800 M0,800 H1800 M0,1000 H1800"/>
+    <path d="M300,0 V1200 M600,0 V1200 M900,0 V1200 M1200,0 V1200 M1500,0 V1200"/>
+  </g>
+
+  <!-- 中心节点 -->
+  <ellipse cx="900" cy="600" rx="260" ry="180" fill="url(#root)"/>
+  <rect x="700" y="555" width="400" height="100" rx="50" fill="#ff3860" opacity="0.85" stroke="#fff" stroke-width="2"/>
+  <text x="900" y="595" text-anchor="middle" font-family="PingFang SC, Noto Sans SC, sans-serif" font-size="26" font-weight="900" fill="#fff">Pixel 10 0-click 攻击链</text>
+  <text x="900" y="625" text-anchor="middle" font-family="Menlo, monospace" font-size="16" fill="#ffd9e1">Project Zero · 2026-05-13</text>
+
+  <!-- 分支：六根主线 -->
+  <!-- 1. 攻击面演化 -->
+  <g>
+    <path d="M700 580 Q 460 380 280 280" stroke="#ff7a90" stroke-width="3" fill="none"/>
+    <rect x="40" y="230" width="320" height="120" rx="14" fill="#2a1828" stroke="#ff7a90" stroke-width="2"/>
+    <text x="60" y="265" font-family="PingFang SC, sans-serif" font-size="20" font-weight="800" fill="#ff7a90">① 攻击面如何长出</text>
+    <text x="60" y="293" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">AI 摘要功能 → 自动解码音频</text>
+    <text x="60" y="313" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">Google Messages = 0-click 平台</text>
+    <text x="60" y="333" font-family="PingFang SC, sans-serif" font-size="14" fill="#9cffd3">Dolby UDC blob 进入热路径</text>
+  </g>
+
+  <!-- 2. Dolby UDC -->
+  <g>
+    <path d="M780 555 Q 700 380 600 250" stroke="#ffd166" stroke-width="3" fill="none"/>
+    <rect x="440" y="80" width="320" height="160" rx="14" fill="#2a2418" stroke="#ffd166" stroke-width="2"/>
+    <text x="460" y="115" font-family="PingFang SC, sans-serif" font-size="20" font-weight="800" fill="#ffd166">② Dolby UDC (CVE-2025-54957)</text>
+    <text x="460" y="143" font-family="Menlo, monospace" font-size="14" fill="#e6ecff">syncframe → skipfld → EMDF</text>
+    <text x="460" y="163" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">skipl 取 9 bit，最大 0x1FF</text>
+    <text x="460" y="183" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">→ 越界写堆，绕过 stack guard</text>
+    <text x="460" y="203" font-family="PingFang SC, sans-serif" font-size="14" fill="#9cffd3">RET PAC 取代 -fstack-protector</text>
+    <text x="460" y="223" font-family="PingFang SC, sans-serif" font-size="14" fill="#9cffd3">改用 dap_cpdp_init 落地</text>
+  </g>
+
+  <!-- 3. VPU mmap bug（核心） -->
+  <g>
+    <path d="M1100 555 Q 1280 350 1480 220" stroke="#9cffd3" stroke-width="4" fill="none"/>
+    <rect x="1300" y="60" width="460" height="200" rx="14" fill="#0e2a26" stroke="#9cffd3" stroke-width="3"/>
+    <text x="1320" y="95" font-family="PingFang SC, sans-serif" font-size="22" font-weight="900" fill="#9cffd3">③ 圣杯漏洞：vpu_mmap()</text>
+    <text x="1320" y="125" font-family="Menlo, monospace" font-size="13" fill="#e6ecff">remap_pfn_range(vm, vm-&gt;vm_start,</text>
+    <text x="1320" y="143" font-family="Menlo, monospace" font-size="13" fill="#e6ecff">    pfn, vm-&gt;vm_end - vm-&gt;vm_start, ...);</text>
+    <text x="1320" y="170" font-family="PingFang SC, sans-serif" font-size="14" fill="#ff7a90">长度从未与 MMIO 寄存器区域对齐</text>
+    <text x="1320" y="190" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">用户态可映射任意物理页</text>
+    <text x="1320" y="210" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">物理 KASLR 在 Pixel 固定 →</text>
+    <text x="1320" y="230" font-family="PingFang SC, sans-serif" font-size="14" fill="#ffd166">已知 offset 直达内核 .text/.data</text>
+    <text x="1320" y="250" font-family="Menlo, monospace" font-size="13" fill="#9cffd3">"5 lines, less than a day"</text>
+  </g>
+
+  <!-- 4. 上下文：Pixel 9 链 -->
+  <g>
+    <path d="M740 660 Q 500 760 280 850" stroke="#7a8aff" stroke-width="3" fill="none"/>
+    <rect x="40" y="780" width="320" height="170" rx="14" fill="#181d35" stroke="#7a8aff" stroke-width="2"/>
+    <text x="60" y="815" font-family="PingFang SC, sans-serif" font-size="20" font-weight="800" fill="#7a8aff">④ 与 Pixel 9 链的对照</text>
+    <text x="60" y="843" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">Part 1：Dolby 越界写</text>
+    <text x="60" y="863" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">Part 2：BigWave LPE</text>
+    <text x="60" y="883" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">Part 3：缓解建议</text>
+    <text x="60" y="903" font-family="PingFang SC, sans-serif" font-size="14" fill="#ff7a90">Pixel 10 抹掉 BigWave，</text>
+    <text x="60" y="923" font-family="PingFang SC, sans-serif" font-size="14" fill="#ff7a90">却把 VPU 暴露得更深</text>
+  </g>
+
+  <!-- 5. 修复政策 -->
+  <g>
+    <path d="M1080 660 Q 1260 800 1480 880" stroke="#ffb86b" stroke-width="3" fill="none"/>
+    <rect x="1340" y="800" width="420" height="180" rx="14" fill="#26221a" stroke="#ffb86b" stroke-width="2"/>
+    <text x="1360" y="835" font-family="PingFang SC, sans-serif" font-size="20" font-weight="800" fill="#ffb86b">⑤ Triage / 响应政策的进步</text>
+    <text x="1360" y="865" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">2025-11-24 报告 → 71 天后修复</text>
+    <text x="1360" y="885" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">Android VRP 评级：<tspan fill="#ffb86b" font-weight="700">High</tspan></text>
+    <text x="1360" y="905" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">BigWave 同等影响仅评 Moderate</text>
+    <text x="1360" y="925" font-family="PingFang SC, sans-serif" font-size="14" fill="#9cffd3">"first Android driver bug</text>
+    <text x="1360" y="945" font-family="PingFang SC, sans-serif" font-size="14" fill="#9cffd3">patched within 90 days"</text>
+    <text x="1360" y="965" font-family="PingFang SC, sans-serif" font-size="14" fill="#ff7a90">→ 制度向漏洞类别看齐</text>
+  </g>
+
+  <!-- 6. AI 时代的隐含命题 -->
+  <g>
+    <path d="M900 690 Q 900 880 900 1010" stroke="#ff3860" stroke-width="3" fill="none"/>
+    <rect x="620" y="1010" width="560" height="160" rx="14" fill="#2c1018" stroke="#ff3860" stroke-width="2"/>
+    <text x="640" y="1045" font-family="PingFang SC, sans-serif" font-size="20" font-weight="900" fill="#ff3860">⑥ AI 时代的悖论</text>
+    <text x="640" y="1075" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">AI 转写让自动解码成默认行为 → 攻击面扩大</text>
+    <text x="640" y="1095" font-family="PingFang SC, sans-serif" font-size="14" fill="#e6ecff">2 小时人工审计 vs LLM 一次 prompt 命中同一 bug</text>
+    <text x="640" y="1115" font-family="PingFang SC, sans-serif" font-size="14" fill="#9cffd3">CVE 发布速度近年翻倍（4y → 2y 翻番）</text>
+    <text x="640" y="1135" font-family="PingFang SC, sans-serif" font-size="14" fill="#ffd166">驱动代码缺乏"系统级文化补丁"</text>
+    <text x="640" y="1155" font-family="PingFang SC, sans-serif" font-size="14" fill="#ff7a90">→ 厂商需主动 audit，不是被动 patch</text>
+  </g>
+
+  <!-- 角注 -->
+  <text x="40" y="40" font-family="Menlo, monospace" font-size="14" fill="#5b6379">好文共赏 · 思维导图 / Mind Map</text>
+  <text x="1760" y="40" text-anchor="end" font-family="Menlo, monospace" font-size="14" fill="#5b6379">Project Zero · Pixel 10 0-click</text>
+  <text x="40" y="1180" font-family="Menlo, monospace" font-size="14" fill="#5b6379">Seth Jenkins × Jann Horn · 5 lines of code, less than a day</text>
+</svg>
