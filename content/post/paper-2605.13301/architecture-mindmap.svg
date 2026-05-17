@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bgm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="goldm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgm)"/>
+
+  <!-- title -->
+  <text x="700" y="46" text-anchor="middle" fill="#f1f5f9" font-size="26" font-weight="800">SU-01 训练-推理总览思维导图</text>
+  <text x="700" y="74" text-anchor="middle" fill="#94a3b8" font-size="14">P1-30B-A3B  ─▶  340K 轨迹 SFT  ─▶  200 步两阶段 RL  ─▶  10× 并发 TTS  ─▶  IMO 35/42 · USAMO 35/42</text>
+
+  <!-- root -->
+  <g transform="translate(620,110)">
+    <rect width="160" height="60" rx="30" fill="url(#goldm)"/>
+    <text x="80" y="28" text-anchor="middle" fill="#1e293b" font-size="18" font-weight="800">SU-01</text>
+    <text x="80" y="48" text-anchor="middle" fill="#1e293b" font-size="11">30B-total · A3B-active MoE</text>
+  </g>
+
+  <!-- backbone box -->
+  <g transform="translate(40,210)">
+    <rect width="260" height="160" rx="14" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <text x="20" y="30" fill="#fbbf24" font-size="15" font-weight="700">骨架 Backbone</text>
+    <text x="20" y="56" fill="#e2e8f0" font-size="13">• 初始化 P1-30B-A3B</text>
+    <text x="20" y="76" fill="#e2e8f0" font-size="13">• MoE / 3B active</text>
+    <text x="20" y="96" fill="#e2e8f0" font-size="13">• 训练上下文 160K tok</text>
+    <text x="20" y="116" fill="#e2e8f0" font-size="13">• 推理上下文 ≤256K tok</text>
+    <text x="20" y="136" fill="#94a3b8" font-size="12" font-style="italic">RL 阶段冻结路由器</text>
+  </g>
+
+  <!-- SFT -->
+  <g transform="translate(340,210)">
+    <rect width="280" height="160" rx="14" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="30" fill="#22d3ee" font-size="15" font-weight="700">① SFT · 反向 PPL 课程</text>
+    <text x="20" y="56" fill="#e2e8f0" font-size="13">• 338K 轨迹 (≤8K tok)</text>
+    <text x="20" y="76" fill="#e2e8f0" font-size="13">• 教师 DeepSeek-V3.2-Speciale</text>
+    <text x="20" y="96" fill="#e2e8f0" font-size="13">• 高 PPL 先, 低 PPL 后</text>
+    <text x="20" y="116" fill="#e2e8f0" font-size="13">• Self-Verify 89.5K + Self-Refine 65.2K</text>
+    <text x="20" y="136" fill="#94a3b8" font-size="12" font-style="italic">截断率 &lt;5% 视为收敛</text>
+  </g>
+
+  <!-- Coarse RL -->
+  <g transform="translate(660,210)">
+    <rect width="280" height="160" rx="14" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="30" fill="#22d3ee" font-size="15" font-weight="700">② Coarse RL · RLVR</text>
+    <text x="20" y="56" fill="#e2e8f0" font-size="13">• 8,967 verifiable prompts</text>
+    <text x="20" y="76" fill="#e2e8f0" font-size="13">• 96 步 / K=8 rollout</text>
+    <text x="20" y="96" fill="#e2e8f0" font-size="13">• GSPO 序列级裁剪</text>
+    <text x="20" y="116" fill="#e2e8f0" font-size="13">• 三层 verifier 级联</text>
+    <text x="20" y="136" fill="#94a3b8" font-size="12" font-style="italic">恢复答题力 (+17.4 Answer)</text>
+  </g>
+
+  <!-- Refined RL -->
+  <g transform="translate(980,210)">
+    <rect width="300" height="160" rx="14" fill="#1e293b" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="30" fill="#22d3ee" font-size="15" font-weight="700">③ Refined Proof RL</text>
+    <text x="20" y="56" fill="#e2e8f0" font-size="13">• 16,287 证明题 + OPC</text>
+    <text x="20" y="76" fill="#e2e8f0" font-size="13">• 104 步 / DeepSeekMath-V2 judge</text>
+    <text x="20" y="96" fill="#e2e8f0" font-size="13">• 重放 ρ=0.25, 0&lt;n⁺&lt;2</text>
+    <text x="20" y="116" fill="#e2e8f0" font-size="13">• 自精修 η_ref=0.20</text>
+    <text x="20" y="136" fill="#94a3b8" font-size="12" font-style="italic">攻 Advanced (+12.9)</text>
+  </g>
+
+  <!-- Connecting lines from SU-01 to stages -->
+  <g stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+    <path d="M700,170 C 700,190 170,180 170,210"/>
+    <path d="M700,170 C 700,190 480,180 480,210"/>
+    <path d="M700,170 C 700,190 800,180 800,210"/>
+    <path d="M700,170 C 700,190 1130,180 1130,210"/>
+  </g>
+
+  <!-- TTS row -->
+  <g transform="translate(140,420)">
+    <rect width="1120" height="180" rx="14" fill="#0f172a" stroke="url(#goldm)" stroke-width="2.5"/>
+    <text x="24" y="34" fill="#fbbf24" font-size="16" font-weight="800">④ Test-Time Scaling: Solve · Verify · Refine 循环</text>
+    <!-- 4 inner blocks -->
+    <g transform="translate(24,54)">
+      <rect width="240" height="100" rx="10" fill="#1e293b" stroke="#64748b"/>
+      <text x="14" y="24" fill="#e2e8f0" font-size="13" font-weight="700">Solver</text>
+      <text x="14" y="46" fill="#cbd5e1" font-size="12">初始证明草稿</text>
+      <text x="14" y="64" fill="#94a3b8" font-size="11">中位 106K tok / 提示偏证明非答案</text>
+      <text x="14" y="84" fill="#94a3b8" font-size="11">T=1.0, top-p=0.95</text>
+    </g>
+    <g transform="translate(280,54)">
+      <rect width="240" height="100" rx="10" fill="#1e293b" stroke="#64748b"/>
+      <text x="14" y="24" fill="#e2e8f0" font-size="13" font-weight="700">Refiner</text>
+      <text x="14" y="46" fill="#cbd5e1" font-size="12">重审 + 修复弱步骤</text>
+      <text x="14" y="64" fill="#94a3b8" font-size="11">中位 83K tok</text>
+      <text x="14" y="84" fill="#94a3b8" font-size="11">继承 Self-Refine 模板</text>
+    </g>
+    <g transform="translate(536,54)">
+      <rect width="240" height="100" rx="10" fill="#1e293b" stroke="#64748b"/>
+      <text x="14" y="24" fill="#e2e8f0" font-size="13" font-weight="700">Verifier</text>
+      <text x="14" y="46" fill="#cbd5e1" font-size="12">结构化错误报告</text>
+      <text x="14" y="64" fill="#94a3b8" font-size="11">中位 28.7K tok</text>
+      <text x="14" y="84" fill="#94a3b8" font-size="11">关键错 / 严重 / 轻微</text>
+    </g>
+    <g transform="translate(792,54)">
+      <rect width="304" height="100" rx="10" fill="#1e293b" stroke="url(#goldm)" stroke-width="1.5"/>
+      <text x="14" y="24" fill="#fbbf24" font-size="13" font-weight="700">Verdict 控制器</text>
+      <text x="14" y="46" fill="#cbd5e1" font-size="12">5×✓ 连续通过 → Accept</text>
+      <text x="14" y="64" fill="#cbd5e1" font-size="12">10×✗ 连续失败 → Stop</text>
+      <text x="14" y="84" fill="#cbd5e1" font-size="12">否则 → Refine; 最多 30 轮 / 10 并发</text>
+    </g>
+    <!-- loop arrows -->
+    <g stroke="#fbbf24" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+      <path d="M264,104 L280,104"/>
+      <path d="M520,104 L536,104"/>
+      <path d="M776,104 L792,104"/>
+      <path d="M944,154 C 944,170 250,170 250,154"/>
+    </g>
+  </g>
+
+  <!-- Results panel -->
+  <g transform="translate(40,640)">
+    <rect width="640" height="220" rx="14" fill="#1e293b" stroke="#475569"/>
+    <text x="20" y="30" fill="#f1f5f9" font-size="16" font-weight="700">📊 关键成绩 (SU-01 + TTS)</text>
+    <g font-size="13" fill="#e2e8f0">
+      <text x="20" y="60">IMO-ProofBench Overall</text><text x="280" y="60" fill="#fbbf24" font-weight="700">70.2</text><text x="380" y="60" fill="#94a3b8">超越 Gemini-2.5-DeepThink (60.7)</text>
+      <text x="20" y="88">IMO 2025 (满分 42)</text><text x="280" y="88" fill="#fbbf24" font-weight="700">35 🏅 金</text><text x="380" y="88" fill="#94a3b8">金线 35</text>
+      <text x="20" y="116">USAMO 2026 (满分 42)</text><text x="280" y="116" fill="#fbbf24" font-weight="700">35 🏅 金</text><text x="380" y="116" fill="#94a3b8">340 人最高分</text>
+      <text x="20" y="144">IPhO 2024</text><text x="280" y="144" fill="#fbbf24" font-weight="700">25.3 🏅</text><text x="380" y="144" fill="#94a3b8">金线 20.8</text>
+      <text x="20" y="172">IPhO 2025</text><text x="280" y="172" fill="#fbbf24" font-weight="700">21.7 🏅</text><text x="380" y="172" fill="#94a3b8">金线 19.7</text>
+      <text x="20" y="200">AIME 2025/26</text><text x="280" y="200" fill="#fbbf24" font-weight="700">94.6 / 93.3</text><text x="380" y="200" fill="#94a3b8">同级最佳</text>
+    </g>
+  </g>
+
+  <!-- Datasets / engineering -->
+  <g transform="translate(720,640)">
+    <rect width="640" height="220" rx="14" fill="#1e293b" stroke="#475569"/>
+    <text x="20" y="30" fill="#f1f5f9" font-size="16" font-weight="700">⚙️ 训练 & 工程要素</text>
+    <g font-size="13" fill="#e2e8f0">
+      <text x="20" y="60">SFT 数据组合</text><text x="280" y="60" fill="#22d3ee">数学 71.8K · 科学 62.9K · 代码 30.2K · IF 18.8K</text>
+      <text x="20" y="88">自改进数据</text><text x="280" y="88" fill="#22d3ee">Self-Verify 89.5K + Self-Refine 65.2K</text>
+      <text x="20" y="116">SFT 资源</text><text x="280" y="116" fill="#22d3ee">8 GPU · 4 epoch · lr 1e-5</text>
+      <text x="20" y="144">RL 资源</text><text x="280" y="144" fill="#22d3ee">64 GPU · 200 步 · K=8 rollout</text>
+      <text x="20" y="172">Verifier 三层</text><text x="280" y="172" fill="#22d3ee">规则 → Math-Verify → gpt-oss-120b</text>
+      <text x="20" y="200">推理后端</text><text x="280" y="200" fill="#22d3ee">SGLang · EAGLE-MTP 投机解码</text>
+    </g>
+  </g>
+</svg>

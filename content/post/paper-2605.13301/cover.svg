@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1d3a"/>
+      <stop offset="55%" stop-color="#142457"/>
+      <stop offset="100%" stop-color="#3a1259"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffe082"/>
+      <stop offset="50%" stop-color="#ffc107"/>
+      <stop offset="100%" stop-color="#ff8f00"/>
+    </linearGradient>
+    <linearGradient id="bar1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="bar2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle math grid -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1">
+    <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200 M0 500 H1200"/>
+    <path d="M100 0 V630 M200 0 V630 M300 0 V630 M400 0 V630 M500 0 V630 M600 0 V630 M700 0 V630 M800 0 V630 M900 0 V630 M1000 0 V630 M1100 0 V630"/>
+  </g>
+
+  <!-- background formula watermark -->
+  <text x="60" y="540" font-size="42" fill="#ffffff" fill-opacity="0.06" font-family="Cambria Math, 'Latin Modern Math', serif">
+    π_θ ← arg max  E[ Â · clip(s, 1−ε, 1+ε) ]
+  </text>
+  <text x="80" y="160" font-size="32" fill="#ffffff" fill-opacity="0.05" font-family="Cambria Math, serif">
+    PPL(x,y) = exp(−1/T · Σ log π₀(yₜ | y&lt;ₜ))
+  </text>
+
+  <!-- Top tag -->
+  <g transform="translate(60,60)">
+    <rect width="240" height="36" rx="18" fill="url(#gold)"/>
+    <text x="120" y="24" text-anchor="middle" fill="#0b1d3a" font-size="16" font-weight="700">🏅 PAPER PICK · 好文共赏</text>
+  </g>
+  <text x="60" y="140" fill="#ffffff" font-size="44" font-weight="800">SU-01: 30B-A3B 拿下 IMO/USAMO 金牌</text>
+  <text x="60" y="186" fill="#cbd5e1" font-size="22" font-weight="500">一份从 SFT → 两阶段 RL → 推理时验证-修正 的统一配方</text>
+  <text x="60" y="216" fill="#94a3b8" font-size="15">arXiv 2605.13301 · 上海AI实验室 / CUHK / 清华 · 多模评分 8.67/10</text>
+
+  <!-- benchmark bars -->
+  <g transform="translate(60,260)">
+    <text x="0" y="0" fill="#e2e8f0" font-size="16" font-weight="600">IMO-ProofBench Overall (%)</text>
+
+    <g transform="translate(0,30)">
+      <text x="0" y="14" fill="#94a3b8" font-size="13" text-anchor="end" transform="translate(170,0)">P1-30B-A3B (起点)</text>
+      <rect x="180" y="0" width="60" height="22" rx="3" fill="url(#bar2)"/>
+      <text x="248" y="16" fill="#cbd5e1" font-size="13">20.0</text>
+    </g>
+    <g transform="translate(0,62)">
+      <text x="170" y="14" fill="#94a3b8" font-size="13" text-anchor="end">+ SFT</text>
+      <rect x="180" y="0" width="108" height="22" rx="3" fill="url(#bar2)"/>
+      <text x="296" y="16" fill="#cbd5e1" font-size="13">36.2</text>
+    </g>
+    <g transform="translate(0,94)">
+      <text x="170" y="14" fill="#94a3b8" font-size="13" text-anchor="end">+ Coarse RL</text>
+      <rect x="180" y="0" width="153" height="22" rx="3" fill="url(#bar2)"/>
+      <text x="341" y="16" fill="#cbd5e1" font-size="13">51.0</text>
+    </g>
+    <g transform="translate(0,126)">
+      <text x="170" y="14" fill="#94a3b8" font-size="13" text-anchor="end">+ Proof RL (= SU-01)</text>
+      <rect x="180" y="0" width="173" height="22" rx="3" fill="url(#bar1)"/>
+      <text x="361" y="16" fill="#cbd5e1" font-size="13">57.6</text>
+    </g>
+    <g transform="translate(0,158)">
+      <text x="170" y="14" fill="#ffe082" font-size="13" text-anchor="end" font-weight="700">+ TTS</text>
+      <rect x="180" y="0" width="211" height="22" rx="3" fill="url(#gold)"/>
+      <text x="399" y="16" fill="#ffe082" font-size="13" font-weight="700">70.2 🏅</text>
+    </g>
+    <g transform="translate(0,200)">
+      <text x="170" y="14" fill="#94a3b8" font-size="13" text-anchor="end">Gemini 3.1 Pro Thinking</text>
+      <rect x="180" y="0" width="218" height="22" rx="3" fill="#475569"/>
+      <text x="406" y="16" fill="#94a3b8" font-size="13">72.6</text>
+    </g>
+    <g transform="translate(0,232)">
+      <text x="170" y="14" fill="#94a3b8" font-size="13" text-anchor="end">GPT-5.5-High</text>
+      <rect x="180" y="0" width="242" height="22" rx="3" fill="#475569"/>
+      <text x="430" y="16" fill="#94a3b8" font-size="13">80.7</text>
+    </g>
+  </g>
+
+  <!-- Right column: pipeline -->
+  <g transform="translate(650,260)">
+    <text x="0" y="0" fill="#e2e8f0" font-size="16" font-weight="600">统一配方 / Pipeline</text>
+
+    <g transform="translate(0,20)">
+      <rect width="480" height="58" rx="10" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="20" y="26" fill="#22d3ee" font-size="14" font-weight="700">① Reverse-PPL Curriculum SFT</text>
+      <text x="20" y="48" fill="#cbd5e1" font-size="12">340K 轨迹 · 难者先教 · 灌注 self-verify / self-refine</text>
+    </g>
+    <g transform="translate(0,90)">
+      <rect width="480" height="58" rx="10" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="20" y="26" fill="#22d3ee" font-size="14" font-weight="700">② Coarse RL (RLVR · GSPO)</text>
+      <text x="20" y="48" fill="#cbd5e1" font-size="12">8.97K 题 · 答案二值奖励 · 96 步 · MoE 路由冻结</text>
+    </g>
+    <g transform="translate(0,160)">
+      <rect width="480" height="58" rx="10" fill="#1e293b" stroke="#22d3ee" stroke-width="1.5"/>
+      <text x="20" y="26" fill="#22d3ee" font-size="14" font-weight="700">③ Refined Proof RL</text>
+      <text x="20" y="48" fill="#cbd5e1" font-size="12">16.29K 证明题 · DeepSeekMath-V2 生成式判官 · 104 步 · 重放+自精修</text>
+    </g>
+    <g transform="translate(0,230)">
+      <rect width="480" height="58" rx="10" fill="#0f172a" stroke="url(#gold)" stroke-width="2"/>
+      <text x="20" y="26" fill="#ffe082" font-size="14" font-weight="700">④ Test-Time: Solve → Verify → Refine</text>
+      <text x="20" y="48" fill="#fde68a" font-size="12">5×✓ 接受 · 10×✗ 早停 · 30 轮内 · 10 并发 · &gt;100K tokens 轨迹</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <line x1="60" y1="585" x2="1140" y2="585" stroke="#ffffff" stroke-opacity="0.18"/>
+  <text x="60" y="612" fill="#94a3b8" font-size="13">谢家芸 · 好文共赏 · xiejiayun.github.io</text>
+  <text x="1140" y="612" text-anchor="end" fill="#94a3b8" font-size="13">arxiv.org/abs/2605.13301 · 2026-05-17</text>
+</svg>
