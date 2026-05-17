@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080d1c"/>
+      <stop offset="100%" stop-color="#161b34"/>
+    </linearGradient>
+    <linearGradient id="root" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5e6c"/>
+      <stop offset="100%" stop-color="#ff9966"/>
+    </linearGradient>
+    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c8cff"/>
+      <stop offset="100%" stop-color="#5ad1ff"/>
+    </linearGradient>
+    <linearGradient id="b2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ffa552"/>
+    </linearGradient>
+    <linearGradient id="b3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7be495"/>
+      <stop offset="100%" stop-color="#56c596"/>
+    </linearGradient>
+    <linearGradient id="b4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#e879f9"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 100 H1600 M0 200 H1600 M0 300 H1600 M0 400 H1600 M0 500 H1600 M0 600 H1600 M0 700 H1600 M0 800 H1600 M0 900 H1600"/>
+    <path d="M200 0 V1000 M400 0 V1000 M600 0 V1000 M800 0 V1000 M1000 0 V1000 M1200 0 V1000 M1400 0 V1000"/>
+  </g>
+
+  <text x="40" y="50" font-family="'Segoe UI', sans-serif" font-size="20" fill="#9aa3c7" letter-spacing="4">MINDMAP · CTF Scene Collapse</text>
+
+  <!-- Center node -->
+  <g transform="translate(800,500)" filter="url(#glow)">
+    <circle cx="0" cy="0" r="90" fill="url(#root)"/>
+    <text x="0" y="-6" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="22" font-weight="700" fill="#fff">CTF 阶梯坍塌</text>
+    <text x="0" y="24" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="16" fill="#fff">Kabir Acharya 2026-05-01</text>
+  </g>
+
+  <!-- Branch 1: 触发因（左上） -->
+  <g stroke="url(#b1)" stroke-width="3" fill="none" opacity="0.7">
+    <path d="M740 460 C 550 380, 380 280, 240 200"/>
+  </g>
+  <g transform="translate(240,180)">
+    <rect x="-180" y="-30" width="360" height="60" rx="14" fill="#1a2340" stroke="#7c8cff"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="600" fill="#cdd3ee">触发因：模型能力跃迁</text>
+  </g>
+  <g font-family="'PingFang SC', sans-serif" font-size="14" fill="#cdd3ee">
+    <text x="80" y="260">• GPT-4 (2023): medium one-shot</text>
+    <text x="80" y="285">• Opus 4.5: agent harness × CTFd API</text>
+    <text x="80" y="310">• GPT-5.5 Pro: HackTheBox Insane one-shot</text>
+    <text x="80" y="335">• alias1 等垂类模型边际优势消失</text>
+  </g>
+
+  <!-- Branch 2: 第一阶后果（右上） -->
+  <g stroke="url(#b2)" stroke-width="3" fill="none" opacity="0.7">
+    <path d="M860 460 C 1050 380, 1220 280, 1360 200"/>
+  </g>
+  <g transform="translate(1360,180)">
+    <rect x="-180" y="-30" width="360" height="60" rx="14" fill="#2a1d10" stroke="#ffa552"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="600" fill="#ffd166">第一阶后果：榜单失效</text>
+  </g>
+  <g font-family="'PingFang SC', sans-serif" font-size="14" fill="#ffe2b2">
+    <text x="1200" y="260">• CTFtime 排名变成 token 钱包排名</text>
+    <text x="1200" y="285">• 顶级队伍 TheHackersCrew 减员/退出</text>
+    <text x="1200" y="310">• Plaid CTF 等老牌赛停办</text>
+    <text x="1200" y="335">• "pay-to-win" 成为字面事实</text>
+  </g>
+
+  <!-- Branch 3: 第二阶后果 — 阶梯断裂（左下） -->
+  <g stroke="url(#b3)" stroke-width="3" fill="none" opacity="0.7">
+    <path d="M740 540 C 550 620, 380 720, 240 820"/>
+  </g>
+  <g transform="translate(240,820)">
+    <rect x="-180" y="-30" width="360" height="60" rx="14" fill="#0e2419" stroke="#56c596"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="600" fill="#7be495">阶梯断裂：人才管道</text>
+  </g>
+  <g font-family="'PingFang SC', sans-serif" font-size="14" fill="#c9efd9">
+    <text x="80" y="880">• 初学者被迫先用 AI，直觉无法建立</text>
+    <text x="80" y="905">• 出题人退出（中难度题不再有意义）</text>
+    <text x="80" y="930">• picoGym → 中段 → 高段链条断裂</text>
+    <text x="80" y="955">• 招聘信号污染：CTF 名次 ≠ 安全技能</text>
+  </g>
+
+  <!-- Branch 4: 出路（右下） -->
+  <g stroke="url(#b4)" stroke-width="3" fill="none" opacity="0.7">
+    <path d="M860 540 C 1050 620, 1220 720, 1360 820"/>
+  </g>
+  <g transform="translate(1360,820)">
+    <rect x="-180" y="-30" width="360" height="60" rx="14" fill="#251030" stroke="#c084fc"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="600" fill="#e9b8ff">出路：返祖 / 线下化</text>
+  </g>
+  <g font-family="'PingFang SC', sans-serif" font-size="14" fill="#e9d4f7">
+    <text x="1200" y="880">• 学习平台代替竞赛端做训练场</text>
+    <text x="1200" y="905">• SecTalks / 学生会 / 本地 meetup</text>
+    <text x="1200" y="930">• DEF CON Final 等闭门赛保留少量功能</text>
+    <text x="1200" y="955">• 招聘转向项目 / CVE / 现场无网络面试</text>
+  </g>
+
+  <!-- footer note -->
+  <text x="800" y="980" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="14" fill="#7d85a7">原文 18 分钟 · HN 408 分 / 436 评论 · 多模评分 8.9/10</text>
+</svg>
