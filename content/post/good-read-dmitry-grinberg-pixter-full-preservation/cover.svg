@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c0f1a"/>
+      <stop offset="0.55" stop-color="#1a1428"/>
+      <stop offset="1" stop-color="#241228"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1b1a"/>
+      <stop offset="1" stop-color="#08110f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0" stop-color="#ff6b9d" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ff6b9d" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="900" cy="320" r="380" fill="url(#glow)"/>
+
+  <!-- Label -->
+  <g transform="translate(72,80)">
+    <rect x="0" y="0" width="170" height="38" rx="6" fill="#ff6b9d" fill-opacity="0.12" stroke="#ff6b9d" stroke-width="1"/>
+    <text x="85" y="25" font-family="ui-sans-serif, system-ui, -apple-system, 'PingFang SC'" font-size="16" fill="#ff9bc0" text-anchor="middle" letter-spacing="2">好文共赏</text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(72,160)">
+    <text font-family="ui-sans-serif, system-ui, 'PingFang SC'" font-size="56" fill="#ffffff" font-weight="700">
+      <tspan x="0" y="0">把童年盲盒一颗颗剥光</tspan>
+    </text>
+    <text font-family="ui-sans-serif, system-ui, 'PingFang SC'" font-size="32" fill="#ffd6e8" font-weight="500" opacity="0.95">
+      <tspan x="0" y="62">Dmitry Grinberg · Pixter Full Preservation</tspan>
+    </text>
+    <text font-family="ui-sans-serif, system-ui, 'PingFang SC'" font-size="22" fill="#c5c9d8" opacity="0.85">
+      <tspan x="0" y="108">41,000 字 · 三套自创 VM · 两条总线 · 两颗 SoC · 一段抢救出来的工业历史</tspan>
+    </text>
+  </g>
+
+  <!-- Tag pills -->
+  <g transform="translate(72,360)" font-family="ui-sans-serif, system-ui, 'PingFang SC'" font-size="15" fill="#9fb0c8">
+    <g>
+      <rect x="0" y="0" width="156" height="34" rx="17" fill="#1d2540" stroke="#3a4677" stroke-width="1"/>
+      <text x="78" y="22" text-anchor="middle">ARM7TDMI 最小化</text>
+    </g>
+    <g transform="translate(170,0)">
+      <rect x="0" y="0" width="138" height="34" rx="17" fill="#1d2540" stroke="#3a4677" stroke-width="1"/>
+      <text x="69" y="22" text-anchor="middle">栈式 16-bit VM</text>
+    </g>
+    <g transform="translate(322,0)">
+      <rect x="0" y="0" width="148" height="34" rx="17" fill="#1d2540" stroke="#3a4677" stroke-width="1"/>
+      <text x="74" y="22" text-anchor="middle">R-2R 8-bit DAC</text>
+    </g>
+    <g transform="translate(484,0)">
+      <rect x="0" y="0" width="138" height="34" rx="17" fill="#1d2540" stroke="#3a4677" stroke-width="1"/>
+      <text x="69" y="22" text-anchor="middle">BEX 链式总线</text>
+    </g>
+    <g transform="translate(636,0)">
+      <rect x="0" y="0" width="146" height="34" rx="17" fill="#1d2540" stroke="#3a4677" stroke-width="1"/>
+      <text x="73" y="22" text-anchor="middle">数字保存 / 考古</text>
+    </g>
+  </g>
+
+  <!-- Decorative Pixter device representation -->
+  <g transform="translate(800,180)">
+    <!-- device body -->
+    <rect x="0" y="0" width="280" height="320" rx="22" fill="#2a1a2a" stroke="#4a2a4a" stroke-width="2"/>
+    <rect x="20" y="22" width="240" height="180" rx="6" fill="url(#screen)" stroke="#1a3030" stroke-width="2"/>
+    <!-- screen "pixels" -->
+    <g fill="#5edbb0" opacity="0.85">
+      <rect x="40" y="44" width="8" height="8"/>
+      <rect x="58" y="44" width="8" height="8"/>
+      <rect x="76" y="44" width="8" height="8"/>
+      <rect x="58" y="62" width="8" height="8"/>
+      <rect x="76" y="62" width="8" height="8"/>
+      <rect x="94" y="62" width="8" height="8"/>
+      <rect x="40" y="80" width="8" height="8"/>
+      <rect x="94" y="80" width="8" height="8"/>
+      <rect x="76" y="98" width="8" height="8"/>
+    </g>
+    <g fill="#ff9bc0" opacity="0.85">
+      <rect x="160" y="80" width="8" height="8"/>
+      <rect x="178" y="80" width="8" height="8"/>
+      <rect x="196" y="80" width="8" height="8"/>
+      <rect x="178" y="98" width="8" height="8"/>
+      <rect x="196" y="98" width="8" height="8"/>
+      <rect x="178" y="116" width="8" height="8"/>
+      <rect x="160" y="134" width="8" height="8"/>
+      <rect x="178" y="134" width="8" height="8"/>
+      <rect x="196" y="134" width="8" height="8"/>
+    </g>
+    <g fill="#ffd06a" opacity="0.7">
+      <rect x="120" y="160" width="6" height="6"/>
+      <rect x="132" y="160" width="6" height="6"/>
+      <rect x="144" y="160" width="6" height="6"/>
+      <rect x="126" y="172" width="6" height="6"/>
+      <rect x="138" y="172" width="6" height="6"/>
+    </g>
+    <!-- buttons -->
+    <circle cx="60" cy="240" r="18" fill="#3a2238" stroke="#5a3a58" stroke-width="2"/>
+    <circle cx="220" cy="240" r="18" fill="#3a2238" stroke="#5a3a58" stroke-width="2"/>
+    <rect x="100" y="225" width="80" height="30" rx="14" fill="#3a2238" stroke="#5a3a58" stroke-width="2"/>
+    <!-- cart slot indicator -->
+    <rect x="60" y="280" width="160" height="18" rx="3" fill="#1a0a1a" stroke="#3a1a3a" stroke-width="1.5"/>
+    <text x="140" y="293" text-anchor="middle" font-family="monospace" font-size="9" fill="#7a5a78">CART · nCS2/nCS3</text>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(72,565)" font-family="ui-sans-serif, system-ui, 'PingFang SC'" font-size="15" fill="#7c8094">
+    <text x="0" y="0">xiejiayun.github.io · 2026-05-18 · dmitry.gr · Editor's Pick</text>
+  </g>
+</svg>

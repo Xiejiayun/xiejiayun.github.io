@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0d18"/>
+      <stop offset="1" stop-color="#1a1228"/>
+    </linearGradient>
+    <radialGradient id="center" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff6b9d" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ff6b9d" stop-opacity="0.15"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#mbg)"/>
+
+  <!-- Title -->
+  <text x="800" y="50" font-family="ui-sans-serif, 'PingFang SC'" font-size="26" fill="#ffffff" text-anchor="middle" font-weight="600">Pixter 完全保存 · 思维导图</text>
+  <text x="800" y="78" font-family="ui-sans-serif, 'PingFang SC'" font-size="15" fill="#9a9eb4" text-anchor="middle">Dmitry Grinberg · dmitry.gr · 2026-05-11</text>
+
+  <!-- Central node -->
+  <g>
+    <circle cx="800" cy="500" r="120" fill="url(#center)" stroke="#ff6b9d" stroke-width="2.5"/>
+    <text x="800" y="490" text-anchor="middle" font-family="ui-sans-serif, 'PingFang SC'" font-size="20" fill="#ffffff" font-weight="700">Pixter</text>
+    <text x="800" y="515" text-anchor="middle" font-family="ui-sans-serif, 'PingFang SC'" font-size="14" fill="#ffe2ee">Full Preservation</text>
+    <text x="800" y="535" text-anchor="middle" font-family="ui-sans-serif, 'PingFang SC'" font-size="11" fill="#bdb5c5">~41k words</text>
+  </g>
+
+  <!-- Branches: 6 main directions -->
+  <!-- Top-left: Pixter family -->
+  <g stroke="#7aa8ff" stroke-width="2.2" fill="none">
+    <path d="M 720 430 C 580 330, 380 230, 240 180"/>
+  </g>
+  <g transform="translate(80,130)">
+    <rect x="0" y="0" width="280" height="180" rx="14" fill="#1a2238" stroke="#7aa8ff" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#7aa8ff" font-weight="700">① Pixter 家族</text>
+    <text x="20" y="60" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#ccd2e4">• Classic (2000) · 80×80 单色</text>
+    <text x="20" y="80" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#ccd2e4">• Plus / 2.0 · 同核 + 红外</text>
+    <text x="20" y="100" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#ccd2e4">• Color (2003) · 160×160 ARM</text>
+    <text x="20" y="120" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#ccd2e4">• Multimedia (2005) · NAND</text>
+    <text x="20" y="140" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#ccd2e4">• Pocket · 一卡一机 + D-pad</text>
+    <text x="20" y="160" font-family="ui-sans-serif, 'PingFang SC'" font-size="12" fill="#8a90a8">25/32/9 款游戏</text>
+  </g>
+
+  <!-- Top: SoCs -->
+  <g stroke="#5edbb0" stroke-width="2.2" fill="none">
+    <path d="M 800 380 C 800 280, 780 200, 760 150"/>
+  </g>
+  <g transform="translate(600,80)">
+    <rect x="0" y="0" width="320" height="170" rx="14" fill="#142628" stroke="#5edbb0" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#5edbb0" font-weight="700">② 两颗 SoC</text>
+    <text x="20" y="58" font-family="monospace" font-size="13" fill="#d6f0e7">Sharp LH75411 · ARM7TDMI</text>
+    <text x="20" y="76" font-family="ui-sans-serif, 'PingFang SC'" font-size="12" fill="#9ec6b8">无 cache · 无 MMU · 无 MPU</text>
+    <text x="20" y="100" font-family="monospace" font-size="13" fill="#d6f0e7">Sharp LH79524 (Multimedia)</text>
+    <text x="20" y="118" font-family="ui-sans-serif, 'PingFang SC'" font-size="12" fill="#9ec6b8">SSP=I²S+SPI · TLV320DAC26</text>
+    <text x="20" y="142" font-family="monospace" font-size="13" fill="#d6f0e7">Sunplus SPL130A / SPL133A?</text>
+    <text x="20" y="158" font-family="ui-sans-serif, 'PingFang SC'" font-size="11" fill="#8aa6a0">6502 派系 · programming guide 失踪</text>
+  </g>
+
+  <!-- Top-right: VM -->
+  <g stroke="#ffd06a" stroke-width="2.2" fill="none">
+    <path d="M 880 430 C 1020 330, 1220 230, 1360 180"/>
+  </g>
+  <g transform="translate(1240,130)">
+    <rect x="0" y="0" width="280" height="190" rx="14" fill="#2a2210" stroke="#ffd06a" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#ffd06a" font-weight="700">③ 三套自创 VM</text>
+    <text x="20" y="58" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f5e9c8">• Color VM · 16-bit stack</text>
+    <text x="20" y="78" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f5e9c8">  12 大类 opcode · ~4 MIPS</text>
+    <text x="20" y="98" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f5e9c8">• Classic VM · 6502 衍生</text>
+    <text x="20" y="118" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f5e9c8">  ALU + SPECIAL ops</text>
+    <text x="20" y="138" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f5e9c8">• Multimedia VM · Color 扩展</text>
+    <text x="20" y="166" font-family="ui-sans-serif, 'PingFang SC'" font-size="11" fill="#b89e58">"Brutalism if it were software"</text>
+  </g>
+
+  <!-- Right: Bus -->
+  <g stroke="#ff9bc0" stroke-width="2.2" fill="none">
+    <path d="M 920 500 C 1080 500, 1240 500, 1360 500"/>
+  </g>
+  <g transform="translate(1240,420)">
+    <rect x="0" y="0" width="280" height="170" rx="14" fill="#2a1a28" stroke="#ff9bc0" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#ff9bc0" font-weight="700">④ 两条总线 + 卡接口</text>
+    <text x="20" y="58" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f3d2e2">• Color: 标准 x16 + nCS2/3</text>
+    <text x="20" y="78" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f3d2e2">• Classic: BEX 链式 (GPIO)</text>
+    <text x="20" y="98" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f3d2e2">  同条总线服务卡 + 存档 NOR</text>
+    <text x="20" y="118" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f3d2e2">• Multimedia: NAND</text>
+    <text x="20" y="138" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#f3d2e2">  CLE/ALE 接到 GPIO B6/B7</text>
+    <text x="20" y="158" font-family="ui-sans-serif, 'PingFang SC'" font-size="11" fill="#bd8aa8">AT29LV010 cart NOR 存档</text>
+  </g>
+
+  <!-- Bottom-right: cost-cut tricks -->
+  <g stroke="#c8a8ff" stroke-width="2.2" fill="none">
+    <path d="M 880 570 C 1020 670, 1220 770, 1360 820"/>
+  </g>
+  <g transform="translate(1240,770)">
+    <rect x="0" y="0" width="280" height="180" rx="14" fill="#211a32" stroke="#c8a8ff" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#c8a8ff" font-weight="700">⑤ 抠成本的硬件杂技</text>
+    <text x="20" y="58" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#e2d6f5">• 触摸屏：无 ADC</text>
+    <text x="20" y="78" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#e2d6f5">  → 8 GPIO + R-2R = 8-bit DAC</text>
+    <text x="20" y="98" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#e2d6f5">  + comparator 软逐次逼近</text>
+    <text x="20" y="118" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#e2d6f5">• 用 BJT 省 \$0.000001/件</text>
+    <text x="20" y="138" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#e2d6f5">• 音量旋钮 → ADC 输入</text>
+    <text x="20" y="158" font-family="ui-sans-serif, 'PingFang SC'" font-size="12" fill="#9e8ab8">"Fisher-Price = cost-cut kings"</text>
+  </g>
+
+  <!-- Bottom: Preservation -->
+  <g stroke="#ffaf6a" stroke-width="2.2" fill="none">
+    <path d="M 800 620 C 800 720, 780 820, 760 880"/>
+  </g>
+  <g transform="translate(600,820)">
+    <rect x="0" y="0" width="320" height="160" rx="14" fill="#2a1f10" stroke="#ffaf6a" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#ffaf6a" font-weight="700">⑥ 保存产物</text>
+    <text x="20" y="58" font-family="monospace" font-size="12" fill="#f4dabe">uARMpixter · uPixter (ARM emu)</text>
+    <text x="20" y="78" font-family="monospace" font-size="12" fill="#f4dabe">uM23 (6502 emu, Classic)</text>
+    <text x="20" y="98" font-family="monospace" font-size="12" fill="#f4dabe">ClassicDisasm / ColorDisasm</text>
+    <text x="20" y="118" font-family="monospace" font-size="12" fill="#f4dabe">PIXTER COLOR!!! / CLASSIC! 格式</text>
+    <text x="20" y="142" font-family="ui-sans-serif, 'PingFang SC'" font-size="12" fill="#c4a888">Internet Archive · Wikipedia</text>
+  </g>
+
+  <!-- Bottom-left: Methodology -->
+  <g stroke="#7fdbe8" stroke-width="2.2" fill="none">
+    <path d="M 720 570 C 580 670, 380 770, 240 820"/>
+  </g>
+  <g transform="translate(80,770)">
+    <rect x="0" y="0" width="280" height="180" rx="14" fill="#102628" stroke="#7fdbe8" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#7fdbe8" font-weight="700">⑦ 方法论</text>
+    <text x="20" y="58" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#cfe9ee">1. 黑色环氧 blob 推断</text>
+    <text x="20" y="78" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#cfe9ee">2. 用 Pi Pico 2 bit-bang dump</text>
+    <text x="20" y="98" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#cfe9ee">3. IDA Pro + chip-select 区段</text>
+    <text x="20" y="118" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#cfe9ee">4. VM 解码 → 模拟器</text>
+    <text x="20" y="138" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#cfe9ee">5. 自定义文件格式 + IA 上传</text>
+    <text x="20" y="160" font-family="ui-sans-serif, 'PingFang SC'" font-size="11" fill="#85b0b6">"Preservation, not RE"</text>
+  </g>
+
+  <!-- Left: Author -->
+  <g stroke="#b5b5b5" stroke-width="2.2" fill="none">
+    <path d="M 680 500 C 540 500, 380 500, 240 500"/>
+  </g>
+  <g transform="translate(80,420)">
+    <rect x="0" y="0" width="280" height="170" rx="14" fill="#1a1a22" stroke="#9090a0" stroke-width="1.8"/>
+    <text x="20" y="30" font-family="ui-sans-serif, 'PingFang SC'" font-size="17" fill="#cccccc" font-weight="700">⑧ Dmitry Grinberg</text>
+    <text x="20" y="58" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#d8d8e0">• 8-bit AVR 上跑 Linux</text>
+    <text x="20" y="78" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#d8d8e0">• Intel 4004 上跑 Linux</text>
+    <text x="20" y="98" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#d8d8e0">• RePalm — PalmOS-on-ARM</text>
+    <text x="20" y="118" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#d8d8e0">• 3 颗 8 引脚芯片的 Linux</text>
+    <text x="20" y="138" font-family="ui-sans-serif, 'PingFang SC'" font-size="13" fill="#d8d8e0">• 名片跑 Linux</text>
+    <text x="20" y="158" font-family="ui-sans-serif, 'PingFang SC'" font-size="11" fill="#9090a8">无 cache 时代的执念专家</text>
+  </g>
+
+</svg>
