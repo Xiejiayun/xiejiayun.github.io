@@ -1,6 +1,6 @@
 ---
 title: "【好文共赏】HCF 考古：Scott Robinson 把 1977 年 BYTE 上的那个玩笑指令，一路追到 2019 年的示波器和今天的 x86 模糊测试"
-description: "Scott Robinson 用一篇 1500 字的小品，把 'Halt and Catch Fire' 这条半神话指令的来龙去脉抖了出来——从 1964 年 IBM System/360 的程序员段子，到 1977 年 12 月 BYTE 杂志上 Gerry Wheeler 给 0x9D / 0xDD 起的代号，再到 Doc TB 2019 年在真实 6800 上用示波器看见的那条干净 500 kHz 方波，最后落到 F00F、UD2 和现代 CPU 模糊测试。这是写给所有"只看寄存器、不看硅片"的工程师的一份补课读物。"
+description: "Scott Robinson 用一篇 1500 字的小品，把 'Halt and Catch Fire' 这条半神话指令的来龙去脉抖了出来——从 1964 年 IBM System/360 的程序员段子，到 1977 年 12 月 BYTE 杂志上 Gerry Wheeler 给 0x9D / 0xDD 起的代号，再到 Doc TB 2019 年在真实 6800 上用示波器看见的那条干净 500 kHz 方波，最后落到 F00F、UD2 和现代 CPU 模糊测试。这是写给所有『只看寄存器、不看硅片』的工程师的一份补课读物。"
 date: 2026-05-18
 slug: "good-read-hcf-halt-and-catch-fire-history"
 image: "cover.svg"

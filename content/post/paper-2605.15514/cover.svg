@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#1a1f3a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="50%" stop-color="#feca57"/>
+      <stop offset="100%" stop-color="#48dbfb"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- decorative wave: RoPE product as random variable -->
+  <g opacity="0.25" stroke="url(#accent)" stroke-width="1.5" fill="none">
+    <path d="M 0 380 Q 50 320, 100 380 T 200 380 T 300 380 T 400 380 T 500 380 T 600 380 T 700 380 T 800 380 T 900 380 T 1000 380 T 1100 380 T 1200 380"/>
+    <path d="M 0 410 Q 30 340, 60 410 T 120 410 T 180 410 T 240 410 T 300 410 T 360 410 T 420 410 T 480 410 T 540 410 T 600 410 T 660 410 T 720 410 T 780 410 T 840 410 T 900 410 T 960 410 T 1020 410 T 1080 410 T 1140 410 T 1200 410"/>
+    <path d="M 0 450 Q 20 380, 40 450 T 80 450 T 120 450 T 160 450 T 200 450 T 240 450 T 280 450 T 320 450 T 360 450 T 400 450 T 440 450 T 480 450 T 520 450 T 560 450 T 600 450 T 640 450 T 680 450 T 720 450 T 760 450 T 800 450 T 840 450 T 880 450 T 920 450 T 960 450 T 1000 450 T 1040 450 T 1080 450 T 1120 450 T 1160 450 T 1200 450"/>
+  </g>
+
+  <!-- normal distribution overlay -->
+  <g opacity="0.18" fill="none" stroke="#48dbfb" stroke-width="2">
+    <path d="M 100 540 C 200 540, 250 460, 350 460 C 450 460, 500 540, 600 540"/>
+    <line x1="100" y1="540" x2="600" y2="540" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- big title -->
+  <text x="60" y="120" fill="#feca57" font-size="32" font-weight="700">📐 arXiv 2605.15514</text>
+  <text x="60" y="200" fill="#ffffff" font-size="58" font-weight="800">RoPE 在长上下文里</text>
+  <text x="60" y="270" fill="#ffffff" font-size="58" font-weight="800">既不分位置 也不分 token</text>
+
+  <text x="60" y="320" fill="#ff6b6b" font-size="24" font-weight="600">— 可证明 Provably —</text>
+
+  <!-- subtitle: 4 failure modes -->
+  <g font-size="20" fill="#a4b0be">
+    <text x="60" y="510">▸ 位置反转 Position Inversion · Pr → 0.5</text>
+    <text x="60" y="540">▸ 位置混叠 Position Aliasing · Pr → 1</text>
+    <text x="60" y="570">▸ Token 反转 Token Inversion · Pr → 0.5</text>
+    <text x="60" y="600">▸ Token 混叠 Token Aliasing · 数量随 M 上升</text>
+  </g>
+
+  <!-- right side stats -->
+  <g transform="translate(820, 100)">
+    <rect x="0" y="0" width="320" height="380" rx="14" fill="#ffffff" opacity="0.05" stroke="#48dbfb" stroke-width="1.5"/>
+    <text x="20" y="36" fill="#48dbfb" font-size="18" font-weight="600">⚙️ 多模型评分</text>
+
+    <text x="20" y="80" fill="#ffffff" font-size="14">突破性 Breakthrough</text>
+    <text x="270" y="80" fill="#feca57" font-size="14" text-anchor="end" font-weight="700">8.3 / 10</text>
+
+    <text x="20" y="120" fill="#ffffff" font-size="14">严谨性 Rigor</text>
+    <text x="270" y="120" fill="#feca57" font-size="14" text-anchor="end" font-weight="700">9.0 / 10</text>
+
+    <text x="20" y="160" fill="#ffffff" font-size="14">可复现性 Reproducibility</text>
+    <text x="270" y="160" fill="#feca57" font-size="14" text-anchor="end" font-weight="700">8.3 / 10</text>
+
+    <text x="20" y="200" fill="#ffffff" font-size="14">影响力 Impact</text>
+    <text x="270" y="200" fill="#feca57" font-size="14" text-anchor="end" font-weight="700">9.0 / 10</text>
+
+    <line x1="20" y1="220" x2="300" y2="220" stroke="#48dbfb" stroke-opacity="0.4"/>
+
+    <text x="20" y="260" fill="#48dbfb" font-size="22" font-weight="800">综合 8.67 / 10</text>
+    <text x="20" y="290" fill="#a4b0be" font-size="13">Opus 9.0 · Sonnet 8.5 · Gemini 8.5</text>
+
+    <text x="20" y="335" fill="#ff6b6b" font-size="13" font-weight="600">📊 候选池：298 篇 / 30min 扫描</text>
+    <text x="20" y="360" fill="#ff6b6b" font-size="13" font-weight="600">✅ 唯一过 8.5 线的论文</text>
+  </g>
+
+  <!-- bottom footer -->
+  <text x="60" y="610" fill="#576574" font-size="14">Hermes Agent · 好文共赏 · 论文导读 | 2026-05-18</text>
+</svg>
