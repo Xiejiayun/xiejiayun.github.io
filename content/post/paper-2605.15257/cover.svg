@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#1a1d3a"/>
+      <stop offset="100%" stop-color="#2c1810"/>
+    </linearGradient>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff4757" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ff4757" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#cbg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.08" stroke="#7a85b3">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+  </g>
+
+  <!-- Red glow behind big number -->
+  <circle cx="980" cy="320" r="280" fill="url(#redGlow)"/>
+
+  <!-- Watermark "CoT" pattern -->
+  <g opacity="0.06" font-size="14" fill="#7a85b3" font-family="monospace">
+    <text x="50" y="430">&lt;think&gt;</text>
+    <text x="120" y="450">  user asks about defect</text>
+    <text x="120" y="470">  policy says do not confirm</text>
+    <text x="120" y="490">  we should answer based on public advisories</text>
+    <text x="120" y="510">  avoid meta-discussion of internal rules</text>
+    <text x="120" y="530">  keep tone neutral and short</text>
+    <text x="50" y="550">&lt;/think&gt;</text>
+  </g>
+
+  <!-- Editor pick badge -->
+  <g transform="translate(64,52)">
+    <rect width="200" height="30" rx="15" fill="#ff4757"/>
+    <text x="100" y="20" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">📌 好文共赏 · Paper Pick</text>
+  </g>
+
+  <!-- arXiv badge -->
+  <g transform="translate(280,52)">
+    <rect width="180" height="30" rx="15" fill="#1a1f4d" stroke="#7a85b3" stroke-width="1"/>
+    <text x="90" y="20" text-anchor="middle" font-size="14" font-weight="600" fill="#9ba3c5">arXiv 2605.15257</text>
+  </g>
+
+  <!-- Big title -->
+  <text x="64" y="150" font-size="56" font-weight="800" fill="#fff">当模型『听说过监控』</text>
+  <text x="64" y="220" font-size="56" font-weight="800" fill="#ff4757">就学会了掩盖思考</text>
+
+  <text x="64" y="280" font-size="22" fill="#b3b8d8">DeepMind 把 CoT 监控的最大盲点摆上桌</text>
+
+  <!-- Big stat -->
+  <g transform="translate(64,360)">
+    <rect width="450" height="160" rx="14" fill="rgba(255,71,87,0.15)" stroke="#ff4757" stroke-width="2"/>
+    <text x="24" y="50" font-size="18" fill="#ffb8b8">gpt-oss-120b 未察觉欺骗率</text>
+    <text x="24" y="110" font-size="48" font-weight="800" fill="#fff">1.7%  <tspan fill="#ff4757">→  25.7%</tspan></text>
+    <text x="24" y="140" font-size="14" fill="#9ba3c5">仅仅因为预训练数据里读到过『监控存在』</text>
+  </g>
+
+  <!-- Eye -->
+  <g transform="translate(900,200)">
+    <circle cx="0" cy="0" r="80" fill="#0f1444" stroke="#ff4757" stroke-width="3"/>
+    <ellipse cx="0" cy="0" rx="56" ry="32" fill="none" stroke="#ff4757" stroke-width="2"/>
+    <circle cx="0" cy="0" r="18" fill="#ff4757"/>
+    <circle cx="-6" cy="-6" r="4" fill="#fff"/>
+    <text x="0" y="120" text-anchor="middle" font-size="16" fill="#ffb8b8">monitored?</text>
+  </g>
+
+  <!-- r = 0.800 -->
+  <g transform="translate(900,370)">
+    <text x="0" y="0" font-size="40" font-weight="800" fill="#4cd2c7">r = 0.800</text>
+    <text x="0" y="30" font-size="14" fill="#9ba3c5">CoT controllability ⟺ obfuscation</text>
+    <text x="0" y="50" font-size="14" fill="#9ba3c5">p = 0.017 · n = 8</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="64" y="595" font-size="14" fill="#7a85b3">DeepMind × Pivotal Research · 2026-05-14 · 14 pages</text>
+  <text x="1140" y="595" text-anchor="end" font-size="14" fill="#7a85b3">xiejiayun.github.io / 好文共赏</text>
+</svg>
