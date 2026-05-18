@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e14"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="4" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1f2937" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Top label -->
+  <text x="60" y="80" font-family="Menlo, Consolas, monospace" font-size="20" fill="#9CA3AF">好文共赏 / Editor's Pick · 2026-05-18</text>
+
+  <!-- main title -->
+  <text x="60" y="160" font-family="-apple-system, system-ui, sans-serif" font-weight="800" font-size="54" fill="#F9FAFB">8 kB RAM 装下一个 TCP 栈</text>
+  <text x="60" y="220" font-family="-apple-system, system-ui, sans-serif" font-weight="600" font-size="34" fill="#FBBF24">一颗 1 美元 AVR、一根串口线，全栈 600 行 C</text>
+
+  <!-- DIP chip illustration -->
+  <g transform="translate(80,300)">
+    <!-- chip body -->
+    <rect x="0" y="0" width="280" height="180" rx="6" fill="#111827" stroke="#374151" stroke-width="2"/>
+    <!-- notch -->
+    <circle cx="140" cy="0" r="14" fill="#0a0e14"/>
+    <!-- pins left -->
+    <g fill="#9CA3AF">
+      <rect x="-20" y="20" width="20" height="6"/>
+      <rect x="-20" y="40" width="20" height="6"/>
+      <rect x="-20" y="60" width="20" height="6"/>
+      <rect x="-20" y="80" width="20" height="6"/>
+      <rect x="-20" y="100" width="20" height="6"/>
+      <rect x="-20" y="120" width="20" height="6"/>
+      <rect x="-20" y="140" width="20" height="6"/>
+      <rect x="-20" y="160" width="20" height="6"/>
+    </g>
+    <!-- pins right -->
+    <g fill="#9CA3AF">
+      <rect x="280" y="20" width="20" height="6"/>
+      <rect x="280" y="40" width="20" height="6"/>
+      <rect x="280" y="60" width="20" height="6"/>
+      <rect x="280" y="80" width="20" height="6"/>
+      <rect x="280" y="100" width="20" height="6"/>
+      <rect x="280" y="120" width="20" height="6"/>
+      <rect x="280" y="140" width="20" height="6"/>
+      <rect x="280" y="160" width="20" height="6"/>
+    </g>
+    <text x="140" y="80" font-family="Menlo, Consolas, monospace" font-size="18" fill="#FBBF24" text-anchor="middle">AVR64DD32</text>
+    <text x="140" y="105" font-family="Menlo, Consolas, monospace" font-size="13" fill="#9CA3AF" text-anchor="middle">8-bit · 24 MHz</text>
+    <text x="140" y="125" font-family="Menlo, Consolas, monospace" font-size="13" fill="#9CA3AF" text-anchor="middle">8 kB RAM · 64 kB Flash</text>
+    <text x="140" y="145" font-family="Menlo, Consolas, monospace" font-size="13" fill="#34D399" text-anchor="middle">$1</text>
+  </g>
+
+  <!-- stack on right -->
+  <g transform="translate(540,280)" font-family="Menlo, Consolas, monospace" font-size="18" fill="#E5E7EB">
+    <rect x="0" y="0" width="600" height="40" fill="#1F2937" stroke="#374151"/>
+    <text x="20" y="26">HTTP · 一行硬编码响应</text>
+    <rect x="0" y="40" width="600" height="40" fill="#1F2937" stroke="#374151"/>
+    <text x="20" y="66">TCP · 自写状态机 · 200 conns</text>
+    <rect x="0" y="80" width="600" height="40" fill="#1F2937" stroke="#374151"/>
+    <text x="20" y="106">IPv4 · 30 行 · 互换 src/dst</text>
+    <rect x="0" y="120" width="600" height="40" fill="#1F2937" stroke="#374151"/>
+    <text x="20" y="146">SLIP · RFC 1055 · 0xC0/0xDB</text>
+    <rect x="0" y="160" width="600" height="40" fill="#1F2937" stroke="#374151"/>
+    <text x="20" y="186">USART · 115200 bps · USB-Serial</text>
+    <rect x="0" y="200" width="600" height="40" fill="#451a03" stroke="#92400E"/>
+    <text x="20" y="226" fill="#FBBF24">WireGuard 隧道 → 公网 nginx 反代</text>
+  </g>
+
+  <!-- bottom score -->
+  <text x="60" y="580" font-family="Menlo, Consolas, monospace" font-size="18" fill="#9CA3AF">综合评分 8.63 / 10 · Opus 8.8 · Sonnet 8.5 · Gemini 8.6</text>
+  <text x="60" y="606" font-family="Menlo, Consolas, monospace" font-size="14" fill="#6B7280">原文：maurycyz.com/projects/mcusite/ · 235 HN points · 600 行 C 源码</text>
+</svg>
