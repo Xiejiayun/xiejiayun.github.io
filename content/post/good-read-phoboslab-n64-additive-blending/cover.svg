@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a14"/>
+      <stop offset="1" stop-color="#1a1030"/>
+    </linearGradient>
+    <radialGradient id="psxExp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.95"/>
+      <stop offset="0.3" stop-color="#ffe680" stop-opacity="0.8"/>
+      <stop offset="0.6" stop-color="#ff8c1a" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#ff2a4d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="n64Exp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2a004a" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#5a1080" stop-opacity="0.7"/>
+      <stop offset="0.7" stop-color="#a830a0" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#400060" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <path d="M0 100 L1200 100 M0 200 L1200 200 M0 300 L1200 300 M0 400 L1200 400 M0 500 L1200 500"/>
+    <path d="M200 0 L200 630 M400 0 L400 630 M600 0 L600 630 M800 0 L800 630 M1000 0 L1000 630"/>
+  </g>
+
+  <!-- 好文共赏 badge -->
+  <g transform="translate(56, 56)">
+    <rect width="160" height="36" rx="6" fill="#ff6a3d" fill-opacity="0.18" stroke="#ff6a3d" stroke-opacity="0.6"/>
+    <text x="80" y="24" font-size="16" fill="#ffb89a" text-anchor="middle" font-weight="600">好文共赏 · Editor's Pick</text>
+  </g>
+
+  <!-- main title -->
+  <text x="56" y="158" font-size="42" fill="#f5f5fa" font-weight="800">PSX 的爆炸为什么</text>
+  <text x="56" y="208" font-size="42" fill="#f5f5fa" font-weight="800">比 N64 漂亮</text>
+  <text x="56" y="260" font-size="20" fill="#9aa0c8" font-weight="400">一段 RDP 寄存器 + 一块临时画布 + 3.1 ms 的 RSP 微码</text>
+  <text x="56" y="288" font-size="20" fill="#9aa0c8" font-weight="400">phoboslab 把三十年前的硬件 bug 补完了</text>
+
+  <!-- PSX example: bright explosion -->
+  <g transform="translate(720, 200)">
+    <circle cx="0" cy="0" r="105" fill="url(#psxExp)" filter="url(#glow)"/>
+    <text x="0" y="135" font-size="16" fill="#ffe680" text-anchor="middle" font-weight="700">PSX · src + dst · clamped</text>
+    <text x="0" y="156" font-size="13" fill="#bbb088" text-anchor="middle">Silent Bomber (1998)</text>
+  </g>
+
+  <!-- N64 example: wrap-around -->
+  <g transform="translate(720, 450)">
+    <circle cx="0" cy="0" r="105" fill="url(#n64Exp)"/>
+    <!-- wrap-around artifact stripes -->
+    <g opacity="0.6">
+      <rect x="-60" y="-30" width="40" height="10" fill="#1a0030"/>
+      <rect x="10" y="-10" width="30" height="8" fill="#1a0030"/>
+      <rect x="-30" y="15" width="50" height="9" fill="#1a0030"/>
+    </g>
+    <text x="0" y="135" font-size="16" fill="#c890d0" text-anchor="middle" font-weight="700">N64 · RDP no clamp · wraps</text>
+    <text x="0" y="156" font-size="13" fill="#a070a8" text-anchor="middle">Star Fox 64 (1997)</text>
+  </g>
+
+  <!-- formula band -->
+  <g transform="translate(56, 380)">
+    <rect width="600" height="180" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="20" y="32" font-size="14" fill="#9aa0c8" font-family="monospace">PSX  :  result = clamp( src + dst, 0, 255 )   ✓ monotonic brightness</text>
+    <text x="20" y="60" font-size="14" fill="#9aa0c8" font-family="monospace">N64  :  result =        (P*A + Q*B) mod 256    ✗ B: 396 → 140</text>
+    <text x="20" y="100" font-size="13" fill="#ffd28a" font-family="monospace">Hack :  32-bit framebuffer  +  fog_alpha = 1/8  +  RSP microcode</text>
+    <text x="20" y="124" font-size="13" fill="#ffd28a" font-family="monospace">       CPU  70 ms / frame   →   RSP  3.1 ms / frame  (23× speedup)</text>
+    <text x="20" y="158" font-size="12" fill="#7a82a8">原文：phoboslab.org · 2026-05-04 · Dominic Szablewski</text>
+  </g>
+
+  <!-- footer -->
+  <text x="56" y="600" font-size="13" fill="#5a5f80">xiejiayun.github.io · 综合评分 8.6/10 · Opus 8.7 / Sonnet 8.5 / Gemini 8.6</text>
+</svg>
