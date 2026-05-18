@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" font-family="-apple-system, 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="gMint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="gUp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="gDown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#bfdbfe"/>
+    </linearGradient>
+    <linearGradient id="gOut" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dcfce7"/>
+      <stop offset="100%" stop-color="#bbf7d0"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="1000" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="700" y="48" font-size="28" font-weight="800" text-anchor="middle" fill="#0f172a">MinT 架构思维导图</text>
+  <text x="700" y="76" font-size="14" fill="#64748b" text-anchor="middle">arXiv 2605.13779 · LoRA × 三条 Scaling 轴 × 资源调度</text>
+
+  <!-- Center node -->
+  <g transform="translate(700, 500)">
+    <ellipse cx="0" cy="0" rx="120" ry="60" fill="url(#gMint)" stroke="#92400e" stroke-width="2"/>
+    <text x="0" y="-6" font-size="26" font-weight="800" text-anchor="middle" fill="#451a03">MinT</text>
+    <text x="0" y="20" font-size="11" text-anchor="middle" fill="#451a03">LoRA-centric service</text>
+  </g>
+
+  <!-- =========== SCALE UP (top-left) =========== -->
+  <g transform="translate(220, 220)">
+    <rect x="-160" y="-40" width="320" height="80" fill="url(#gUp)" stroke="#b45309" stroke-width="2" rx="12"/>
+    <text x="0" y="-12" font-size="20" font-weight="700" text-anchor="middle" fill="#7c2d12">Scale Up ↑</text>
+    <text x="0" y="14" font-size="12" text-anchor="middle" fill="#7c2d12">LoRA RL on 1T-class bases</text>
+  </g>
+
+  <!-- Scale Up subtopics -->
+  <g font-size="11" fill="#7c2d12">
+    <g transform="translate(120, 80)">
+      <rect x="-110" y="-22" width="220" height="44" fill="#fffbeb" stroke="#fbbf24" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Kimi K2 · 1.04T</text>
+      <text x="0" y="14" text-anchor="middle">MLA + MoE / 64×H800 countdown</text>
+    </g>
+    <g transform="translate(50, 200)">
+      <rect x="-95" y="-22" width="190" height="44" fill="#fffbeb" stroke="#fbbf24" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Qwen3-235B-A22B</text>
+      <text x="0" y="14" text-anchor="middle">TP=4/EP=8 · AIME24 0.967</text>
+    </g>
+    <g transform="translate(360, 80)">
+      <rect x="-90" y="-22" width="180" height="44" fill="#fffbeb" stroke="#fbbf24" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">R3 router replay</text>
+      <text x="0" y="14" text-anchor="middle">expert id record → mask</text>
+    </g>
+    <g transform="translate(360, 200)">
+      <rect x="-95" y="-22" width="190" height="44" fill="#fffbeb" stroke="#fbbf24" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">IcePop importance clip</text>
+      <text x="0" y="14" text-anchor="middle">GLM-5 DSA indexer drift</text>
+    </g>
+  </g>
+
+  <!-- =========== SCALE DOWN (left/middle bottom) =========== -->
+  <g transform="translate(220, 780)">
+    <rect x="-160" y="-40" width="320" height="80" fill="url(#gDown)" stroke="#1d4ed8" stroke-width="2" rx="12"/>
+    <text x="0" y="-12" font-size="20" font-weight="700" text-anchor="middle" fill="#1e3a8a">Scale Down ↓</text>
+    <text x="0" y="14" font-size="12" text-anchor="middle" fill="#1e3a8a">Adapter-only handoff</text>
+  </g>
+
+  <g font-size="11" fill="#1e3a8a">
+    <g transform="translate(50, 600)">
+      <rect x="-100" y="-22" width="200" height="44" fill="#eff6ff" stroke="#60a5fa" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">4B: 18.3× faster step</text>
+      <text x="0" y="14" text-anchor="middle">252 MiB vs 8.06 GB merged</text>
+    </g>
+    <g transform="translate(50, 880)">
+      <rect x="-100" y="-22" width="200" height="44" fill="#eff6ff" stroke="#60a5fa" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">30B MoE: 2.85× faster</text>
+      <text x="0" y="14" text-anchor="middle">1.69 GB vs 61.08 GB</text>
+    </g>
+    <g transform="translate(380, 700)">
+      <rect x="-100" y="-22" width="200" height="44" fill="#eff6ff" stroke="#60a5fa" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Concurrent GRPO 1.77×</text>
+      <text x="0" y="14" text-anchor="middle">peak memory unchanged</text>
+    </g>
+    <g transform="translate(380, 880)">
+      <rect x="-100" y="-22" width="200" height="44" fill="#eff6ff" stroke="#60a5fa" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Rank-1 adapter &lt;1%</text>
+      <text x="0" y="14" text-anchor="middle">Qwen3-4B ≈ 7.9 MiB</text>
+    </g>
+  </g>
+
+  <!-- =========== SCALE OUT (right) =========== -->
+  <g transform="translate(1180, 500)">
+    <rect x="-160" y="-40" width="320" height="80" fill="url(#gOut)" stroke="#15803d" stroke-width="2" rx="12"/>
+    <text x="0" y="-12" font-size="20" font-weight="700" text-anchor="middle" fill="#14532d">Scale Out →</text>
+    <text x="0" y="14" font-size="12" text-anchor="middle" fill="#14532d">Million-policy serving</text>
+  </g>
+
+  <g font-size="11" fill="#14532d">
+    <g transform="translate(1080, 220)">
+      <rect x="-110" y="-22" width="220" height="44" fill="#f0fdf4" stroke="#4ade80" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Catalog: 10⁶ entries</text>
+      <text x="0" y="14" text-anchor="middle">durable, control-plane</text>
+    </g>
+    <g transform="translate(1080, 320)">
+      <rect x="-110" y="-22" width="220" height="44" fill="#f0fdf4" stroke="#4ade80" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">CPU cache: ~369–550</text>
+      <text x="0" y="14" text-anchor="middle">LRU under pressure</text>
+    </g>
+    <g transform="translate(1280, 400)">
+      <rect x="-110" y="-22" width="220" height="44" fill="#f0fdf4" stroke="#4ade80" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">GPU batch: ≤64</text>
+      <text x="0" y="14" text-anchor="middle">distinct adapters/step</text>
+    </g>
+    <g transform="translate(1280, 600)">
+      <rect x="-110" y="-22" width="220" height="44" fill="#f0fdf4" stroke="#4ade80" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Packed MoE LoRA</text>
+      <text x="0" y="14" text-anchor="middle">37,248→672 tensors · 8.5×</text>
+    </g>
+    <g transform="translate(1080, 700)">
+      <rect x="-110" y="-22" width="220" height="44" fill="#f0fdf4" stroke="#4ade80" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Cold load: 199.81 s p95</text>
+      <text x="0" y="14" text-anchor="middle">backpressure + dedup</text>
+    </g>
+    <g transform="translate(1080, 800)">
+      <rect x="-110" y="-22" width="220" height="44" fill="#f0fdf4" stroke="#4ade80" rx="6"/>
+      <text x="0" y="-3" font-weight="700" text-anchor="middle">Fleet: 36 engines / 144 GPUs</text>
+      <text x="0" y="14" text-anchor="middle">for 2300 active wave</text>
+    </g>
+  </g>
+
+  <!-- Connectors from center -->
+  <g stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M 600 470 Q 450 380 280 240"/>
+    <path d="M 600 530 Q 450 660 280 760"/>
+    <path d="M 820 500 Q 950 500 1020 500"/>
+  </g>
+
+  <!-- Connector sublines -->
+  <g stroke="#94a3b8" stroke-width="1.2" fill="none" stroke-dasharray="3,3">
+    <path d="M 220 200 L 120 100"/>
+    <path d="M 220 220 L 50 200"/>
+    <path d="M 220 220 L 360 100"/>
+    <path d="M 220 240 L 360 200"/>
+
+    <path d="M 220 760 L 50 620"/>
+    <path d="M 220 800 L 50 880"/>
+    <path d="M 220 800 L 380 720"/>
+    <path d="M 220 800 L 380 880"/>
+
+    <path d="M 1180 480 L 1080 240"/>
+    <path d="M 1180 480 L 1080 320"/>
+    <path d="M 1180 500 L 1280 420"/>
+    <path d="M 1180 520 L 1280 600"/>
+    <path d="M 1180 520 L 1080 700"/>
+    <path d="M 1180 540 L 1080 800"/>
+  </g>
+
+  <!-- Bottom legend / definitions row -->
+  <g transform="translate(700, 940)" font-size="13" fill="#334155" text-anchor="middle">
+    <text font-weight="700">三大跨边界对象：</text>
+    <text x="-140" y="22">📦 base model (resident)</text>
+    <text x="60" y="22">🧬 adapter revision (PEFT bytes)</text>
+    <text x="280" y="22">📋 policy record (durable state)</text>
+  </g>
+</svg>

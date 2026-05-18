@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, 'Helvetica Neue', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid pattern -->
+  <g opacity="0.08" stroke="#60a5fa" stroke-width="0.5">
+    <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200 M0 500 H1200"/>
+    <path d="M100 0 V630 M250 0 V630 M400 0 V630 M550 0 V630 M700 0 V630 M850 0 V630 M1000 0 V630 M1150 0 V630"/>
+  </g>
+
+  <!-- ribbon -->
+  <rect x="56" y="56" width="200" height="34" fill="url(#accent)" rx="4"/>
+  <text x="156" y="79" font-size="18" font-weight="700" text-anchor="middle" fill="#1e293b">📌 好文共赏 · Paper Pick</text>
+
+  <!-- arxiv ID -->
+  <text x="56" y="124" font-size="14" fill="#94a3b8" letter-spacing="2">arXiv:2605.13779 · Mind Lab @ Macaron AI · 2026-05-13</text>
+
+  <!-- title -->
+  <text x="56" y="190" font-size="44" font-weight="800" fill="#f8fafc">MinT</text>
+  <text x="56" y="232" font-size="22" font-weight="500" fill="#e2e8f0">把「百万 LoRA × 1T 基模」做成</text>
+  <text x="56" y="262" font-size="22" font-weight="500" fill="#e2e8f0">一个可调度服务的工程母带</text>
+
+  <!-- subtitle -->
+  <text x="56" y="306" font-size="16" fill="#cbd5e1">Managed Infrastructure for Training and Serving Millions of LoRA</text>
+
+  <!-- three pillars -->
+  <g transform="translate(56, 350)">
+    <!-- Scale Up -->
+    <rect width="350" height="180" fill="url(#card)" stroke="rgba(251,191,36,0.4)" stroke-width="1.5" rx="8"/>
+    <text x="20" y="32" font-size="18" font-weight="700" fill="#fbbf24">Scale Up ↑</text>
+    <text x="20" y="62" font-size="14" fill="#e2e8f0">LoRA RL 推到 1T 基模</text>
+    <text x="20" y="88" font-size="13" fill="#94a3b8">• Kimi K2 1.04T countdown</text>
+    <text x="20" y="108" font-size="13" fill="#94a3b8">• Qwen3-235B AIME24 0.967</text>
+    <text x="20" y="128" font-size="13" fill="#94a3b8">• R3 router replay</text>
+    <text x="20" y="148" font-size="13" fill="#94a3b8">• IcePop DSA 校正</text>
+    <text x="20" y="168" font-size="13" fill="#94a3b8">• MLA + DSA + MoE + MTP</text>
+  </g>
+
+  <g transform="translate(425, 350)">
+    <!-- Scale Down -->
+    <rect width="350" height="180" fill="url(#card)" stroke="rgba(96,165,250,0.4)" stroke-width="1.5" rx="8"/>
+    <text x="20" y="32" font-size="18" font-weight="700" fill="#60a5fa">Scale Down ↓</text>
+    <text x="20" y="62" font-size="14" fill="#e2e8f0">adapter-only 训推切换</text>
+    <text x="20" y="88" font-size="13" fill="#94a3b8">• 4B 单步切换 18.3× 加速</text>
+    <text x="20" y="108" font-size="13" fill="#94a3b8">• 30B MoE 切换 2.85× 加速</text>
+    <text x="20" y="128" font-size="13" fill="#94a3b8">• 并发 3-policy GRPO 1.77×</text>
+    <text x="20" y="148" font-size="13" fill="#94a3b8">• adapter &lt; 1% base size</text>
+    <text x="20" y="168" font-size="13" fill="#94a3b8">• peak memory 不变</text>
+  </g>
+
+  <g transform="translate(794, 350)">
+    <!-- Scale Out -->
+    <rect width="350" height="180" fill="url(#card)" stroke="rgba(74,222,128,0.4)" stroke-width="1.5" rx="8"/>
+    <text x="20" y="32" font-size="18" font-weight="700" fill="#4ade80">Scale Out →</text>
+    <text x="20" y="62" font-size="14" fill="#e2e8f0">百万 LoRA policy 调度</text>
+    <text x="20" y="88" font-size="13" fill="#94a3b8">• Catalog 10⁶ entry</text>
+    <text x="20" y="108" font-size="13" fill="#94a3b8">• CPU cache 369~550 adapters</text>
+    <text x="20" y="128" font-size="13" fill="#94a3b8">• GPU batch ≤64 distinct</text>
+    <text x="20" y="148" font-size="13" fill="#94a3b8">• Packed MoE LoRA 8.5×</text>
+    <text x="20" y="168" font-size="13" fill="#94a3b8">• 144 GPUs for 2300 active</text>
+  </g>
+
+  <!-- bottom strip -->
+  <text x="56" y="590" font-size="13" fill="#64748b">多模评分：综合 8.7/10 · Opus 8.9 / Sonnet 7.5 / Gemini 7.5 · 27 页 · cs.LG/cs.AI/cs.DC</text>
+</svg>
