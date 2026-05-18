@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="1" stop-color="#10172e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="800" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Browsers Treat Big Sites Differently — 思维导图</text>
+  <text x="800" y="90" text-anchor="middle" font-family="Helvetica, monospace" font-size="14" fill="#7a7e96">Den Odell  ·  Canva Staff Engineer  ·  2026-05-14</text>
+
+  <!-- center node -->
+  <circle cx="800" cy="550" r="100" fill="#ff6b6b" opacity="0.95"/>
+  <text x="800" y="540" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">浏览器</text>
+  <text x="800" y="570" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#fff">三家不公平</text>
+
+  <!-- branches -->
+  <!-- 1. WebKit -->
+  <g>
+    <line x1="800" y1="550" x2="280" y2="220" stroke="#06d6a0" stroke-width="2"/>
+    <rect x="80" y="170" width="380" height="120" rx="10" fill="#1f2547" stroke="#06d6a0" stroke-width="2"/>
+    <text x="100" y="200" font-family="Helvetica" font-size="18" font-weight="700" fill="#06d6a0">WebKit (Apple / Safari)</text>
+    <text x="100" y="230" font-family="Helvetica" font-size="14" fill="#a0a4c0">Source/WebCore/page/Quirks.cpp</text>
+    <text x="100" y="252" font-family="Helvetica" font-size="14" fill="#a0a4c0">· 4048 行 C++</text>
+    <text x="100" y="272" font-family="Helvetica" font-size="14" fill="#a0a4c0">· 149 个硬编码域名 / 84 个域名判定</text>
+  </g>
+
+  <!-- 1.1 leaf -->
+  <g>
+    <line x1="270" y1="290" x2="180" y2="380" stroke="#3a4070" stroke-width="1.5"/>
+    <rect x="30" y="380" width="300" height="70" rx="8" fill="#161b35" stroke="#3a4070"/>
+    <text x="50" y="405" font-family="Helvetica" font-size="14" fill="#ffd166">SeatGuru 例</text>
+    <text x="50" y="425" font-family="Helvetica" font-size="12" fill="#7a7e96">"FIXME: Remove if SeatGuru</text>
+    <text x="50" y="442" font-family="Helvetica" font-size="12" fill="#7a7e96">decides to adjust their site."</text>
+  </g>
+  <g>
+    <line x1="320" y1="290" x2="360" y2="380" stroke="#3a4070" stroke-width="1.5"/>
+    <rect x="350" y="380" width="280" height="70" rx="8" fill="#161b35" stroke="#3a4070"/>
+    <text x="370" y="405" font-family="Helvetica" font-size="14" fill="#ffd166">claude.ai 已入列</text>
+    <text x="370" y="425" font-family="Helvetica" font-size="12" fill="#7a7e96">2026 年 AI 应用正在变成</text>
+    <text x="370" y="442" font-family="Helvetica" font-size="12" fill="#7a7e96">下一代 SeatGuru</text>
+  </g>
+
+  <!-- 2. Firefox -->
+  <g>
+    <line x1="800" y1="550" x2="1320" y2="220" stroke="#ffd166" stroke-width="2"/>
+    <rect x="1140" y="170" width="380" height="120" rx="10" fill="#1f2547" stroke="#ffd166" stroke-width="2"/>
+    <text x="1160" y="200" font-family="Helvetica" font-size="18" font-weight="700" fill="#ffd166">Gecko (Mozilla / Firefox)</text>
+    <text x="1160" y="230" font-family="Helvetica" font-size="14" fill="#a0a4c0">webcompat/data/interventions/</text>
+    <text x="1160" y="252" font-family="Helvetica" font-size="14" fill="#a0a4c0">· 372 份 JSON</text>
+    <text x="1160" y="272" font-family="Helvetica" font-size="14" fill="#a0a4c0">· about:compat 用户可见 / 可关</text>
+  </g>
+
+  <g>
+    <line x1="1330" y1="290" x2="1280" y2="380" stroke="#3a4070" stroke-width="1.5"/>
+    <rect x="1140" y="380" width="300" height="70" rx="8" fill="#161b35" stroke="#3a4070"/>
+    <text x="1160" y="405" font-family="Helvetica" font-size="14" fill="#ffd166">372 之最</text>
+    <text x="1160" y="425" font-family="Helvetica" font-size="12" fill="#7a7e96">linkedin / paypal / discord</text>
+    <text x="1160" y="442" font-family="Helvetica" font-size="12" fill="#7a7e96">perplexity.ai / character.ai</text>
+  </g>
+
+  <!-- 3. Chrome -->
+  <g>
+    <line x1="800" y1="550" x2="800" y2="200" stroke="#ff6b6b" stroke-width="2"/>
+    <rect x="600" y="100" width="400" height="100" rx="10" fill="#1f2547" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="800" y="140" text-anchor="middle" font-family="Helvetica" font-size="20" font-weight="700" fill="#ff6b6b">Chromium / Chrome</text>
+    <text x="800" y="170" text-anchor="middle" font-family="Helvetica" font-size="15" fill="#a0a4c0">没有等价 quirks 目录</text>
+    <text x="800" y="190" text-anchor="middle" font-family="Helvetica" font-size="15" fill="#a0a4c0">因为它自己就是事实规范</text>
+  </g>
+
+  <!-- 4. Mechanism (left bottom) -->
+  <g>
+    <line x1="800" y1="550" x2="280" y2="800" stroke="#9b8aff" stroke-width="2"/>
+    <rect x="80" y="760" width="380" height="220" rx="10" fill="#1f2547" stroke="#9b8aff" stroke-width="2"/>
+    <text x="100" y="790" font-family="Helvetica" font-size="18" font-weight="700" fill="#9b8aff">机制 / Why</text>
+    <text x="100" y="822" font-family="Helvetica" font-size="14" fill="#cfd2e8">· 用户会换浏览器 → 非主导浏览器</text>
+    <text x="120" y="842" font-family="Helvetica" font-size="14" fill="#cfd2e8">  必须 quirk</text>
+    <text x="100" y="868" font-family="Helvetica" font-size="14" fill="#cfd2e8">· 修自己 &lt; 等站点修</text>
+    <text x="100" y="892" font-family="Helvetica" font-size="14" fill="#cfd2e8">· UA 伪装：源码里假装是 Chrome</text>
+    <text x="100" y="916" font-family="Helvetica" font-size="14" fill="#cfd2e8">· implementation-defined = Chrome</text>
+    <text x="120" y="938" font-family="Helvetica" font-size="14" fill="#cfd2e8">  定的就算规范</text>
+    <text x="100" y="962" font-family="Helvetica" font-size="14" fill="#cfd2e8">· 反馈隐形 → 错误代码无信号</text>
+  </g>
+
+  <!-- 5. Implications (right bottom) -->
+  <g>
+    <line x1="800" y1="550" x2="1320" y2="800" stroke="#06d6a0" stroke-width="2"/>
+    <rect x="1140" y="760" width="380" height="220" rx="10" fill="#1f2547" stroke="#06d6a0" stroke-width="2"/>
+    <text x="1160" y="790" font-family="Helvetica" font-size="18" font-weight="700" fill="#06d6a0">含义 / So What</text>
+    <text x="1160" y="822" font-family="Helvetica" font-size="14" fill="#cfd2e8">· Web 平台 ≈ Chrome + 脚注</text>
+    <text x="1160" y="848" font-family="Helvetica" font-size="14" fill="#cfd2e8">· "互操作" 项目是反扑，但只</text>
+    <text x="1180" y="868" font-family="Helvetica" font-size="14" fill="#cfd2e8">  覆盖新特性，不解决长尾</text>
+    <text x="1160" y="894" font-family="Helvetica" font-size="14" fill="#cfd2e8">· DMA 推开了 iOS 引擎闸门</text>
+    <text x="1180" y="914" font-family="Helvetica" font-size="14" fill="#cfd2e8">  但 Chrome 行为仍未被监管</text>
+    <text x="1160" y="940" font-family="Helvetica" font-size="14" fill="#cfd2e8">· AI 工具默认 Chromium-headless</text>
+    <text x="1180" y="960" font-family="Helvetica" font-size="14" fill="#cfd2e8">  → 偏差会变本加厉</text>
+  </g>
+
+  <!-- 6. Action items (bottom center) -->
+  <g>
+    <line x1="800" y1="650" x2="800" y2="800" stroke="#ff6b6b" stroke-width="2"/>
+    <rect x="540" y="800" width="520" height="180" rx="10" fill="#1f2547" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="800" y="830" text-anchor="middle" font-family="Helvetica" font-size="18" font-weight="700" fill="#ff6b6b">编辑延伸 / 出路</text>
+    <text x="560" y="860" font-family="Helvetica" font-size="14" fill="#cfd2e8">1. 把 quirks 合并成第三方公共数据库</text>
+    <text x="560" y="884" font-family="Helvetica" font-size="14" fill="#cfd2e8">2. Chrome 应被监管要求公布 implementation-defined 清单</text>
+    <text x="560" y="908" font-family="Helvetica" font-size="14" fill="#cfd2e8">3. 前端文化升级：在三引擎里都测</text>
+    <text x="560" y="932" font-family="Helvetica" font-size="14" fill="#cfd2e8">4. 正视 SeatGuru 现象：对小、旧、无人维护站点的</text>
+    <text x="580" y="952" font-family="Helvetica" font-size="14" fill="#cfd2e8">    容忍度，是浏览器的公共义务</text>
+  </g>
+
+  <text x="800" y="1070" text-anchor="middle" font-family="Helvetica, monospace" font-size="12" fill="#5a5e7a">数据基于 WebKit/WebKit & mozilla-firefox/firefox main 分支 · 2026-05-18 UTC 03:30 清点</text>
+</svg>
