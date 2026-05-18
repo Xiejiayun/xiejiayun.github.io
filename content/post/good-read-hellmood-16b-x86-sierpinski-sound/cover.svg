@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050810"/>
+      <stop offset="50%" stop-color="#0d1422"/>
+      <stop offset="100%" stop-color="#1a0f22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#48d597"/>
+      <stop offset="100%" stop-color="#48a6d5"/>
+    </linearGradient>
+    <linearGradient id="redaccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff7755"/>
+      <stop offset="100%" stop-color="#ffaa44"/>
+    </linearGradient>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="20" height="20">
+      <circle cx="2" cy="2" r="0.5" fill="#48d59722"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Sierpinski triangle pattern, drawn as a recursive nested triangle (depth 4) -->
+  <g transform="translate(800, 110)" opacity="0.55">
+    <g fill="#48d597">
+      <!-- depth 0 (big) -->
+      <polygon points="0,300 150,0 300,300"/>
+    </g>
+    <g fill="#050810">
+      <!-- inverted holes -->
+      <polygon points="75,300 150,150 225,300"/>
+    </g>
+    <g fill="#050810">
+      <polygon points="37.5,300 75,225 112.5,300"/>
+      <polygon points="187.5,300 225,225 262.5,300"/>
+      <polygon points="112.5,225 150,150 187.5,225"/>
+    </g>
+    <g fill="#050810">
+      <!-- depth 3 holes -->
+      <polygon points="18.75,300 37.5,262.5 56.25,300"/>
+      <polygon points="93.75,300 112.5,262.5 131.25,300"/>
+      <polygon points="56.25,262.5 75,225 93.75,262.5"/>
+      <polygon points="168.75,300 187.5,262.5 206.25,300"/>
+      <polygon points="243.75,300 262.5,262.5 281.25,300"/>
+      <polygon points="206.25,262.5 225,225 243.75,262.5"/>
+      <polygon points="131.25,225 150,187.5 168.75,225"/>
+    </g>
+  </g>
+
+  <!-- Big tag -->
+  <g transform="translate(60, 80)">
+    <rect width="170" height="42" rx="6" fill="#48d59722" stroke="#48d597" stroke-width="1.5"/>
+    <text x="85" y="28" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#48d597" text-anchor="middle">好文共赏 · GOOD READ</text>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(60, 160)">
+    <text font-family="'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif" font-size="48" font-weight="700" fill="#f5f5fa">
+      <tspan x="0" dy="0">16 字节 x86</tspan>
+      <tspan x="0" dy="60">同时画出 Sierpinski</tspan>
+      <tspan x="0" dy="60">和发出方波</tspan>
+    </text>
+  </g>
+
+  <!-- Subtitle -->
+  <g transform="translate(60, 380)">
+    <text font-family="'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif" font-size="22" fill="#9aa9c0">
+      <tspan x="0" dy="0">HellMood 的 Outline 2026 demoscene 神作</tspan>
+      <tspan x="0" dy="34">把 Lucas 定理变成扬声器锥的拨动</tspan>
+    </text>
+  </g>
+
+  <!-- Code box -->
+  <g transform="translate(60, 480)">
+    <rect width="700" height="115" rx="8" fill="#0a0e1a" stroke="#48d597" stroke-width="1" opacity="0.85"/>
+    <text font-family="'JetBrains Mono', 'Courier New', monospace" font-size="15" fill="#48d597">
+      <tspan x="20" y="28">int 10h         ; 2 B   ; VGA text mode</tspan>
+      <tspan x="20" y="50">mov bh, 0xB8    ; 2 B   ; DS = 0xB800</tspan>
+      <tspan x="20" y="72">mov ds, bx      ; 2 B</tspan>
+      <tspan x="20" y="94">L: lodsb / sub si,57 / xor [si],al / out 61h,al / jmp L</tspan>
+    </text>
+  </g>
+
+  <!-- Footer info -->
+  <g transform="translate(800, 540)">
+    <text font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#ff7755" font-weight="600">综合 9.4 / 10</text>
+    <text font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#9aa9c0" y="28">Opus 9.5 · Sonnet 9.3 · Gemini 9.4</text>
+    <text font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#9aa9c0" y="50">2026-05-18 · xiejiayun.github.io</text>
+  </g>
+</svg>

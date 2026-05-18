@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#070b14"/>
+      <stop offset="100%" stop-color="#0e1525"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="1100" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="800" y="50" font-family="'PingFang SC', 'Microsoft YaHei', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#f0f0f6" text-anchor="middle">HellMood · 16 Bytes x86 思维导图</text>
+  <text x="800" y="80" font-family="'PingFang SC', 'Microsoft YaHei', Helvetica, sans-serif" font-size="16" fill="#7a8aa8" text-anchor="middle">硬件 × 数学 × 算法 × 演出 — 四象限</text>
+
+  <!-- Center node -->
+  <circle cx="800" cy="550" r="78" fill="#48d59733" stroke="#48d597" stroke-width="3" filter="url(#glow)"/>
+  <text x="800" y="540" font-family="Helvetica, sans-serif" font-size="20" font-weight="700" fill="#48d597" text-anchor="middle">wake up! 16b</text>
+  <text x="800" y="565" font-family="Helvetica, sans-serif" font-size="13" fill="#9aa9c0" text-anchor="middle">8 instructions</text>
+  <text x="800" y="582" font-family="Helvetica, sans-serif" font-size="13" fill="#9aa9c0" text-anchor="middle">16 bytes</text>
+
+  <!-- Branches as 4 quadrants -->
+  <!-- HARDWARE (top-left) -->
+  <g>
+    <path d="M740 510 Q500 400 250 230" stroke="#48a6d5" stroke-width="2.5" fill="none"/>
+    <rect x="80" y="200" width="280" height="40" rx="6" fill="#48a6d533" stroke="#48a6d5"/>
+    <text x="220" y="226" font-family="Helvetica, sans-serif" font-size="18" font-weight="600" fill="#48a6d5" text-anchor="middle">HARDWARE 硬件</text>
+
+    <g font-family="Helvetica, sans-serif" font-size="14" fill="#cdd8ec">
+      <circle cx="100" cy="280" r="4" fill="#48a6d5"/>
+      <text x="115" y="285">int 10h → VGA mode 0 (40×25 文本)</text>
+
+      <circle cx="100" cy="310" r="4" fill="#48a6d5"/>
+      <text x="115" y="315">DS = 0xB800 (文本缓冲段)</text>
+
+      <circle cx="100" cy="340" r="4" fill="#48a6d5"/>
+      <text x="115" y="345">BIOS 用 0x20 0x07 预填 4000 字节</text>
+
+      <circle cx="100" cy="370" r="4" fill="#48a6d5"/>
+      <text x="115" y="375">实模式段 = 65536 字节</text>
+
+      <circle cx="100" cy="400" r="4" fill="#48a6d5"/>
+      <text x="115" y="405">8-bit register (AL) cap = 256</text>
+
+      <circle cx="100" cy="430" r="4" fill="#48a6d5"/>
+      <text x="115" y="435">PC speaker port 0x61 Bit 1</text>
+    </g>
+  </g>
+
+  <!-- MATH (top-right) -->
+  <g>
+    <path d="M860 510 Q1100 400 1350 230" stroke="#d56fa8" stroke-width="2.5" fill="none"/>
+    <rect x="1240" y="200" width="280" height="40" rx="6" fill="#d56fa833" stroke="#d56fa8"/>
+    <text x="1380" y="226" font-family="Helvetica, sans-serif" font-size="18" font-weight="600" fill="#d56fa8" text-anchor="middle">MATH 数学</text>
+
+    <g font-family="Helvetica, sans-serif" font-size="14" fill="#cdd8ec">
+      <circle cx="1260" cy="280" r="4" fill="#d56fa8"/>
+      <text x="1275" y="285">prefix sum 前缀和递推</text>
+
+      <circle cx="1260" cy="310" r="4" fill="#d56fa8"/>
+      <text x="1275" y="315">A[k] ≡ 2·C(k+p, p−1) (mod 256)</text>
+
+      <circle cx="1260" cy="340" r="4" fill="#d56fa8"/>
+      <text x="1275" y="345">Lucas 定理 (1878)</text>
+
+      <circle cx="1260" cy="370" r="4" fill="#d56fa8"/>
+      <text x="1275" y="375">Pascal mod 2 = Sierpinski</text>
+
+      <circle cx="1260" cy="400" r="4" fill="#d56fa8"/>
+      <text x="1275" y="405">Kummer 定理（进位 → 素因子幂）</text>
+
+      <circle cx="1260" cy="430" r="4" fill="#d56fa8"/>
+      <text x="1275" y="435">gcd(56, 65536) = 8</text>
+    </g>
+  </g>
+
+  <!-- ALGORITHM (bottom-left) -->
+  <g>
+    <path d="M740 590 Q500 700 250 880" stroke="#ffaa44" stroke-width="2.5" fill="none"/>
+    <rect x="80" y="850" width="280" height="40" rx="6" fill="#ffaa4433" stroke="#ffaa44"/>
+    <text x="220" y="876" font-family="Helvetica, sans-serif" font-size="18" font-weight="600" fill="#ffaa44" text-anchor="middle">ALGORITHM 算法</text>
+
+    <g font-family="Helvetica, sans-serif" font-size="14" fill="#cdd8ec">
+      <circle cx="100" cy="920" r="4" fill="#ffaa44"/>
+      <text x="115" y="925">lodsb 读 + AL 累加</text>
+
+      <circle cx="100" cy="950" r="4" fill="#ffaa44"/>
+      <text x="115" y="955">sub si, 57 → 净步 -56</text>
+
+      <circle cx="100" cy="980" r="4" fill="#ffaa44"/>
+      <text x="115" y="985">xor [si], al → Rule 60 自动机</text>
+
+      <circle cx="100" cy="1010" r="4" fill="#ffaa44"/>
+      <text x="115" y="1015">起始值 = 2 (0b00000010, 只动 Bit 1)</text>
+
+      <circle cx="100" cy="1040" r="4" fill="#ffaa44"/>
+      <text x="115" y="1045">JMP 无条件回到 lodsb</text>
+
+      <circle cx="100" cy="1070" r="4" fill="#ffaa44"/>
+      <text x="115" y="1075">无寄存器初始化 (依赖 BIOS 状态)</text>
+    </g>
+  </g>
+
+  <!-- PERFORMANCE (bottom-right) -->
+  <g>
+    <path d="M860 590 Q1100 700 1350 880" stroke="#48d597" stroke-width="2.5" fill="none"/>
+    <rect x="1240" y="850" width="280" height="40" rx="6" fill="#48d59733" stroke="#48d597"/>
+    <text x="1380" y="876" font-family="Helvetica, sans-serif" font-size="18" font-weight="600" fill="#48d597" text-anchor="middle">PERFORMANCE 演出</text>
+
+    <g font-family="Helvetica, sans-serif" font-size="14" fill="#cdd8ec">
+      <circle cx="1260" cy="920" r="4" fill="#48d597"/>
+      <text x="1275" y="925">Sierpinski 三角形 (视觉)</text>
+
+      <circle cx="1260" cy="950" r="4" fill="#48d597"/>
+      <text x="1275" y="955">10 条等距分形柱 (-56 mod 80)</text>
+
+      <circle cx="1260" cy="980" r="4" fill="#48d597"/>
+      <text x="1275" y="985">方波音乐 (听觉)</text>
+
+      <circle cx="1260" cy="1010" r="4" fill="#48d597"/>
+      <text x="1275" y="1015">8192 步宏周期 → 频率降一八度</text>
+
+      <circle cx="1260" cy="1040" r="4" fill="#48d597"/>
+      <text x="1275" y="1045">CPU 速度 = 采样率</text>
+
+      <circle cx="1260" cy="1070" r="4" fill="#48d597"/>
+      <text x="1275" y="1075">不同 BIOS 给出不同音色 (feature)</text>
+    </g>
+  </g>
+
+  <!-- Connection note -->
+  <text x="800" y="690" font-family="Helvetica, sans-serif" font-size="14" font-style="italic" fill="#7a8aa8" text-anchor="middle">同一个 Bit 1：既是 Sierpinski 像素，也是扬声器电压</text>
+</svg>
