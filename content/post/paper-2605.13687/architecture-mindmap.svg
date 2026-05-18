@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 920" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1426"/>
+      <stop offset="100%" stop-color="#1a1240"/>
+    </linearGradient>
+    <linearGradient id="defStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="lowerStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="upperStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="empStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a3e635"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="920" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="700" y="50" text-anchor="middle" font-size="28" font-weight="800" fill="#fde68a">
+    arXiv 2605.13687 · 证明结构思维导图
+  </text>
+  <text x="700" y="80" text-anchor="middle" font-size="15" fill="#94a3b8">
+    从生成模型出发，推出 Ω(n) 下界与 Θ(log n) 上界，最终在 nanochat 上实证
+  </text>
+
+  <!-- Central node: Broadcast Process -->
+  <g transform="translate(700, 170)">
+    <rect x="-180" y="-50" width="360" height="100" rx="14" fill="#1f2937" stroke="url(#defStroke)" stroke-width="3"/>
+    <text x="0" y="-20" text-anchor="middle" font-size="18" font-weight="700" fill="#fbbf24">语言 = (d, h, κ, ν)-广播过程</text>
+    <text x="0" y="6" text-anchor="middle" font-size="13" fill="#e5e7eb">d-叉树根 → 叶；token = 叶序列</text>
+    <text x="0" y="26" text-anchor="middle" font-size="13" fill="#e5e7eb">实例：Ising (ρ) · q-Coloring</text>
+  </g>
+
+  <!-- Level 2: branches -->
+  <!-- Left branch: bounded ctx LM -->
+  <g transform="translate(280, 340)">
+    <rect x="-180" y="-40" width="360" height="80" rx="12" fill="#1f2937" stroke="url(#lowerStroke)" stroke-width="2.5"/>
+    <text x="0" y="-12" text-anchor="middle" font-size="17" font-weight="700" fill="#f472b6">Context-only LM</text>
+    <text x="0" y="12" text-anchor="middle" font-size="13" fill="#e5e7eb">k-gram ansatz / ctx = w 的 Transformer</text>
+    <text x="0" y="30" text-anchor="middle" font-size="13" fill="#e5e7eb">↓ 通过自回归广播过程作为代理</text>
+  </g>
+  <!-- Right branch: reasoning LM -->
+  <g transform="translate(1120, 340)">
+    <rect x="-180" y="-40" width="360" height="80" rx="12" fill="#1f2937" stroke="url(#upperStroke)" stroke-width="2.5"/>
+    <text x="0" y="-12" text-anchor="middle" font-size="17" font-weight="700" fill="#22d3ee">Reasoning LM</text>
+    <text x="0" y="12" text-anchor="middle" font-size="13" fill="#e5e7eb">CoT 轨迹 = 显式工作记忆</text>
+    <text x="0" y="30" text-anchor="middle" font-size="13" fill="#e5e7eb">↓ 构造性算法：belief propagation</text>
+  </g>
+
+  <!-- Connector lines from center to branches -->
+  <g stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M620 200 Q450 270 320 295"/>
+    <path d="M780 200 Q950 270 1080 295"/>
+  </g>
+
+  <!-- Level 3: Theorems left -->
+  <g transform="translate(280, 490)">
+    <rect x="-180" y="-50" width="360" height="100" rx="12" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+    <text x="0" y="-25" text-anchor="middle" font-size="15" font-weight="700" fill="#f9a8d4">下界 · Ising</text>
+    <text x="0" y="-3" text-anchor="middle" font-size="12" fill="#e5e7eb">Thm 3.1：log Var(S_X) ≈ w·log(dρ²)</text>
+    <text x="0" y="15" text-anchor="middle" font-size="12" fill="#e5e7eb">Thm 3.2：峰度 → 0（强制高斯化）</text>
+    <text x="0" y="33" text-anchor="middle" font-size="12" fill="#fcd34d">⇒ 要匹配真实分布 ctx = Ω(n)</text>
+  </g>
+  <g transform="translate(280, 640)">
+    <rect x="-180" y="-50" width="360" height="100" rx="12" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+    <text x="0" y="-25" text-anchor="middle" font-size="15" font-weight="700" fill="#f9a8d4">下界 · Coloring (CSP)</text>
+    <text x="0" y="-3" text-anchor="middle" font-size="12" fill="#e5e7eb">Thm 3.3：合法率 → 0</text>
+    <text x="0" y="15" text-anchor="middle" font-size="12" fill="#e5e7eb">局部约束 OK，但全局 link 失败</text>
+    <text x="0" y="33" text-anchor="middle" font-size="12" fill="#fcd34d">⇒ long-horizon coding 的形式化</text>
+  </g>
+
+  <!-- Level 3: Theorems right -->
+  <g transform="translate(1120, 490)">
+    <rect x="-180" y="-50" width="360" height="100" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="0" y="-25" text-anchor="middle" font-size="15" font-weight="700" fill="#67e8f9">上界 · Reasoning</text>
+    <text x="0" y="-3" text-anchor="middle" font-size="12" fill="#e5e7eb">Thm 3.4：存在推理模型 M^reason</text>
+    <text x="0" y="15" text-anchor="middle" font-size="12" fill="#e5e7eb">工作记忆 O(h log d) = O(log n)</text>
+    <text x="0" y="33" text-anchor="middle" font-size="12" fill="#fcd34d">⇒ 精确匹配真实语言分布</text>
+  </g>
+  <g transform="translate(1120, 640)">
+    <rect x="-180" y="-50" width="360" height="100" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="0" y="-25" text-anchor="middle" font-size="15" font-weight="700" fill="#67e8f9">构造：层级标点</text>
+    <text x="0" y="-3" text-anchor="middle" font-size="12" fill="#e5e7eb">实验里用 punctuation token</text>
+    <text x="0" y="15" text-anchor="middle" font-size="12" fill="#e5e7eb">标记 DFS 路径 + 祖先状态</text>
+    <text x="0" y="33" text-anchor="middle" font-size="12" fill="#fcd34d">⇒ 工程版的"推理轨迹"</text>
+  </g>
+
+  <!-- Connectors L3 -->
+  <g stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M280 380 V440"/>
+    <path d="M280 540 V590"/>
+    <path d="M1120 380 V440"/>
+    <path d="M1120 540 V590"/>
+  </g>
+
+  <!-- KS Threshold callout -->
+  <g transform="translate(700, 490)">
+    <rect x="-150" y="-50" width="300" height="100" rx="12" fill="#1e1b4b" stroke="#fbbf24" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <text x="0" y="-22" text-anchor="middle" font-size="15" font-weight="700" fill="#fbbf24">KS 阈值（信号传播条件）</text>
+    <text x="0" y="3" text-anchor="middle" font-size="20" font-weight="800" fill="#fde68a">d · ρ² &gt; 1</text>
+    <text x="0" y="27" text-anchor="middle" font-size="11" fill="#fed7aa">所有下界默认在此相之上</text>
+  </g>
+  <g stroke="#fbbf24" stroke-width="1" stroke-dasharray="4 4" fill="none" stroke-opacity="0.7">
+    <line x1="550" y1="490" x2="460" y2="490"/>
+    <line x1="850" y1="490" x2="940" y2="490"/>
+  </g>
+
+  <!-- Empirical verification (nanochat) -->
+  <g transform="translate(700, 780)">
+    <rect x="-360" y="-60" width="720" height="120" rx="14" fill="#052e16" stroke="url(#empStroke)" stroke-width="3"/>
+    <text x="0" y="-30" text-anchor="middle" font-size="18" font-weight="800" fill="#a3e635">实证验证 (nanochat, 10 层 Transformer)</text>
+    <text x="-340" y="0" text-anchor="start" font-size="13" fill="#d9f99d">✓ 训练在 d=3 h=8 Ising (ρ=0.9) 与 d=4 h=6 q=3 Coloring 上</text>
+    <text x="-340" y="22" text-anchor="start" font-size="13" fill="#d9f99d">✓ ctx-only LM 的 log Var 实测斜率 ≈ log(dρ²) = 0.886（理论预测）</text>
+    <text x="-340" y="44" text-anchor="start" font-size="13" fill="#d9f99d">✓ 加入层级标点后的 LM 在 Coloring 上合法率 ≫ 同尺寸非推理 baseline</text>
+  </g>
+
+  <g stroke="#a3e635" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-opacity="0.7">
+    <path d="M280 700 Q400 760 340 730"/>
+    <path d="M1120 700 Q1000 760 1060 730"/>
+  </g>
+
+  <!-- Footer -->
+  <text x="700" y="895" text-anchor="middle" font-size="12" fill="#64748b">
+    Gaitonde · Koehler · Mossel · Sly  ·  好文共赏 · xiejiayun.github.io
+  </text>
+</svg>

@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1832"/>
+      <stop offset="55%" stop-color="#13234d"/>
+      <stop offset="100%" stop-color="#421259"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffe082"/>
+      <stop offset="50%" stop-color="#ffc107"/>
+      <stop offset="100%" stop-color="#ff8f00"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="magenta" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="rootGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd54f" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffd54f" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle math grid -->
+  <g stroke="#ffffff" stroke-opacity="0.06" stroke-width="1">
+    <path d="M0 100 H1200 M0 200 H1200 M0 300 H1200 M0 400 H1200 M0 500 H1200"/>
+    <path d="M100 0 V630 M200 0 V630 M300 0 V630 M400 0 V630 M500 0 V630 M600 0 V630 M700 0 V630 M800 0 V630 M900 0 V630 M1000 0 V630 M1100 0 V630"/>
+  </g>
+
+  <!-- decorative formulas -->
+  <g fill="#ffffff" fill-opacity="0.05" font-style="italic">
+    <text x="40" y="60" font-size="22">d·ρ² &gt; 1</text>
+    <text x="1010" y="60" font-size="22">P(X) = κ(σ|σ')</text>
+    <text x="40" y="600" font-size="20">Var(S_X) ∝ (dρ²)^w</text>
+    <text x="930" y="600" font-size="20">Ω(n)  vs.  Θ(log n)</text>
+  </g>
+
+  <!-- Title -->
+  <g>
+    <text x="60" y="130" font-size="48" font-weight="800" fill="url(#gold)">证明思维链的价值</text>
+    <text x="60" y="180" font-size="26" font-weight="500" fill="#e0f2fe">为什么 Θ(log n) 推理能顶 Ω(n) 上下文</text>
+    <text x="60" y="215" font-size="18" fill="#94a3b8" letter-spacing="2">arXiv 2605.13687 · Gaitonde · Koehler · Mossel · Sly</text>
+  </g>
+
+  <!-- Left: broadcast tree (root → leaves) -->
+  <g transform="translate(170, 350)">
+    <!-- Root glow -->
+    <circle cx="0" cy="0" r="60" fill="url(#rootGlow)"/>
+    <!-- Layer 1 edges (d=3) -->
+    <g stroke="#22d3ee" stroke-width="2" stroke-opacity="0.7">
+      <line x1="0" y1="0" x2="-90" y2="60"/>
+      <line x1="0" y1="0" x2="0" y2="60"/>
+      <line x1="0" y1="0" x2="90" y2="60"/>
+    </g>
+    <!-- Layer 2 edges -->
+    <g stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.55">
+      <line x1="-90" y1="60" x2="-115" y2="130"/>
+      <line x1="-90" y1="60" x2="-90" y2="130"/>
+      <line x1="-90" y1="60" x2="-65" y2="130"/>
+      <line x1="0" y1="60" x2="-25" y2="130"/>
+      <line x1="0" y1="60" x2="0" y2="130"/>
+      <line x1="0" y1="60" x2="25" y2="130"/>
+      <line x1="90" y1="60" x2="65" y2="130"/>
+      <line x1="90" y1="60" x2="90" y2="130"/>
+      <line x1="90" y1="60" x2="115" y2="130"/>
+    </g>
+    <!-- Layer 3 edges (faded) -->
+    <g stroke="#22d3ee" stroke-width="1" stroke-opacity="0.35">
+      <line x1="-115" y1="130" x2="-122" y2="175"/>
+      <line x1="-115" y1="130" x2="-115" y2="175"/>
+      <line x1="-115" y1="130" x2="-108" y2="175"/>
+      <line x1="-90" y1="130" x2="-97" y2="175"/>
+      <line x1="-90" y1="130" x2="-90" y2="175"/>
+      <line x1="-90" y1="130" x2="-83" y2="175"/>
+      <line x1="-65" y1="130" x2="-72" y2="175"/>
+      <line x1="-65" y1="130" x2="-65" y2="175"/>
+      <line x1="-65" y1="130" x2="-58" y2="175"/>
+      <line x1="-25" y1="130" x2="-32" y2="175"/>
+      <line x1="-25" y1="130" x2="-25" y2="175"/>
+      <line x1="-25" y1="130" x2="-18" y2="175"/>
+      <line x1="0" y1="130" x2="-7" y2="175"/>
+      <line x1="0" y1="130" x2="0" y2="175"/>
+      <line x1="0" y1="130" x2="7" y2="175"/>
+      <line x1="25" y1="130" x2="18" y2="175"/>
+      <line x1="25" y1="130" x2="25" y2="175"/>
+      <line x1="25" y1="130" x2="32" y2="175"/>
+      <line x1="65" y1="130" x2="58" y2="175"/>
+      <line x1="65" y1="130" x2="65" y2="175"/>
+      <line x1="65" y1="130" x2="72" y2="175"/>
+      <line x1="90" y1="130" x2="83" y2="175"/>
+      <line x1="90" y1="130" x2="90" y2="175"/>
+      <line x1="90" y1="130" x2="97" y2="175"/>
+      <line x1="115" y1="130" x2="108" y2="175"/>
+      <line x1="115" y1="130" x2="115" y2="175"/>
+      <line x1="115" y1="130" x2="122" y2="175"/>
+    </g>
+
+    <!-- Root -->
+    <circle cx="0" cy="0" r="14" fill="#ffd54f" stroke="#fff" stroke-width="2"/>
+    <text x="0" y="-25" font-size="13" fill="#ffd54f" text-anchor="middle" font-weight="700">root σ</text>
+
+    <!-- Layer 1 nodes -->
+    <g fill="#22d3ee">
+      <circle cx="-90" cy="60" r="9"/>
+      <circle cx="0" cy="60" r="9"/>
+      <circle cx="90" cy="60" r="9"/>
+    </g>
+    <!-- Layer 2 -->
+    <g fill="#67e8f9">
+      <circle cx="-115" cy="130" r="6"/>
+      <circle cx="-90" cy="130" r="6"/>
+      <circle cx="-65" cy="130" r="6"/>
+      <circle cx="-25" cy="130" r="6"/>
+      <circle cx="0" cy="130" r="6"/>
+      <circle cx="25" cy="130" r="6"/>
+      <circle cx="65" cy="130" r="6"/>
+      <circle cx="90" cy="130" r="6"/>
+      <circle cx="115" cy="130" r="6"/>
+    </g>
+    <!-- Leaves -->
+    <g fill="#f472b6">
+      <circle cx="-122" cy="175" r="3.5"/><circle cx="-115" cy="175" r="3.5"/><circle cx="-108" cy="175" r="3.5"/>
+      <circle cx="-97" cy="175" r="3.5"/><circle cx="-90" cy="175" r="3.5"/><circle cx="-83" cy="175" r="3.5"/>
+      <circle cx="-72" cy="175" r="3.5"/><circle cx="-65" cy="175" r="3.5"/><circle cx="-58" cy="175" r="3.5"/>
+      <circle cx="-32" cy="175" r="3.5"/><circle cx="-25" cy="175" r="3.5"/><circle cx="-18" cy="175" r="3.5"/>
+      <circle cx="-7" cy="175" r="3.5"/><circle cx="0" cy="175" r="3.5"/><circle cx="7" cy="175" r="3.5"/>
+      <circle cx="18" cy="175" r="3.5"/><circle cx="25" cy="175" r="3.5"/><circle cx="32" cy="175" r="3.5"/>
+      <circle cx="58" cy="175" r="3.5"/><circle cx="65" cy="175" r="3.5"/><circle cx="72" cy="175" r="3.5"/>
+      <circle cx="83" cy="175" r="3.5"/><circle cx="90" cy="175" r="3.5"/><circle cx="97" cy="175" r="3.5"/>
+      <circle cx="108" cy="175" r="3.5"/><circle cx="115" cy="175" r="3.5"/><circle cx="122" cy="175" r="3.5"/>
+    </g>
+    <text x="0" y="210" font-size="13" fill="#f9a8d4" text-anchor="middle">leaves = language</text>
+
+    <text x="0" y="-110" font-size="16" fill="#cbd5e1" text-anchor="middle" font-weight="600">Broadcast Process</text>
+    <text x="0" y="-90" font-size="12" fill="#94a3b8" text-anchor="middle">(d=3, h=3, Ising κ)</text>
+  </g>
+
+  <!-- Right: Ω(n) vs Θ(log n) comparison bars -->
+  <g transform="translate(680, 290)">
+    <text x="0" y="-10" font-size="20" fill="#e0f2fe" font-weight="700">Context-only vs. Reasoning</text>
+
+    <!-- Bar Ω(n) -->
+    <text x="0" y="40" font-size="15" fill="#94a3b8">Non-reasoning LM</text>
+    <rect x="0" y="50" width="460" height="38" rx="6" fill="url(#magenta)" filter="url(#glow)"/>
+    <rect x="0" y="50" width="460" height="38" rx="6" fill="url(#magenta)"/>
+    <text x="20" y="76" font-size="22" font-weight="800" fill="#fff">ctx = Ω(n)</text>
+    <text x="280" y="76" font-size="14" fill="#fde2f3">长度=n → 上下文也得=n</text>
+
+    <!-- Bar Θ(log n) -->
+    <text x="0" y="130" font-size="15" fill="#94a3b8">Reasoning LM</text>
+    <rect x="0" y="140" width="80" height="38" rx="6" fill="url(#cyan)" filter="url(#glow)"/>
+    <rect x="0" y="140" width="80" height="38" rx="6" fill="url(#cyan)"/>
+    <text x="14" y="166" font-size="20" font-weight="800" fill="#fff">Θ(log n)</text>
+    <text x="100" y="166" font-size="14" fill="#bae6fd">工作记忆只需 O(log n) 比特</text>
+
+    <!-- Gap callout -->
+    <g transform="translate(0, 210)">
+      <rect x="0" y="0" width="460" height="60" rx="10" fill="#fbbf24" fill-opacity="0.12" stroke="#fbbf24" stroke-opacity="0.55" stroke-width="1.5"/>
+      <text x="20" y="28" font-size="15" fill="#fde68a" font-weight="700">指数级分离 (Exponential Separation)</text>
+      <text x="20" y="48" font-size="13" fill="#fef3c7">首份可证、可量化的 CoT 价值定理 · Theorem 3.4</text>
+    </g>
+  </g>
+
+  <!-- Bottom strip -->
+  <g>
+    <rect x="0" y="555" width="1200" height="75" fill="#000" fill-opacity="0.35"/>
+    <text x="60" y="585" font-size="14" fill="#94a3b8" letter-spacing="2">PAPER PICK · 论文导读 · 好文共赏</text>
+    <text x="60" y="610" font-size="13" fill="#64748b">综合评分 8.875/10 · Opus + Sonnet + Gemini 三模型评审</text>
+    <text x="1140" y="610" font-size="13" fill="#64748b" text-anchor="end">xiejiayun.github.io</text>
+  </g>
+</svg>
