@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#181f33"/>
+      <stop offset="100%" stop-color="#1a0808"/>
+    </linearGradient>
+    <linearGradient id="redglow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3838" stop-opacity="0.0"/>
+      <stop offset="50%" stop-color="#ff3838" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff3838" stop-opacity="0.0"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Grid -->
+  <g stroke="#1d2740" stroke-width="1" opacity="0.5">
+    <path d="M0,210 L1200,210"/>
+    <path d="M0,420 L1200,420"/>
+    <path d="M400,0 L400,630"/>
+    <path d="M800,0 L800,630"/>
+  </g>
+
+  <!-- Three layers labels -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="14" fill="#5b6378">
+    <text x="40" y="80">LAYER 1 / KERNEL</text>
+    <text x="40" y="290">LAYER 2 / FIRMWARE</text>
+    <text x="40" y="500">LAYER 3 / BASEBAND</text>
+  </g>
+
+  <!-- Cracks -->
+  <g stroke="#ff3838" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M120,140 L260,170 L340,150 L420,180 L500,160" stroke-linejoin="round"/>
+    <path d="M260,170 L290,200 M340,150 L355,135 M420,180 L460,205 M500,160 L530,140"/>
+
+    <path d="M120,330 L240,360 L320,340 L400,375 L470,345" stroke-linejoin="round"/>
+    <path d="M240,360 L255,390 M320,340 L335,320 M400,375 L420,395"/>
+
+    <path d="M120,540 L250,560 L330,540 L420,570 L500,545" stroke-linejoin="round"/>
+    <path d="M250,560 L280,580 M330,540 L355,520 M420,570 L450,590"/>
+  </g>
+
+  <!-- CVE badges -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace">
+    <g transform="translate(820,90)">
+      <rect width="320" height="120" rx="6" fill="#1c1318" stroke="#ff3838" stroke-width="1.5"/>
+      <text x="20" y="32" fill="#ff5a5a" font-size="14">CRITICAL · LPE</text>
+      <text x="20" y="62" fill="#f1f5ff" font-size="22" font-weight="bold">Copy.Fail</text>
+      <text x="20" y="90" fill="#9ca3b5" font-size="13">copy_from_user_iter() race</text>
+      <text x="20" y="108" fill="#9ca3b5" font-size="13">Linux 6.6 → 6.12 · Theori</text>
+    </g>
+    <g transform="translate(820,260)">
+      <rect width="320" height="120" rx="6" fill="#1c1318" stroke="#ffa500" stroke-width="1.5"/>
+      <text x="20" y="32" fill="#ffa500" font-size="14">HIGH · PHYSICAL</text>
+      <text x="20" y="62" fill="#f1f5ff" font-size="22" font-weight="bold">YellowKey</text>
+      <text x="20" y="90" fill="#9ca3b5" font-size="13">BitLocker TPM-only bypass</text>
+      <text x="20" y="108" fill="#9ca3b5" font-size="13">Win 11 24H2+ · 6 sec unlock</text>
+    </g>
+    <g transform="translate(820,430)">
+      <rect width="320" height="120" rx="6" fill="#1c1318" stroke="#ff3838" stroke-width="1.5"/>
+      <text x="20" y="32" fill="#ff5a5a" font-size="14">CRITICAL · 0-CLICK</text>
+      <text x="20" y="62" fill="#f1f5ff" font-size="22" font-weight="bold">P10 RCS Chain</text>
+      <text x="20" y="90" fill="#9ca3b5" font-size="13">Dolby AC-4 → mediacodec → root</text>
+      <text x="20" y="108" fill="#9ca3b5" font-size="13">Pixel 10 · Project Zero</text>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <g font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+    <text x="60" y="595" fill="#e8ecf5" font-size="26" font-weight="700">底层三连击 · 2026 年 5 月</text>
+    <text x="430" y="595" fill="#7a8197" font-size="16">Kernel · Firmware · Baseband — 0-days converge</text>
+  </g>
+</svg>

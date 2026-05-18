@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1c"/>
+      <stop offset="100%" stop-color="#1b2236"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Three fronts: triangular composition -->
+  <!-- Center -->
+  <g transform="translate(600,330)">
+    <circle r="55" fill="#1a2138" stroke="#7a8197" stroke-width="2"/>
+    <text y="-5" text-anchor="middle" fill="#e8ecf5" font-family="ui-monospace, monospace" font-size="13" font-weight="bold">OSS</text>
+    <text y="12" text-anchor="middle" fill="#9ca3b5" font-family="ui-monospace, monospace" font-size="11">Governance</text>
+    <text y="28" text-anchor="middle" fill="#9ca3b5" font-family="ui-monospace, monospace" font-size="11">2026</text>
+  </g>
+
+  <!-- Three battle nodes -->
+  <!-- Trail of Bits / Go -->
+  <g transform="translate(200,230)">
+    <circle r="80" fill="#1a2a1c" stroke="#5dd693" stroke-width="2"/>
+    <text y="-25" text-anchor="middle" fill="#5dd693" font-family="ui-monospace, monospace" font-size="13" font-weight="bold">FORK</text>
+    <text y="-5" text-anchor="middle" fill="#bcf7d4" font-family="ui-monospace, monospace" font-size="14" font-weight="bold">Go × Fuzz</text>
+    <text y="15" text-anchor="middle" fill="#86d2a8" font-family="ui-monospace, monospace" font-size="10">Trail of Bits</text>
+    <text y="30" text-anchor="middle" fill="#86d2a8" font-family="ui-monospace, monospace" font-size="10">upstream stall 8yr</text>
+    <text y="45" text-anchor="middle" fill="#5b8e74" font-family="ui-monospace, monospace" font-size="9">→ fork toolchain</text>
+  </g>
+
+  <!-- Rust LLM -->
+  <g transform="translate(1000,230)">
+    <circle r="80" fill="#2a1c1c" stroke="#ff8a6a" stroke-width="2"/>
+    <text y="-25" text-anchor="middle" fill="#ff8a6a" font-family="ui-monospace, monospace" font-size="13" font-weight="bold">BAN?</text>
+    <text y="-5" text-anchor="middle" fill="#fdd4c4" font-family="ui-monospace, monospace" font-size="14" font-weight="bold">Rust × LLM</text>
+    <text y="15" text-anchor="middle" fill="#f1a285" font-family="ui-monospace, monospace" font-size="10">Drew DeVault</text>
+    <text y="30" text-anchor="middle" fill="#f1a285" font-family="ui-monospace, monospace" font-size="10">contributor policy</text>
+    <text y="45" text-anchor="middle" fill="#b5765c" font-family="ui-monospace, monospace" font-size="9">→ ban LLM PRs</text>
+  </g>
+
+  <!-- Bambu AGPL -->
+  <g transform="translate(600,510)">
+    <circle r="80" fill="#1c1c2a" stroke="#9b8aff" stroke-width="2"/>
+    <text y="-25" text-anchor="middle" fill="#9b8aff" font-family="ui-monospace, monospace" font-size="13" font-weight="bold">SUE</text>
+    <text y="-5" text-anchor="middle" fill="#dad0ff" font-family="ui-monospace, monospace" font-size="14" font-weight="bold">Bambu × AGPL</text>
+    <text y="15" text-anchor="middle" fill="#b5a7e8" font-family="ui-monospace, monospace" font-size="10">Josef Prusa</text>
+    <text y="30" text-anchor="middle" fill="#b5a7e8" font-family="ui-monospace, monospace" font-size="10">cloud black-box</text>
+    <text y="45" text-anchor="middle" fill="#7e72b3" font-family="ui-monospace, monospace" font-size="9">→ license violation</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <g stroke="#3a4f80" stroke-width="1.5" stroke-dasharray="4,4" fill="none">
+    <line x1="280" y1="230" x2="545" y2="320"/>
+    <line x1="920" y1="230" x2="655" y2="320"/>
+    <line x1="600" y1="430" x2="600" y2="385"/>
+  </g>
+
+  <!-- Title -->
+  <g font-family="-apple-system, 'PingFang SC', sans-serif">
+    <text x="60" y="80" fill="#e8ecf5" font-size="38" font-weight="800">工具链战争 2026</text>
+    <text x="60" y="120" fill="#7a8197" font-size="18">Three Fronts · One Crisis — 开源治理的三场临界仗</text>
+    <text x="60" y="595" fill="#9ca3b5" font-size="14">Fork · Ban · Sue — 同一周, 同一根本矛盾</text>
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b15"/>
+      <stop offset="100%" stop-color="#121b2e"/>
+    </linearGradient>
+    <linearGradient id="diegpu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d6e3f"/>
+      <stop offset="100%" stop-color="#0e3a22"/>
+    </linearGradient>
+    <linearGradient id="diemem" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3a5cbf"/>
+      <stop offset="100%" stop-color="#1d2e6e"/>
+    </linearGradient>
+    <linearGradient id="dieflash" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bf8d3a"/>
+      <stop offset="100%" stop-color="#6e4f1d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Interposer -->
+  <rect x="120" y="350" width="960" height="40" fill="#0d1830" stroke="#3a4f80" stroke-width="1"/>
+  <text x="125" y="408" font-family="ui-monospace, monospace" fill="#5b6378" font-size="11">interposer · UCIe 1.1 · 32 GT/s</text>
+
+  <!-- GPU die -->
+  <g transform="translate(360,180)">
+    <rect width="200" height="170" rx="6" fill="url(#diegpu)" stroke="#5dd693" stroke-width="2"/>
+    <text x="100" y="40" text-anchor="middle" fill="#bcf7d4" font-family="ui-monospace, monospace" font-size="16" font-weight="bold">GPU</text>
+    <text x="100" y="65" text-anchor="middle" fill="#86d2a8" font-family="ui-monospace, monospace" font-size="13">Vera Rubin</text>
+    <text x="100" y="110" text-anchor="middle" fill="#5dd693" font-family="ui-monospace, monospace" font-size="26" font-weight="bold">5×</text>
+    <text x="100" y="135" text-anchor="middle" fill="#86d2a8" font-family="ui-monospace, monospace" font-size="12">FP4 TFLOPS</text>
+    <text x="100" y="155" text-anchor="middle" fill="#5b8e74" font-family="ui-monospace, monospace" font-size="10">vs Hopper</text>
+  </g>
+
+  <!-- HBM stack left -->
+  <g transform="translate(180,200)">
+    <rect width="160" height="150" rx="4" fill="url(#diemem)" stroke="#8da7ff" stroke-width="2"/>
+    <text x="80" y="32" text-anchor="middle" fill="#dde7ff" font-family="ui-monospace, monospace" font-size="14" font-weight="bold">HBM3E</text>
+    <g stroke="#5b7cd1" stroke-width="1" opacity="0.6">
+      <line x1="10" y1="55" x2="150" y2="55"/>
+      <line x1="10" y1="80" x2="150" y2="80"/>
+      <line x1="10" y1="105" x2="150" y2="105"/>
+      <line x1="10" y1="130" x2="150" y2="130"/>
+    </g>
+    <text x="80" y="76" text-anchor="middle" fill="#9fb6ff" font-family="ui-monospace, monospace" font-size="11">36GB · 1.2 TB/s</text>
+    <text x="80" y="103" text-anchor="middle" fill="#9fb6ff" font-family="ui-monospace, monospace" font-size="11">~10ns latency</text>
+    <text x="80" y="148" text-anchor="middle" fill="#7591d8" font-family="ui-monospace, monospace" font-size="10">12 die stack</text>
+  </g>
+
+  <!-- HBF stack right -->
+  <g transform="translate(580,200)">
+    <rect width="160" height="150" rx="4" fill="url(#dieflash)" stroke="#e8b773" stroke-width="2"/>
+    <text x="80" y="32" text-anchor="middle" fill="#fde9c4" font-family="ui-monospace, monospace" font-size="14" font-weight="bold">HBF (new)</text>
+    <g stroke="#a87e35" stroke-width="1" opacity="0.6">
+      <line x1="10" y1="55" x2="150" y2="55"/>
+      <line x1="10" y1="80" x2="150" y2="80"/>
+      <line x1="10" y1="105" x2="150" y2="105"/>
+      <line x1="10" y1="130" x2="150" y2="130"/>
+    </g>
+    <text x="80" y="76" text-anchor="middle" fill="#fac98a" font-family="ui-monospace, monospace" font-size="11">512GB · 64 GB/s</text>
+    <text x="80" y="103" text-anchor="middle" fill="#fac98a" font-family="ui-monospace, monospace" font-size="11">~10µs · $0.6/GB</text>
+    <text x="80" y="148" text-anchor="middle" fill="#b9863d" font-family="ui-monospace, monospace" font-size="10">3D NAND × HV-TSV</text>
+  </g>
+
+  <!-- SOCAMM module -->
+  <g transform="translate(780,200)">
+    <rect width="240" height="150" rx="4" fill="#2a1e3d" stroke="#b487e8" stroke-width="2"/>
+    <text x="120" y="32" text-anchor="middle" fill="#ead4ff" font-family="ui-monospace, monospace" font-size="14" font-weight="bold">SOCAMM2 LPDDR5X</text>
+    <g fill="#3d2a59" stroke="#7e5cb3">
+      <rect x="20" y="55" width="30" height="60"/>
+      <rect x="60" y="55" width="30" height="60"/>
+      <rect x="100" y="55" width="30" height="60"/>
+      <rect x="140" y="55" width="30" height="60"/>
+      <rect x="180" y="55" width="30" height="60"/>
+    </g>
+    <text x="120" y="138" text-anchor="middle" fill="#c8a8ed" font-family="ui-monospace, monospace" font-size="11">96GB · 76.8 GB/s · 90W</text>
+  </g>
+
+  <!-- Title -->
+  <g font-family="-apple-system, 'PingFang SC', sans-serif">
+    <text x="60" y="80" fill="#e8ecf5" font-size="36" font-weight="800">GPU 之外的第二战线</text>
+    <text x="60" y="118" fill="#7a8197" font-size="18">HBF · SOCAMM2 · UCIe — 内存与互联接管 AI 算力瓶颈</text>
+    <text x="60" y="590" fill="#9ca3b5" font-size="14">2026 年 5 月 · SemiEngineering 四篇技术报告整合</text>
+  </g>
+
+  <!-- arrow CPU dim -->
+  <text x="60" y="475" font-family="ui-monospace, monospace" fill="#5b6378" font-size="11">CXL 3.0 · 200ns · pool</text>
+  <text x="950" y="475" font-family="ui-monospace, monospace" fill="#5b6378" font-size="11">PCIe 6.0 · 64 GT/s</text>
+</svg>
