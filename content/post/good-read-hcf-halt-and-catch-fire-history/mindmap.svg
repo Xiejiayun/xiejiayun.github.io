@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="mmbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#1a1530"/>
+    </linearGradient>
+    <filter id="nglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#mmbg)"/>
+
+  <text x="700" y="48" font-family="ui-sans-serif, system-ui" font-size="26" fill="#ffb347" text-anchor="middle" font-weight="700">HCF · 从段子到指令到现代 CPU 模糊测试的演化</text>
+
+  <!-- 中央节点 -->
+  <g transform="translate(700,450)">
+    <ellipse cx="0" cy="0" rx="120" ry="60" fill="#ff5e1a" opacity="0.25" stroke="#ffb347" stroke-width="2" filter="url(#nglow)"/>
+    <text x="0" y="-5" font-family="ui-serif, Georgia, serif" font-size="22" fill="#fff2cc" text-anchor="middle" font-weight="700">Halt and</text>
+    <text x="0" y="22" font-family="ui-serif, Georgia, serif" font-size="22" fill="#fff2cc" text-anchor="middle" font-weight="700">Catch Fire</text>
+  </g>
+
+  <!-- 4 个主要分支：起源 / 命名 / 硬件实测 / 现代后裔 -->
+
+  <!-- 分支1：起源 (左上) -->
+  <g>
+    <line x1="600" y1="430" x2="380" y2="220" stroke="#7da3ff" stroke-width="2" opacity="0.6"/>
+    <ellipse cx="270" cy="180" rx="130" ry="50" fill="#1a2540" stroke="#7da3ff" stroke-width="1.5"/>
+    <text x="270" y="170" font-family="ui-sans-serif, system-ui" font-size="16" fill="#fff" text-anchor="middle" font-weight="600">① 起源：程序员幽默</text>
+    <text x="270" y="195" font-family="ui-sans-serif, system-ui" font-size="13" fill="#9fb4d3" text-anchor="middle">IBM 360 (1964) · 三字母助记符</text>
+
+    <line x1="270" y1="230" x2="140" y2="290" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="140" y="305" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">EPI / DC / CRN</text>
+
+    <line x1="270" y1="230" x2="270" y2="290" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="270" y="305" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">Konrad Zuse Z1/Z3</text>
+
+    <line x1="270" y1="230" x2="410" y2="290" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="410" y="305" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">apocryphal: 360 起火</text>
+  </g>
+
+  <!-- 分支2：命名 (右上) -->
+  <g>
+    <line x1="800" y1="430" x2="1020" y2="220" stroke="#7da3ff" stroke-width="2" opacity="0.6"/>
+    <ellipse cx="1130" cy="180" rx="140" ry="50" fill="#1a2540" stroke="#7da3ff" stroke-width="1.5"/>
+    <text x="1130" y="170" font-family="ui-sans-serif, system-ui" font-size="16" fill="#fff" text-anchor="middle" font-weight="600">② 命名：BYTE 1977</text>
+    <text x="1130" y="195" font-family="ui-sans-serif, system-ui" font-size="13" fill="#9fb4d3" text-anchor="middle">Gerry Wheeler 给 0x9D/0xDD 起名</text>
+
+    <line x1="1130" y1="230" x2="1020" y2="290" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="1020" y="305" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">"address bus = 16-bit counter"</text>
+
+    <line x1="1130" y1="230" x2="1150" y2="290" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="1170" y="305" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">59 条未文档化 opcodes</text>
+
+    <line x1="1130" y1="230" x2="1280" y2="290" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="1280" y="305" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">Agans 2002: "Drop Dead"</text>
+  </g>
+
+  <!-- 分支3：硬件实测 (左下) -->
+  <g>
+    <line x1="600" y1="470" x2="380" y2="680" stroke="#7da3ff" stroke-width="2" opacity="0.6"/>
+    <ellipse cx="270" cy="710" rx="140" ry="50" fill="#1a2540" stroke="#7da3ff" stroke-width="1.5"/>
+    <text x="270" y="700" font-family="ui-sans-serif, system-ui" font-size="16" fill="#fff" text-anchor="middle" font-weight="600">③ 硬件实测</text>
+    <text x="270" y="725" font-family="ui-sans-serif, system-ui" font-size="13" fill="#9fb4d3" text-anchor="middle">Doc TB 2019 · 真实 MC6800P</text>
+
+    <line x1="270" y1="760" x2="140" y2="810" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="140" y="825" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">64 ms 潜伏期</text>
+
+    <line x1="270" y1="760" x2="270" y2="810" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="270" y="825" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">500 kHz 干净方波</text>
+
+    <line x1="270" y1="760" x2="410" y2="810" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="410" y="825" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">0xCD/0xED/0xFD 慢速</text>
+
+    <!-- 中间小节点：1985 IEEE -->
+    <line x1="320" y1="660" x2="500" y2="600" stroke="#5a7ab0" stroke-width="1" opacity="0.6"/>
+    <ellipse cx="500" cy="600" rx="100" ry="35" fill="#1a2540" stroke="#7da3ff" stroke-width="1" opacity="0.7"/>
+    <text x="500" y="595" font-family="ui-sans-serif, system-ui" font-size="13" fill="#fff" text-anchor="middle">IEEE D&amp;T 1985</text>
+    <text x="500" y="615" font-family="SF Mono, monospace" font-size="11" fill="#9fb4d3" text-anchor="middle">Daniels &amp; Bruce / HACOF</text>
+  </g>
+
+  <!-- 分支4：现代后裔 (右下) -->
+  <g>
+    <line x1="800" y1="470" x2="1020" y2="680" stroke="#7da3ff" stroke-width="2" opacity="0.6"/>
+    <ellipse cx="1130" cy="710" rx="140" ry="50" fill="#1a2540" stroke="#7da3ff" stroke-width="1.5"/>
+    <text x="1130" y="700" font-family="ui-sans-serif, system-ui" font-size="16" fill="#fff" text-anchor="middle" font-weight="600">④ 现代后裔</text>
+    <text x="1130" y="725" font-family="ui-sans-serif, system-ui" font-size="13" fill="#9fb4d3" text-anchor="middle">从 6800 到 x86 / RISC-V</text>
+
+    <line x1="1130" y1="760" x2="970" y2="810" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="970" y="825" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">Pentium F00F (1994)</text>
+
+    <line x1="1130" y1="760" x2="1130" y2="810" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="1130" y="825" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">UD2 (受控 halt)</text>
+
+    <line x1="1130" y1="760" x2="1290" y2="810" stroke="#5a7ab0" stroke-width="1"/>
+    <text x="1290" y="825" font-family="SF Mono, monospace" font-size="12" fill="#9fb4d3" text-anchor="middle">Sandsifter 2017</text>
+
+    <!-- 中间小节点：Spectre/Meltdown / PACMAN -->
+    <line x1="1080" y1="660" x2="900" y2="600" stroke="#5a7ab0" stroke-width="1" opacity="0.6"/>
+    <ellipse cx="900" cy="600" rx="110" ry="35" fill="#1a2540" stroke="#7da3ff" stroke-width="1" opacity="0.7"/>
+    <text x="900" y="595" font-family="ui-sans-serif, system-ui" font-size="13" fill="#fff" text-anchor="middle">Spectre / PACMAN</text>
+    <text x="900" y="615" font-family="SF Mono, monospace" font-size="11" fill="#9fb4d3" text-anchor="middle">推测执行的 hidden state</text>
+  </g>
+
+  <!-- 底部主题 -->
+  <text x="700" y="880" font-family="ui-sans-serif, system-ui" font-size="15" fill="#9fb4d3" text-anchor="middle" font-style="italic" opacity="0.85">指令集 ≠ CPU。Robinson 这篇短文把 60 年的 hidden state 演化串成了一根时间线</text>
+</svg>
