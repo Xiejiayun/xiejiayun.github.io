@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#16223b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <style>
+      .node-rect { fill: #1e293b; stroke-width: 1.5; rx: 8; ry: 8; }
+      .label { font-family: ui-sans-serif, system-ui, sans-serif; fill: #e2e8f0; }
+      .sub { font-family: ui-sans-serif, system-ui, sans-serif; fill: #94a3b8; font-size: 12px; }
+      .branch { fill: none; stroke-width: 2; opacity: 0.7; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- center -->
+  <g transform="translate(700,450)">
+    <circle r="95" fill="#1e293b" stroke="url(#accent)" stroke-width="3"/>
+    <text class="label" text-anchor="middle" y="-15" font-size="22" font-weight="700" fill="#5eead4">六个 SQL</text>
+    <text class="label" text-anchor="middle" y="15" font-size="22" font-weight="700" fill="#5eead4">反欺诈模式</text>
+    <text class="sub" text-anchor="middle" y="42">Fixel Smith · 2026-05</text>
+  </g>
+
+  <!-- branch lines -->
+  <g class="branch" stroke="#5eead4">
+    <path d="M 700 355 Q 350 200 230 165"/>
+    <path d="M 700 355 Q 1050 200 1170 165"/>
+    <path d="M 605 450 Q 350 450 230 450"/>
+    <path d="M 795 450 Q 1050 450 1170 450"/>
+    <path d="M 700 545 Q 350 700 230 745"/>
+    <path d="M 700 545 Q 1050 700 1170 745"/>
+  </g>
+
+  <!-- node 1: Velocity -->
+  <g transform="translate(80,120)">
+    <rect class="node-rect" width="300" height="100" stroke="url(#accent)"/>
+    <text class="label" x="20" y="32" font-size="18" font-weight="700" fill="#5eead4">1. Velocity 速率</text>
+    <text class="sub" x="20" y="56">同一持卡人窗口内交易次数</text>
+    <text class="sub" x="20" y="74">1min · 5min · 1hr 三档并行</text>
+    <text class="sub" x="20" y="92">假阳性：售货机巡检员、批量充值</text>
+  </g>
+
+  <!-- node 2: Travel -->
+  <g transform="translate(1020,120)">
+    <rect class="node-rect" width="300" height="100" stroke="url(#accent)"/>
+    <text class="label" x="20" y="32" font-size="18" font-weight="700" fill="#60a5fa">2. Impossible Travel</text>
+    <text class="sub" x="20" y="56">LAG() + haversine 算等效时速</text>
+    <text class="sub" x="20" y="74">阈值 600 mph = 比客机还快</text>
+    <text class="sub" x="20" y="92">家族：同州 5min、跨邮编 1hr、跨国 10min</text>
+  </g>
+
+  <!-- node 3: Amount -->
+  <g transform="translate(80,400)">
+    <rect class="node-rect" width="300" height="100" stroke="url(#accent)"/>
+    <text class="label" x="20" y="32" font-size="18" font-weight="700" fill="#5eead4">3. Amount 金额异常</text>
+    <text class="sub" x="20" y="56">$1/$5/$10 → 试卡</text>
+    <text class="sub" x="20" y="74">$99.99/$499.99 → 贴线规避</text>
+    <text class="sub" x="20" y="92">福利交易：另一篇文章的主题</text>
+  </g>
+
+  <!-- node 4: Merchant -->
+  <g transform="translate(1020,400)">
+    <rect class="node-rect" width="300" height="100" stroke="url(#accent)"/>
+    <text class="label" x="20" y="32" font-size="18" font-weight="700" fill="#60a5fa">4. Suspicious Merchant</text>
+    <text class="sub" x="20" y="56">168 小时滚动均值作基线</text>
+    <text class="sub" x="20" y="74">spike_ratio > 3 触发</text>
+    <text class="sub" x="20" y="92">解决静态阈值"大小不分"问题</text>
+  </g>
+
+  <!-- node 5: Off-hours -->
+  <g transform="translate(80,700)">
+    <rect class="node-rect" width="300" height="100" stroke="url(#accent)"/>
+    <text class="label" x="20" y="32" font-size="18" font-weight="700" fill="#5eead4">5. Off-Hours 时段异常</text>
+    <text class="sub" x="20" y="56">90 天里小时分布</text>
+    <text class="sub" x="20" y="74">FILTER (count >= 2) 才算习惯</text>
+    <text class="sub" x="20" y="92">短板：新账户无历史</text>
+  </g>
+
+  <!-- node 6: Windows -->
+  <g transform="translate(1020,700)">
+    <rect class="node-rect" width="300" height="100" stroke="#fbbf24" stroke-width="2.5"/>
+    <text class="label" x="20" y="32" font-size="18" font-weight="700" fill="#fbbf24">6. Composable Windows</text>
+    <text class="sub" x="20" y="56">预计算 4 列：</text>
+    <text class="sub" x="20" y="74">time_since_last / merchant_change /</text>
+    <text class="sub" x="20" y="92">running_24h_total / tx_of_day</text>
+  </g>
+
+  <!-- top frame: techniques -->
+  <g transform="translate(600,30)">
+    <rect class="node-rect" width="200" height="60" stroke="#94a3b8"/>
+    <text class="label" x="100" y="26" text-anchor="middle" font-size="14" fill="#94a3b8">SQL:2003 窗口函数</text>
+    <text class="sub" x="100" y="46" text-anchor="middle">QUALIFY · LAG · OVER</text>
+  </g>
+  <line x1="700" y1="90" x2="700" y2="355" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+
+  <!-- bottom frame: combined scoring -->
+  <g transform="translate(500,830)">
+    <rect class="node-rect" width="400" height="50" stroke="#fbbf24" stroke-width="2"/>
+    <text class="label" x="200" y="22" text-anchor="middle" font-size="15" font-weight="700" fill="#fbbf24">组合评分：3-4 条规则同时触发 = 几乎必为欺诈</text>
+    <text class="sub" x="200" y="40" text-anchor="middle">never auto-block on a single rule</text>
+  </g>
+  <line x1="700" y1="545" x2="700" y2="830" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+</svg>
