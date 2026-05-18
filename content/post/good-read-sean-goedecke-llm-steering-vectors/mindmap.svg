@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1c"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <style>
+      .root { fill:#fbbf24; }
+      .b1 { fill:#22d3ee; }
+      .b2 { fill:#a78bfa; }
+      .b3 { fill:#4ade80; }
+      .b4 { fill:#f472b6; }
+      .b5 { fill:#fb923c; }
+      .lab { font-family: ui-sans-serif, system-ui, sans-serif; fill:#f1f5f9; }
+      .lab2 { font-family: ui-sans-serif, system-ui, sans-serif; fill:#cbd5e1; font-size:13px; }
+      .conn { stroke:#64748b; stroke-width:1.8; fill:none; opacity:0.6; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg2)"/>
+
+  <!-- title -->
+  <text x="700" y="50" text-anchor="middle" class="lab" font-size="22" font-weight="700">Sean Goedecke · 「Steering 重新有趣」思维导图</text>
+
+  <!-- root -->
+  <g transform="translate(700,450)">
+    <ellipse cx="0" cy="0" rx="170" ry="60" fill="#fbbf24" opacity="0.15" stroke="#fbbf24" stroke-width="2"/>
+    <text class="root" x="0" y="-8" text-anchor="middle" font-size="22" font-weight="800">LLM Steering</text>
+    <text class="root" x="0" y="20" text-anchor="middle" font-size="16">在 DS4 之后</text>
+  </g>
+
+  <!-- 5 branches -->
+  <!-- 1: 触发事件 (top-left) -->
+  <path class="conn" d="M 580,420 C 480,400 380,360 250,260"/>
+  <g transform="translate(140,170)">
+    <rect width="280" height="200" rx="14" fill="#0f172a" stroke="#22d3ee" stroke-width="2"/>
+    <text x="20" y="34" class="b1" font-size="18" font-weight="700">① 触发事件</text>
+    <text x="20" y="68" class="lab2">· DS4 = antirez 单文件运行时</text>
+    <text x="20" y="90" class="lab2">· 把 DeepSeek V4 Flash 拉到本地</text>
+    <text x="20" y="112" class="lab2">· dir-steering 一等公民</text>
+    <text x="20" y="134" class="lab2">· 第一次：本地权重 + 强模型</text>
+    <text x="20" y="156" class="lab2">· Golden Gate Claude（2024）的余温</text>
+    <text x="20" y="178" class="lab2">· 普通工程师终于能动手实验</text>
+  </g>
+
+  <!-- 2: 怎么做 (top-right) -->
+  <path class="conn" d="M 820,420 C 920,400 1020,360 1150,260"/>
+  <g transform="translate(990,170)">
+    <rect width="280" height="200" rx="14" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="34" class="b2" font-size="18" font-weight="700">② 怎么做</text>
+    <text x="20" y="68" class="lab2">· 朴素法：成对 prompt 差分</text>
+    <text x="20" y="90" class="lab2">  → 取 activation 相减得向量</text>
+    <text x="20" y="112" class="lab2">· 高级法：训练 sparse autoencoder</text>
+    <text x="20" y="134" class="lab2">  → 抽取 monosemantic features</text>
+    <text x="20" y="156" class="lab2">· 推理时把向量加到选定层</text>
+    <text x="20" y="178" class="lab2">· 任何 activation 位置都能切</text>
+  </g>
+
+  <!-- 3: 为什么没火 (bottom-left) -->
+  <path class="conn" d="M 580,480 C 480,520 380,580 250,680"/>
+  <g transform="translate(140,640)">
+    <rect width="280" height="200" rx="14" fill="#0f172a" stroke="#4ade80" stroke-width="2"/>
+    <text x="20" y="34" class="b3" font-size="18" font-weight="700">③ 为什么没火</text>
+    <text x="20" y="68" class="lab2">· "中产阶层" 研究：</text>
+    <text x="20" y="90" class="lab2">  上不去大厂、下不到 API 用户</text>
+    <text x="20" y="112" class="lab2">· API 用户拿不到 activation</text>
+    <text x="20" y="134" class="lab2">· 大厂宁可直接训练</text>
+    <text x="20" y="156" class="lab2">· 多数效果 prompt 都能做</text>
+    <text x="20" y="178" class="lab2">· "请简洁" 三个字就够了</text>
+  </g>
+
+  <!-- 4: 杀手锏 unpromptable (bottom-center) -->
+  <path class="conn" d="M 700,510 C 700,560 700,610 700,680"/>
+  <g transform="translate(560,690)">
+    <rect width="280" height="180" rx="14" fill="#0f172a" stroke="#f472b6" stroke-width="2"/>
+    <text x="20" y="34" class="b4" font-size="18" font-weight="700">④ 真正的甜点</text>
+    <text x="20" y="68" class="lab2">· 不可 prompt 的概念：</text>
+    <text x="20" y="90" class="lab2">  「智力」「refusal」</text>
+    <text x="20" y="112" class="lab2">· abliteration：去拒答的真实用法</text>
+    <text x="20" y="134" class="lab2">· compression：把 codebase 知识</text>
+    <text x="20" y="156" class="lab2">  从 context 挪进 implicit memory</text>
+  </g>
+
+  <!-- 5: 哲学边界 (bottom-right) -->
+  <path class="conn" d="M 820,480 C 920,520 1020,580 1150,680"/>
+  <g transform="translate(990,640)">
+    <rect width="280" height="200" rx="14" fill="#0f172a" stroke="#fb923c" stroke-width="2"/>
+    <text x="20" y="34" class="b5" font-size="18" font-weight="700">⑤ 哲学边界</text>
+    <text x="20" y="68" class="lab2">· 极限：steering 复杂度 ≈ 模型本身</text>
+    <text x="20" y="90" class="lab2">· "把 GPT-2 激活换成 GPT-5"</text>
+    <text x="20" y="112" class="lab2">  其实是在跟更强模型说话</text>
+    <text x="20" y="134" class="lab2">· 智力在 steering，不在模型</text>
+    <text x="20" y="156" class="lab2">· 与 NLA、SAE 一脉相承</text>
+    <text x="20" y="178" class="lab2">· 六个月可见：社区会发力</text>
+  </g>
+
+  <!-- bottom legend -->
+  <text x="700" y="870" text-anchor="middle" class="lab2" font-size="12" opacity="0.7">作者：Sean Goedecke · 2026-05-16 · 导读：xiejiayun.github.io</text>
+</svg>
