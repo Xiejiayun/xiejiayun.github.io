@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0a18"/>
+      <stop offset="100%" stop-color="#1a1633"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f5d27a"/>
+      <stop offset="100%" stop-color="#c69b4d"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg2)"/>
+
+  <!-- title -->
+  <text x="800" y="46" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#f6f3ff" text-anchor="middle">禁欲计算 · 思维导图</text>
+  <text x="800" y="72" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#bda6f0" text-anchor="middle">Ascetic Computing — Dave Gauer (ratfactor) · 2026-05-15</text>
+
+  <!-- center node -->
+  <g transform="translate(800,500)">
+    <circle r="98" fill="url(#core)"/>
+    <text y="-8" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#1a1633" text-anchor="middle">禁欲计算</text>
+    <text y="22" font-family="Georgia, serif" font-style="italic" font-size="16" fill="#1a1633" text-anchor="middle">Ascetic Computing</text>
+  </g>
+
+  <!-- branch helper styles via groups -->
+  <!-- 3 principles (top) -->
+  <g stroke="#7c6cc4" stroke-width="1.4" fill="none">
+    <path d="M800 402 L800 270 L300 200"/>
+    <path d="M800 402 L800 270 L800 160"/>
+    <path d="M800 402 L800 270 L1300 200"/>
+  </g>
+  <g font-family="Noto Sans CJK SC, sans-serif" fill="#e6dfff">
+    <g transform="translate(300,200)" text-anchor="end">
+      <rect x="-256" y="-30" width="252" height="60" fill="#241e44" stroke="#7c6cc4" rx="6"/>
+      <text x="-130" y="-6" font-size="17" font-weight="700" text-anchor="middle">原则 1 · 道德</text>
+      <text x="-130" y="18" font-size="13" fill="#cabfee" text-anchor="middle">拒绝违反个人标准的工具</text>
+    </g>
+    <g transform="translate(800,160)" text-anchor="middle">
+      <rect x="-160" y="-30" width="320" height="60" fill="#241e44" stroke="#7c6cc4" rx="6"/>
+      <text y="-6" font-size="17" font-weight="700">原则 2 · 反 FOMO</text>
+      <text y="18" font-size="13" fill="#cabfee">允许自己错过 — 错过即省略</text>
+    </g>
+    <g transform="translate(1300,200)" text-anchor="start">
+      <rect x="4" y="-30" width="252" height="60" fill="#241e44" stroke="#7c6cc4" rx="6"/>
+      <text x="130" y="-6" font-size="17" font-weight="700" text-anchor="middle">原则 3 · 反 Shiny</text>
+      <text x="130" y="18" font-size="13" fill="#cabfee" text-anchor="middle">不追新玩具是最终 boss</text>
+    </g>
+  </g>
+
+  <!-- 4 pillars (bottom) -->
+  <g stroke="#7c6cc4" stroke-width="1.4" fill="none">
+    <path d="M800 598 L800 700 L260 770"/>
+    <path d="M800 598 L800 700 L620 800"/>
+    <path d="M800 598 L800 700 L980 800"/>
+    <path d="M800 598 L800 700 L1340 770"/>
+  </g>
+  <g font-family="Noto Sans CJK SC, sans-serif" fill="#e6dfff">
+    <g transform="translate(260,770)" text-anchor="middle">
+      <rect x="-130" y="-32" width="260" height="84" fill="#241e44" stroke="#8d80c3" rx="6"/>
+      <text y="-10" font-size="16" font-weight="700">支柱 A · Lindy 效应</text>
+      <text y="12" font-size="12" fill="#cabfee">优先学"还能活很久"的知识</text>
+      <text y="32" font-size="12" fill="#cabfee">vi (1976) · Unix · 编程基础</text>
+    </g>
+    <g transform="translate(620,800)" text-anchor="middle">
+      <rect x="-130" y="-32" width="260" height="84" fill="#241e44" stroke="#8d80c3" rx="6"/>
+      <text y="-10" font-size="16" font-weight="700">支柱 B · 约束 = 创造</text>
+      <text y="12" font-size="12" fill="#cabfee">Programming Pearls 第一章</text>
+      <text y="32" font-size="12" fill="#cabfee">受限内存 → 位图 + 10x 加速</text>
+    </g>
+    <g transform="translate(980,800)" text-anchor="middle">
+      <rect x="-130" y="-32" width="260" height="84" fill="#241e44" stroke="#8d80c3" rx="6"/>
+      <text y="-10" font-size="16" font-weight="700">支柱 C · 可靠性伦理</text>
+      <text y="12" font-size="12" fill="#cabfee">"Use it in anger" — 4 点 page</text>
+      <text y="32" font-size="12" fill="#cabfee">拒绝静默自动更新</text>
+    </g>
+    <g transform="translate(1340,770)" text-anchor="middle">
+      <rect x="-130" y="-32" width="260" height="84" fill="#241e44" stroke="#8d80c3" rx="6"/>
+      <text y="-10" font-size="16" font-weight="700">支柱 D · Maximalism</text>
+      <text y="12" font-size="12" fill="#cabfee">休眠的电子园圃</text>
+      <text y="32" font-size="12" fill="#cabfee">Cray (1976) ≈ Celeron 旧本</text>
+    </g>
+  </g>
+
+  <!-- left tool stack -->
+  <g stroke="#5b7c5b" stroke-width="1.2" fill="none">
+    <path d="M702 500 L400 460 L160 420"/>
+    <path d="M702 500 L400 460 L160 470"/>
+    <path d="M702 500 L400 460 L160 520"/>
+    <path d="M702 500 L400 460 L160 570"/>
+  </g>
+  <g font-family="JetBrains Mono, Menlo, monospace" fill="#bdf0c0">
+    <text x="158" y="424" font-size="13" text-anchor="end">OpenBSD</text>
+    <text x="158" y="474" font-size="13" text-anchor="end">vim</text>
+    <text x="158" y="524" font-size="13" text-anchor="end">LibreWolf + Dillo</text>
+    <text x="158" y="574" font-size="13" text-anchor="end">Ruby scripts</text>
+    <text x="400" y="490" font-family="Noto Sans CJK SC" font-size="12" fill="#7caf7e" text-anchor="middle">每日工具栈</text>
+  </g>
+
+  <!-- right echo chamber: 本博呼应 -->
+  <g stroke="#c47a7a" stroke-width="1.2" fill="none">
+    <path d="M898 500 L1200 460 L1440 410"/>
+    <path d="M898 500 L1200 460 L1440 450"/>
+    <path d="M898 500 L1200 460 L1440 490"/>
+    <path d="M898 500 L1200 460 L1440 530"/>
+    <path d="M898 500 L1200 460 L1440 570"/>
+  </g>
+  <g font-family="Noto Sans CJK SC, sans-serif" fill="#f0c4c4" font-size="12">
+    <text x="1442" y="414" text-anchor="start">matklad 论架构</text>
+    <text x="1442" y="454" text-anchor="start">Redis 野心代价</text>
+    <text x="1442" y="494" text-anchor="start">Julia Evans 离开 Tailwind</text>
+    <text x="1442" y="534" text-anchor="start">FST 把 3GB 压成 10MB</text>
+    <text x="1442" y="574" text-anchor="start">Mercury Haskell 10 年</text>
+    <text x="1200" y="478" font-size="12" fill="#a76262" text-anchor="middle">本博内部呼应</text>
+  </g>
+
+  <!-- bottom: 反方观点 -->
+  <g stroke="#8888b0" stroke-width="1.2" fill="none">
+    <path d="M800 920 L500 900"/>
+    <path d="M800 920 L800 920"/>
+    <path d="M800 920 L1100 900"/>
+  </g>
+  <g font-family="Noto Sans CJK SC, sans-serif" fill="#cabfee" font-size="12">
+    <text x="500" y="945" text-anchor="middle">反方：Native 输给 Electron（Artem Loenko）</text>
+    <text x="800" y="945" text-anchor="middle">补丁：AI 不会让流程更快（Vanbrabant）</text>
+    <text x="1100" y="945" text-anchor="middle">同向：指数不会变 sigmoid（Scott Alexander）</text>
+  </g>
+
+  <!-- top tag chips -->
+  <g font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#bda6f0">
+    <text x="56" y="118">📅 2026-05-15</text>
+    <text x="56" y="138">📰 Lobsters Top of Week (156 ↑)</text>
+    <text x="56" y="158">✍ Dave Gauer (since 1997)</text>
+  </g>
+  <g font-family="Noto Sans CJK SC, sans-serif" font-size="12" fill="#bda6f0" text-anchor="end">
+    <text x="1544" y="118">📊 多模评分 8.7/10</text>
+    <text x="1544" y="138">📚 5000+ 英文词</text>
+    <text x="1544" y="158">🔗 5 张本博内部链接</text>
+  </g>
+</svg>
