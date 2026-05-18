@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="50%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0c1426"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+    <linearGradient id="exp1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+    <linearGradient id="exp2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="exp3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="muGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fca5a5"/>
+      <stop offset="100%" style="stop-color:#dc2626"/>
+    </linearGradient>
+    <linearGradient id="msspGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#86efac"/>
+      <stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.06" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Top tag -->
+  <rect x="60" y="50" width="180" height="32" rx="16" fill="url(#accent)"/>
+  <text x="150" y="72" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">📌 论文导读 · Paper Pick</text>
+
+  <!-- Title -->
+  <text x="60" y="142" font-family="-apple-system, sans-serif" font-size="44" font-weight="800" fill="#f8fafc">μP → MSSP</text>
+  <text x="60" y="186" font-family="-apple-system, sans-serif" font-size="28" font-weight="600" fill="#e2e8f0">MoE 时代的最大尺度稳定参数化</text>
+  <text x="60" y="218" font-family="-apple-system, sans-serif" font-size="18" font-weight="400" fill="#94a3b8">arXiv 2605.14200 · Vankadara, Haas, Bordt et al. · UCL Gatsby + Tübingen</text>
+
+  <!-- The "mu doesn't work" arrow -->
+  <g transform="translate(60, 270)">
+    <rect x="0" y="0" width="380" height="80" rx="10" fill="url(#muGrad)" opacity="0.85"/>
+    <text x="190" y="35" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">μP on MoE</text>
+    <text x="190" y="62" font-family="-apple-system, sans-serif" font-size="15" fill="#fee2e2" text-anchor="middle">大模型反而更差 · LR 不迁移</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(460, 290)">
+    <path d="M 0 20 L 60 20 M 50 10 L 60 20 L 50 30" stroke="#f59e0b" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="30" y="0" font-family="-apple-system, sans-serif" font-size="14" fill="#fbbf24" text-anchor="middle" font-weight="600">CLT/LLN 失衡</text>
+  </g>
+
+  <!-- MSSP green -->
+  <g transform="translate(540, 270)">
+    <rect x="0" y="0" width="600" height="80" rx="10" fill="url(#msspGrad)" opacity="0.9"/>
+    <text x="300" y="35" font-family="-apple-system, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">MSSP — Maximally Scale-Stable Parameterization</text>
+    <text x="300" y="62" font-family="-apple-system, sans-serif" font-size="15" fill="#dcfce7" text-anchor="middle">每个子项都 Θ(1) · 三区制完整处方 · 2.5B GPT-MoE 上 LR 完美迁移</text>
+  </g>
+
+  <!-- Three Regime cards -->
+  <g transform="translate(60, 400)">
+    <!-- Regime I -->
+    <rect x="0" y="0" width="340" height="140" rx="12" fill="url(#exp1)" opacity="0.18" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="20" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#7dd3fc">Regime I</text>
+    <text x="20" y="56" font-family="-apple-system, sans-serif" font-size="14" fill="#e0f2fe">N ≍ N_e → ∞, M, K 固定</text>
+    <text x="20" y="84" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">"少而宽" 经典 MoE</text>
+    <text x="20" y="114" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#fbbf24">fix: router 初始化为零</text>
+
+    <!-- Regime II -->
+    <rect x="380" y="0" width="340" height="140" rx="12" fill="url(#exp2)" opacity="0.22" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="400" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#c4b5fd">Regime II ⭐</text>
+    <text x="400" y="56" font-family="-apple-system, sans-serif" font-size="14" fill="#ede9fe">N ≍ M ≍ K → ∞, N_e 固定</text>
+    <text x="400" y="84" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">细粒度路线 (DeepSeek/Qwen)</text>
+    <text x="400" y="114" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#fbbf24">fix: expert init std × √M</text>
+
+    <!-- Regime III -->
+    <rect x="760" y="0" width="340" height="140" rx="12" fill="url(#exp3)" opacity="0.18" stroke="#34d399" stroke-width="1.5"/>
+    <text x="780" y="32" font-family="-apple-system, sans-serif" font-size="18" font-weight="700" fill="#6ee7b7">Regime III</text>
+    <text x="780" y="56" font-family="-apple-system, sans-serif" font-size="14" fill="#d1fae5">N, N_e, M, K 全部 → ∞</text>
+    <text x="780" y="84" font-family="-apple-system, sans-serif" font-size="13" fill="#cbd5e1">全比例放大</text>
+    <text x="780" y="114" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#fbbf24">fix: 专家共享初始化</text>
+  </g>
+
+  <!-- Bottom strip -->
+  <rect x="0" y="585" width="1200" height="45" fill="#0c1426" opacity="0.8"/>
+  <text x="60" y="613" font-family="-apple-system, sans-serif" font-size="14" fill="#64748b">DMFT-rigorous · 完整 SGD + AdamW 处方 · 开源代码 · 综合评分 8.47/10</text>
+  <text x="1140" y="613" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#94a3b8" text-anchor="end">xiejiayun.github.io · 好文共赏</text>
+</svg>

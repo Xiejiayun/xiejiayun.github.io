@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fafafa"/>
+      <stop offset="100%" style="stop-color:#f1f5f9"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="1000" fill="url(#bg2)"/>
+
+  <!-- Title -->
+  <text x="700" y="45" font-family="-apple-system, sans-serif" font-size="26" font-weight="800" fill="#0f172a" text-anchor="middle">MSSP 方法体系思维导图</text>
+  <text x="700" y="72" font-family="-apple-system, sans-serif" font-size="14" fill="#475569" text-anchor="middle">From μP failure → CLT/LLN diagnosis → MSSP axioms → three-regime prescriptions</text>
+
+  <!-- LEVEL 1: Problem -->
+  <rect x="500" y="100" width="400" height="65" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="700" y="128" font-family="-apple-system, sans-serif" font-size="17" font-weight="700" fill="#991b1b" text-anchor="middle">观察到的问题</text>
+  <text x="700" y="152" font-family="-apple-system, sans-serif" font-size="13" fill="#7f1d1d" text-anchor="middle">把 dense μP 套到 MoE — 大模型反而更差，LR 不迁移</text>
+
+  <line x1="700" y1="170" x2="700" y2="195" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LEVEL 2: Derive mu-P for MoE -->
+  <rect x="450" y="200" width="500" height="65" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="700" y="228" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#92400e" text-anchor="middle">Step 1: 在 MoE 上严格推导 μP（Result 1）</text>
+  <text x="700" y="252" font-family="-apple-system, sans-serif" font-size="13" fill="#78350f" text-anchor="middle">在三种 Regime × {SGD, Adam} 上得到唯一 bcdα-参数化</text>
+
+  <line x1="700" y1="270" x2="700" y2="295" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LEVEL 3: Empirical failure -->
+  <rect x="450" y="300" width="500" height="65" rx="10" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+  <text x="700" y="328" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#7f1d1d" text-anchor="middle">Step 2: μP 在 Regime II / III 上失效</text>
+  <text x="700" y="352" font-family="-apple-system, sans-serif" font-size="13" fill="#7f1d1d" text-anchor="middle">实验验证：性能下降 + LR 漂移 + 多步才 "自愈"</text>
+
+  <line x1="700" y1="370" x2="700" y2="395" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LEVEL 4: Mechanism -->
+  <rect x="380" y="400" width="640" height="100" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="700" y="428" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#1e3a8a" text-anchor="middle">Step 3: 诊断 — 跨专家聚合的 CLT/LLN 失衡</text>
+  <text x="700" y="454" font-family="-apple-system, sans-serif" font-size="13" fill="#1e40af" text-anchor="middle">h^agg 拆为 init + effective + propagating 三项</text>
+  <text x="700" y="474" font-family="-apple-system, sans-serif" font-size="13" fill="#1e40af" text-anchor="middle">i.i.d. 方向 ⇒ CLT 抑制 Θ(1/√M) · 相干方向 ⇒ LLN 保持 Θ(1)</text>
+  <text x="700" y="494" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#1e3a8a" text-anchor="middle">μP 只看总和 Θ(1) — 容忍了子项失衡</text>
+
+  <line x1="700" y1="505" x2="700" y2="530" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LEVEL 5: MSSP axiom -->
+  <rect x="380" y="535" width="640" height="90" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="700" y="563" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#14532d" text-anchor="middle">Step 4: 新公理 — Maximal Scale Stability</text>
+  <text x="700" y="588" font-family="-apple-system, sans-serif" font-size="13" fill="#166534" text-anchor="middle">把 W = W_0 + ΔW 完全展开后，每个原子贡献都必须 Θ(1)</text>
+  <text x="700" y="610" font-family="-apple-system, sans-serif" font-size="13" fill="#166534" text-anchor="middle">forward / backward / 聚合三类共 6 条要求 · μP 是 dense 特例</text>
+
+  <line x1="700" y1="630" x2="700" y2="660" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LEVEL 6: Three regime prescriptions -->
+  <text x="700" y="690" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#0f172a" text-anchor="middle">Step 5: 三 Regime 下结构性不同的修补处方（Result 2）</text>
+
+  <!-- Regime I -->
+  <rect x="80" y="710" width="380" height="170" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="270" y="738" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#075985" text-anchor="middle">Regime I — Few Wide Experts</text>
+  <text x="270" y="762" font-family="-apple-system, sans-serif" font-size="13" fill="#0c4a6e" text-anchor="middle">N ≍ N_e → ∞,  M, K 固定</text>
+  <line x1="100" y1="775" x2="440" y2="775" stroke="#0284c7" stroke-width="1" stroke-dasharray="3"/>
+  <text x="100" y="798" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#0c4a6e">Fix: router 初始化为 0</text>
+  <text x="100" y="820" font-family="-apple-system, sans-serif" font-size="12" fill="#075985">μP 实际上在 Reg I 已基本 work，</text>
+  <text x="100" y="838" font-family="-apple-system, sans-serif" font-size="12" fill="#075985">只是 router 的传播更新数值上消失，</text>
+  <text x="100" y="856" font-family="-apple-system, sans-serif" font-size="12" fill="#075985">零初始化是个 marginal 修正</text>
+
+  <!-- Regime II (star) -->
+  <rect x="510" y="710" width="380" height="170" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="700" y="738" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#4c1d95" text-anchor="middle">Regime II ⭐ — Fine-Grained MoE</text>
+  <text x="700" y="762" font-family="-apple-system, sans-serif" font-size="13" fill="#581c87" text-anchor="middle">N ≍ M ≍ K → ∞,  N_e 固定</text>
+  <line x1="530" y1="775" x2="870" y2="775" stroke="#7c3aed" stroke-width="1" stroke-dasharray="3"/>
+  <text x="530" y="798" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#4c1d95">Fix: expert 输出 init std × √M</text>
+  <text x="530" y="820" font-family="-apple-system, sans-serif" font-size="12" fill="#581c87">从 1/√N_e 改成 √M/√N_e</text>
+  <text x="530" y="838" font-family="-apple-system, sans-serif" font-size="12" fill="#581c87">DeepSeek-V3/Qwen-MoE 路线</text>
+  <text x="530" y="856" font-family="-apple-system, sans-serif" font-size="12" fill="#581c87">一行代码修复</text>
+
+  <!-- Regime III -->
+  <rect x="940" y="710" width="380" height="170" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="1130" y="738" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#064e3b" text-anchor="middle">Regime III — Full Proportional</text>
+  <text x="1130" y="762" font-family="-apple-system, sans-serif" font-size="13" fill="#065f46" text-anchor="middle">N, N_e, M, K 全部 → ∞</text>
+  <line x1="960" y1="775" x2="1300" y2="775" stroke="#059669" stroke-width="1" stroke-dasharray="3"/>
+  <text x="960" y="798" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#064e3b">Fix: 专家共享初始化</text>
+  <text x="960" y="820" font-family="-apple-system, sans-serif" font-size="12" fill="#065f46">W_0^{i} 对所有专家相同</text>
+  <text x="960" y="838" font-family="-apple-system, sans-serif" font-size="12" fill="#065f46">routing 训练中自然分化</text>
+  <text x="960" y="856" font-family="-apple-system, sans-serif" font-size="12" fill="#065f46">DMFT 极限：四层条件分布</text>
+
+  <!-- LEVEL 7: Validation -->
+  <line x1="700" y1="890" x2="700" y2="920" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <rect x="350" y="925" width="700" height="55" rx="10" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="700" y="950" font-family="-apple-system, sans-serif" font-size="15" font-weight="700" fill="#713f12" text-anchor="middle">Step 6: 实证验证</text>
+  <text x="700" y="970" font-family="-apple-system, sans-serif" font-size="12" fill="#854d0e" text-anchor="middle">MLP MoE on TinyImageNet (穷举扫超参) + Transformer MoE on Dolma3 up to 2.5B params · LR 跨尺度完美迁移</text>
+</svg>
