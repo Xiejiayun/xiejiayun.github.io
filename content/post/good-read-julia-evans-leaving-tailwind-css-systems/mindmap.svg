@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1020"/>
+      <stop offset="100%" stop-color="#161028"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fea0c2"/>
+      <stop offset="100%" stop-color="#f91a55"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f7b250"/>
+      <stop offset="100%" stop-color="#de751f"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7ee0ff"/>
+      <stop offset="100%" stop-color="#4dc1ff"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c19bff"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7fe0a8"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- grid dots -->
+  <g fill="#1f2a4a" opacity="0.5">
+    <g id="dot"><circle r="1.4"/></g>
+    <g>
+      <!-- a sparse dot grid -->
+      <g transform="translate(40,40)"><use href="#dot"/></g>
+      <g transform="translate(140,40)"><use href="#dot"/></g>
+      <g transform="translate(240,40)"><use href="#dot"/></g>
+      <g transform="translate(340,40)"><use href="#dot"/></g>
+    </g>
+  </g>
+
+  <!-- central node -->
+  <g transform="translate(800,500)">
+    <ellipse rx="220" ry="80" fill="#1a2444" stroke="url(#pink)" stroke-width="2.5"/>
+    <text text-anchor="middle" font-family="'PingFang SC', system-ui, sans-serif" fill="#f5f7ff">
+      <tspan x="0" y="-12" font-size="28" font-weight="800">CSS 的九个抽屉</tspan>
+      <tspan x="0" y="22" font-size="16" fill="#c4cfe3">Julia Evans · jvns.ca · 2026</tspan>
+    </text>
+  </g>
+
+  <!-- 9 branches around center -->
+  <!-- helper macro for nodes via raw -->
+
+  <!-- 1. reset (top-left) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 700,460 Q 540,360 380,260" stroke="url(#pink)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(180,200)">
+      <rect width="360" height="120" rx="14" fill="#15203c" stroke="url(#pink)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#pink)">1. reset</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">直接抄 Tailwind preflight 前 200 行</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">box-sizing: border-box · line-height: 1.5</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">"我潜意识依赖着它们"</text>
+    </g>
+  </g>
+
+  <!-- 2. components (left) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 680,495 Q 470,500 260,500" stroke="url(#violet)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(40,440)">
+      <rect width="360" height="120" rx="14" fill="#15203c" stroke="url(#violet)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#violet)">2. components</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">每组件一个文件 · 一个 class · 互不覆盖</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">nested selector: &amp;.horizontal { … }</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">局部推理 (local reasoning)</text>
+    </g>
+  </g>
+
+  <!-- 3. colours (bottom-left) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 700,540 Q 540,640 380,740" stroke="url(#pink)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(180,720)">
+      <rect width="360" height="120" rx="14" fill="#15203c" stroke="url(#pink)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#pink)">3. colours</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">colours.css 单文件登记所有颜色</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">:root { --pink: …; --orange: …; }</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">设计 token 的私人化</text>
+    </g>
+  </g>
+
+  <!-- 4. font sizes (bottom) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 770,580 Q 720,720 680,820" stroke="url(#cyan)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(580,820)">
+      <rect width="340" height="120" rx="14" fill="#15203c" stroke="url(#cyan)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#cyan)">4. font sizes</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">直接复刻 Tailwind 字号刻度</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">--size-xs / sm / lg / xl / 2xl</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">2026 年 OKLCH/CSS vars 已成熟</text>
+    </g>
+  </g>
+
+  <!-- 5. utilities (bottom-right) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 830,580 Q 1000,680 1180,760" stroke="url(#orange)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(1060,720)">
+      <rect width="360" height="120" rx="14" fill="#15203c" stroke="url(#orange)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#orange)">5. utilities</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">保留少量 utility · 如 .sr-only</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">"这一格我尽量克制改动"</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">从 Tailwind 偷来的可访问性遗产</text>
+    </g>
+  </g>
+
+  <!-- 6. base (right) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 870,500 Q 1080,500 1290,500" stroke="url(#green)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(1170,440)">
+      <rect width="360" height="120" rx="14" fill="#15203c" stroke="url(#green)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#green)">6. base</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">全局基线只敢写两条规则</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">bottom-up: 从 components 抽提</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">不为 DRY 而过早抽象</text>
+    </g>
+  </g>
+
+  <!-- 7. spacing (top-right) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 830,460 Q 1000,360 1180,250" stroke="url(#violet)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(1060,200)">
+      <rect width="360" height="120" rx="14" fill="#15203c" stroke="url(#violet)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#violet)">7. spacing</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">owl selector: * + * { margin-top: 1rem }</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">"no outer margin" 原则</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">间距责任向外层布局上浮</text>
+    </g>
+  </g>
+
+  <!-- 8. responsive (top) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 800,420 L 800,180" stroke="url(#orange)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(580,60)">
+      <rect width="440" height="120" rx="14" fill="#15203c" stroke="url(#orange)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#orange)">8. responsive — grid 优先</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">repeat(auto-fit, minmax(min(100%, 400px), max-content))</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">无需 @media · 连续响应式</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">grid-template-areas: Tailwind 做不到</text>
+    </g>
+  </g>
+
+  <!-- 9. build (far right top) -->
+  <g font-family="'PingFang SC', system-ui, sans-serif" fill="#e5ecff">
+    <path d="M 900,450 Q 1100,300 1300,220" stroke="url(#cyan)" stroke-width="2" fill="none" opacity="0.7"/>
+    <g transform="translate(1180,60)">
+      <rect width="360" height="120" rx="14" fill="#15203c" stroke="url(#cyan)" stroke-width="2"/>
+      <text x="20" y="34" font-size="20" font-weight="700" fill="url(#cyan)">9. build system</text>
+      <text x="20" y="62" font-size="14" fill="#c4cfe3">dev: 原生 @import + CSS nesting</text>
+      <text x="20" y="84" font-size="13" fill="#9ab2ff">prod: esbuild (静态 Go 二进制)</text>
+      <text x="20" y="104" font-size="12" fill="#7e8fb5" font-style="italic">Tailwind v3+ 必须 build → 离开主因</text>
+    </g>
+  </g>
+
+  <!-- bottom tagline -->
+  <g transform="translate(800,960)" text-anchor="middle" font-family="'PingFang SC', system-ui, sans-serif">
+    <text font-size="18" fill="#9ab2ff">"CSS is hard because it's solving a hard problem." — Julia Evans</text>
+  </g>
+</svg>
