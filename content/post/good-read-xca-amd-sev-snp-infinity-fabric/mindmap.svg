@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="100%" stop-color="#150a1f"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7c83fd"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff4d6d"/>
+    </marker>
+    <style>
+      .root { fill: #1a0e2a; stroke: #ff9f1c; stroke-width: 2.5; }
+      .n1 { fill: #161a2e; stroke: #4cc9f0; stroke-width: 2; }
+      .n2 { fill: #1d1430; stroke: #7c83fd; stroke-width: 1.5; }
+      .n3 { fill: #2a1830; stroke: #ff4d6d; stroke-width: 1.5; }
+      .t-root { fill: #ffcf73; font: bold 22px -apple-system,Helvetica,sans-serif; }
+      .t1 { fill: #cfd2ff; font: bold 17px -apple-system,Helvetica,sans-serif; }
+      .t2 { fill: #bfc6ff; font: 14px -apple-system,Helvetica,sans-serif; }
+      .t3 { fill: #ffb1bf; font: 12px -apple-system,Helvetica,sans-serif; }
+      .link { stroke: #7c83fd; stroke-width: 1.8; fill: none; }
+      .link-red { stroke: #ff4d6d; stroke-width: 2; fill: none; stroke-dasharray: 6,4; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- 标题 -->
+  <text x="40" y="48" fill="#ffffff" font-family="-apple-system,Helvetica,sans-serif" font-size="24" font-weight="800">XCA：Interconnect Corruption Attacks（互联总线腐化攻击）</text>
+  <text x="40" y="74" fill="#9aa0c7" font-family="Menlo,monospace" font-size="13">ETH Zurich Sectrs · 攻击 AMD SEV-SNP · USENIX'26 + IEEE S&amp;P'26</text>
+
+  <!-- 中心节点 -->
+  <g transform="translate(700,460)">
+    <ellipse cx="0" cy="0" rx="160" ry="58" class="root"/>
+    <text y="-8" text-anchor="middle" class="t-root">XCA</text>
+    <text y="20" text-anchor="middle" fill="#ffd9a1" font-family="Menlo,monospace" font-size="13">Interconnect Corruption</text>
+  </g>
+
+  <!-- 主分支：Infinity Fabric -->
+  <g>
+    <path class="link" d="M 540 460 C 380 460, 320 220, 240 200" marker-end="url(#arr)"/>
+    <rect x="40" y="170" width="220" height="60" rx="10" class="n1"/>
+    <text x="150" y="195" text-anchor="middle" class="t1">Infinity Fabric</text>
+    <text x="150" y="215" text-anchor="middle" class="t2">两层平面（Data + Control）</text>
+
+    <path class="link" d="M 150 230 C 150 280, 110 320, 100 360" marker-end="url(#arr)"/>
+    <rect x="20" y="360" width="200" height="56" rx="8" class="n2"/>
+    <text x="120" y="382" text-anchor="middle" class="t1">Data Fabric</text>
+    <text x="120" y="402" text-anchor="middle" class="t2">数据搬运 / 地址映射</text>
+
+    <path class="link" d="M 220 230 C 220 320, 280 360, 280 400" marker-end="url(#arr)"/>
+    <rect x="180" y="400" width="220" height="56" rx="8" class="n2"/>
+    <text x="290" y="422" text-anchor="middle" class="t1">Control Fabric (SMN)</text>
+    <text x="290" y="442" text-anchor="middle" class="t2">4 GB 寄存器配置空间</text>
+  </g>
+
+  <!-- 主分支：PSP -->
+  <g>
+    <path class="link" d="M 860 460 C 1020 460, 1080 220, 1160 200" marker-end="url(#arr)"/>
+    <rect x="1140" y="170" width="220" height="60" rx="10" class="n1"/>
+    <text x="1250" y="195" text-anchor="middle" class="t1">PSP</text>
+    <text x="1250" y="215" text-anchor="middle" class="t2">Platform Security Processor</text>
+
+    <path class="link" d="M 1250 230 C 1250 290, 1230 320, 1180 360" marker-end="url(#arr)"/>
+    <rect x="1080" y="360" width="220" height="56" rx="8" class="n2"/>
+    <text x="1190" y="382" text-anchor="middle" class="t1">SEV-SNP 可信根</text>
+    <text x="1190" y="402" text-anchor="middle" class="t2">RMP / 加密密钥 / 证明</text>
+  </g>
+
+  <!-- 上分支：SEV-SNP 安全模型 -->
+  <g>
+    <path class="link" d="M 700 402 C 700 320, 700 180, 700 130" marker-end="url(#arr)"/>
+    <rect x="580" y="60" width="240" height="70" rx="10" class="n1"/>
+    <text x="700" y="88" text-anchor="middle" class="t1">SEV-SNP 安全模型</text>
+    <text x="700" y="108" text-anchor="middle" class="t2">"Hypervisor / BIOS 都不可信"</text>
+  </g>
+
+  <!-- 下分支：两个攻击 -->
+  <g>
+    <!-- Fabricked -->
+    <path class="link-red" d="M 650 518 C 480 600, 360 660, 280 700" marker-end="url(#arr-red)"/>
+    <rect x="60" y="700" width="280" height="170" rx="12" class="n3"/>
+    <text x="200" y="728" text-anchor="middle" class="t1">Fabricked</text>
+    <text x="200" y="752" text-anchor="middle" class="t3">CVE-2025-54510 · USENIX'26</text>
+    <text x="200" y="780" text-anchor="middle" class="t2">改 Data Fabric 路由</text>
+    <text x="200" y="800" text-anchor="middle" class="t2">→ 丢掉 PSP 对 RMP 的写入</text>
+    <text x="200" y="824" text-anchor="middle" class="t2">→ RMP 保留 hypervisor 伪造内容</text>
+    <text x="200" y="848" text-anchor="middle" class="t3">100% deterministic, software-only</text>
+
+    <!-- BreakFAST -->
+    <path class="link-red" d="M 750 518 C 920 600, 1040 660, 1120 700" marker-end="url(#arr-red)"/>
+    <rect x="1060" y="700" width="280" height="170" rx="12" class="n3"/>
+    <text x="1200" y="728" text-anchor="middle" class="t1">BreakFAST</text>
+    <text x="1200" y="752" text-anchor="middle" class="t3">CVE-2025-61971 / 61972 · S&amp;P'26</text>
+    <text x="1200" y="780" text-anchor="middle" class="t2">confused deputy on PSP</text>
+    <text x="1200" y="800" text-anchor="middle" class="t2">→ 借 PSP 的手写 FASTREGCNTL / FASTREG</text>
+    <text x="1200" y="824" text-anchor="middle" class="t2">→ 任意读写 4 GB Control Fabric</text>
+    <text x="1200" y="848" text-anchor="middle" class="t3">伪造 attestation + 打开 debug 模式</text>
+  </g>
+
+  <!-- 后果分支 -->
+  <g>
+    <path class="link" d="M 700 518 C 700 600, 700 660, 700 700" marker-end="url(#arr)"/>
+    <rect x="540" y="700" width="320" height="170" rx="12" class="n2"/>
+    <text x="700" y="730" text-anchor="middle" class="t1">CVM 安全保证崩塌</text>
+    <text x="700" y="758" text-anchor="middle" class="t2">• RMP 保护失效 → 任意读写客户 CVM 内存</text>
+    <text x="700" y="780" text-anchor="middle" class="t2">• Attestation 可伪造 → KDS 验证不再可靠</text>
+    <text x="700" y="802" text-anchor="middle" class="t2">• Debug 模式可激活 → vCPU 寄存器外泄</text>
+    <text x="700" y="824" text-anchor="middle" class="t2">• 影响 Zen 3 / 4 / 5 全代</text>
+    <text x="700" y="848" text-anchor="middle" class="t3">→ AMD-SB-3030 / 3034 已发 firmware update</text>
+  </g>
+
+  <!-- 启示 -->
+  <g>
+    <rect x="40" y="540" width="240" height="100" rx="10" class="n1"/>
+    <text x="160" y="568" text-anchor="middle" class="t1">含义</text>
+    <text x="160" y="592" text-anchor="middle" class="t2">SoC 内部互联</text>
+    <text x="160" y="612" text-anchor="middle" class="t2">必须纳入</text>
+    <text x="160" y="632" text-anchor="middle" class="t2">可信边界</text>
+  </g>
+  <g>
+    <rect x="1120" y="540" width="240" height="100" rx="10" class="n1"/>
+    <text x="1240" y="568" text-anchor="middle" class="t1">外推</text>
+    <text x="1240" y="592" text-anchor="middle" class="t2">Intel TDX、Arm CCA</text>
+    <text x="1240" y="612" text-anchor="middle" class="t2">同类互联架构</text>
+    <text x="1240" y="632" text-anchor="middle" class="t3">几乎肯定存在同类攻击</text>
+  </g>
+</svg>
