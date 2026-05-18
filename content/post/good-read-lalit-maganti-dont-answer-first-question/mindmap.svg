@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="1" stop-color="#1a1340"/>
+    </linearGradient>
+    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ef476f"/>
+    </linearGradient>
+    <linearGradient id="cool" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#06d6a0"/>
+      <stop offset="1" stop-color="#118ab2"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- subtle dots -->
+  <g fill="#ffffff" fill-opacity="0.05">
+    <circle cx="200" cy="150" r="2"/>
+    <circle cx="500" cy="80" r="2"/>
+    <circle cx="900" cy="200" r="2"/>
+    <circle cx="1300" cy="120" r="2"/>
+    <circle cx="1450" cy="500" r="2"/>
+    <circle cx="120" cy="600" r="2"/>
+    <circle cx="800" cy="900" r="2"/>
+  </g>
+
+  <!-- title -->
+  <g transform="translate(800, 60)" text-anchor="middle">
+    <text x="0" y="0" fill="#ffffff" font-size="34" font-weight="700">Don't Answer the First Question</text>
+    <text x="0" y="34" fill="#94a3d6" font-size="18">用户提"奇怪问题"时的四种结局 · Lalit Maganti / Perfetto</text>
+  </g>
+
+  <!-- center node -->
+  <g transform="translate(800, 470)">
+    <circle r="100" fill="#1f2a55" stroke="url(#hot)" stroke-width="3"/>
+    <text y="-10" fill="#ffd166" font-size="22" font-weight="700" text-anchor="middle">用户问一个</text>
+    <text y="22" fill="#ffd166" font-size="22" font-weight="700" text-anchor="middle">"奇怪"问题</text>
+    <text y="52" fill="#ef476f" font-size="14" text-anchor="middle">先反问</text>
+  </g>
+
+  <!-- diagnose triangle on top -->
+  <g transform="translate(800, 220)" text-anchor="middle">
+    <rect x="-260" y="-30" width="520" height="100" rx="14" fill="#142046" stroke="#06d6a0" stroke-width="2"/>
+    <text y="0" fill="#06d6a0" font-size="18" font-weight="600">三步诊断 checklist</text>
+    <text y="28" fill="#cbd6ff" font-size="14">① 我见过吗？ &nbsp;&nbsp; ② 这问题在分布内吗？</text>
+    <text y="52" fill="#cbd6ff" font-size="14">③ 它符合工具的形状吗？</text>
+  </g>
+  <line x1="800" y1="290" x2="800" y2="370" stroke="#06d6a0" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- four endings -->
+
+  <!-- A: missing philosophy (top-left) -->
+  <g transform="translate(220, 380)">
+    <rect width="320" height="160" rx="14" fill="#142046" stroke="url(#hot)" stroke-width="2"/>
+    <text x="20" y="32" fill="#ffd166" font-size="18" font-weight="700">A · 缺哲学</text>
+    <text x="20" y="60" fill="#ffffff" font-size="14">用户不理解工具的设计意图。</text>
+    <text x="20" y="82" fill="#94a3d6" font-size="13">案例：把 trace 当 metric 系统用</text>
+    <text x="20" y="110" fill="#06d6a0" font-size="12">→ 教世界观，工具只是载体</text>
+    <text x="20" y="130" fill="#94a3d6" font-size="12">"trace 是全息，metric 是采样"</text>
+  </g>
+  <line x1="540" y1="460" x2="710" y2="470" stroke="#ffd166" stroke-width="2"/>
+
+  <!-- B: hidden path (top-right) -->
+  <g transform="translate(1060, 380)">
+    <rect width="320" height="160" rx="14" fill="#142046" stroke="url(#hot)" stroke-width="2"/>
+    <text x="20" y="32" fill="#ffd166" font-size="18" font-weight="700">B · 路径被藏起</text>
+    <text x="20" y="60" fill="#ffffff" font-size="14">工具已支持，但入口不直观。</text>
+    <text x="20" y="82" fill="#94a3d6" font-size="13">案例：trace splitting → periodic snapshots</text>
+    <text x="20" y="110" fill="#06d6a0" font-size="12">→ 重新组合既有功能</text>
+    <text x="20" y="130" fill="#94a3d6" font-size="12">"那是我真正需要的！"</text>
+  </g>
+  <line x1="890" y1="470" x2="1060" y2="460" stroke="#ffd166" stroke-width="2"/>
+
+  <!-- C: product needs change (bottom-left) -->
+  <g transform="translate(220, 620)">
+    <rect width="320" height="170" rx="14" fill="#142046" stroke="url(#cool)" stroke-width="2"/>
+    <text x="20" y="32" fill="#06d6a0" font-size="18" font-weight="700">C · 产品要改</text>
+    <text x="20" y="60" fill="#ffffff" font-size="14">需求真是新的，但用户说不清。</text>
+    <text x="20" y="82" fill="#94a3d6" font-size="13">反例：UI 自定义 → 一年技术债</text>
+    <text x="20" y="104" fill="#94a3d6" font-size="13">正例：trace merge → 等到看清形状</text>
+    <text x="20" y="132" fill="#ef476f" font-size="12">→ 找本质，不做仓促决定</text>
+    <text x="20" y="152" fill="#94a3d6" font-size="12">至少要 3 个团队都要再做</text>
+  </g>
+  <line x1="540" y1="700" x2="710" y2="540" stroke="#06d6a0" stroke-width="2"/>
+
+  <!-- D: do nothing (bottom-right) -->
+  <g transform="translate(1060, 620)">
+    <rect width="320" height="170" rx="14" fill="#142046" stroke="url(#cool)" stroke-width="2"/>
+    <text x="20" y="32" fill="#06d6a0" font-size="18" font-weight="700">D · 什么都不做</text>
+    <text x="20" y="60" fill="#ffffff" font-size="14">现在做是错的——按住手。</text>
+    <text x="20" y="82" fill="#94a3d6" font-size="13">判断标准：</text>
+    <text x="20" y="104" fill="#94a3d6" font-size="12">• 形状清楚吗？</text>
+    <text x="20" y="122" fill="#94a3d6" font-size="12">• 多个团队都要吗？</text>
+    <text x="20" y="140" fill="#94a3d6" font-size="12">• 一次做对，不返工吗？</text>
+    <text x="20" y="160" fill="#ef476f" font-size="12">→ "等" 是一种工作</text>
+  </g>
+  <line x1="890" y1="540" x2="1060" y2="700" stroke="#06d6a0" stroke-width="2"/>
+
+  <!-- bottom anti-pattern -->
+  <g transform="translate(800, 860)" text-anchor="middle">
+    <rect x="-380" y="0" width="760" height="100" rx="14" fill="#3a0e3a" stroke="#ef476f" stroke-width="2"/>
+    <text x="0" y="32" fill="#ef476f" font-size="18" font-weight="700">⚠️ LLM 客服的盲区</text>
+    <text x="0" y="60" fill="#ffe2ec" font-size="14">把 A、B 两类困惑直接消解，让维护者再也看不到 C、D 的种子。</text>
+    <text x="0" y="82" fill="#ffe2ec" font-size="13">"工具进化的氧气" 被礼貌的自动回复掐断。</text>
+  </g>
+
+  <!-- left side principle -->
+  <g transform="translate(40, 400)">
+    <rect x="0" y="0" width="160" height="160" rx="14" fill="#142046" stroke="#ffffff" stroke-opacity="0.2"/>
+    <text x="80" y="34" fill="#ffd166" font-size="16" font-weight="600" text-anchor="middle">反问先行</text>
+    <text x="80" y="62" fill="#cbd6ff" font-size="12" text-anchor="middle">"你这个直接答案</text>
+    <text x="80" y="80" fill="#cbd6ff" font-size="12" text-anchor="middle">是 X，但为什么</text>
+    <text x="80" y="98" fill="#cbd6ff" font-size="12" text-anchor="middle">会问？"</text>
+    <text x="80" y="130" fill="#ef476f" font-size="11" text-anchor="middle">高级工程师</text>
+    <text x="80" y="146" fill="#ef476f" font-size="11" text-anchor="middle">的肌肉记忆</text>
+  </g>
+
+  <!-- right side support to research -->
+  <g transform="translate(1400, 400)">
+    <rect x="0" y="0" width="160" height="160" rx="14" fill="#142046" stroke="#ffffff" stroke-opacity="0.2"/>
+    <text x="80" y="34" fill="#06d6a0" font-size="16" font-weight="600" text-anchor="middle">客服即研究</text>
+    <text x="80" y="62" fill="#cbd6ff" font-size="12" text-anchor="middle">工单是数据流</text>
+    <text x="80" y="80" fill="#cbd6ff" font-size="12" text-anchor="middle">不是负债</text>
+    <text x="80" y="108" fill="#cbd6ff" font-size="12" text-anchor="middle">每次答复</text>
+    <text x="80" y="126" fill="#cbd6ff" font-size="12" text-anchor="middle">= 一次采样</text>
+    <text x="80" y="148" fill="#ef476f" font-size="11" text-anchor="middle">基础软件的 IP</text>
+  </g>
+
+  <!-- footer -->
+  <text x="800" y="980" fill="#94a3d6" font-size="12" text-anchor="middle">xiejiayun.github.io · 好文共赏 · 2026-05-18 · 原文：lalitm.com/post/dont-answer-the-first-question/</text>
+</svg>
