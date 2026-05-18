@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="0.5" stop-color="#1a0b2e"/>
+      <stop offset="1" stop-color="#0d1424"/>
+    </linearGradient>
+    <linearGradient id="atariOrange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff8c1a"/>
+      <stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+    <linearGradient id="amigaBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0066cc"/>
+      <stop offset="1" stop-color="#3399ff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Subtle scanline grid -->
+  <g opacity="0.06" stroke="#9fb3ff" stroke-width="1">
+    <line x1="0" y1="180" x2="1600" y2="180"/>
+    <line x1="0" y1="360" x2="1600" y2="360"/>
+    <line x1="0" y1="540" x2="1600" y2="540"/>
+    <line x1="0" y1="720" x2="1600" y2="720"/>
+  </g>
+
+  <!-- Tag -->
+  <g transform="translate(80, 80)">
+    <rect width="200" height="48" rx="24" fill="#ff8c1a" opacity="0.18"/>
+    <text x="100" y="32" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#ffb347" text-anchor="middle">好文共赏</text>
+  </g>
+
+  <!-- Title -->
+  <text x="80" y="220" font-family="Inter, 'PingFang SC', system-ui, sans-serif" font-size="64" font-weight="800" fill="#ffffff">YM2149 → PAULA</text>
+  <text x="80" y="296" font-family="Inter, 'PingFang SC', system-ui, sans-serif" font-size="40" font-weight="600" fill="#9fb3ff">0% CPU · 100% COPPER</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="370" font-family="Inter, 'PingFang SC', system-ui, sans-serif" font-size="26" font-weight="400" fill="#cfd8ff">Leonard / Oxygene 在 Amiga 上把 Atari ST 的声音芯片</text>
+  <text x="80" y="406" font-family="Inter, 'PingFang SC', system-ui, sans-serif" font-size="26" font-weight="400" fill="#cfd8ff">完全外包给协处理器 —— 一次跨越 1985 与 2026 的硬件考古</text>
+
+  <!-- Center diagram: chip-to-chip arrow -->
+  <g transform="translate(80, 500)" filter="url(#glow)">
+    <!-- Atari side -->
+    <rect x="0" y="0" width="320" height="180" rx="14" fill="#1a0e08" stroke="url(#atariOrange)" stroke-width="3"/>
+    <text x="160" y="44" font-family="JetBrains Mono, monospace" font-size="22" font-weight="700" fill="#ffb347" text-anchor="middle">ATARI ST</text>
+    <text x="160" y="78" font-family="JetBrains Mono, monospace" font-size="16" fill="#e0a85c" text-anchor="middle">YM2149 / AY-3-8910</text>
+    <text x="160" y="108" font-family="JetBrains Mono, monospace" font-size="14" fill="#a0875f" text-anchor="middle">3 squares · 1 envelope</text>
+    <text x="160" y="132" font-family="JetBrains Mono, monospace" font-size="14" fill="#a0875f" text-anchor="middle">MadMax Buzzer</text>
+    <text x="160" y="156" font-family="JetBrains Mono, monospace" font-size="12" fill="#7a6240" text-anchor="middle">1985</text>
+
+    <!-- Arrow -->
+    <g transform="translate(370, 90)">
+      <line x1="0" y1="0" x2="80" y2="0" stroke="#9fb3ff" stroke-width="3"/>
+      <polygon points="80,-10 100,0 80,10" fill="#9fb3ff"/>
+      <text x="50" y="-18" font-family="Inter, sans-serif" font-size="14" fill="#cfd8ff" text-anchor="middle">PAULA 反转</text>
+      <text x="50" y="32" font-family="Inter, sans-serif" font-size="14" fill="#cfd8ff" text-anchor="middle">attached voice</text>
+    </g>
+
+    <!-- Amiga side -->
+    <rect x="500" y="0" width="320" height="180" rx="14" fill="#081626" stroke="url(#amigaBlue)" stroke-width="3"/>
+    <text x="660" y="44" font-family="JetBrains Mono, monospace" font-size="22" font-weight="700" fill="#3399ff" text-anchor="middle">AMIGA 500</text>
+    <text x="660" y="78" font-family="JetBrains Mono, monospace" font-size="16" fill="#5cb0ff" text-anchor="middle">PAULA + COPPER</text>
+    <text x="660" y="108" font-family="JetBrains Mono, monospace" font-size="14" fill="#6e9fd6" text-anchor="middle">4 × 8-bit PCM</text>
+    <text x="660" y="132" font-family="JetBrains Mono, monospace" font-size="14" fill="#6e9fd6" text-anchor="middle">copper-list 自驱动</text>
+    <text x="660" y="156" font-family="JetBrains Mono, monospace" font-size="12" fill="#456e9a" text-anchor="middle">68000 idle ✓</text>
+
+    <!-- Result block -->
+    <g transform="translate(900, 30)">
+      <text x="0" y="0" font-family="Inter, sans-serif" font-size="18" fill="#ffd078">SIN-DOTS 记录</text>
+      <text x="0" y="32" font-family="JetBrains Mono, monospace" font-size="36" font-weight="800" fill="#ffffff">6,682 → 7,210</text>
+      <text x="0" y="64" font-family="Inter, sans-serif" font-size="16" fill="#9fb3ff">50 FPS · 同时播放 Atari 音乐</text>
+      <text x="0" y="100" font-family="Inter, sans-serif" font-size="14" fill="#7c8ec7">"Hi Leonard, you optimized your dots well</text>
+      <text x="0" y="120" font-family="Inter, sans-serif" font-size="14" fill="#7c8ec7">for an Atari programmer." — Hannibal</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="80" y="828" font-family="Inter, sans-serif" font-size="16" fill="#7c8ec7">Arnaud Carré · 2026-05-15 · arnaud-carre.github.io</text>
+  <text x="80" y="852" font-family="Inter, sans-serif" font-size="13" fill="#5a6f9c">YM Envelope Trickery · Logarithmic Triangle · COPPER Self-chaining</text>
+
+  <text x="1520" y="852" font-family="Inter, sans-serif" font-size="14" fill="#4a5e8a" text-anchor="end">demoscene · 1990 → 2026</text>
+</svg>

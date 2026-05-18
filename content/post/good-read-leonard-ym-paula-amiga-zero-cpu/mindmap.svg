@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="1" stop-color="#13182d"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1800" height="1200" fill="url(#bg)"/>
+
+  <!-- Center node -->
+  <g transform="translate(900,600)" filter="url(#soft)">
+    <circle r="120" fill="#ff8c1a" opacity="0.18"/>
+    <circle r="90" fill="#1a0e08" stroke="#ffb347" stroke-width="3"/>
+    <text y="-10" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">YM2149 →</text>
+    <text y="18" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#ffb347" text-anchor="middle">PAULA</text>
+    <text y="42" font-family="JetBrains Mono, monospace" font-size="14" fill="#cfd8ff" text-anchor="middle">0% CPU</text>
+  </g>
+
+  <!-- Branches: 6 directions -->
+  <!-- 1: Context (top-left) -->
+  <g stroke="#9fb3ff" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M810,540 Q620,420 420,300"/>
+    <path d="M810,560 Q620,540 380,520"/>
+    <path d="M810,620 Q620,720 380,760"/>
+    <path d="M810,660 Q620,820 420,940"/>
+    <path d="M990,540 Q1180,420 1380,300"/>
+    <path d="M990,560 Q1180,540 1420,520"/>
+    <path d="M990,620 Q1180,720 1420,760"/>
+    <path d="M990,660 Q1180,820 1380,940"/>
+  </g>
+
+  <!-- Branch 1: Hannibal Challenge -->
+  <g transform="translate(220,260)">
+    <rect width="320" height="100" rx="14" fill="#1a0e08" stroke="#ffb347" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffb347">挑衅 Provocation</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">6405 → 6682 sin-dots</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">Hannibal: "你像 Atari 程序员"</text>
+  </g>
+
+  <!-- Branch 2: YM2149 anatomy -->
+  <g transform="translate(180,480)">
+    <rect width="320" height="100" rx="14" fill="#081626" stroke="#5cb0ff" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#5cb0ff">YM2149 解剖</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">3 voices · square wave only</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">1 shared envelope generator</text>
+  </g>
+
+  <!-- Branch 3: MadMax Buzzer -->
+  <g transform="translate(180,720)">
+    <rect width="320" height="100" rx="14" fill="#2b1530" stroke="#cc66ff" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#cc66ff">MadMax Buzzer</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">Jochen Hippel / TEX (Thalion)</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">envelope 自身变身 sound source</text>
+  </g>
+
+  <!-- Branch 4: First failure -->
+  <g transform="translate(220,920)">
+    <rect width="320" height="100" rx="14" fill="#301f08" stroke="#ffaa44" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffaa44">第一次失败</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">attached voice 半采样率</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">triangle 分辨率不够 → 锯齿</text>
+  </g>
+
+  <!-- Branch 5: Eureka reversal -->
+  <g transform="translate(1380,260)">
+    <rect width="320" height="100" rx="14" fill="#0a2014" stroke="#66ff99" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#66ff99">"尤里卡" 时刻</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">反转角色：triangle 当 sample</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">square 当 volume modulator</text>
+  </g>
+
+  <!-- Branch 6: PAULA features -->
+  <g transform="translate(1420,480)">
+    <rect width="320" height="100" rx="14" fill="#081626" stroke="#3399ff" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#3399ff">PAULA attached voice</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">未被使用的硬件特性</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">"对称的被忽视"</text>
+  </g>
+
+  <!-- Branch 7: COPPER -->
+  <g transform="translate(1420,720)">
+    <rect width="320" height="100" rx="14" fill="#170b2e" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#a78bfa">COPPER 自驱动</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">write reg · wait raster</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">copper list 自链接 → 0 CPU</text>
+  </g>
+
+  <!-- Branch 8: Final result -->
+  <g transform="translate(1380,920)">
+    <rect width="320" height="100" rx="14" fill="#280a14" stroke="#ff4488" stroke-width="2"/>
+    <text x="20" y="32" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ff4488">最终战果</text>
+    <text x="20" y="58" font-family="Inter, sans-serif" font-size="13" fill="#cfd8ff">7210 dots · Atari 音乐同播</text>
+    <text x="20" y="78" font-family="Inter, sans-serif" font-size="12" fill="#9fb3ff">Hannibal 反击成功</text>
+  </g>
+
+  <!-- Footer note -->
+  <text x="900" y="1140" font-family="Inter, sans-serif" font-size="16" fill="#7c8ec7" text-anchor="middle">8 个分支节点 · 一条从挑衅到逆转的硬件考古路径 · 1985 ↔ 2026</text>
+</svg>
