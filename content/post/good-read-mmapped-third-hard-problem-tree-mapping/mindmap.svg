@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e27"/>
+      <stop offset="1" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <style>
+      .center-node { fill: #7c3aed; }
+      .branch-1 { fill: #06b6d4; }
+      .branch-2 { fill: #10b981; }
+      .branch-3 { fill: #f59e0b; }
+      .branch-4 { fill: #ec4899; }
+      .branch-5 { fill: #f43f5e; }
+      .leaf { fill: #1e293b; stroke-width: 2; }
+      .label { font-family: -apple-system, 'PingFang SC', 'Hiragino Sans GB', sans-serif; fill: #f8fafc; }
+      .sub-label { font-family: -apple-system, 'PingFang SC', sans-serif; fill: #cbd5e1; font-size: 11px; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="700" y="40" class="label" font-size="22" font-weight="700" text-anchor="middle">The Third Hard Problem · Tree Mapping 思维导图</text>
+  <text x="700" y="62" class="sub-label" text-anchor="middle">五个战场 + 一组方法论 + 计算机科学第三难的命名行为</text>
+
+  <!-- Center node -->
+  <g transform="translate(700, 450)">
+    <circle r="80" class="center-node" opacity="0.92"/>
+    <text y="-6" class="label" font-size="20" font-weight="700" text-anchor="middle">Tree</text>
+    <text y="20" class="label" font-size="20" font-weight="700" text-anchor="middle">Mapping</text>
+  </g>
+
+  <!-- 5 branches with curved paths -->
+  <!-- Branch 1: File Systems (top-left) -->
+  <path d="M 640 410 Q 480 320 280 220" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
+  <g transform="translate(280, 220)">
+    <circle r="50" class="branch-1" opacity="0.92"/>
+    <text y="-6" class="label" font-size="14" font-weight="700" text-anchor="middle">File</text>
+    <text y="14" class="label" font-size="14" font-weight="700" text-anchor="middle">Systems</text>
+  </g>
+  <!-- B1 leaves -->
+  <line x1="240" y1="270" x2="140" y2="320" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+  <line x1="280" y1="280" x2="240" y2="400" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+  <line x1="320" y1="270" x2="380" y2="370" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+  <line x1="240" y1="180" x2="130" y2="120" stroke="#06b6d4" stroke-width="1.5" opacity="0.7"/>
+  <g transform="translate(135, 320)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#06b6d4"/><text class="sub-label" text-anchor="middle" y="4">macOS Bundle</text></g>
+  <g transform="translate(240, 415)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#06b6d4"/><text class="sub-label" text-anchor="middle" y="4">Linux Shred</text></g>
+  <g transform="translate(380, 380)"><rect x="-66" y="-15" width="132" height="30" rx="6" class="leaf" stroke="#06b6d4"/><text class="sub-label" text-anchor="middle" y="4">Snap / Flatpak</text></g>
+  <g transform="translate(130, 110)"><rect x="-72" y="-15" width="144" height="30" rx="6" class="leaf" stroke="#06b6d4"/><text class="sub-label" text-anchor="middle" y="4">Bazel · Monorepo</text></g>
+
+  <!-- Branch 2: Writing (top-right) -->
+  <path d="M 760 410 Q 920 320 1120 220" stroke="#10b981" stroke-width="2.5" fill="none"/>
+  <g transform="translate(1120, 220)">
+    <circle r="50" class="branch-2" opacity="0.92"/>
+    <text y="4" class="label" font-size="14" font-weight="700" text-anchor="middle">Writing</text>
+  </g>
+  <line x1="1080" y1="180" x2="980" y2="130" stroke="#10b981" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1160" y1="180" x2="1260" y2="120" stroke="#10b981" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1120" y1="270" x2="1110" y2="380" stroke="#10b981" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1170" y1="250" x2="1290" y2="320" stroke="#10b981" stroke-width="1.5" opacity="0.7"/>
+  <g transform="translate(980, 120)"><rect x="-66" y="-15" width="132" height="30" rx="6" class="leaf" stroke="#10b981"/><text class="sub-label" text-anchor="middle" y="4">Pinker: web→tree→string</text></g>
+  <g transform="translate(1260, 110)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#10b981"/><text class="sub-label" text-anchor="middle" y="4">Math Textbooks</text></g>
+  <g transform="translate(1110, 395)"><rect x="-54" y="-15" width="108" height="30" rx="6" class="leaf" stroke="#10b981"/><text class="sub-label" text-anchor="middle" y="4">Design Docs</text></g>
+  <g transform="translate(1290, 335)"><rect x="-52" y="-15" width="104" height="30" rx="6" class="leaf" stroke="#10b981"/><text class="sub-label" text-anchor="middle" y="4">Storytelling</text></g>
+
+  <!-- Branch 3: Architecture (mid-left) -->
+  <path d="M 620 470 Q 460 540 250 580" stroke="#f59e0b" stroke-width="2.5" fill="none"/>
+  <g transform="translate(250, 580)">
+    <circle r="50" class="branch-3" opacity="0.92"/>
+    <text y="-3" class="label" font-size="13" font-weight="700" text-anchor="middle">City</text>
+    <text y="14" class="label" font-size="13" font-weight="700" text-anchor="middle">Architecture</text>
+  </g>
+  <line x1="220" y1="530" x2="140" y2="500" stroke="#f59e0b" stroke-width="1.5" opacity="0.7"/>
+  <line x1="240" y1="630" x2="180" y2="710" stroke="#f59e0b" stroke-width="1.5" opacity="0.7"/>
+  <line x1="290" y1="610" x2="370" y2="660" stroke="#f59e0b" stroke-width="1.5" opacity="0.7"/>
+  <line x1="290" y1="555" x2="380" y2="540" stroke="#f59e0b" stroke-width="1.5" opacity="0.7"/>
+  <g transform="translate(140, 490)"><rect x="-66" y="-15" width="132" height="30" rx="6" class="leaf" stroke="#f59e0b"/><text class="sub-label" text-anchor="middle" y="4">Alexander 1965</text></g>
+  <g transform="translate(180, 720)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#f59e0b"/><text class="sub-label" text-anchor="middle" y="4">Tree vs Semilattice</text></g>
+  <g transform="translate(370, 670)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#f59e0b"/><text class="sub-label" text-anchor="middle" y="4">Siena / Kyoto</text></g>
+  <g transform="translate(380, 530)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#f59e0b"/><text class="sub-label" text-anchor="middle" y="4">Levittown</text></g>
+
+  <!-- Branch 4: Biology (mid-right) -->
+  <path d="M 780 470 Q 940 540 1150 580" stroke="#ec4899" stroke-width="2.5" fill="none"/>
+  <g transform="translate(1150, 580)">
+    <circle r="50" class="branch-4" opacity="0.92"/>
+    <text y="4" class="label" font-size="14" font-weight="700" text-anchor="middle">Biology</text>
+  </g>
+  <line x1="1190" y1="540" x2="1280" y2="500" stroke="#ec4899" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1170" y1="630" x2="1240" y2="720" stroke="#ec4899" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1110" y1="610" x2="1020" y2="660" stroke="#ec4899" stroke-width="1.5" opacity="0.7"/>
+  <line x1="1110" y1="555" x2="1020" y2="540" stroke="#ec4899" stroke-width="1.5" opacity="0.7"/>
+  <g transform="translate(1280, 490)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#ec4899"/><text class="sub-label" text-anchor="middle" y="4">Morphological</text></g>
+  <g transform="translate(1240, 730)"><rect x="-52" y="-15" width="104" height="30" rx="6" class="leaf" stroke="#ec4899"/><text class="sub-label" text-anchor="middle" y="4">Cladistics</text></g>
+  <g transform="translate(1020, 670)"><rect x="-72" y="-15" width="144" height="30" rx="6" class="leaf" stroke="#ec4899"/><text class="sub-label" text-anchor="middle" y="4">Convergent Evolution</text></g>
+  <g transform="translate(1020, 530)"><rect x="-62" y="-15" width="124" height="30" rx="6" class="leaf" stroke="#ec4899"/><text class="sub-label" text-anchor="middle" y="4">Borges Encyclopedia</text></g>
+
+  <!-- Branch 5: Code / CS (bottom) -->
+  <path d="M 700 530 L 700 720" stroke="#f43f5e" stroke-width="2.5" fill="none"/>
+  <g transform="translate(700, 770)">
+    <circle r="50" class="branch-5" opacity="0.92"/>
+    <text y="-3" class="label" font-size="14" font-weight="700" text-anchor="middle">Code</text>
+    <text y="15" class="label" font-size="14" font-weight="700" text-anchor="middle">Today</text>
+  </g>
+  <line x1="660" y1="800" x2="540" y2="820" stroke="#f43f5e" stroke-width="1.5" opacity="0.7"/>
+  <line x1="650" y1="760" x2="540" y2="710" stroke="#f43f5e" stroke-width="1.5" opacity="0.7"/>
+  <line x1="750" y1="760" x2="860" y2="710" stroke="#f43f5e" stroke-width="1.5" opacity="0.7"/>
+  <line x1="740" y1="800" x2="860" y2="820" stroke="#f43f5e" stroke-width="1.5" opacity="0.7"/>
+  <g transform="translate(540, 830)"><rect x="-66" y="-15" width="132" height="30" rx="6" class="leaf" stroke="#f43f5e"/><text class="sub-label" text-anchor="middle" y="4">Rust Borrow Checker</text></g>
+  <g transform="translate(540, 700)"><rect x="-66" y="-15" width="132" height="30" rx="6" class="leaf" stroke="#f43f5e"/><text class="sub-label" text-anchor="middle" y="4">MongoDB / Schema</text></g>
+  <g transform="translate(860, 700)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#f43f5e"/><text class="sub-label" text-anchor="middle" y="4">OOP 类继承</text></g>
+  <g transform="translate(860, 830)"><rect x="-58" y="-15" width="116" height="30" rx="6" class="leaf" stroke="#f43f5e"/><text class="sub-label" text-anchor="middle" y="4">node_modules / DAG</text></g>
+
+  <!-- Methodology box -->
+  <g transform="translate(700, 850)">
+    <rect x="-380" y="-30" width="760" height="38" rx="8" fill="#7c3aed" fill-opacity="0.18" stroke="#a78bfa" stroke-width="1.2" stroke-opacity="0.6"/>
+    <text class="sub-label" text-anchor="middle" y="-7" font-size="13" font-weight="600" fill="#c4b5fd">三问 · Be Intentional</text>
+    <text class="sub-label" text-anchor="middle" y="10" font-size="11">What web is being flattened? · Which links are sacrificed? · Must the target medium be a tree?</text>
+  </g>
+</svg>
