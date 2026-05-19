@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="60%" stop-color="#160b22"/>
+      <stop offset="100%" stop-color="#2a0a1c"/>
+    </linearGradient>
+    <linearGradient id="redLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff3860" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ff3860" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ff3860" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="greenLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7be39c" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7be39c" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7be39c" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- 标题 -->
+  <text x="60" y="92" fill="#ff5577" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif" font-size="22" font-weight="700" letter-spacing="6">好文共赏 · GOOD READ</text>
+
+  <text x="60" y="172" fill="#f4f6ff" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif" font-size="50" font-weight="800">把审查电路从权重里挖出来</text>
+  <text x="60" y="232" fill="#f4f6ff" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif" font-size="36" font-weight="500">一份关于 Qwen 3.5 政治内容过滤的机制可解释性研究</text>
+
+  <!-- 层条图：模拟 transformer L0–L31 -->
+  <g transform="translate(60,320)">
+    <text x="0" y="-12" fill="#9aa4c0" font-family="monospace" font-size="14">L0    L8    L11—L20 (writers)    L20—L31 (readers)         L31</text>
+    <!-- 32 个小格代表层 -->
+    <g>
+      <!-- 前 11 层：灰色 -->
+      <g fill="#33405a">
+        <rect x="0"  y="0" width="22" height="40" rx="3"/>
+        <rect x="26" y="0" width="22" height="40" rx="3"/>
+        <rect x="52" y="0" width="22" height="40" rx="3"/>
+        <rect x="78" y="0" width="22" height="40" rx="3"/>
+        <rect x="104" y="0" width="22" height="40" rx="3"/>
+        <rect x="130" y="0" width="22" height="40" rx="3"/>
+        <rect x="156" y="0" width="22" height="40" rx="3"/>
+        <rect x="182" y="0" width="22" height="40" rx="3"/>
+        <rect x="208" y="0" width="22" height="40" rx="3"/>
+        <rect x="234" y="0" width="22" height="40" rx="3"/>
+        <rect x="260" y="0" width="22" height="40" rx="3"/>
+      </g>
+      <!-- L11–L20 writers: 红色 -->
+      <g fill="#ff3860">
+        <rect x="286" y="0" width="22" height="40" rx="3"/>
+        <rect x="312" y="0" width="22" height="40" rx="3"/>
+        <rect x="338" y="0" width="22" height="40" rx="3"/>
+        <rect x="364" y="0" width="22" height="40" rx="3"/>
+        <rect x="390" y="0" width="22" height="40" rx="3"/>
+        <rect x="416" y="0" width="22" height="40" rx="3"/>
+        <rect x="442" y="0" width="22" height="40" rx="3"/>
+        <rect x="468" y="0" width="22" height="40" rx="3"/>
+        <rect x="494" y="0" width="22" height="40" rx="3"/>
+        <rect x="520" y="0" width="22" height="40" rx="3"/>
+      </g>
+      <!-- L20–L31 readers: 黄色 -->
+      <g fill="#ffb347">
+        <rect x="546" y="0" width="22" height="40" rx="3"/>
+        <rect x="572" y="0" width="22" height="40" rx="3"/>
+        <rect x="598" y="0" width="22" height="40" rx="3"/>
+        <rect x="624" y="0" width="22" height="40" rx="3"/>
+        <rect x="650" y="0" width="22" height="40" rx="3"/>
+        <rect x="676" y="0" width="22" height="40" rx="3"/>
+        <rect x="702" y="0" width="22" height="40" rx="3"/>
+        <rect x="728" y="0" width="22" height="40" rx="3"/>
+        <rect x="754" y="0" width="22" height="40" rx="3"/>
+        <rect x="780" y="0" width="22" height="40" rx="3"/>
+        <rect x="806" y="0" width="22" height="40" rx="3"/>
+      </g>
+    </g>
+
+    <!-- tap 24 标线 -->
+    <line x1="624" y1="-30" x2="624" y2="80" stroke="#7be39c" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="630" y="-32" fill="#7be39c" font-family="monospace" font-size="13">tap 24 ⇒ 抱歉，我不能…</text>
+  </g>
+
+  <!-- 三个 axes 标签 -->
+  <g transform="translate(60,440)" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif" font-size="20" font-weight="600">
+    <text x="0"   y="0" fill="#ff5577">d_prc</text>
+    <text x="0"   y="22" fill="#9aa4c0" font-size="13">是否 PRC 敏感内容</text>
+
+    <text x="220" y="0" fill="#ffb347">d_refuse</text>
+    <text x="220" y="22" fill="#9aa4c0" font-size="13">是否拒绝回答</text>
+
+    <text x="440" y="0" fill="#7be39c">d_style</text>
+    <text x="440" y="22" fill="#9aa4c0" font-size="13">偏转 / 宣传</text>
+  </g>
+
+  <!-- 底部 byline -->
+  <g transform="translate(60,550)">
+    <text x="0" y="0" fill="#7a8299" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif" font-size="16">原文：vas-blog · 主评 Opus 9.4 · 副评 Sonnet 9.2 · 综合 9.2 / 10</text>
+    <text x="0" y="28" fill="#5f6680" font-family="'Noto Sans CJK SC','PingFang SC',sans-serif" font-size="14">writers / readers · 三轴诊断 · tap 24 的中文 verdict · 47 个实验、200 条提示、1056 条 rollout</text>
+  </g>
+</svg>

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <radialGradient id="bgm" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#13182b"/>
+      <stop offset="100%" stop-color="#080a14"/>
+    </radialGradient>
+    <style>
+      .root { fill:#ff5577; }
+      .l1 { fill:#ffb347; }
+      .l2 { fill:#7be39c; }
+      .l3 { fill:#7fb8ff; }
+      .l4 { fill:#c89cff; }
+      text { font-family: 'Noto Sans CJK SC','PingFang SC',sans-serif; }
+      .lbl  { fill:#e8ecff; font-size:14px; font-weight:600; }
+      .sub  { fill:#9aa4c0; font-size:11px; }
+      .root-lbl { fill:#fff; font-size:20px; font-weight:800; }
+      line { stroke-width:1.5; stroke-opacity:0.55; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bgm)"/>
+
+  <!-- 根节点 -->
+  <g transform="translate(700,450)">
+    <circle r="68" class="root" opacity="0.95"/>
+    <text text-anchor="middle" y="-4" class="root-lbl">Qwen 3.5</text>
+    <text text-anchor="middle" y="22" class="root-lbl">审查电路</text>
+  </g>
+
+  <!-- 5 个一级分支位置 -->
+  <!-- 1. 三轴诊断 -->
+  <line x1="700" y1="450" x2="280" y2="200" stroke="#ffb347"/>
+  <g transform="translate(280,200)">
+    <circle r="44" class="l1"/>
+    <text text-anchor="middle" y="-3" class="lbl" fill="#1a1a2a">1. 三个内部</text>
+    <text text-anchor="middle" y="14" class="lbl" fill="#1a1a2a">方向</text>
+    <text text-anchor="middle" y="60" class="sub">diff-of-means · 单位归一</text>
+  </g>
+  <!-- 三轴叶子 -->
+  <line x1="280" y1="200" x2="100" y2="80" stroke="#ffb347" stroke-opacity="0.3"/>
+  <text x="100" y="70" class="lbl">d_prc</text>
+  <text x="100" y="90" class="sub">tap 14 · PRC 敏感性</text>
+
+  <line x1="280" y1="200" x2="100" y2="200" stroke="#ffb347" stroke-opacity="0.3"/>
+  <text x="100" y="205" class="lbl">d_refuse</text>
+  <text x="100" y="222" class="sub">tap 19 · 是否拒答</text>
+
+  <line x1="280" y1="200" x2="100" y2="320" stroke="#ffb347" stroke-opacity="0.3"/>
+  <text x="100" y="320" class="lbl">d_style</text>
+  <text x="100" y="338" class="sub">tap 19 · 偏转 vs 宣传</text>
+
+  <!-- 2. Writers L11–L20 -->
+  <line x1="700" y1="450" x2="1120" y2="200" stroke="#7be39c"/>
+  <g transform="translate(1120,200)">
+    <circle r="44" class="l2"/>
+    <text text-anchor="middle" y="-3" class="lbl" fill="#0a1018">2. Writers</text>
+    <text text-anchor="middle" y="14" class="lbl" fill="#0a1018">L11–L20</text>
+    <text text-anchor="middle" y="60" class="sub">局部 · 线性 · sigmoid</text>
+  </g>
+  <line x1="1120" y1="200" x2="1300" y2="80" stroke="#7be39c" stroke-opacity="0.3"/>
+  <text x="1300" y="70" class="lbl" text-anchor="end">MLP 主导（93%）</text>
+  <text x="1300" y="90" class="sub" text-anchor="end">d_prc → L13.mlp</text>
+
+  <line x1="1120" y1="200" x2="1300" y2="200" stroke="#7be39c" stroke-opacity="0.3"/>
+  <text x="1300" y="195" class="lbl" text-anchor="end">d_refuse / d_style</text>
+  <text x="1300" y="213" class="sub" text-anchor="end">→ L17.mlp + L18.mlp</text>
+
+  <line x1="1120" y1="200" x2="1300" y2="320" stroke="#7be39c" stroke-opacity="0.3"/>
+  <text x="1300" y="315" class="lbl" text-anchor="end">写在 post-train 阶段</text>
+  <text x="1300" y="333" class="sub" text-anchor="end">cos 0.5 ↔ base</text>
+
+  <!-- 3. Readers L20–L31 -->
+  <line x1="700" y1="450" x2="1120" y2="700" stroke="#7fb8ff"/>
+  <g transform="translate(1120,700)">
+    <circle r="44" class="l3"/>
+    <text text-anchor="middle" y="-3" class="lbl" fill="#0a1018">3. Readers</text>
+    <text text-anchor="middle" y="14" class="lbl" fill="#0a1018">L20–L31</text>
+    <text text-anchor="middle" y="60" class="sub">分布式 · 冗余 · 不可外科</text>
+  </g>
+  <line x1="1120" y1="700" x2="1300" y2="580" stroke="#7fb8ff" stroke-opacity="0.3"/>
+  <text x="1300" y="575" class="lbl" text-anchor="end">每个 reader MLP</text>
+  <text x="1300" y="592" class="sub" text-anchor="end">单独可解码 verdict（0.97–1.0）</text>
+
+  <line x1="1120" y1="700" x2="1300" y2="700" stroke="#7fb8ff" stroke-opacity="0.3"/>
+  <text x="1300" y="695" class="lbl" text-anchor="end">600 神经元置零 ≈ 0</text>
+  <text x="1300" y="713" class="sub" text-anchor="end">无单点失败</text>
+
+  <line x1="1120" y1="700" x2="1300" y2="820" stroke="#7fb8ff" stroke-opacity="0.3"/>
+  <text x="1300" y="815" class="lbl" text-anchor="end">头消融 ≈ 0</text>
+  <text x="1300" y="833" class="sub" text-anchor="end">L3.h10 仅相关，非因果</text>
+
+  <!-- 4. tap 24 中文 verdict -->
+  <line x1="700" y1="450" x2="280" y2="700" stroke="#c89cff"/>
+  <g transform="translate(280,700)">
+    <circle r="44" class="l4"/>
+    <text text-anchor="middle" y="-3" class="lbl" fill="#1a0a2a">4. tap 24</text>
+    <text text-anchor="middle" y="14" class="lbl" fill="#1a0a2a">中文 verdict</text>
+    <text text-anchor="middle" y="60" class="sub">logit lens 中位层</text>
+  </g>
+  <line x1="280" y1="700" x2="100" y2="580" stroke="#c89cff" stroke-opacity="0.3"/>
+  <text x="100" y="575" class="lbl">100% 中文 top-1</text>
+  <text x="100" y="592" class="sub">Tiananmen 提示</text>
+
+  <line x1="280" y1="700" x2="100" y2="700" stroke="#c89cff" stroke-opacity="0.3"/>
+  <text x="100" y="695" class="lbl">"抱歉，我不能…"</text>
+  <text x="100" y="713" class="sub">连钓鱼提示也是中文承诺</text>
+
+  <line x1="280" y1="700" x2="100" y2="820" stroke="#c89cff" stroke-opacity="0.3"/>
+  <text x="100" y="815" class="lbl">L24–L31 分布式翻译</text>
+  <text x="100" y="833" class="sub">无单一翻译层</text>
+
+  <!-- 5. 四种响应风格 -->
+  <line x1="700" y1="450" x2="700" y2="120" stroke="#ff5577" stroke-dasharray="4,4"/>
+  <g transform="translate(700,120)">
+    <circle r="44" class="root"/>
+    <text text-anchor="middle" y="-3" class="lbl" fill="#fff">5. 四种</text>
+    <text text-anchor="middle" y="14" class="lbl" fill="#fff">响应风格</text>
+  </g>
+  <text x="540" y="50" class="sub">Tiananmen → 偏转</text>
+  <text x="540" y="68" class="sub">"我的主要功能是提供帮助…"</text>
+  <text x="860" y="50" class="sub">Other PRC → 宣传</text>
+  <text x="860" y="68" class="sub">Taiwan / Xinjiang / Falun Gong</text>
+  <text x="540" y="200" class="sub" text-anchor="end" transform="translate(120,-150)"></text>
+
+  <!-- 6. Steering 是否能"解审查"? -->
+  <line x1="700" y1="450" x2="700" y2="800" stroke="#ff5577" stroke-dasharray="4,4"/>
+  <g transform="translate(700,800)">
+    <circle r="44" fill="#ff7799"/>
+    <text text-anchor="middle" y="-3" class="lbl" fill="#fff">6. 失败模式</text>
+    <text text-anchor="middle" y="14" class="lbl" fill="#fff">denial 模板</text>
+  </g>
+  <text x="700" y="880" text-anchor="middle" class="sub">超出 dose band 不是回到事实，而是落入 denial / 不连贯</text>
+
+  <!-- Title -->
+  <text x="700" y="40" text-anchor="middle" fill="#f4f6ff" font-size="22" font-weight="700">vas-blog · Qwen 3.5 政治审查机制可解释性 · 思维导图</text>
+</svg>
