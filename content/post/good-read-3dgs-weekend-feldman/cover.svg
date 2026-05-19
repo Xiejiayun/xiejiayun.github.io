@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#1a2330"/>
+      <stop offset="60%" stop-color="#0e1420"/>
+      <stop offset="100%" stop-color="#05080f"/>
+    </radialGradient>
+    <radialGradient id="splat1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6b9d" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#ff6b9d" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff6b9d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="splat2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7fb6ff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#7fb6ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7fb6ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="splat3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd86b" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#ffd86b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffd86b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="splat4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#9affc4" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#9affc4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#9affc4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="splat5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c699ff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#c699ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c699ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="splat6" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff9b6b" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#ff9b6b" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff9b6b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#1f2a3a" stroke-width="0.5" opacity="0.4">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Gaussian splats — anisotropic ellipses with rotation -->
+  <g>
+    <ellipse cx="190" cy="420" rx="120" ry="55" transform="rotate(-22 190 420)" fill="url(#splat1)"/>
+    <ellipse cx="340" cy="320" rx="95" ry="40" transform="rotate(35 340 320)" fill="url(#splat2)"/>
+    <ellipse cx="270" cy="510" rx="80" ry="35" transform="rotate(-10 270 510)" fill="url(#splat3)"/>
+    <ellipse cx="430" cy="450" rx="100" ry="45" transform="rotate(58 430 450)" fill="url(#splat4)"/>
+    <ellipse cx="155" cy="270" rx="90" ry="38" transform="rotate(72 155 270)" fill="url(#splat5)"/>
+    <ellipse cx="380" cy="540" rx="70" ry="30" transform="rotate(15 380 540)" fill="url(#splat6)"/>
+    <ellipse cx="100" cy="500" rx="85" ry="35" transform="rotate(-45 100 500)" fill="url(#splat2)" opacity="0.7"/>
+    <ellipse cx="350" cy="210" rx="65" ry="28" transform="rotate(20 350 210)" fill="url(#splat1)" opacity="0.7"/>
+    <ellipse cx="220" cy="380" rx="55" ry="22" transform="rotate(-65 220 380)" fill="url(#splat3)" opacity="0.85"/>
+    <ellipse cx="450" cy="350" rx="60" ry="25" transform="rotate(48 450 350)" fill="url(#splat5)" opacity="0.8"/>
+    <ellipse cx="120" cy="350" rx="50" ry="20" transform="rotate(-15 120 350)" fill="url(#splat6)" opacity="0.7"/>
+    <ellipse cx="500" cy="500" rx="55" ry="22" transform="rotate(85 500 500)" fill="url(#splat4)" opacity="0.75"/>
+  </g>
+
+  <!-- Bounding quad wireframe overlay — left side -->
+  <g stroke="#7fb6ff" stroke-width="1.5" fill="none" opacity="0.55">
+    <polygon points="280,360 470,340 490,500 300,520"/>
+    <line x1="280" y1="360" x2="490" y2="500" stroke-dasharray="3,3"/>
+    <line x1="470" y1="340" x2="300" y2="520" stroke-dasharray="3,3"/>
+  </g>
+  <g fill="#7fb6ff" opacity="0.8">
+    <circle cx="385" cy="430" r="3"/>
+  </g>
+  <text x="395" y="425" fill="#7fb6ff" font-family="ui-monospace, monospace" font-size="11" opacity="0.85">μ₂D</text>
+
+  <!-- Math callouts on right -->
+  <g font-family="ui-serif, Georgia, serif" fill="#e8eef8">
+    <text x="640" y="105" font-size="22" font-style="italic" fill="#7fb6ff">Σ₂D = J W Σ Wᵀ Jᵀ</text>
+    <text x="640" y="155" font-size="14" opacity="0.7">covariance projection</text>
+
+    <text x="640" y="215" font-size="22" font-style="italic" fill="#ffd86b">λ₁,₂ = tr/2 ± √(tr²/4 − det)</text>
+    <text x="640" y="245" font-size="14" opacity="0.7">eigen-decomposition</text>
+
+    <text x="640" y="305" font-size="22" font-style="italic" fill="#ff6b9d">b_i = 3√λᵢ · eᵢ</text>
+    <text x="640" y="335" font-size="14" opacity="0.7">3σ bounding quad</text>
+
+    <text x="640" y="395" font-size="22" font-style="italic" fill="#9affc4">G = exp(−4.5 (p_x² + p_y²))</text>
+    <text x="640" y="425" font-size="14" opacity="0.7">fragment Gaussian falloff</text>
+  </g>
+
+  <!-- Title block -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', sans-serif">
+    <text x="60" y="80" fill="#7fb6ff" font-size="18" letter-spacing="3" font-weight="500">好文共赏 · EDITOR'S PICK</text>
+    <text x="60" y="135" fill="#ffffff" font-size="38" font-weight="700">3D Gaussian Splatting</text>
+    <text x="60" y="180" fill="#ffd86b" font-size="32" font-weight="600" font-style="italic">in a Weekend</text>
+  </g>
+
+  <!-- Bottom info bar -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif">
+    <text x="60" y="585" fill="#cfd9e8" font-size="18">Benjamin Feldman · bfeldman.me · 2026-05</text>
+    <text x="60" y="610" fill="#9faec3" font-size="13" opacity="0.85">1000 lines · OpenGL 4.5 · GLSL · ply parser · EWA Splatting · forward-only renderer</text>
+  </g>
+
+  <!-- Score badge -->
+  <g transform="translate(1010, 545)">
+    <rect x="0" y="0" width="140" height="56" rx="10" fill="#1a2435" stroke="#7fb6ff" stroke-width="1.5"/>
+    <text x="70" y="22" fill="#9faec3" font-size="11" text-anchor="middle" font-family="ui-sans-serif, sans-serif" letter-spacing="2">SCORE</text>
+    <text x="70" y="46" fill="#7fb6ff" font-size="20" text-anchor="middle" font-family="ui-sans-serif, sans-serif" font-weight="700">9.0 / 10</text>
+  </g>
+</svg>

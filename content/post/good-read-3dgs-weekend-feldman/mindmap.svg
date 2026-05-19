@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <radialGradient id="mbg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#13202f"/>
+      <stop offset="100%" stop-color="#070b13"/>
+    </radialGradient>
+    <linearGradient id="ln" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b6298" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3b6298" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#mbg)"/>
+
+  <!-- Title -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif">
+    <text x="700" y="50" fill="#7fb6ff" font-size="14" letter-spacing="4" text-anchor="middle">MIND MAP</text>
+    <text x="700" y="84" fill="#ffffff" font-size="26" font-weight="700" text-anchor="middle">3D Gaussian Splatting · Feldman 周末教程</text>
+  </g>
+
+  <!-- Central node -->
+  <g transform="translate(700, 450)">
+    <circle r="100" fill="#1c2a3e" stroke="#7fb6ff" stroke-width="2.5"/>
+    <text y="-8" font-family="ui-sans-serif, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">3DGS</text>
+    <text y="20" font-family="ui-sans-serif, sans-serif" font-size="14" fill="#7fb6ff" text-anchor="middle">forward rendering</text>
+  </g>
+
+  <!-- Branches -->
+  <!-- Top-left: Input -->
+  <g stroke="url(#ln)" stroke-width="2" fill="none">
+    <path d="M 620 380 Q 450 300 250 200"/>
+    <path d="M 620 420 Q 420 380 240 320"/>
+    <path d="M 700 350 L 700 180"/>
+    <path d="M 780 380 Q 940 300 1140 200"/>
+    <path d="M 780 420 Q 970 380 1150 320"/>
+    <path d="M 780 480 Q 970 540 1160 600"/>
+    <path d="M 700 550 L 700 720"/>
+    <path d="M 620 480 Q 420 540 240 600"/>
+    <path d="M 620 460 Q 450 480 240 480"/>
+  </g>
+
+  <!-- Branch boxes -->
+  <g font-family="ui-sans-serif, sans-serif" font-size="13">
+
+    <!-- Input: PLY file -->
+    <g transform="translate(60, 160)">
+      <rect width="380" height="90" rx="10" fill="#1f2c3f" stroke="#ff6b9d" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#ff6b9d" text-anchor="middle">① 输入：PLY 文件</text>
+      <text x="20" y="52" fill="#cfd9e8">• μ (centroid 3D), scale (log), rotation (quat)</text>
+      <text x="20" y="72" fill="#cfd9e8">• opacity (logit), SH coeffs (DC + f_rest)</text>
+    </g>
+
+    <!-- Param decode -->
+    <g transform="translate(60, 290)">
+      <rect width="380" height="80" rx="10" fill="#1f2c3f" stroke="#ffd86b" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#ffd86b" text-anchor="middle">② 参数解码</text>
+      <text x="20" y="52" fill="#cfd9e8">s = exp(scale)  ·  α_base = sigmoid(opacity)</text>
+      <text x="20" y="72" fill="#cfd9e8">R = quat→3×3  ·  Σ = R S Sᵀ Rᵀ</text>
+    </g>
+
+    <!-- Top: Math foundation -->
+    <g transform="translate(510, 100)">
+      <rect width="380" height="80" rx="10" fill="#1f2c3f" stroke="#9affc4" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#9affc4" text-anchor="middle">数学根基：EWA Splatting</text>
+      <text x="20" y="52" fill="#cfd9e8">Zwicker et al. 2001  ·  局部线性化</text>
+      <text x="20" y="72" fill="#cfd9e8">透视投影 = 一阶 Taylor 展开 in 每个 splat</text>
+    </g>
+
+    <!-- Top-right: covariance projection -->
+    <g transform="translate(960, 160)">
+      <rect width="380" height="90" rx="10" fill="#1f2c3f" stroke="#7fb6ff" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#7fb6ff" text-anchor="middle">③ 协方差投影</text>
+      <text x="20" y="52" fill="#cfd9e8" font-style="italic">Σ₂D = J W Σ Wᵀ Jᵀ</text>
+      <text x="20" y="72" fill="#cfd9e8">J: 2×3 雅可比（每个 splat 中心点计算）</text>
+    </g>
+
+    <!-- Right: eigen-decomposition -->
+    <g transform="translate(970, 290)">
+      <rect width="380" height="80" rx="10" fill="#1f2c3f" stroke="#c699ff" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#c699ff" text-anchor="middle">④ 特征分解</text>
+      <text x="20" y="52" fill="#cfd9e8" font-style="italic">λ₁,₂ = tr/2 ± √(tr²/4 − det)</text>
+      <text x="20" y="72" fill="#cfd9e8">e₁, e₂ 椭圆主轴方向</text>
+    </g>
+
+    <!-- Right-bottom: bounding quad -->
+    <g transform="translate(970, 560)">
+      <rect width="380" height="80" rx="10" fill="#1f2c3f" stroke="#ff9b6b" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#ff9b6b" text-anchor="middle">⑤ 3σ 包围四边形</text>
+      <text x="20" y="52" fill="#cfd9e8" font-style="italic">b_i = 3√λᵢ · eᵢ</text>
+      <text x="20" y="72" fill="#cfd9e8">四个顶点: μ₂D ± b₁ ± b₂</text>
+    </g>
+
+    <!-- Bottom: fragment shader -->
+    <g transform="translate(510, 730)">
+      <rect width="380" height="90" rx="10" fill="#1f2c3f" stroke="#9affc4" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#9affc4" text-anchor="middle">⑥ Fragment Gaussian</text>
+      <text x="20" y="52" fill="#cfd9e8" font-style="italic">G = exp(−4.5 (p_x² + p_y²))</text>
+      <text x="20" y="72" fill="#cfd9e8">discard if power &lt; −9 or alpha &lt; 0.001</text>
+    </g>
+
+    <!-- Bottom-left: depth sort -->
+    <g transform="translate(60, 560)">
+      <rect width="380" height="90" rx="10" fill="#1f2c3f" stroke="#ffd86b" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#ffd86b" text-anchor="middle">⑦ CPU 深度排序</text>
+      <text x="20" y="52" fill="#cfd9e8">std::sort by camera-space z (back-to-front)</text>
+      <text x="20" y="72" fill="#cfd9e8">每帧 ~5-10 ms / 200K splat · 静止可缓存</text>
+    </g>
+
+    <!-- Left-mid: instanced -->
+    <g transform="translate(60, 430)">
+      <rect width="380" height="80" rx="10" fill="#1f2c3f" stroke="#7fb6ff" stroke-width="1.5"/>
+      <text x="190" y="28" font-size="16" font-weight="700" fill="#7fb6ff" text-anchor="middle">⑧ Instanced Rendering</text>
+      <text x="20" y="52" fill="#cfd9e8">unit quad + per-instance attrs (divisor=1)</text>
+      <text x="20" y="72" fill="#cfd9e8">glDrawArraysInstanced(...) — 1 draw call / N</text>
+    </g>
+
+  </g>
+
+  <!-- Footer -->
+  <g font-family="ui-sans-serif, sans-serif">
+    <text x="700" y="870" fill="#5d7390" font-size="12" text-anchor="middle">基于 bfeldman.me/3dgs-weekend (2026-05) · 好文共赏 · 谢家允</text>
+  </g>
+</svg>
