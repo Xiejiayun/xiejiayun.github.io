@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e1a"/>
+      <stop offset="0.5" stop-color="#1a1f3a"/>
+      <stop offset="1" stop-color="#0d1226"/>
+    </linearGradient>
+    <linearGradient id="expGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#1be9a3" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#1be9a3" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="sigGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6b6b" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ff6b6b" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- grid -->
+  <g stroke="#2a3050" stroke-width="0.6" opacity="0.45">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="390" x2="1200" y2="390"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="570" x2="1200" y2="570"/>
+    <line x1="100" y1="0" x2="100" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="500" y1="0" x2="500" y2="630"/>
+    <line x1="700" y1="0" x2="700" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1100" y1="0" x2="1100" y2="630"/>
+  </g>
+
+  <!-- "High" target line -->
+  <line x1="80" y1="180" x2="1120" y2="180" stroke="#ffe066" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.85"/>
+  <text x="1130" y="184" fill="#ffe066" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-style="italic">High</text>
+
+  <!-- Sigmoid curve (the wrong prediction) -->
+  <path d="M 80,500 C 280,500 340,470 420,420 C 500,370 540,330 620,310 C 700,295 760,295 840,295 C 920,295 1000,295 1120,295"
+        fill="none" stroke="url(#sigGrad)" stroke-width="4.5" filter="url(#glow)"/>
+  <text x="780" y="285" fill="#ff8a8a" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Predicted sigmoid (wrong, again)</text>
+
+  <!-- Exponential curve (reality) -->
+  <path d="M 80,500 C 200,490 280,460 380,420 C 480,375 540,330 620,275 C 700,220 760,170 820,135 C 880,105 940,90 1020,80 C 1080,72 1110,68 1120,67"
+        fill="none" stroke="url(#expGrad)" stroke-width="4.5" filter="url(#glow)"/>
+  <text x="900" y="105" fill="#1be9a3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13">Reality (Lindy continues)</text>
+
+  <!-- data points -->
+  <g fill="#1be9a3">
+    <circle cx="200" cy="490" r="4"/>
+    <circle cx="320" cy="460" r="4"/>
+    <circle cx="440" cy="405" r="4"/>
+    <circle cx="540" cy="330" r="4"/>
+    <circle cx="640" cy="265" r="4"/>
+    <circle cx="740" cy="195" r="4"/>
+    <circle cx="820" cy="135" r="5" stroke="#fff" stroke-width="1.5"/>
+  </g>
+  <text x="838" y="135" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-style="italic">↑ next model release</text>
+
+  <!-- Header -->
+  <text x="60" y="65" fill="#7eb3ff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" letter-spacing="3" font-weight="600">好文共赏 · EDITOR'S PICK</text>
+
+  <!-- Title -->
+  <text x="60" y="555" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="42" font-weight="700">The Sigmoids Won't Save You</text>
+  <text x="60" y="595" fill="#aab8d8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18">Scott Alexander · Astral Codex Ten · 2026-05-15</text>
+
+  <!-- Lower right tag -->
+  <rect x="950" y="525" width="190" height="60" rx="10" fill="#1a2244" stroke="#3a4880" stroke-width="1"/>
+  <text x="970" y="552" fill="#9bb3ff" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" letter-spacing="2">综合评分</text>
+  <text x="970" y="578" fill="#ffd166" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="700">8.7 / 10</text>
+</svg>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0e1a"/>
+      <stop offset="1" stop-color="#141a30"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="2.5"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+
+  <!-- Center node -->
+  <ellipse cx="800" cy="500" rx="190" ry="70" fill="#1f2954" stroke="#7eb3ff" stroke-width="2.5"/>
+  <text x="800" y="490" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="700" text-anchor="middle">The Sigmoids</text>
+  <text x="800" y="520" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="700" text-anchor="middle">Won't Save You</text>
+  <text x="800" y="544" fill="#9bb3ff" font-family="sans-serif" font-size="12" text-anchor="middle">Scott Alexander · 2026-05-15</text>
+
+  <!-- Branch 1: 反方陈词 -->
+  <line x1="650" y1="475" x2="350" y2="220" stroke="#ff6b6b" stroke-width="2"/>
+  <rect x="180" y="180" width="340" height="80" rx="12" fill="#2a1830" stroke="#ff6b6b" stroke-width="1.8"/>
+  <text x="350" y="210" fill="#ff8a8a" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">反方陈词</text>
+  <text x="350" y="240" fill="#ffd0d0" font-family="sans-serif" font-size="13" text-anchor="middle">"All exponentials eventually become sigmoids"</text>
+
+  <!-- Branch 2: 三个案例 -->
+  <line x1="630" y1="500" x2="280" y2="500" stroke="#ffd166" stroke-width="2"/>
+  <rect x="80" y="395" width="200" height="210" rx="12" fill="#2a2410" stroke="#ffd166" stroke-width="1.8"/>
+  <text x="180" y="425" fill="#ffd166" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">Sigmoid 误判名人堂</text>
+  <text x="100" y="460" fill="#fff7d0" font-family="sans-serif" font-size="13">🥉 UN 生育率</text>
+  <text x="100" y="486" fill="#cccccc" font-family="sans-serif" font-size="11">韩国 2030 预测一路下修</text>
+  <text x="100" y="514" fill="#fff7d0" font-family="sans-serif" font-size="13">🥈 WEO 太阳能</text>
+  <text x="100" y="540" fill="#cccccc" font-family="sans-serif" font-size="11">15 条蓝线全部画钩</text>
+  <text x="100" y="568" fill="#fff7d0" font-family="sans-serif" font-size="13">🥇 Wharton × METR</text>
+  <text x="100" y="594" fill="#cccccc" font-family="sans-serif" font-size="11">3 个月内被星点穿透</text>
+
+  <!-- Branch 3: 共同病理 -->
+  <line x1="650" y1="525" x2="350" y2="780" stroke="#ff6b6b" stroke-width="2"/>
+  <rect x="155" y="740" width="390" height="90" rx="12" fill="#2a1830" stroke="#ff6b6b" stroke-width="1.8"/>
+  <text x="350" y="770" fill="#ff8a8a" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">共同病理</text>
+  <text x="350" y="798" fill="#ffd0d0" font-family="sans-serif" font-size="13" text-anchor="middle">拐点总是"正好在今天"</text>
+  <text x="350" y="818" fill="#ffd0d0" font-family="sans-serif" font-size="13" text-anchor="middle">先验冒充后验</text>
+
+  <!-- Branch 4: Lindy 律 -->
+  <line x1="950" y1="500" x2="1280" y2="500" stroke="#1be9a3" stroke-width="2.5"/>
+  <rect x="1080" y="395" width="420" height="210" rx="12" fill="#0f2a22" stroke="#1be9a3" stroke-width="1.8"/>
+  <text x="1290" y="425" fill="#1be9a3" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">Lindy 律 · 默认先验</text>
+  <text x="1100" y="455" fill="#a8f0d0" font-family="sans-serif" font-size="12">几何泉眼思想实验：</text>
+  <text x="1100" y="475" fill="#ccffe0" font-family="sans-serif" font-size="11">"上次爆发 10 万年前" → 几乎不会再爆</text>
+  <text x="1100" y="492" fill="#ccffe0" font-family="sans-serif" font-size="11">"上次爆发 10 分钟前" → 很快会再爆</text>
+  <text x="1100" y="520" fill="#a8f0d0" font-family="sans-serif" font-size="12">应用到 AI：</text>
+  <text x="1100" y="540" fill="#ccffe0" font-family="sans-serif" font-size="11">scaling era ≈ 7 年（2019-2026）</text>
+  <text x="1100" y="557" fill="#ccffe0" font-family="sans-serif" font-size="11">→ 中位再涨 7 年</text>
+  <text x="1100" y="585" fill="#ffe066" font-family="sans-serif" font-size="11">→ 2 年内崩盘概率仅 ≈ 22%</text>
+
+  <!-- Branch 5: 反转举证 -->
+  <line x1="940" y1="525" x2="1240" y2="780" stroke="#7eb3ff" stroke-width="2"/>
+  <rect x="1020" y="730" width="490" height="115" rx="12" fill="#102040" stroke="#7eb3ff" stroke-width="1.8"/>
+  <text x="1265" y="760" fill="#7eb3ff" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">反转举证：辩论换桌</text>
+  <text x="1040" y="788" fill="#cfe2ff" font-family="sans-serif" font-size="12">① 走 explicit 模型 → 摆出数据中心 / 算法 / scaling exponent 假设</text>
+  <text x="1040" y="808" fill="#cfe2ff" font-family="sans-serif" font-size="12">② 走黑盒 → 必须服从 Lindy 默认</text>
+  <text x="1040" y="828" fill="#9bb3ff" font-family="sans-serif" font-size="11" font-style="italic">不能两者皆否——这是 Scott 的杀招</text>
+
+  <!-- Branch 6: 二阶论点 -->
+  <line x1="950" y1="475" x2="1280" y2="220" stroke="#b794f4" stroke-width="2"/>
+  <rect x="1130" y="180" width="380" height="90" rx="12" fill="#251a3a" stroke="#b794f4" stroke-width="1.8"/>
+  <text x="1320" y="210" fill="#b794f4" font-family="sans-serif" font-size="16" font-weight="700" text-anchor="middle">隐藏二阶论点</text>
+  <text x="1320" y="236" fill="#dcccff" font-family="sans-serif" font-size="13" text-anchor="middle">技术代际链：飞行器 = 螺旋桨+涡喷+冲压</text>
+  <text x="1320" y="258" fill="#dcccff" font-family="sans-serif" font-size="13" text-anchor="middle">单条 sigmoid 不是整体停滞</text>
+
+  <!-- Branch 7: 与中文圈对话 -->
+  <line x1="650" y1="510" x2="430" y2="540" stroke="#7eb3ff" stroke-width="1"/>
+  <line x1="800" y1="570" x2="800" y2="900" stroke="#7eb3ff" stroke-width="1.5"/>
+  <rect x="555" y="900" width="490" height="80" rx="12" fill="#102040" stroke="#7eb3ff" stroke-width="1.8"/>
+  <text x="800" y="930" fill="#7eb3ff" font-family="sans-serif" font-size="15" font-weight="700" text-anchor="middle">本土化分离：算力市场 vs 能力曲线</text>
+  <text x="800" y="956" fill="#cfe2ff" font-family="sans-serif" font-size="12" text-anchor="middle">NVIDIA 估值修正 ≠ AI 能力 sigmoid</text>
+  <text x="800" y="974" fill="#cfe2ff" font-family="sans-serif" font-size="12" text-anchor="middle">把商业周期和技术轨迹分开看</text>
+
+  <!-- Footer -->
+  <text x="800" y="40" fill="#7eb3ff" font-family="sans-serif" font-size="14" letter-spacing="3" font-weight="600" text-anchor="middle">好文共赏思维导图 · MINDMAP</text>
+</svg>
