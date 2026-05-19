@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#080b1c"/>
+    </radialGradient>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7afcff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- center node -->
+  <g transform="translate(700, 450)">
+    <circle r="100" fill="#1e2547" stroke="url(#grad1)" stroke-width="3"/>
+    <text x="0" y="-15" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">Serverless GPU</text>
+    <text x="0" y="15" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700" text-anchor="middle">Cold Start</text>
+    <text x="0" y="45" font-family="Helvetica,Arial,sans-serif" font-size="16" fill="#7afcff" font-weight="600" text-anchor="middle">2000s → 50s</text>
+  </g>
+
+  <!-- branch lines -->
+  <g stroke="#a78bfa" stroke-width="2" opacity="0.4" fill="none">
+    <path d="M700,350 Q700,250 350,180"/>
+    <path d="M700,350 Q700,250 1050,180"/>
+    <path d="M700,550 Q700,650 350,720"/>
+    <path d="M700,550 Q700,650 1050,720"/>
+    <path d="M600,450 Q450,450 180,450"/>
+    <path d="M800,450 Q950,450 1220,450"/>
+  </g>
+
+  <!-- Branch 1: Cloud Buffer -->
+  <g transform="translate(180, 130)">
+    <rect width="340" height="120" rx="10" fill="#1e2547" stroke="#7afcff" stroke-width="2"/>
+    <text x="20" y="32" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#7afcff" font-weight="700">① Cloud Buffer (LP)</text>
+    <text x="20" y="58" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• Google GLOP 求解器</text>
+    <text x="20" y="78" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• 观测到的真实供给反馈</text>
+    <text x="20" y="98" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• Xid 错误 / health check</text>
+  </g>
+
+  <!-- Branch 2: ImageFS -->
+  <g transform="translate(880, 130)">
+    <rect width="340" height="120" rx="10" fill="#1e2547" stroke="#a78bfa" stroke-width="2"/>
+    <text x="20" y="32" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#a78bfa" font-weight="700">② ImageFS (FUSE)</text>
+    <text x="20" y="58" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• libfuse lazy 加载</text>
+    <text x="20" y="78" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• 内容寻址多级缓存</text>
+    <text x="20" y="98" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• read_ahead_kb=32MB</text>
+  </g>
+
+  <!-- Branch 3: gVisor C/R -->
+  <g transform="translate(180, 670)">
+    <rect width="340" height="120" rx="10" fill="#1e2547" stroke="#fbbf24" stroke-width="2"/>
+    <text x="20" y="32" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#fbbf24" font-weight="700">③ gVisor runsc C/R</text>
+    <text x="20" y="58" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• user-space kernel</text>
+    <text x="20" y="78" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• pages.img (100MB+)</text>
+    <text x="20" y="98" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• @modal.enter(snap=True)</text>
+  </g>
+
+  <!-- Branch 4: CUDA C/R -->
+  <g transform="translate(880, 670)">
+    <rect width="340" height="120" rx="10" fill="#1e2547" stroke="#34d399" stroke-width="2"/>
+    <text x="20" y="32" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#34d399" font-weight="700">④ CUDA checkpoint</text>
+    <text x="20" y="58" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• driver freeze/thaw</text>
+    <text x="20" y="78" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• device → host memory</text>
+    <text x="20" y="98" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">• vLLM/SGLang 5-7×</text>
+  </g>
+
+  <!-- Branch 5: Allocation Utilization -->
+  <g transform="translate(40, 400)">
+    <rect width="280" height="100" rx="10" fill="#1e2547" stroke="#f87171" stroke-width="2"/>
+    <text x="20" y="32" font-family="Helvetica,Arial,sans-serif" font-size="16" fill="#f87171" font-weight="700">⚖️ 会计学视角</text>
+    <text x="20" y="56" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#cbd5ff">Allocation Util := </text>
+    <text x="20" y="74" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#cbd5ff">  跑代码秒 / 付费秒</text>
+    <text x="20" y="92" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#a5b4fc" font-style="italic">业界常见值: 10-20%</text>
+  </g>
+
+  <!-- Branch 6: Infrastructure compounds -->
+  <g transform="translate(1080, 400)">
+    <rect width="280" height="100" rx="10" fill="#1e2547" stroke="#f472b6" stroke-width="2"/>
+    <text x="20" y="32" font-family="Helvetica,Arial,sans-serif" font-size="16" fill="#f472b6" font-weight="700">🧱 哲学</text>
+    <text x="20" y="58" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">Infrastructure</text>
+    <text x="20" y="80" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">compounds. ④ 站在 ③ 上,</text>
+    <text x="20" y="98" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#cbd5ff">③ 站在 ② 上, ② 站在 ① 上</text>
+  </g>
+
+  <!-- bottom secondary nodes -->
+  <g transform="translate(40, 800)">
+    <text x="0" y="0" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#7afcff" font-weight="600">关键论文 / 工具</text>
+    <text x="0" y="22" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#a5b4fc">Slacker (FAST'16) · To FUSE or Not (FAST'17) · CRIU · gVisor · cuda-checkpoint · GLOP</text>
+  </g>
+
+  <g transform="translate(800, 800)">
+    <text x="0" y="0" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#34d399" font-weight="600">实测数字</text>
+    <text x="0" y="22" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#a5b4fc">vLLM 95.7s→13.8s · SGLang 83.7s→17.5s · Reducto 70s→12s · 50M restores</text>
+  </g>
+
+  <!-- title strip -->
+  <g transform="translate(40, 40)">
+    <text x="0" y="0" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#7afcff" font-weight="700">🗺️ 思维导图 · Modal Serverless GPU 全栈</text>
+    <text x="0" y="22" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#a5b4fc" font-style="italic">Cutting inference cold starts by 40x with LP, FUSE, C/R, and CUDA-checkpoint</text>
+  </g>
+</svg>

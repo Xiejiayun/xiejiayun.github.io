@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#1a1f3a"/>
+      <stop offset="100%" stop-color="#0d1224"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7afcff"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g opacity="0.07" stroke="#7afcff" stroke-width="1">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- top label -->
+  <text x="60" y="68" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#7afcff" font-weight="600" letter-spacing="2">📌 好文共赏 · Editor's Pick</text>
+
+  <!-- main title -->
+  <text x="60" y="140" font-family="Helvetica,Arial,sans-serif" font-size="46" fill="#ffffff" font-weight="700">把 2000 秒砍成 50 秒</text>
+  <text x="60" y="195" font-family="Helvetica,Arial,sans-serif" font-size="32" fill="#cbd5ff" font-weight="500">Modal 的『真·无服务器 GPU』五年账本</text>
+
+  <!-- divider -->
+  <line x1="60" y1="225" x2="1140" y2="225" stroke="url(#accent)" stroke-width="2" opacity="0.6"/>
+
+  <!-- 4 pillars -->
+  <g transform="translate(60, 270)">
+    <!-- Pillar 1 -->
+    <rect x="0" y="0" width="250" height="200" rx="14" fill="#1e2547" stroke="#7afcff" stroke-width="1.5"/>
+    <text x="20" y="40" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#7afcff" font-weight="600">① 云端</text>
+    <text x="20" y="80" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700">LP Buffer</text>
+    <text x="20" y="115" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">GLOP 求解器</text>
+    <text x="20" y="138" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">健康检查池</text>
+    <text x="20" y="172" font-family="Helvetica,Arial,sans-serif" font-size="30" fill="url(#green)" font-weight="700" filter="url(#glow)">-15 min</text>
+
+    <!-- Pillar 2 -->
+    <rect x="270" y="0" width="250" height="200" rx="14" fill="#1e2547" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="290" y="40" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#a78bfa" font-weight="600">② 文件系统</text>
+    <text x="290" y="80" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700">ImageFS</text>
+    <text x="290" y="115" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">libfuse lazy</text>
+    <text x="290" y="138" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">内容寻址多级缓存</text>
+    <text x="290" y="172" font-family="Helvetica,Arial,sans-serif" font-size="30" fill="url(#green)" font-weight="700" filter="url(#glow)">-60 sec</text>
+
+    <!-- Pillar 3 -->
+    <rect x="540" y="0" width="250" height="200" rx="14" fill="#1e2547" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="560" y="40" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#fbbf24" font-weight="600">③ CPU 进程</text>
+    <text x="560" y="80" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700">gVisor C/R</text>
+    <text x="560" y="115" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">runsc snapshot</text>
+    <text x="560" y="138" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">@modal.enter(snap=True)</text>
+    <text x="560" y="172" font-family="Helvetica,Arial,sans-serif" font-size="30" fill="url(#green)" font-weight="700" filter="url(#glow)">10× 缩减</text>
+
+    <!-- Pillar 4 -->
+    <rect x="810" y="0" width="270" height="200" rx="14" fill="#1e2547" stroke="#34d399" stroke-width="1.5"/>
+    <text x="830" y="40" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#34d399" font-weight="600">④ GPU 上下文</text>
+    <text x="830" y="80" font-family="Helvetica,Arial,sans-serif" font-size="22" fill="#ffffff" font-weight="700">cuda-checkpoint</text>
+    <text x="830" y="115" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">driver device snapshot</text>
+    <text x="830" y="138" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">vLLM / SGLang</text>
+    <text x="830" y="172" font-family="Helvetica,Arial,sans-serif" font-size="30" fill="url(#green)" font-weight="700" filter="url(#glow)">4-10×</text>
+  </g>
+
+  <!-- bottom result -->
+  <g transform="translate(60, 510)">
+    <text x="0" y="0" font-family="Helvetica,Arial,sans-serif" font-size="18" fill="#7afcff" font-weight="600">综合效果</text>
+    <text x="0" y="40" font-family="Helvetica,Arial,sans-serif" font-size="36" fill="#ffffff" font-weight="700">2000 s → 50 s &nbsp;·&nbsp; 40× cold start &nbsp;·&nbsp; 50M+ replicas restored</text>
+    <text x="0" y="80" font-family="Helvetica,Arial,sans-serif" font-size="16" fill="#a5b4fc" font-style="italic">"Infrastructure compounds." — Charles Frye, Modal Engineering</text>
+  </g>
+
+  <!-- top-right meta -->
+  <g transform="translate(960, 60)">
+    <text x="0" y="0" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc" text-anchor="start">2026-05-12 · Modal Blog</text>
+    <text x="0" y="22" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#a5b4fc">Frye / Belotti / Bernhardsson / Bubna</text>
+    <text x="0" y="46" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#34d399" font-weight="600">综合评分 9.1/10</text>
+  </g>
+</svg>
