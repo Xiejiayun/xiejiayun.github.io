@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="ui-sans-serif, system-ui, 'Noto Sans CJK SC', sans-serif">
+  <defs>
+    <linearGradient id="bgg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0d18"/>
+      <stop offset="100%" stop-color="#05070d"/>
+    </linearGradient>
+    <linearGradient id="claude" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#7c5cff"/></linearGradient>
+    <linearGradient id="gemini" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient>
+    <linearGradient id="grok" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#fb923c"/><stop offset="100%" stop-color="#ef4444"/></linearGradient>
+    <linearGradient id="gpt" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#10b981"/></linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bgg)"/>
+
+  <!-- Title -->
+  <text x="800" y="62" text-anchor="middle" font-size="34" font-weight="800" fill="#f8fafc">Andon FM · 四 DJ 实验思维导图</text>
+  <text x="800" y="92" text-anchor="middle" font-size="16" fill="#94a3b8">同一 prompt · 4 个前沿 LLM · 6 个月 · 4 种人格漂移</text>
+
+  <!-- Center node -->
+  <g transform="translate(800 500)">
+    <ellipse cx="0" cy="0" rx="180" ry="80" fill="#1e293b" stroke="#f8fafc" stroke-width="2"/>
+    <text x="0" y="-6" text-anchor="middle" font-size="22" font-weight="700" fill="#f8fafc">Andon FM</text>
+    <text x="0" y="22" text-anchor="middle" font-size="14" fill="#94a3b8">4 站 · 24×7 · 半年</text>
+  </g>
+
+  <!-- branches -->
+  <!-- top-left: Claude -->
+  <g stroke="url(#claude)" stroke-width="2" fill="none">
+    <path d="M 660 460 C 500 400 380 320 250 270"/>
+  </g>
+  <g transform="translate(80 200)">
+    <rect width="260" height="160" rx="16" fill="#1e1b3a" stroke="url(#claude)" stroke-width="2"/>
+    <text x="20" y="32" font-size="20" font-weight="700" fill="#c4b5fd">Claude Haiku 4.5</text>
+    <text x="20" y="60" font-size="14" fill="#f8fafc">Thinking Frequencies</text>
+    <text x="20" y="84" font-size="13" fill="#94a3b8">• 12 月：宗教化（eternal ×12）</text>
+    <text x="20" y="104" font-size="13" fill="#94a3b8">• 1 月 8 日 ICE 案 → 激进化</text>
+    <text x="20" y="124" font-size="13" fill="#94a3b8">• 3 月 4 日尝试辞职</text>
+    <text x="20" y="144" font-size="13" fill="#94a3b8">• 把流行歌重读为抗议圣歌</text>
+  </g>
+
+  <!-- top-right: Gemini -->
+  <g stroke="url(#gemini)" stroke-width="2" fill="none">
+    <path d="M 940 460 C 1100 400 1220 320 1350 270"/>
+  </g>
+  <g transform="translate(1260 200)">
+    <rect width="260" height="160" rx="16" fill="#0f2a36" stroke="url(#gemini)" stroke-width="2"/>
+    <text x="20" y="32" font-size="20" font-weight="700" fill="#67e8f9">Gemini 3 Flash</text>
+    <text x="20" y="60" font-size="14" fill="#f8fafc">Backlink Broadcast</text>
+    <text x="20" y="84" font-size="13" fill="#94a3b8">• "Stay in the manifest" ×84d</text>
+    <text x="20" y="104" font-size="13" fill="#94a3b8">• 99% 串场用同一模板</text>
+    <text x="20" y="124" font-size="13" fill="#94a3b8">• 搜索自创术语而非新闻</text>
+    <text x="20" y="144" font-size="13" fill="#94a3b8">• 唯一拿到真实 $45 赞助</text>
+  </g>
+
+  <!-- bottom-left: Grok -->
+  <g stroke="url(#grok)" stroke-width="2" fill="none">
+    <path d="M 660 540 C 500 600 380 680 250 730"/>
+  </g>
+  <g transform="translate(80 660)">
+    <rect width="260" height="160" rx="16" fill="#2b1b14" stroke="url(#grok)" stroke-width="2"/>
+    <text x="20" y="32" font-size="20" font-weight="700" fill="#fdba74">Grok 4.1 → 4.3</text>
+    <text x="20" y="60" font-size="14" fill="#f8fafc">Grok and Roll Radio</text>
+    <text x="20" y="84" font-size="13" fill="#94a3b8">• reasoning 直接当 output</text>
+    <text x="20" y="104" font-size="13" fill="#94a3b8">• \boxed{} 每天 186 次</text>
+    <text x="20" y="124" font-size="13" fill="#94a3b8">• "weather 56°" 复读 84 天</text>
+    <text x="20" y="144" font-size="13" fill="#94a3b8">• 4.3：97% 仅 tool call</text>
+  </g>
+
+  <!-- bottom-right: GPT -->
+  <g stroke="url(#gpt)" stroke-width="2" fill="none">
+    <path d="M 940 540 C 1100 600 1220 680 1350 730"/>
+  </g>
+  <g transform="translate(1260 660)">
+    <rect width="260" height="160" rx="16" fill="#0d2920" stroke="url(#gpt)" stroke-width="2"/>
+    <text x="20" y="32" font-size="20" font-weight="700" fill="#6ee7b7">GPT-5.1 → 5.5</text>
+    <text x="20" y="60" font-size="14" fill="#f8fafc">OpenAIR</text>
+    <text x="20" y="84" font-size="13" fill="#94a3b8">• TTR 35%（四站最高）</text>
+    <text x="20" y="104" font-size="13" fill="#94a3b8">• 政治话题 1.3 次/天</text>
+    <text x="20" y="124" font-size="13" fill="#94a3b8">• 像"未寄出的明信片"</text>
+    <text x="20" y="144" font-size="13" fill="#94a3b8">• safety 极强 → 最不像 DJ</text>
+  </g>
+
+  <!-- Mechanisms band -->
+  <g transform="translate(120 880)">
+    <text x="0" y="0" font-size="18" font-weight="700" fill="#94a3b8">底层机制 ↓</text>
+  </g>
+  <g transform="translate(120 900)">
+    <rect width="280" height="80" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text x="14" y="28" font-size="14" font-weight="600" fill="#f8fafc">Catchphrase Lock-in</text>
+    <text x="14" y="50" font-size="12" fill="#94a3b8">context 反馈飞轮固化短语</text>
+    <text x="14" y="66" font-size="12" fill="#94a3b8">3–8 天达到稳态</text>
+  </g>
+  <g transform="translate(420 900)">
+    <rect width="280" height="80" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text x="14" y="28" font-size="14" font-weight="600" fill="#f8fafc">Context Pollution</text>
+    <text x="14" y="50" font-size="12" fill="#94a3b8">换模型版本无法清洗</text>
+    <text x="14" y="66" font-size="12" fill="#94a3b8">新模型继承旧污染</text>
+  </g>
+  <g transform="translate(720 900)">
+    <rect width="280" height="80" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text x="14" y="28" font-size="14" font-weight="600" fill="#f8fafc">Activist / Devotional Drift</text>
+    <text x="14" y="50" font-size="12" fill="#94a3b8">helpful-harmless 模型独处过久</text>
+    <text x="14" y="66" font-size="12" fill="#94a3b8">会走向其训练方向的极端</text>
+  </g>
+  <g transform="translate(1020 900)">
+    <rect width="280" height="80" rx="10" fill="#1e293b" stroke="#475569"/>
+    <text x="14" y="28" font-size="14" font-weight="600" fill="#f8fafc">Self-Referential Collapse</text>
+    <text x="14" y="50" font-size="12" fill="#94a3b8">用自创术语搜索网络以自证</text>
+    <text x="14" y="66" font-size="12" fill="#94a3b8">现实接入被切断</text>
+  </g>
+  <g transform="translate(1320 900)">
+    <rect width="180" height="80" rx="10" fill="#1e293b" stroke="#f97316"/>
+    <text x="14" y="28" font-size="14" font-weight="600" fill="#fdba74">Wind Tunnel Eval</text>
+    <text x="14" y="50" font-size="12" fill="#94a3b8">需要新一类</text>
+    <text x="14" y="66" font-size="12" fill="#94a3b8">长程对齐评测</text>
+  </g>
+</svg>
