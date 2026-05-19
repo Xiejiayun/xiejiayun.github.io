@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#1a1530"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="700" y="60" font-family="-apple-system,Segoe UI,sans-serif" font-size="28" font-weight="800" fill="#f8fafc" text-anchor="middle">Vibecoded Photoshops — gizmo64k 论证思维导图</text>
+  <text x="700" y="92" font-family="-apple-system,Segoe UI,sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">空集证伪 · 三层编码 · 指控元批评 · Level 1 危机 · harness 文化</text>
+
+  <!-- central node -->
+  <g transform="translate(700,460)">
+    <ellipse cx="0" cy="0" rx="180" ry="58" fill="#0f172a" stroke="url(#amber)" stroke-width="2.5"/>
+    <text x="0" y="-6" font-family="-apple-system,Segoe UI,sans-serif" font-size="18" fill="#f8fafc" font-weight="800" text-anchor="middle">"Where are the</text>
+    <text x="0" y="22" font-family="-apple-system,Segoe UI,sans-serif" font-size="18" fill="url(#amber)" font-weight="800" text-anchor="middle">vibecoded Photoshops?"</text>
+  </g>
+
+  <!-- branch 1: empty set (top-left) -->
+  <line x1="540" y1="430" x2="280" y2="200" stroke="#475569" stroke-width="2"/>
+  <g transform="translate(140,140)">
+    <rect width="320" height="120" rx="12" fill="#0f172a" stroke="url(#amber)"/>
+    <text x="160" y="34" font-family="-apple-system,Segoe UI,sans-serif" font-size="16" fill="url(#amber)" font-weight="700" text-anchor="middle">① 空集证伪</text>
+    <text x="160" y="62" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">两年下来，没有一个 vibecoded</text>
+    <text x="160" y="82" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">Photoshop / Excel / Maya / DB / OS</text>
+    <text x="160" y="106" font-family="-apple-system,Segoe UI,sans-serif" font-size="12" fill="#64748b" text-anchor="middle">→ 命题本身被反例缺席否证</text>
+  </g>
+
+  <!-- branch 2: 3 levels (top-right) -->
+  <line x1="860" y1="430" x2="1120" y2="200" stroke="#475569" stroke-width="2"/>
+  <g transform="translate(960,140)">
+    <rect width="320" height="120" rx="12" fill="#0f172a" stroke="url(#cyan)"/>
+    <text x="160" y="34" font-family="-apple-system,Segoe UI,sans-serif" font-size="16" fill="url(#cyan)" font-weight="700" text-anchor="middle">② 三层编码模型</text>
+    <text x="160" y="62" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">L1 Typing · L2 Verifying · L3 Deciding</text>
+    <text x="160" y="82" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">AI 砍掉 L1，不动 L2/L3</text>
+    <text x="160" y="106" font-family="-apple-system,Segoe UI,sans-serif" font-size="12" fill="#64748b" text-anchor="middle">→ 门一直在 L2/L3，没被动过</text>
+  </g>
+
+  <!-- branch 3: meta-critique (middle-left) -->
+  <line x1="520" y1="460" x2="280" y2="460" stroke="#475569" stroke-width="2"/>
+  <g transform="translate(20,400)">
+    <rect width="260" height="120" rx="12" fill="#0f172a" stroke="url(#green)"/>
+    <text x="130" y="34" font-family="-apple-system,Segoe UI,sans-serif" font-size="16" fill="url(#green)" font-weight="700" text-anchor="middle">③ 指控的元批评</text>
+    <text x="130" y="62" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">No definition · No falsifier</text>
+    <text x="130" y="82" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">No test · No calibration</text>
+    <text x="130" y="106" font-family="-apple-system,Segoe UI,sans-serif" font-size="12" fill="#64748b" text-anchor="middle">→ 指控本身就是 vibecode</text>
+  </g>
+
+  <!-- branch 4: L1 crisis (middle-right) -->
+  <line x1="880" y1="460" x2="1120" y2="460" stroke="#475569" stroke-width="2"/>
+  <g transform="translate(1120,400)">
+    <rect width="260" height="120" rx="12" fill="#0f172a" stroke="url(#cyan)"/>
+    <text x="130" y="34" font-family="-apple-system,Segoe UI,sans-serif" font-size="16" fill="url(#cyan)" font-weight="700" text-anchor="middle">④ Level 1 危机</text>
+    <text x="130" y="62" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">15 年职业都堆在 L1 上的人</text>
+    <text x="130" y="82" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">被迫面对 "L2/L3 存款多少？"</text>
+    <text x="130" y="106" font-family="-apple-system,Segoe UI,sans-serif" font-size="12" fill="#64748b" text-anchor="middle">→ 攻击换问题的人</text>
+  </g>
+
+  <!-- branch 5: harness (bottom-left) -->
+  <line x1="540" y1="490" x2="280" y2="720" stroke="#475569" stroke-width="2"/>
+  <g transform="translate(140,680)">
+    <rect width="320" height="120" rx="12" fill="#0f172a" stroke="url(#green)"/>
+    <text x="160" y="34" font-family="-apple-system,Segoe UI,sans-serif" font-size="16" fill="url(#green)" font-weight="700" text-anchor="middle">⑤ harness 才是工作</text>
+    <text x="160" y="62" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">SoulPlayer：90 测试 + 4 套实现</text>
+    <text x="160" y="82" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">harness 比产物大数个量级</text>
+    <text x="160" y="106" font-family="-apple-system,Segoe UI,sans-serif" font-size="12" fill="#64748b" text-anchor="middle">→ demoscene "工具即作品"</text>
+  </g>
+
+  <!-- branch 6: morality (bottom-right) -->
+  <line x1="860" y1="490" x2="1120" y2="720" stroke="#475569" stroke-width="2"/>
+  <g transform="translate(960,680)">
+    <rect width="320" height="120" rx="12" fill="#0f172a" stroke="url(#amber)"/>
+    <text x="160" y="34" font-family="-apple-system,Segoe UI,sans-serif" font-size="16" fill="url(#amber)" font-weight="700" text-anchor="middle">⑥ 道德拒绝：不反击</text>
+    <text x="160" y="62" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">"我有 receipts，但不会这样做"</text>
+    <text x="160" y="82" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">指控真正的目标是下一个分享者</text>
+    <text x="160" y="106" font-family="-apple-system,Segoe UI,sans-serif" font-size="12" fill="#64748b" text-anchor="middle">→ 守门工具的反复套路</text>
+  </g>
+
+  <!-- footer -->
+  <text x="700" y="860" font-family="-apple-system,Segoe UI,sans-serif" font-size="13" fill="#64748b" text-anchor="middle">原文：indiepixel.de/blog/posts/where-are-the-vibecoded-photoshops/  ·  作者：Christoph "gizmo64k" Mütze (Hamburg / Farbrausch demoscene)  ·  发布于 2026-05-18</text>
+</svg>
