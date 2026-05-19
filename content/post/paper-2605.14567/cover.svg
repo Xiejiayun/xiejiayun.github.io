@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10182c"/>
+      <stop offset="50%" stop-color="#1a2444"/>
+      <stop offset="100%" stop-color="#0c1226"/>
+    </linearGradient>
+    <linearGradient id="curveStrong" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5ce1e6" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#5ce1e6" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="curveSmooth" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb35a"/>
+      <stop offset="100%" stop-color="#ff6a3d"/>
+    </linearGradient>
+    <radialGradient id="spike" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#ffd166" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#2a3760" stroke-width="0.5" opacity="0.5">
+    <line x1="100" y1="100" x2="100" y2="540"/>
+    <line x1="100" y1="540" x2="1100" y2="540"/>
+  </g>
+
+  <!-- staircase: sharp per-feature transitions -->
+  <g stroke="#5ce1e6" stroke-width="2.5" fill="none" opacity="0.85">
+    <polyline points="120,500 200,500 200,460 290,460 290,410 390,410 390,355 510,355 510,295 660,295 660,230 870,230 870,160 1080,160"/>
+  </g>
+  <!-- spikes/dots showing emerging features -->
+  <g>
+    <circle cx="200" cy="460" r="6" fill="#ffd166"/>
+    <circle cx="290" cy="410" r="6" fill="#ffd166"/>
+    <circle cx="390" cy="355" r="6" fill="#ffd166"/>
+    <circle cx="510" cy="295" r="6" fill="#ffd166"/>
+    <circle cx="660" cy="230" r="6" fill="#ffd166"/>
+    <circle cx="870" cy="160" r="6" fill="#ffd166"/>
+  </g>
+
+  <!-- smooth power law overlay -->
+  <path d="M 120,510 Q 320,420 540,300 T 1080,140" stroke="url(#curveSmooth)" stroke-width="4" fill="none" stroke-dasharray="6 4" opacity="0.95"/>
+
+  <!-- labels on staircase -->
+  <text x="170" y="535" fill="#cfd8e6" font-size="11" font-style="italic">i=1</text>
+  <text x="260" y="498" fill="#cfd8e6" font-size="11" font-style="italic">i=2</text>
+  <text x="360" y="448" fill="#cfd8e6" font-size="11" font-style="italic">i=3</text>
+  <text x="480" y="395" fill="#cfd8e6" font-size="11" font-style="italic">i=4</text>
+  <text x="630" y="333" fill="#cfd8e6" font-size="11" font-style="italic">i=5</text>
+  <text x="845" y="265" fill="#cfd8e6" font-size="11" font-style="italic">i=6</text>
+
+  <!-- titles -->
+  <text x="600" y="80" text-anchor="middle" font-size="34" font-weight="800" fill="#fff">
+    平滑标度律是阶梯式特征恢复的<tspan fill="#ffb35a">总和</tspan>
+  </text>
+  <text x="600" y="120" text-anchor="middle" font-size="16" fill="#9fb0d0">
+    Wortsman-Zurich · Tabanelli · Dandi · Krzakala · Loureiro  ·  arXiv 2605.14567
+  </text>
+
+  <!-- axis labels -->
+  <text x="600" y="572" text-anchor="middle" fill="#cfd8e6" font-size="14">log n  (sample size)</text>
+  <text x="50" y="300" text-anchor="middle" fill="#cfd8e6" font-size="14" transform="rotate(-90 50,300)">overlap with hidden feature</text>
+
+  <!-- legend -->
+  <g transform="translate(820,455)">
+    <rect x="0" y="0" width="270" height="80" rx="8" fill="#0c1226" opacity="0.85" stroke="#2a3760"/>
+    <line x1="14" y1="22" x2="44" y2="22" stroke="#5ce1e6" stroke-width="2.5"/>
+    <text x="52" y="26" fill="#dfe6f1" font-size="12">逐个特征的 sharp recovery</text>
+    <line x1="14" y1="46" x2="44" y2="46" stroke="url(#curveSmooth)" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="52" y="50" fill="#dfe6f1" font-size="12">aggregate power-law MSE ↓</text>
+    <circle cx="29" cy="68" r="4" fill="#ffd166"/>
+    <text x="52" y="72" fill="#dfe6f1" font-size="12">第 i 个 spike 在 nᵢ≍dᵠi²ᵞ 处跳出</text>
+  </g>
+
+  <!-- bottom tagline -->
+  <text x="600" y="608" text-anchor="middle" font-size="12" fill="#5d6f99" font-style="italic">
+    "smooth scaling laws emerge from a cascade of sharp feature-learning transitions"
+  </text>
+</svg>
